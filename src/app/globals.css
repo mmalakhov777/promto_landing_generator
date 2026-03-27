@@ -109,8 +109,8 @@
   /* Accent gradient colors for buttons/text/borders */
   --theme-accent-from: #78FF86;
   --theme-accent-to: #289F35;
-  --theme-glow-color-1: rgba(120, 255, 134, 0.2);
-  --theme-glow-color-2: rgba(40, 159, 53, 0.1);
+  --theme-glow-color-1: rgba(255, 255, 255, 0.15);
+  --theme-glow-color-2: rgba(255, 255, 255, 0.08);
 }
 
 @theme inline {
@@ -204,14 +204,14 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Dark CTA glow uses green */
+/* Dark CTA glow uses white */
 [data-theme="dark"] .animate-cta-glow {
   animation-name: glow-pulse-dark;
 }
 
 @keyframes glow-pulse-dark {
-  0%, 100% { box-shadow: 0 0 12px 2px rgba(120, 255, 134, 0.15), 0 0 24px 4px rgba(40, 159, 53, 0.08); }
-  50% { box-shadow: 0 0 20px 6px rgba(120, 255, 134, 0.25), 0 0 40px 8px rgba(40, 159, 53, 0.12); }
+  0%, 100% { box-shadow: 0 0 12px 2px rgba(255, 255, 255, 0.1), 0 0 24px 4px rgba(255, 255, 255, 0.05); }
+  50% { box-shadow: 0 0 20px 6px rgba(255, 255, 255, 0.18), 0 0 40px 8px rgba(255, 255, 255, 0.08); }
 }
 
 /* Dark step cards: no border override needed, just subtle glass */
