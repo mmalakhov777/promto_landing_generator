@@ -34,6 +34,24 @@
   --theme-scrollbar-thumb: #BCBCBD;
   --theme-github-fill: #111;
   --theme-noise-opacity: 0;
+
+  /* Light theme gradient defaults */
+  --theme-gradient-primary: linear-gradient(186deg, #5EFF6E -11%, #464EFF 71%);
+  --theme-gradient-primary-animated: linear-gradient(135deg, #5EFF6E 0%, #464EFF 50%, #5EFF6E 100%);
+  --theme-gradient-border: linear-gradient(135deg, #464EFF 0%, #5EFF6E 50%, #464EFF 100%);
+  --theme-gradient-text: 4deg, rgba(70,78,255,1) 21%, rgba(94,255,110,1) 100%;
+  --theme-gradient-border-static: 4deg, rgba(70,78,255,1) 30%, rgba(94,255,110,1) 100%;
+  --theme-btn-primary-bg: linear-gradient(186deg, #5EFF6E -11%, #464EFF 71%);
+  --theme-btn-frosted-bg: transparent;
+  --theme-btn-frosted-hover: transparent;
+  --theme-card-border: transparent;
+  --theme-card-glass-bg: transparent;
+  --theme-blob-color-1: rgba(70,78,255,1);
+  --theme-blob-color-2: rgba(94,255,110,1);
+  --theme-accent-from: rgba(70,78,255,1);
+  --theme-accent-to: rgba(94,255,110,1);
+  --theme-glow-color-1: rgba(70, 78, 255, 0.2);
+  --theme-glow-color-2: rgba(94, 255, 110, 0.1);
 }
 
 [data-theme="dark"] {
@@ -89,28 +107,6 @@
   --theme-accent-to: #289F35;
   --theme-glow-color-1: rgba(120, 255, 134, 0.2);
   --theme-glow-color-2: rgba(40, 159, 53, 0.1);
-}
-
-/* Light theme defaults for gradient vars */
-:root {
-  --theme-gradient-primary: linear-gradient(186deg, #5EFF6E -11%, #464EFF 71%);
-  --theme-gradient-primary-animated: linear-gradient(135deg, #5EFF6E 0%, #464EFF 50%, #5EFF6E 100%);
-  --theme-gradient-border: linear-gradient(135deg, #464EFF 0%, #5EFF6E 50%, #464EFF 100%);
-  --theme-gradient-text: 4deg, rgba(70,78,255,1) 21%, rgba(94,255,110,1) 100%;
-  --theme-gradient-border-static: 4deg, rgba(70,78,255,1) 30%, rgba(94,255,110,1) 100%;
-  --theme-btn-primary-bg: linear-gradient(186deg, #5EFF6E -11%, #464EFF 71%);
-  --theme-btn-frosted-bg: transparent;
-  --theme-btn-frosted-hover: transparent;
-  --theme-card-border: transparent;
-  --theme-card-glass-bg: transparent;
-  /* Background blobs: blue + green in light theme */
-  --theme-blob-color-1: rgba(70,78,255,1);
-  --theme-blob-color-2: rgba(94,255,110,1);
-  /* Accent gradient colors for buttons/text/borders */
-  --theme-accent-from: rgba(70,78,255,1);
-  --theme-accent-to: rgba(94,255,110,1);
-  --theme-glow-color-1: rgba(70, 78, 255, 0.2);
-  --theme-glow-color-2: rgba(94, 255, 110, 0.1);
 }
 
 @theme inline {
