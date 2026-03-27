@@ -263,21 +263,32 @@ body {
   color: white !important;
 }
 
-/* Small outline buttons (Войти) in dark theme */
+/* Outline buttons in dark theme: frosted glass */
 [data-theme="dark"] .btn-outline-sm {
-  background: rgba(255, 255, 255, 0.12) !important;
+  background: rgba(255, 255, 255, 0.16) !important;
   border: none !important;
   color: white !important;
 }
 
 [data-theme="dark"] .btn-outline-sm:hover {
-  background: rgba(255, 255, 255, 0.20) !important;
+  background: rgba(255, 255, 255, 0.24) !important;
 }
 
 [data-theme="dark"] .btn-outline-sm .bg-clip-text {
   background: none !important;
   -webkit-text-fill-color: white !important;
   color: white !important;
+}
+
+/* Hide gradient border mask on outline buttons in dark theme */
+[data-theme="dark"] .btn-outline-sm .gradient-border-mask {
+  display: none !important;
+}
+
+/* Icons white in dark theme outline buttons */
+[data-theme="dark"] .btn-outline-sm svg {
+  color: white !important;
+  stroke: white !important;
 }
 
 /* Animated gradient border for chat input */
