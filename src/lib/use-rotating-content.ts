@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback, useRef, useSyncExternalStore } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 
 const AGENT_CONTENT: Record<string, { words: string[]; placeholders: string[] }> = {
   'Дизайнер': {
@@ -38,94 +38,50 @@ const AGENT_CONTENT: Record<string, { words: string[]; placeholders: string[] }>
   },
 };
 
+export const MODES = Object.keys(AGENT_CONTENT);
+
 const ROTATE_INTERVAL = 4000;
 const BLUR_DURATION = 600;
 
-// Shared singleton state so title + placeholder stay in sync
-let _mode = 'Разработчик';
-let _index = 0;
-let _blurred = false;
-let _listeners = new Set<() => void>();
-let _intervalId: ReturnType<typeof setInterval> | null = null;
-
-function notify() {
-  _listeners.forEach((l) => l());
-}
-
-function startInterval() {
-  if (_intervalId) return;
-  _intervalId = setInterval(() => {
-    _blurred = true;
-    notify();
-    setTimeout(() => {
-      const content = AGENT_CONTENT[_mode];
-      _index = (_index + 1) % content.words.length;
-      _blurred = false;
-      notify();
-    }, BLUR_DURATION);
-  }, ROTATE_INTERVAL);
-}
-
-function stopInterval() {
-  if (_intervalId) {
-    clearInterval(_intervalId);
-    _intervalId = null;
-  }
-}
-
-function subscribe(listener: () => void) {
-  _listeners.add(listener);
-  if (_listeners.size === 1) startInterval();
-  return () => {
-    _listeners.delete(listener);
-    if (_listeners.size === 0) stopInterval();
-  };
-}
-
-function getSnapshot() {
-  const content = AGENT_CONTENT[_mode];
-  return {
-    mode: _mode,
-    word: content.words[_index] ?? content.words[0],
-    placeholder: content.placeholders[_index] ?? content.placeholders[0],
-    blurred: _blurred,
-  };
-}
-
-// Keep a stable reference when values haven't changed
-let _lastSnapshot = getSnapshot();
-function getStableSnapshot() {
-  const next = getSnapshot();
-  if (
-    next.mode === _lastSnapshot.mode &&
-    next.word === _lastSnapshot.word &&
-    next.placeholder === _lastSnapshot.placeholder &&
-    next.blurred === _lastSnapshot.blurred
-  ) {
-    return _lastSnapshot;
-  }
-  _lastSnapshot = next;
-  return next;
-}
-
 export function useRotatingContent() {
-  const snapshot = useSyncExternalStore(subscribe, getStableSnapshot, getStableSnapshot);
+  const [mode, setModeState] = useState('Разработчик');
+  const [index, setIndex] = useState(0);
+  const [blurred, setBlurred] = useState(false);
+  const intervalRef = useRef<ReturnType<typeof setInterval>>(undefined);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
 
-  const setMode = useCallback((mode: string) => {
-    if (mode === _mode) return;
-    stopInterval();
-    _blurred = true;
-    notify();
-    setTimeout(() => {
-      _mode = mode;
-      _index = 0;
-      _blurred = false;
-      notify();
-      startInterval();
+  const content = AGENT_CONTENT[mode];
+
+  // Auto-rotate every 4s
+  useEffect(() => {
+    intervalRef.current = setInterval(() => {
+      setBlurred(true);
+      timeoutRef.current = setTimeout(() => {
+        setIndex((i) => (i + 1) % content.words.length);
+        setBlurred(false);
+      }, BLUR_DURATION);
+    }, ROTATE_INTERVAL);
+
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, [content.words.length]);
+
+  const setMode = useCallback((newMode: string) => {
+    if (newMode === mode) return;
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setBlurred(true);
+    timeoutRef.current = setTimeout(() => {
+      setModeState(newMode);
+      setIndex(0);
+      setBlurred(false);
     }, BLUR_DURATION);
-  }, []);
+  }, [mode]);
 
-  return { ...snapshot, setMode };
+  const word = content.words[index] ?? content.words[0];
+  const placeholder = content.placeholders[index] ?? content.placeholders[0];
+
+  return { mode, word, placeholder, blurred, setMode };
 }
-
-export const MODES = Object.keys(AGENT_CONTENT);
