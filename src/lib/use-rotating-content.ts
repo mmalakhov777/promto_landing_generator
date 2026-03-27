@@ -47,39 +47,33 @@ export function useRotatingContent() {
   const [mode, setModeState] = useState('Разработчик');
   const [index, setIndex] = useState(0);
   const [blurred, setBlurred] = useState(false);
-  const intervalRef = useRef<ReturnType<typeof setInterval>>(undefined);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const modeRef = useRef(mode);
+  modeRef.current = mode;
 
-  const content = AGENT_CONTENT[mode];
-
-  // Auto-rotate every 4s
   useEffect(() => {
-    intervalRef.current = setInterval(() => {
+    const id = setInterval(() => {
       setBlurred(true);
-      timeoutRef.current = setTimeout(() => {
+      setTimeout(() => {
+        const content = AGENT_CONTENT[modeRef.current];
         setIndex((i) => (i + 1) % content.words.length);
         setBlurred(false);
       }, BLUR_DURATION);
     }, ROTATE_INTERVAL);
 
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    };
-  }, [content.words.length]);
+    return () => clearInterval(id);
+  }, []);
 
   const setMode = useCallback((newMode: string) => {
-    if (newMode === mode) return;
-    if (intervalRef.current) clearInterval(intervalRef.current);
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
     setBlurred(true);
-    timeoutRef.current = setTimeout(() => {
+    setTimeout(() => {
       setModeState(newMode);
+      modeRef.current = newMode;
       setIndex(0);
       setBlurred(false);
     }, BLUR_DURATION);
-  }, [mode]);
+  }, []);
 
+  const content = AGENT_CONTENT[mode];
   const word = content.words[index] ?? content.words[0];
   const placeholder = content.placeholders[index] ?? content.placeholders[0];
 
