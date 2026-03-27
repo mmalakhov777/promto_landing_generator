@@ -94,7 +94,7 @@
   --theme-gradient-primary: linear-gradient(229deg, #78FF86 -56%, #289F35 80%);
   --theme-gradient-primary-animated: rgba(255, 255, 255, 0.16);
   --theme-send-btn-bg: linear-gradient(135deg, #78FF86 0%, #289F35 50%, #78FF86 100%);
-  --theme-gradient-border: linear-gradient(135deg, #78FF86 0%, #289F35 50%, #78FF86 100%);
+  --theme-gradient-border: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.5) 100%);
   --theme-gradient-text: 90deg, #78FF86 0%, #289F35 100%;
   --theme-gradient-border-static: 4deg, #78FF86 30%, #289F35 100%;
   --theme-btn-primary-bg: rgba(255, 255, 255, 0.16);
