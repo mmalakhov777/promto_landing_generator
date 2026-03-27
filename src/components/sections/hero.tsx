@@ -24,7 +24,7 @@ export function Hero() {
 
           {/* Subheadline — 14px mobile / 16px desktop */}
           <p className="text-sm md:text-base lg:text-base text-text-secondary leading-[1.4] max-w-[327px] md:max-w-[520px] lg:max-w-[580px]">
-            Промто превращает вашу идею в&nbsp;действующий сайт, сервис или бот: придумывает структуру, создает дизайн, пишет тексты и&nbsp;собирает в&nbsp;готовый продукт. Без знаний кода и&nbsp;сложных конструкторов&nbsp;&mdash; только ваш запрос и&nbsp;готовый результат.
+            Промто превращает идею в&nbsp;готовый сайт, сервис или бот&nbsp;&mdash; без кода и&nbsp;конструкторов.
           </p>
         </div>
 
