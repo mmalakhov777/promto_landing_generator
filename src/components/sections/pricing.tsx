@@ -71,7 +71,7 @@ export function Pricing() {
 
             {/* CTA buttons — row, gap 12px */}
             <div className="flex gap-3">
-              <Button variant="primary" size="md" icon={<ArrowUpRight size={18} color="white" />} href="https://app.promto.ai">
+              <Button variant="outline" size="md" icon={<ArrowUpRight size={18} color="gradient" />} href="https://app.promto.ai" animated>
                 {CTA_LABELS[activePlan]}
               </Button>
               <Button variant="outline" size="md" icon={<AiMagic size={18} color="gradient" />} href="https://app.promto.ai" animated>
@@ -133,7 +133,7 @@ export function Pricing() {
 
           {/* CTA buttons — column, gap 12px, w-327 per Figma (375-48px padding) */}
           <div className="flex flex-col gap-3">
-            <Button variant="primary" size="md" icon={<ArrowUpRight size={18} color="white" />} href="https://app.promto.ai" className="w-full justify-center">
+            <Button variant="outline" size="md" icon={<ArrowUpRight size={18} color="gradient" />} href="https://app.promto.ai" className="w-full justify-center" animated>
               {CTA_LABELS[activePlan]}
             </Button>
             <Button variant="outline" size="md" icon={<AiMagic size={18} color="gradient" />} href="https://app.promto.ai" className="w-full justify-center" animated>
