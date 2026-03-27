@@ -252,7 +252,7 @@ export function ChatInput() {
               <div
                 className="absolute inset-0 rounded-full animate-gradient-shift-slow"
                 style={{
-                  background: 'var(--theme-gradient-primary-animated)',
+                  background: 'var(--theme-send-btn-bg)',
                   backgroundSize: '200% 200%',
                 }}
               />

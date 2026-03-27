@@ -42,6 +42,8 @@
   --theme-gradient-text: 4deg, rgba(70,78,255,1) 21%, rgba(94,255,110,1) 100%;
   --theme-gradient-border-static: 4deg, rgba(70,78,255,1) 30%, rgba(94,255,110,1) 100%;
   --theme-btn-primary-bg: linear-gradient(186deg, #5EFF6E -11%, #464EFF 71%);
+  --theme-btn-primary-hover-bg: linear-gradient(186deg, #5EFF6E -11%, #464EFF 71%);
+  --theme-send-btn-bg: linear-gradient(135deg, #5EFF6E 0%, #464EFF 50%, #5EFF6E 100%);
   --theme-btn-frosted-bg: transparent;
   --theme-btn-frosted-hover: transparent;
   --theme-card-border: transparent;
@@ -90,11 +92,13 @@
 
   /* Dark theme accent overrides: green gradient instead of blue-green */
   --theme-gradient-primary: linear-gradient(229deg, #78FF86 -56%, #289F35 80%);
-  --theme-gradient-primary-animated: linear-gradient(135deg, #78FF86 0%, #289F35 50%, #78FF86 100%);
+  --theme-gradient-primary-animated: rgba(255, 255, 255, 0.16);
+  --theme-send-btn-bg: linear-gradient(135deg, #78FF86 0%, #289F35 50%, #78FF86 100%);
   --theme-gradient-border: linear-gradient(135deg, #78FF86 0%, #289F35 50%, #78FF86 100%);
   --theme-gradient-text: 90deg, #78FF86 0%, #289F35 100%;
   --theme-gradient-border-static: 4deg, #78FF86 30%, #289F35 100%;
-  --theme-btn-primary-bg: linear-gradient(229deg, #78FF86 -56%, #289F35 80%);
+  --theme-btn-primary-bg: rgba(255, 255, 255, 0.16);
+  --theme-btn-primary-hover-bg: rgba(255, 255, 255, 0.24);
   --theme-btn-frosted-bg: rgba(255, 255, 255, 0.16);
   --theme-btn-frosted-hover: rgba(255, 255, 255, 0.24);
   --theme-card-border: rgba(255, 255, 255, 0.08);
@@ -213,6 +217,18 @@ body {
 /* Dark step cards: no border override needed, just subtle glass */
 [data-theme="dark"] .bg-bg-inactive {
   border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ── Dark theme: primary CTA buttons become frosted glass ── */
+[data-theme="dark"] .btn-primary {
+  background: rgba(255, 255, 255, 0.16) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+  background: rgba(255, 255, 255, 0.24) !important;
 }
 
 /* ── Dark theme: outline CTA buttons become frosted glass ── */

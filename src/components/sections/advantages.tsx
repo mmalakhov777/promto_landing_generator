@@ -63,7 +63,7 @@ export function Advantages() {
           {/* Primary "Создать сайт" — exact Figma SVG gradient */}
           <a
             href="https://app.promto.ai"
-            className="relative overflow-hidden w-[180px] h-[52px] inline-flex items-center justify-center gap-2 rounded-[60px] text-sm font-medium text-white transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2"
+            className="btn-primary relative overflow-hidden w-[180px] h-[52px] inline-flex items-center justify-center gap-2 rounded-[60px] text-sm font-medium text-white transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2"
           >
             <span
               className="absolute inset-0 rounded-[60px]"

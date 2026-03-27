@@ -44,7 +44,7 @@ export function Button({
     );
 
     const cls = cn(
-      `inline-flex items-center justify-center gap-2 rounded-[60px] text-sm font-medium text-white transition-all duration-200 hover:opacity-85 hover:scale-[1.02] hover:shadow-lg ${focusRing}`,
+      `btn-primary inline-flex items-center justify-center gap-2 rounded-[60px] text-sm font-medium text-white transition-all duration-200 hover:opacity-85 hover:scale-[1.02] hover:shadow-lg ${focusRing}`,
       sizeStyles[size],
       animated && 'animate-cta-glow animate-gradient-shift-slow',
       className,
