@@ -263,6 +263,10 @@ body {
   color: white !important;
 }
 
+[data-theme="dark"] .btn-cta-outline svg path {
+  stroke: white !important;
+}
+
 /* Outline buttons in dark theme: frosted glass */
 [data-theme="dark"] .btn-outline-sm {
   background: rgba(255, 255, 255, 0.16) !important;
@@ -285,10 +289,13 @@ body {
   display: none !important;
 }
 
-/* Icons white in dark theme outline buttons */
+/* Icons white in dark theme outline buttons — override SVG gradient strokes */
+[data-theme="dark"] .btn-outline-sm svg path {
+  stroke: white !important;
+}
+
 [data-theme="dark"] .btn-outline-sm svg {
   color: white !important;
-  stroke: white !important;
 }
 
 /* Animated gradient border for chat input */
