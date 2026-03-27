@@ -4,7 +4,6 @@ import { useEffect, useRef, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import { NAV_LINKS } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
-import { Monitor } from '@/components/icons/monitor';
 import { AiMagic } from '@/components/icons/ai-magic';
 
 interface MobileMenuProps {
@@ -125,9 +124,6 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
         <div className="px-6 flex flex-col items-center gap-4">
           <div className="w-full flex flex-col gap-3">
-            <Button variant="primary" size="md" icon={<Monitor size={18} />} href="https://app.promto.ai" className="w-full justify-center">
-              Создать сайт
-            </Button>
             <Button variant="outline" size="md" icon={<AiMagic size={18} color="gradient" />} href="https://app.promto.ai" className="w-full justify-center" animated>
               Попробовать бесплатно
             </Button>
