@@ -78,7 +78,7 @@ export function Button({
   );
 
   const cls = cn(
-    'inline-flex items-center justify-center gap-2 rounded-[60px] text-sm font-medium transition-all duration-200 hover:opacity-75 hover:scale-[1.02]',
+    'btn-outline-sm inline-flex items-center justify-center gap-2 rounded-[60px] text-sm font-medium transition-all duration-200 hover:opacity-75 hover:scale-[1.02]',
     sizeStyles[size],
     className,
   );

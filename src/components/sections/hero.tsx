@@ -49,11 +49,11 @@ export function Hero() {
             {/* Outline "Попробовать бесплатно" — exact Figma SVG gradient border */}
             <a
               href="https://app.promto.ai"
-              className="relative w-full lg:w-[247px] h-[52px] inline-flex items-center justify-center gap-2 rounded-[60px] text-sm font-medium transition-all duration-200 hover:opacity-75 hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 animate-cta-glow"
+              className="btn-cta-outline relative w-full lg:w-[247px] h-[52px] inline-flex items-center justify-center gap-2 rounded-[60px] text-sm font-medium transition-all duration-200 hover:opacity-75 hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 animate-cta-glow"
             >
-              {/* Animated gradient border */}
+              {/* Animated gradient border — hidden in dark theme via CSS */}
               <div
-                className="absolute inset-0 rounded-[60px] animate-gradient-shift-slow"
+                className="gradient-border-mask absolute inset-0 rounded-[60px] animate-gradient-shift-slow"
                 style={{
                   padding: '1.5px',
                   background: 'var(--theme-gradient-border)',

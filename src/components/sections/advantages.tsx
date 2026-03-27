@@ -79,17 +79,16 @@ export function Advantages() {
           {/* Outline "Попробовать бесплатно" — exact Figma SVG gradient border */}
           <a
             href="https://app.promto.ai"
-            className="relative w-[247px] h-[52px] inline-flex items-center justify-center gap-2 rounded-[60px] text-sm font-medium transition-all duration-200 hover:opacity-75 hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 animate-cta-glow"
+            className="btn-cta-outline relative w-[247px] h-[52px] inline-flex items-center justify-center gap-2 rounded-[60px] text-sm font-medium transition-all duration-200 hover:opacity-75 hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 animate-cta-glow"
           >
             <div
-              className="absolute inset-0 rounded-[60px] animate-gradient-shift-slow"
+              className="gradient-border-mask absolute inset-0 rounded-[60px] animate-gradient-shift-slow"
               style={{
                 padding: '1.5px',
                 background: 'var(--theme-gradient-border)',
                 backgroundSize: '200% 200%',
                 WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-                WebkitMaskComposite: 'xor',
-                maskComposite: 'exclude',
+                WebkitMaskComposite: 'exclude',
               }}
             />
             <span className="relative z-10 inline-flex items-center gap-2">

@@ -25,7 +25,7 @@ export function GradientBorder({
       style={{ borderRadius }}
     >
       <span
-        className={cn('absolute inset-0 pointer-events-none', animated && 'animate-gradient-shift-slow')}
+        className={cn('gradient-border-mask absolute inset-0 pointer-events-none', animated && 'animate-gradient-shift-slow')}
         style={{
           borderRadius,
           padding: borderWidth,

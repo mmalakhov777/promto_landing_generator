@@ -83,17 +83,17 @@ export function Header() {
               onClick={() => setMobileOpen(true)}
               aria-label="Открыть меню"
             >
-              <svg width="42" height="42" viewBox="0 0 42 42" fill="none" aria-hidden="true" style={{ pointerEvents: 'none' }}>
+              <svg width="42" height="42" viewBox="0 0 42 42" fill="none" aria-hidden="true" style={{ pointerEvents: 'none' }} className="hamburger-icon">
                 <rect x="0.625" y="0.625" width="40.75" height="40.75" rx="20.375" stroke="url(#hb-border)" strokeWidth="1.25" />
                 <path d="M14 16H28M14 21H28M14 26H28" stroke="url(#hb-lines)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 <defs>
                   <linearGradient id="hb-border" x1="21" y1="35.5" x2="42" y2="-18" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#464EFF" />
-                    <stop offset="1" stopColor="#5EFF6E" />
+                    <stop stopColor="var(--theme-accent-from, #464EFF)" />
+                    <stop offset="1" stopColor="var(--theme-accent-to, #5EFF6E)" />
                   </linearGradient>
                   <linearGradient id="hb-lines" x1="19.5" y1="26" x2="29" y2="4.5" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#464EFF" />
-                    <stop offset="1" stopColor="#5EFF6E" />
+                    <stop stopColor="var(--theme-accent-from, #464EFF)" />
+                    <stop offset="1" stopColor="var(--theme-accent-to, #5EFF6E)" />
                   </linearGradient>
                 </defs>
               </svg>

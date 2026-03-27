@@ -215,6 +215,55 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
+/* ── Dark theme: outline CTA buttons become frosted glass ── */
+/* Frosted glass button base */
+.btn-cta-outline {
+  position: relative;
+}
+
+[data-theme="dark"] .btn-cta-outline {
+  background: rgba(255, 255, 255, 0.16) !important;
+  color: white !important;
+}
+
+[data-theme="dark"] .btn-cta-outline:hover {
+  background: rgba(255, 255, 255, 0.24) !important;
+}
+
+/* Hide gradient border layer in dark theme */
+[data-theme="dark"] .btn-cta-outline .gradient-border-mask {
+  display: none;
+}
+
+/* Override gradient text to plain white in dark theme */
+[data-theme="dark"] .btn-cta-outline .bg-clip-text {
+  background: none !important;
+  -webkit-text-fill-color: white !important;
+  color: white !important;
+}
+
+/* Override icon color to white in dark theme */
+[data-theme="dark"] .btn-cta-outline .text-brand-blue {
+  color: white !important;
+}
+
+/* Small outline buttons (Войти) in dark theme */
+[data-theme="dark"] .btn-outline-sm {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: none !important;
+  color: white !important;
+}
+
+[data-theme="dark"] .btn-outline-sm:hover {
+  background: rgba(255, 255, 255, 0.20) !important;
+}
+
+[data-theme="dark"] .btn-outline-sm .bg-clip-text {
+  background: none !important;
+  -webkit-text-fill-color: white !important;
+  color: white !important;
+}
+
 /* Animated gradient border for chat input */
 @keyframes gradient-shift {
   0% { background-position: 0% 50%; }
