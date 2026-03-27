@@ -30,7 +30,7 @@ export function GradientBorder({
           borderRadius,
           padding: borderWidth,
           background: animated
-            ? 'linear-gradient(135deg, #464EFF 0%, #5EFF6E 50%, #464EFF 100%)'
+            ? 'var(--theme-gradient-border)'
             : `linear-gradient(${gradientAngle})`,
           backgroundSize: animated ? '200% 200%' : undefined,
           WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',

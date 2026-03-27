@@ -1,19 +1,16 @@
 'use client';
 
-import { useTheme } from '@/lib/theme-context';
-
 export function ThemeToggle() {
-  const { theme, toggle } = useTheme();
-
   return (
     <button
       type="button"
-      onClick={toggle}
+      data-theme-toggle=""
       className="w-[42px] h-[42px] flex items-center justify-center rounded-full border border-border-light text-text-secondary hover:text-text-primary transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2"
-      aria-label={theme === 'light' ? 'Включить тёмную тему' : 'Включить светлую тему'}
+      aria-label="Включить тёмную тему"
     >
       {/* Sun icon — shown in dark mode */}
       <svg
+        data-icon="sun"
         width="20"
         height="20"
         viewBox="0 0 24 24"
@@ -22,7 +19,7 @@ export function ThemeToggle() {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={theme === 'dark' ? 'block' : 'hidden'}
+        style={{ display: 'none' }}
         aria-hidden="true"
       >
         <circle cx="12" cy="12" r="5" />
@@ -37,6 +34,7 @@ export function ThemeToggle() {
       </svg>
       {/* Moon icon — shown in light mode */}
       <svg
+        data-icon="moon"
         width="20"
         height="20"
         viewBox="0 0 24 24"
@@ -45,7 +43,6 @@ export function ThemeToggle() {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={theme === 'light' ? 'block' : 'hidden'}
         aria-hidden="true"
       >
         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />

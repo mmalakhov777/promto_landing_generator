@@ -52,11 +52,11 @@ export function Button({
 
     const style = animated
       ? {
-          background: 'linear-gradient(135deg, #5EFF6E 0%, #464EFF 50%, #5EFF6E 100%)',
+          background: 'var(--theme-gradient-primary-animated)',
           backgroundSize: '200% 200%',
         }
       : {
-          background: 'linear-gradient(186deg, var(--color-brand-green) -11%, var(--color-brand-blue) 71%)',
+          background: 'var(--theme-btn-primary-bg)',
         };
 
     if (href) return <a href={href} className={cls} style={style}>{inner}</a>;
@@ -64,15 +64,11 @@ export function Button({
   }
 
   // outline & action share gradient border + gradient text
-  const gradientAngle = size === 'sm'
-    ? '4deg, rgba(70,78,255,1) 30%, rgba(94,255,110,1) 100%'
-    : '187deg, var(--color-brand-green) -22%, var(--color-brand-blue) 67%';
+  const gradientAngle = `var(--theme-gradient-border-static)`;
 
   const borderWidth = borderWidthProp ?? (size === 'sm' ? 1.5 : 1.5);
 
-  const textGradientAngle = size === 'sm'
-    ? '182deg, rgba(94,255,110,1) 0%, rgba(70,78,255,1) 79%'
-    : '0deg, rgba(70,78,255,1) 21%, rgba(94,255,110,1) 100%';
+  const textGradientAngle = `var(--theme-gradient-text)`;
 
   const inner = (
     <>

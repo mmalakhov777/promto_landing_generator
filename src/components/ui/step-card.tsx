@@ -34,7 +34,7 @@ export function StepCard({
           className="absolute inset-0 rounded-[24px] lg:hidden"
           style={{
             padding: 1.25,
-            background: 'linear-gradient(32deg, rgba(70,78,255,1) 46%, rgba(94,255,110,1) 100%)',
+            background: `linear-gradient(32deg, var(--theme-accent-from) 46%, var(--theme-accent-to) 100%)`,
             WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
             WebkitMaskComposite: 'xor',
             maskComposite: 'exclude',
@@ -45,7 +45,7 @@ export function StepCard({
           className="absolute inset-0 rounded-[32px] hidden lg:block"
           style={{
             padding: 1.25,
-            background: 'linear-gradient(3deg, rgba(70,78,255,1) 10%, rgba(94,255,110,1) 100%)',
+            background: `linear-gradient(3deg, var(--theme-accent-from) 10%, var(--theme-accent-to) 100%)`,
             WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
             WebkitMaskComposite: 'xor',
             maskComposite: 'exclude',

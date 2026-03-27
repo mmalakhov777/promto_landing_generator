@@ -39,36 +39,78 @@
 [data-theme="dark"] {
   --theme-bg-page: #0d0d0d;
   --theme-bg-card: #1a1a1a;
-  --theme-bg-inactive: #2a2a2a;
+  --theme-bg-inactive: #1b1b1b;
   --theme-bg-footer: #0d0d0d;
 
   --theme-text-primary: #ffffff;
-  --theme-text-secondary: rgba(255, 255, 255, 0.6);
-  --theme-text-placeholder: rgba(255, 255, 255, 0.35);
-  --theme-text-muted: rgba(255, 255, 255, 0.45);
+  --theme-text-secondary: rgba(255, 255, 255, 0.55);
+  --theme-text-placeholder: rgba(255, 255, 255, 0.75);
+  --theme-text-muted: rgba(255, 255, 255, 0.5);
 
-  --theme-subtle: rgba(255, 255, 255, 0.1);
-  --theme-subtle-light: rgba(255, 255, 255, 0.06);
-  --theme-border-light: rgba(255, 255, 255, 0.15);
-  --theme-border-muted: rgba(255, 255, 255, 0.2);
+  --theme-subtle: rgba(255, 255, 255, 0.07);
+  --theme-subtle-light: rgba(255, 255, 255, 0.04);
+  --theme-border-light: rgba(255, 255, 255, 0.12);
+  --theme-border-muted: rgba(255, 255, 255, 0.24);
 
-  --theme-shadow-card: 0px 4px 12px rgba(0, 0, 0, 0.2);
-  --theme-shadow-card-md: 0px 4px 12px rgba(0, 0, 0, 0.3);
-  --theme-shadow-card-lg: 0px 4px 24px rgba(0, 0, 0, 0.4);
+  --theme-shadow-card: none;
+  --theme-shadow-card-md: none;
+  --theme-shadow-card-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
 
   --theme-header-bg: rgba(13, 13, 13, 0.85);
   --theme-menu-bg: rgba(26, 26, 26, 0.95);
   --theme-chat-inner-bg: #1a1a1a;
   --theme-dropdown-bg: #1a1a1a;
   --theme-dropdown-hover: #2a2a2a;
-  --theme-dropdown-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --theme-dropdown-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   --theme-pricing-selected-fill: #1a1a1a;
-  --theme-pricing-selected-overlay: linear-gradient(180deg, rgba(94,255,110,0.08) 0%, rgba(70,78,255,0.08) 100%);
+  --theme-pricing-selected-overlay: linear-gradient(180deg, rgba(120,255,134,0.06) 0%, rgba(40,159,53,0.06) 100%);
   --theme-accordion-bg: #1a1a1a;
   --theme-scrollbar-track: #1a1a1a;
   --theme-scrollbar-thumb: #3a3a3a;
   --theme-github-fill: #ffffff;
   --theme-noise-opacity: 0.03;
+
+  /* Dark theme accent overrides: green gradient instead of blue-green */
+  --theme-gradient-primary: linear-gradient(229deg, #78FF86 -56%, #289F35 80%);
+  --theme-gradient-primary-animated: linear-gradient(135deg, #78FF86 0%, #289F35 50%, #78FF86 100%);
+  --theme-gradient-border: linear-gradient(135deg, #78FF86 0%, #289F35 50%, #78FF86 100%);
+  --theme-gradient-text: 90deg, #78FF86 0%, #289F35 100%;
+  --theme-gradient-border-static: 4deg, #78FF86 30%, #289F35 100%;
+  --theme-btn-primary-bg: linear-gradient(229deg, #78FF86 -56%, #289F35 80%);
+  --theme-btn-frosted-bg: rgba(255, 255, 255, 0.16);
+  --theme-btn-frosted-hover: rgba(255, 255, 255, 0.24);
+  --theme-card-border: rgba(255, 255, 255, 0.08);
+  --theme-card-glass-bg: rgba(255, 255, 255, 0.04);
+  /* Background blobs: green + purple in dark theme */
+  --theme-blob-color-1: #45e87a;
+  --theme-blob-color-2: #9333ea;
+  /* Accent gradient colors for buttons/text/borders */
+  --theme-accent-from: #78FF86;
+  --theme-accent-to: #289F35;
+  --theme-glow-color-1: rgba(120, 255, 134, 0.2);
+  --theme-glow-color-2: rgba(40, 159, 53, 0.1);
+}
+
+/* Light theme defaults for gradient vars */
+:root {
+  --theme-gradient-primary: linear-gradient(186deg, #5EFF6E -11%, #464EFF 71%);
+  --theme-gradient-primary-animated: linear-gradient(135deg, #5EFF6E 0%, #464EFF 50%, #5EFF6E 100%);
+  --theme-gradient-border: linear-gradient(135deg, #464EFF 0%, #5EFF6E 50%, #464EFF 100%);
+  --theme-gradient-text: 4deg, rgba(70,78,255,1) 21%, rgba(94,255,110,1) 100%;
+  --theme-gradient-border-static: 4deg, rgba(70,78,255,1) 30%, rgba(94,255,110,1) 100%;
+  --theme-btn-primary-bg: linear-gradient(186deg, #5EFF6E -11%, #464EFF 71%);
+  --theme-btn-frosted-bg: transparent;
+  --theme-btn-frosted-hover: transparent;
+  --theme-card-border: transparent;
+  --theme-card-glass-bg: transparent;
+  /* Background blobs: blue + green in light theme */
+  --theme-blob-color-1: rgba(70,78,255,1);
+  --theme-blob-color-2: rgba(94,255,110,1);
+  /* Accent gradient colors for buttons/text/borders */
+  --theme-accent-from: rgba(70,78,255,1);
+  --theme-accent-to: rgba(94,255,110,1);
+  --theme-glow-color-1: rgba(70, 78, 255, 0.2);
+  --theme-glow-color-2: rgba(94, 255, 110, 0.1);
 }
 
 @theme inline {
@@ -153,6 +195,28 @@ body {
   pointer-events: none;
   opacity: var(--theme-noise-opacity);
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* ── Dark theme component overrides ── */
+
+/* Dark cards: glass morphism with subtle border */
+[data-theme="dark"] .bg-bg-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Dark CTA glow uses green */
+[data-theme="dark"] .animate-cta-glow {
+  animation-name: glow-pulse-dark;
+}
+
+@keyframes glow-pulse-dark {
+  0%, 100% { box-shadow: 0 0 12px 2px rgba(120, 255, 134, 0.15), 0 0 24px 4px rgba(40, 159, 53, 0.08); }
+  50% { box-shadow: 0 0 20px 6px rgba(120, 255, 134, 0.25), 0 0 40px 8px rgba(40, 159, 53, 0.12); }
+}
+
+/* Dark step cards: no border override needed, just subtle glass */
+[data-theme="dark"] .bg-bg-inactive {
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 /* Animated gradient border for chat input */

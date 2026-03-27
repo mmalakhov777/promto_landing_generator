@@ -65,15 +65,11 @@ export function Advantages() {
             href="https://app.promto.ai"
             className="relative overflow-hidden w-[180px] h-[52px] inline-flex items-center justify-center gap-2 rounded-[60px] text-sm font-medium text-white transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2"
           >
-            <svg className="absolute inset-0 w-full h-full" viewBox="0 0 180 52" preserveAspectRatio="none" aria-hidden="true">
-              <defs>
-                <linearGradient id="adv-primary" x1="99" y1="-25" x2="86" y2="43" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#5EFF6E"/>
-                  <stop offset="1" stopColor="#464EFF"/>
-                </linearGradient>
-              </defs>
-              <rect width="180" height="52" fill="url(#adv-primary)"/>
-            </svg>
+            <span
+              className="absolute inset-0 rounded-[60px]"
+              style={{ background: 'var(--theme-btn-primary-bg)' }}
+              aria-hidden="true"
+            />
             <span className="relative z-10 inline-flex items-center gap-2">
               <Monitor size={18} />
               Создать сайт
@@ -89,7 +85,7 @@ export function Advantages() {
               className="absolute inset-0 rounded-[60px] animate-gradient-shift-slow"
               style={{
                 padding: '1.5px',
-                background: 'linear-gradient(135deg, #464EFF 0%, #5EFF6E 50%, #464EFF 100%)',
+                background: 'var(--theme-gradient-border)',
                 backgroundSize: '200% 200%',
                 WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
                 WebkitMaskComposite: 'xor',
@@ -98,7 +94,7 @@ export function Advantages() {
             />
             <span className="relative z-10 inline-flex items-center gap-2">
               <span className="flex-shrink-0 text-brand-blue"><AiMagic size={18} /></span>
-              <GradientText angle="4deg, rgba(70,78,255,1) 21%, rgba(94,255,110,1) 100%">
+              <GradientText angle="var(--theme-gradient-text)">
                 Попробовать бесплатно
               </GradientText>
             </span>

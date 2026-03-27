@@ -8,11 +8,11 @@ interface PricingPlanCardProps {
   onSelect: () => void;
 }
 
-/* Figma gradient fills */
-const PRICE_GRADIENT = 'linear-gradient(188deg, rgba(94,255,110,1) 0%, rgba(70,78,255,1) 71%)';
-const MONTH_GRADIENT = 'linear-gradient(184deg, rgba(94,255,110,1) 0%, rgba(70,78,255,1) 100%)';
-const STROKE_GRADIENT = 'linear-gradient(90deg, rgba(70,78,255,1) 0%, rgba(94,255,110,1) 100%)';
-const CHECK_GRADIENT = 'linear-gradient(195deg, rgba(94,255,110,1) 0%, rgba(70,78,255,1) 67%)';
+/* Theme-aware gradient fills — uses CSS vars for dark mode green accent */
+const PRICE_GRADIENT = `linear-gradient(188deg, var(--theme-accent-from) 0%, var(--theme-accent-to) 71%)`;
+const MONTH_GRADIENT = `linear-gradient(184deg, var(--theme-accent-from) 0%, var(--theme-accent-to) 100%)`;
+const STROKE_GRADIENT = `linear-gradient(90deg, var(--theme-accent-to) 0%, var(--theme-accent-from) 100%)`;
+const CHECK_GRADIENT = `linear-gradient(195deg, var(--theme-accent-from) 0%, var(--theme-accent-to) 67%)`;
 
 function PriceDisplay({ plan }: { plan: PricingPlan }) {
   return (

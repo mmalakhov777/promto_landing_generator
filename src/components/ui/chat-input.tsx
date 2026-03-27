@@ -118,7 +118,7 @@ export function ChatInput() {
         className="absolute inset-0 rounded-[24px] animate-gradient-shift"
         style={{
           padding: '1.25px',
-          background: 'linear-gradient(var(--chat-border-angle, 135deg), #464EFF 0%, #5EFF6E 50%, #464EFF 100%)',
+          background: 'var(--theme-gradient-border)',
           backgroundSize: '200% 200%',
           WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
           WebkitMaskComposite: 'xor',
@@ -252,7 +252,7 @@ export function ChatInput() {
               <div
                 className="absolute inset-0 rounded-full animate-gradient-shift-slow"
                 style={{
-                  background: 'linear-gradient(135deg, #464EFF 0%, #6EBF7A 50%, #464EFF 100%)',
+                  background: 'var(--theme-gradient-primary-animated)',
                   backgroundSize: '200% 200%',
                 }}
               />

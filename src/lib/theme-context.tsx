@@ -29,6 +29,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const toggle = useCallback(() => {
     setTheme((prev) => {
       const next = prev === 'light' ? 'dark' : 'light';
+      // toggle theme
       localStorage.setItem('promto-theme', next);
       document.documentElement.setAttribute('data-theme', next);
       return next;
@@ -36,8 +37,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <ThemeContext value={{ theme, toggle }}>
+    <ThemeContext.Provider value={{ theme, toggle }}>
       {children}
-    </ThemeContext>
+    </ThemeContext.Provider>
   );
 }

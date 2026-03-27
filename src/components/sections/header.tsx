@@ -1,16 +1,28 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { NAV_LINKS } from '@/lib/constants';
-import { useTheme } from '@/lib/theme-context';
 import { Button } from '@/components/ui/button';
 import { MobileMenu } from '@/components/ui/mobile-menu';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { theme } = useTheme();
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+
+  useEffect(() => {
+    // Watch for data-theme attribute changes to update logo
+    const observer = new MutationObserver(() => {
+      const t = document.documentElement.getAttribute('data-theme');
+      setTheme(t === 'dark' ? 'dark' : 'light');
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+    // Set initial
+    const t = document.documentElement.getAttribute('data-theme');
+    if (t === 'dark') setTheme('dark');
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <>

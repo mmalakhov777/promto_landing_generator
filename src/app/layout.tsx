@@ -67,7 +67,40 @@ const jsonLd = {
   },
 };
 
-const themeScript = `(function(){try{var t=localStorage.getItem('promto-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}})();`;
+const themeScript = `(function(){
+  try{
+    var t=localStorage.getItem('promto-theme');
+    if(t==='dark') document.documentElement.setAttribute('data-theme','dark');
+  }catch(e){}
+  // Attach theme toggle click handlers after DOM is ready
+  document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('click', function(e) {
+      var btn = e.target.closest('[data-theme-toggle]');
+      if (!btn) return;
+      var html = document.documentElement;
+      var isDark = html.getAttribute('data-theme') === 'dark';
+      var next = isDark ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      try { localStorage.setItem('promto-theme', next); } catch(ex) {}
+      // Update all toggle buttons
+      document.querySelectorAll('[data-theme-toggle]').forEach(function(b) {
+        var sun = b.querySelector('[data-icon="sun"]');
+        var moon = b.querySelector('[data-icon="moon"]');
+        if (sun) sun.style.display = next === 'dark' ? 'block' : 'none';
+        if (moon) moon.style.display = next === 'dark' ? 'none' : 'block';
+        b.setAttribute('aria-label', next === 'dark' ? 'Включить светлую тему' : 'Включить тёмную тему');
+      });
+    });
+    // Initialize icons based on current theme
+    var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.querySelectorAll('[data-theme-toggle]').forEach(function(b) {
+      var sun = b.querySelector('[data-icon="sun"]');
+      var moon = b.querySelector('[data-icon="moon"]');
+      if (sun) sun.style.display = isDark ? 'block' : 'none';
+      if (moon) moon.style.display = isDark ? 'none' : 'block';
+    });
+  });
+})();`;
 
 export default function RootLayout({
   children,

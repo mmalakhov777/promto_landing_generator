@@ -18,13 +18,13 @@ export function Hero() {
             {/* Mobile: single gradient across rotating word + suffix */}
             <RotatingWord
               className="block min-h-[70px] lg:hidden"
-              gradient="90deg, rgba(70,78,255,1) 0%, rgba(94,255,110,1) 100%"
+              gradient="var(--theme-gradient-text)"
               suffix={' за пару минут\u00a0\u2014'}
             />
             {/* Desktop: single gradient across rotating word + suffix */}
             <RotatingWord
               className="hidden lg:inline"
-              gradient="90deg, rgba(70,78,255,1) 26%, rgba(94,255,110,1) 72%"
+              gradient="var(--theme-gradient-text)"
               suffix={' за пару минут\u00a0\u2014'}
             />
             <br className="hidden lg:block" />
@@ -56,7 +56,7 @@ export function Hero() {
                 className="absolute inset-0 rounded-[60px] animate-gradient-shift-slow"
                 style={{
                   padding: '1.5px',
-                  background: 'linear-gradient(135deg, #464EFF 0%, #5EFF6E 50%, #464EFF 100%)',
+                  background: 'var(--theme-gradient-border)',
                   backgroundSize: '200% 200%',
                   WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
                   WebkitMaskComposite: 'xor',
@@ -65,7 +65,7 @@ export function Hero() {
               />
               <span className="relative z-10 inline-flex items-center gap-2">
                 <span className="flex-shrink-0 text-brand-blue"><AiMagic size={18} /></span>
-                <GradientText angle="4deg, rgba(70,78,255,1) 21%, rgba(94,255,110,1) 100%">
+                <GradientText angle="var(--theme-gradient-text)">
                   Попробовать бесплатно
                 </GradientText>
               </span>

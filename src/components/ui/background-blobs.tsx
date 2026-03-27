@@ -61,7 +61,7 @@ export function BackgroundBlobs() {
             width: blob.size,
             height: blob.size,
             opacity: blob.opacity,
-            background: 'linear-gradient(200deg, rgba(70,78,255,1) 21%, rgba(94,255,110,1) 88%)',
+            background: `linear-gradient(200deg, var(--theme-blob-color-1) 21%, var(--theme-blob-color-2) 88%)`,
             filter: `blur(${blob.blur}px)`,
             animationDelay: `${i * -3}s`,
           }}
@@ -77,7 +77,7 @@ export function BackgroundBlobs() {
             width: blob.size,
             height: blob.size,
             opacity: blob.opacity,
-            background: 'linear-gradient(200deg, rgba(70,78,255,1) 21%, rgba(94,255,110,1) 88%)',
+            background: `linear-gradient(200deg, var(--theme-blob-color-1) 21%, var(--theme-blob-color-2) 88%)`,
             filter: `blur(${blob.blur}px)`,
             animationDelay: `${i * -3}s`,
           }}

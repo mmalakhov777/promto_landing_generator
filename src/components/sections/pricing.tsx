@@ -31,7 +31,7 @@ export function Pricing() {
         <div className="hidden lg:flex flex-col items-center gap-6 max-w-[700px] mx-auto mb-20">
           <SectionHeading id="pricing-heading" align="center">
             Готовы создать свой проект<br />
-            <GradientText as="span" angle="-90deg, rgba(94,255,110,1) 0%, rgba(70,78,255,1) 100%">
+            <GradientText as="span" angle="var(--theme-gradient-text)">
               прямо сейчас?
             </GradientText>
           </SectionHeading>
@@ -104,7 +104,7 @@ export function Pricing() {
               Готовы создать свой проект{' '}
               <GradientText
                 as="span"
-                angle="-90deg, rgba(94,255,110,1) 0%, rgba(70,78,255,1) 100%"
+                angle="var(--theme-gradient-text)"
               >
                 прямо сейчас?
               </GradientText>

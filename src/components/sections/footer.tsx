@@ -60,7 +60,7 @@ export function Footer() {
                 href="https://app.promto.ai"
                 className="inline-flex items-center justify-center w-[247px] lg:w-[250px] h-[52px] rounded-[60px] text-sm font-medium text-white transition-all duration-200 hover:opacity-85 hover:scale-[1.02] hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 animate-cta-glow animate-gradient-shift-slow"
                 style={{
-                  background: 'linear-gradient(135deg, #5EFF6E 0%, #464EFF 50%, #5EFF6E 100%)',
+                  background: 'var(--theme-gradient-primary-animated)',
                   backgroundSize: '200% 200%',
                 }}
               >
