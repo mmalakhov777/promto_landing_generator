@@ -70,7 +70,11 @@ const jsonLd = {
 const themeScript = `(function(){
   try{
     var t=localStorage.getItem('promto-theme');
-    if(t==='dark') document.documentElement.setAttribute('data-theme','dark');
+    if(t==='dark'||t==='light'){
+      document.documentElement.setAttribute('data-theme',t);
+    }else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches){
+      document.documentElement.setAttribute('data-theme','dark');
+    }
   }catch(e){}
 
   document.addEventListener('DOMContentLoaded', function() {
