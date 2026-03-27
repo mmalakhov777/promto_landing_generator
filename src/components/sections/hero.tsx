@@ -1,7 +1,7 @@
 'use client';
 
-import { GradientText } from '@/components/ui/gradient-text';
 import { AiMagic } from '@/components/icons/ai-magic';
+import { Button } from '@/components/ui/button';
 import { ChatInput } from '@/components/ui/chat-input';
 import { RotatingWord } from '@/components/ui/rotating-word';
 
@@ -37,30 +37,9 @@ export function Hero() {
         <div className="mt-10 lg:mt-[50px] w-full max-w-[327px] lg:max-w-[442px] flex flex-col items-center gap-4 lg:gap-5">
           {/* Buttons: column on mobile, row on desktop */}
           <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-3">
-            {/* Outline "Попробовать бесплатно" — exact Figma SVG gradient border */}
-            <a
-              href="https://app.promto.ai"
-              className="btn-cta-outline relative w-full lg:w-[247px] h-[52px] inline-flex items-center justify-center gap-2 rounded-[60px] text-sm font-medium transition-all duration-200 hover:opacity-75 hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 animate-cta-glow"
-            >
-              {/* Animated gradient border — hidden in dark theme via CSS */}
-              <div
-                className="gradient-border-mask absolute inset-0 rounded-[60px] animate-gradient-shift-slow"
-                style={{
-                  padding: '1.5px',
-                  background: 'var(--theme-gradient-border)',
-                  backgroundSize: '200% 200%',
-                  WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-                  WebkitMaskComposite: 'xor',
-                  maskComposite: 'exclude',
-                }}
-              />
-              <span className="relative z-10 inline-flex items-center gap-2">
-                <span className="flex-shrink-0 text-brand-blue"><AiMagic size={18} /></span>
-                <GradientText angle="var(--theme-gradient-text)">
-                  Попробовать бесплатно
-                </GradientText>
-              </span>
-            </a>
+            <Button variant="outline" size="md" icon={<AiMagic size={18} color="gradient" />} href="https://app.promto.ai" className="w-full lg:w-auto justify-center" animated>
+              Попробовать бесплатно
+            </Button>
           </div>
 
         </div>

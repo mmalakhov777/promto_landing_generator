@@ -128,7 +128,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             <Button variant="primary" size="md" icon={<Monitor size={18} />} href="https://app.promto.ai" className="w-full justify-center">
               Создать сайт
             </Button>
-            <Button variant="outline" size="md" icon={<AiMagic size={18} color="gradient" />} href="https://app.promto.ai" className="w-full justify-center">
+            <Button variant="outline" size="md" icon={<AiMagic size={18} color="gradient" />} href="https://app.promto.ai" className="w-full justify-center" animated>
               Попробовать бесплатно
             </Button>
           </div>

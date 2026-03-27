@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import { FOOTER_LINKS } from '@/lib/constants';
+import { Button } from '@/components/ui/button';
+import { AiMagic } from '@/components/icons/ai-magic';
 
 export function Footer() {
   return (
@@ -56,16 +58,9 @@ export function Footer() {
                 Создавайте продукты с Промто быстрее,<br />
                 чем рынок успеет измениться
               </p>
-              <a
-                href="https://app.promto.ai"
-                className="btn-primary inline-flex items-center justify-center w-[247px] lg:w-[250px] h-[52px] rounded-[60px] text-sm font-medium text-white transition-all duration-200 hover:opacity-85 hover:scale-[1.02] hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 animate-cta-glow animate-gradient-shift-slow"
-                style={{
-                  background: 'var(--theme-gradient-primary-animated)',
-                  backgroundSize: '200% 200%',
-                }}
-              >
+              <Button variant="outline" size="md" icon={<AiMagic size={18} color="gradient" />} href="https://app.promto.ai" animated>
                 Попробовать бесплатно
-              </a>
+              </Button>
             </div>
           </div>
         </div>
