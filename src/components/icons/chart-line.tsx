@@ -1,0 +1,12 @@
+interface IconProps {
+  className?: string;
+  size?: number;
+}
+
+export function ChartLine({ className, size = 24 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="8 8 24 24" fill="none" className={className} aria-hidden="true">
+      <path d="M11 23.0002V24.8C11 25.9201 11 26.4798 11.218 26.9076C11.4097 27.2839 11.7155 27.5905 12.0918 27.7822C12.5192 28 13.079 28 14.1969 28H29.0002M11 23.0002V13M11 23.0002L14.8534 19.7891L14.8566 19.7865C15.5537 19.2056 15.9029 18.9146 16.2815 18.7964C16.7289 18.6567 17.2107 18.6788 17.6436 18.8584C18.0105 19.0106 18.3323 19.3324 18.9758 19.9759L18.9822 19.9823C19.6357 20.6358 19.9633 20.9635 20.3362 21.1153C20.7774 21.2951 21.2685 21.3106 21.7207 21.1606C22.1041 21.0334 22.4542 20.7275 23.1543 20.115L29 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  );
+}
