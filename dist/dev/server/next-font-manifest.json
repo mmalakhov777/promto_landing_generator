@@ -1,0 +1,13 @@
+{
+  "app": {
+    "[project]/src/app/page": [
+      "static/media/onest_cyrillic_ext-s.p.0xztgtmoqqci1.woff2",
+      "static/media/onest_cyrillic-s.p.12ox4z9fvqw1t.woff2",
+      "static/media/onest_latin_ext-s.p.02jhwc8-_v47-.woff2",
+      "static/media/onest_latin-s.p.0pn9g~a7tqmkp.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}

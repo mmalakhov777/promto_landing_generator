@@ -1,0 +1,51 @@
+/* [project]/src/app/onest_a69d58f7.module.css [app-client] (css) */
+@font-face {
+  font-family: onest;
+  src: url("../media/onest_cyrillic_ext-s.p.0xztgtmoqqci1.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: onest;
+  src: url("../media/onest_cyrillic-s.p.12ox4z9fvqw1t.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: onest;
+  src: url("../media/onest_latin_ext-s.p.02jhwc8-_v47-.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: onest;
+  src: url("../media/onest_latin-s.p.0pn9g~a7tqmkp.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: onest Fallback;
+  src: local(Arial);
+  ascent-override: 91.42%;
+  descent-override: 28.75%;
+  line-gap-override: 0.0%;
+  size-adjust: 106.1%;
+}
+
+.onest_a69d58f7-module__fa__GW__className {
+  font-family: onest, onest Fallback, system-ui, arial;
+}
+
+.onest_a69d58f7-module__fa__GW__variable {
+  --font-onest: "onest", "onest Fallback", system-ui, arial;
+}
+
+/*# sourceMappingURL=src_app_onest_a69d58f7_module_css_0w3-wzy._.single.css.map*/
