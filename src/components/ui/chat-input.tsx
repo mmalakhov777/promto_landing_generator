@@ -1,66 +1,9 @@
 'use client';
 
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Microphone } from '@/components/icons/microphone';
 import { ChevronDown } from '@/components/icons/chevron-down';
-
-const PHRASES = [
-  'Напиши Промто что ты хочешь создать...',
-  'Создай лендинг для моего стартапа...',
-  'Сделай интернет-магазин одежды...',
-  'Собери сервис бронирования для отеля...',
-];
-
-const AGENTS = ['Дизайнер', 'Разработчик', 'Аналитик', 'Тестировщик'];
-
-const TYPE_SPEED = 60;
-const DELETE_SPEED = 30;
-const PAUSE_AFTER_TYPE = 2500;
-const PAUSE_AFTER_DELETE = 500;
-
-function useTypewriter(active: boolean) {
-  const [display, setDisplay] = useState('');
-  const [phraseIdx, setPhraseIdx] = useState(0);
-  const [isTyping, setIsTyping] = useState(true);
-  const timerRef = useRef<ReturnType<typeof setTimeout>>(undefined);
-
-  const tick = useCallback(() => {
-    if (!active) return;
-    const phrase = PHRASES[phraseIdx];
-
-    if (isTyping) {
-      if (display.length < phrase.length) {
-        timerRef.current = setTimeout(() => {
-          setDisplay(phrase.slice(0, display.length + 1));
-        }, TYPE_SPEED);
-      } else {
-        timerRef.current = setTimeout(() => {
-          setIsTyping(false);
-        }, PAUSE_AFTER_TYPE);
-      }
-    } else {
-      if (display.length > 0) {
-        timerRef.current = setTimeout(() => {
-          setDisplay(display.slice(0, -1));
-        }, DELETE_SPEED);
-      } else {
-        timerRef.current = setTimeout(() => {
-          setPhraseIdx((i) => (i + 1) % PHRASES.length);
-          setIsTyping(true);
-        }, PAUSE_AFTER_DELETE);
-      }
-    }
-  }, [display, phraseIdx, isTyping, active]);
-
-  useEffect(() => {
-    tick();
-    return () => {
-      if (timerRef.current) clearTimeout(timerRef.current);
-    };
-  }, [tick]);
-
-  return display;
-}
+import { useRotatingContent, MODES } from '@/lib/use-rotating-content';
 
 function IconFigma() {
   return (
@@ -93,9 +36,9 @@ function IconGitHub() {
 export function ChatInput() {
   const [userValue, setUserValue] = useState('');
   const [focused, setFocused] = useState(false);
-  const [selectedAgent, setSelectedAgent] = useState(AGENTS[0]);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const { mode, placeholder, blurred, setMode } = useRotatingContent();
 
   useEffect(() => {
     if (!dropdownOpen) return;
@@ -108,8 +51,7 @@ export function ChatInput() {
     return () => document.removeEventListener('mousedown', handleClick);
   }, [dropdownOpen]);
 
-  const showAnimation = !focused && userValue.length === 0;
-  const typed = useTypewriter(showAnimation);
+  const showPlaceholder = !focused && userValue.length === 0;
 
   return (
     <div className="relative w-full h-[160px] lg:h-[154px]">
@@ -142,10 +84,16 @@ export function ChatInput() {
             className="w-full bg-transparent text-sm lg:text-base text-text-primary leading-[1.24] font-normal outline-none relative z-10"
             aria-label="Описание задачи"
           />
-          {showAnimation && (
-            <div className="absolute inset-0 flex items-center text-sm lg:text-base text-text-placeholder leading-[1.24] font-normal pointer-events-none">
-              {typed}
-              <span className="inline-block w-[2px] h-[1em] bg-text-placeholder ml-[1px] animate-blink" />
+          {showPlaceholder && (
+            <div
+              className="absolute inset-0 flex items-center text-sm lg:text-base text-text-placeholder leading-[1.4] font-normal pointer-events-none"
+              style={{
+                filter: blurred ? 'blur(10px)' : 'blur(0)',
+                opacity: blurred ? 0 : 1,
+                transition: 'filter 0.6s ease, opacity 0.6s ease',
+              }}
+            >
+              {placeholder}
             </div>
           )}
         </div>
@@ -188,7 +136,7 @@ export function ChatInput() {
                 aria-expanded={dropdownOpen}
                 onClick={() => setDropdownOpen((v) => !v)}
               >
-                {selectedAgent}
+                {mode}
                 <span
                   className="transition-transform duration-200"
                   style={{ transform: dropdownOpen ? 'rotate(180deg)' : 'rotate(0)' }}
@@ -206,22 +154,22 @@ export function ChatInput() {
                     boxShadow: 'var(--theme-dropdown-shadow)',
                   }}
                 >
-                  {AGENTS.map((agent) => (
+                  {MODES.map((agent) => (
                     <button
                       key={agent}
                       className="w-full text-left px-4 py-2.5 text-sm font-medium cursor-pointer transition-colors"
                       style={{
-                        color: agent === selectedAgent ? 'var(--color-brand-blue)' : 'var(--theme-text-primary)',
-                        backgroundColor: agent === selectedAgent ? 'rgba(70, 78, 255, 0.05)' : 'transparent',
+                        color: agent === mode ? 'var(--color-brand-blue)' : 'var(--theme-text-primary)',
+                        backgroundColor: agent === mode ? 'rgba(70, 78, 255, 0.05)' : 'transparent',
                       }}
                       onMouseEnter={(e) => {
-                        if (agent !== selectedAgent) e.currentTarget.style.backgroundColor = 'var(--theme-dropdown-hover)';
+                        if (agent !== mode) e.currentTarget.style.backgroundColor = 'var(--theme-dropdown-hover)';
                       }}
                       onMouseLeave={(e) => {
-                        if (agent !== selectedAgent) e.currentTarget.style.backgroundColor = 'transparent';
+                        if (agent !== mode) e.currentTarget.style.backgroundColor = 'transparent';
                       }}
                       onClick={() => {
-                        setSelectedAgent(agent);
+                        setMode(agent);
                         setDropdownOpen(false);
                       }}
                     >
