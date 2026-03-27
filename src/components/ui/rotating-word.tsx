@@ -1,7 +1,5 @@
 'use client';
 
-import { useState, useEffect, useRef, useCallback } from 'react';
-
 const WORDS = ['Сайт', 'API', 'Бота', 'Сервис', 'Приложение', 'Бэкенд'];
 
 interface RotatingWordProps {
@@ -10,39 +8,20 @@ interface RotatingWordProps {
 }
 
 export function RotatingWord({ className, gradient }: RotatingWordProps) {
-  const [index, setIndex] = useState(0);
-  const [blurred, setBlurred] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  useEffect(() => {
-    if (!mounted) return;
-
-    const id = setInterval(() => {
-      setBlurred(true);
-      setTimeout(() => {
-        setIndex((prev) => (prev + 1) % WORDS.length);
-        setBlurred(false);
-      }, 600);
-    }, 4000);
-
-    return () => clearInterval(id);
-  }, [mounted]);
-
+  // Animation is handled by the inline script in layout.tsx (DOM-based, no React hydration needed)
   return (
     <span
       className={className}
+      data-rotating-title=""
       style={{
         display: 'inline-block',
-        filter: blurred ? 'blur(10px)' : 'blur(0px)',
-        opacity: blurred ? 0 : 1,
+        filter: 'blur(0px)',
+        opacity: 1,
         transition: 'filter 0.6s ease, opacity 0.6s ease',
       }}
     >
       <span
+        data-rotating-word=""
         style={{
           backgroundImage: `linear-gradient(${gradient})`,
           WebkitBackgroundClip: 'text',
@@ -50,7 +29,7 @@ export function RotatingWord({ className, gradient }: RotatingWordProps) {
           backgroundClip: 'text',
         }}
       >
-        {WORDS[index]}
+        {WORDS[0]}
       </span>
       <span className="text-text-primary">
         {' '}за пару минут&nbsp;&mdash;

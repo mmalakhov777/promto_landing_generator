@@ -72,8 +72,9 @@ const themeScript = `(function(){
     var t=localStorage.getItem('promto-theme');
     if(t==='dark') document.documentElement.setAttribute('data-theme','dark');
   }catch(e){}
-  // Attach theme toggle click handlers after DOM is ready
+
   document.addEventListener('DOMContentLoaded', function() {
+    // ── Theme toggle ──
     document.addEventListener('click', function(e) {
       var btn = e.target.closest('[data-theme-toggle]');
       if (!btn) return;
@@ -82,7 +83,6 @@ const themeScript = `(function(){
       var next = isDark ? 'light' : 'dark';
       html.setAttribute('data-theme', next);
       try { localStorage.setItem('promto-theme', next); } catch(ex) {}
-      // Update all toggle buttons
       document.querySelectorAll('[data-theme-toggle]').forEach(function(b) {
         var sun = b.querySelector('[data-icon="sun"]');
         var moon = b.querySelector('[data-icon="moon"]');
@@ -91,7 +91,6 @@ const themeScript = `(function(){
         b.setAttribute('aria-label', next === 'dark' ? 'Включить светлую тему' : 'Включить тёмную тему');
       });
     });
-    // Initialize icons based on current theme
     var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
     document.querySelectorAll('[data-theme-toggle]').forEach(function(b) {
       var sun = b.querySelector('[data-icon="sun"]');
@@ -99,6 +98,37 @@ const themeScript = `(function(){
       if (sun) sun.style.display = isDark ? 'block' : 'none';
       if (moon) moon.style.display = isDark ? 'none' : 'block';
     });
+
+    // ── Rotating title + placeholder animation (pure DOM, no React) ──
+    var WORDS = ['Сайт','API','Бота','Сервис','Приложение','Бэкенд'];
+    var PLACEHOLDERS = [
+      'Попроси Промто создать сайт на React...',
+      'Попроси Промто написать REST API для магазина...',
+      'Попроси Промто создать Telegram-бота...',
+      'Попроси Промто разработать микросервис...',
+      'Попроси Промто написать мобильное приложение...',
+      'Попроси Промто настроить бэкенд с авторизацией...'
+    ];
+    var wordIdx = 0;
+    var titleEls = document.querySelectorAll('[data-rotating-title]');
+    var wordEls = document.querySelectorAll('[data-rotating-word]');
+    var phEls = document.querySelectorAll('[data-rotating-placeholder]');
+
+    if (titleEls.length > 0) {
+      setInterval(function() {
+        // Blur out
+        titleEls.forEach(function(el) { el.style.filter = 'blur(10px)'; el.style.opacity = '0'; });
+        phEls.forEach(function(el) { el.style.filter = 'blur(10px)'; el.style.opacity = '0'; });
+        setTimeout(function() {
+          wordIdx = (wordIdx + 1) % WORDS.length;
+          wordEls.forEach(function(el) { el.textContent = WORDS[wordIdx]; });
+          phEls.forEach(function(el) { el.textContent = PLACEHOLDERS[wordIdx]; });
+          // Blur in
+          titleEls.forEach(function(el) { el.style.filter = 'blur(0px)'; el.style.opacity = '1'; });
+          phEls.forEach(function(el) { el.style.filter = 'blur(0px)'; el.style.opacity = '1'; });
+        }, 600);
+      }, 4000);
+    }
   });
 })();`;
 

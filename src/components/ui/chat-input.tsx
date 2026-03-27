@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Microphone } from '@/components/icons/microphone';
 import { ChevronDown } from '@/components/icons/chevron-down';
-import { useRotatingContent, MODES } from '@/lib/use-rotating-content';
+import { MODES } from '@/lib/use-rotating-content';
 
 function IconFigma() {
   return (
@@ -37,8 +37,8 @@ export function ChatInput() {
   const [userValue, setUserValue] = useState('');
   const [focused, setFocused] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [selectedMode, setSelectedMode] = useState('Разработчик');
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const { mode, placeholder, blurred, setMode } = useRotatingContent();
 
   useEffect(() => {
     if (!dropdownOpen) return;
@@ -86,14 +86,15 @@ export function ChatInput() {
           />
           {showPlaceholder && (
             <div
+              data-rotating-placeholder=""
               className="absolute inset-0 flex items-center text-sm lg:text-base text-text-placeholder leading-[1.4] font-normal pointer-events-none"
               style={{
-                filter: blurred ? 'blur(10px)' : 'blur(0)',
-                opacity: blurred ? 0 : 1,
+                filter: 'blur(0px)',
+                opacity: 1,
                 transition: 'filter 0.6s ease, opacity 0.6s ease',
               }}
             >
-              {placeholder}
+              Попроси Промто создать сайт на React...
             </div>
           )}
         </div>
@@ -136,7 +137,7 @@ export function ChatInput() {
                 aria-expanded={dropdownOpen}
                 onClick={() => setDropdownOpen((v) => !v)}
               >
-                {mode}
+                {selectedMode}
                 <span
                   className="transition-transform duration-200"
                   style={{ transform: dropdownOpen ? 'rotate(180deg)' : 'rotate(0)' }}
@@ -159,17 +160,17 @@ export function ChatInput() {
                       key={agent}
                       className="w-full text-left px-4 py-2.5 text-sm font-medium cursor-pointer transition-colors"
                       style={{
-                        color: agent === mode ? 'var(--color-brand-blue)' : 'var(--theme-text-primary)',
-                        backgroundColor: agent === mode ? 'rgba(70, 78, 255, 0.05)' : 'transparent',
+                        color: agent === selectedMode ? 'var(--color-brand-blue)' : 'var(--theme-text-primary)',
+                        backgroundColor: agent === selectedMode ? 'rgba(70, 78, 255, 0.05)' : 'transparent',
                       }}
                       onMouseEnter={(e) => {
-                        if (agent !== mode) e.currentTarget.style.backgroundColor = 'var(--theme-dropdown-hover)';
+                        if (agent !== selectedMode) e.currentTarget.style.backgroundColor = 'var(--theme-dropdown-hover)';
                       }}
                       onMouseLeave={(e) => {
-                        if (agent !== mode) e.currentTarget.style.backgroundColor = 'transparent';
+                        if (agent !== selectedMode) e.currentTarget.style.backgroundColor = 'transparent';
                       }}
                       onClick={() => {
-                        setMode(agent);
+                        setSelectedMode(agent);
                         setDropdownOpen(false);
                       }}
                     >
