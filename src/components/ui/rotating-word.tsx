@@ -1,10 +1,8 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 
-const WORDS = ['сайт', 'API', 'бота', 'сервис', 'приложение', 'бэкенд'];
-const ROTATE_INTERVAL = 4000;
-const BLUR_DURATION = 600;
+const WORDS = ['Сайт', 'API', 'Бота', 'Сервис', 'Приложение', 'Бэкенд'];
 
 interface RotatingWordProps {
   className?: string;
@@ -14,33 +12,32 @@ interface RotatingWordProps {
 export function RotatingWord({ className, gradient }: RotatingWordProps) {
   const [index, setIndex] = useState(0);
   const [blurred, setBlurred] = useState(false);
-  const intervalRef = useRef<ReturnType<typeof setInterval>>(undefined);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      setBlurred(true);
-      timeoutRef.current = setTimeout(() => {
-        setIndex((i) => (i + 1) % WORDS.length);
-        setBlurred(false);
-      }, BLUR_DURATION);
-    }, ROTATE_INTERVAL);
-
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    };
+    setMounted(true);
   }, []);
 
-  const word = WORDS[index];
-  const capitalized = word.charAt(0).toUpperCase() + word.slice(1);
+  useEffect(() => {
+    if (!mounted) return;
+
+    const id = setInterval(() => {
+      setBlurred(true);
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % WORDS.length);
+        setBlurred(false);
+      }, 600);
+    }, 4000);
+
+    return () => clearInterval(id);
+  }, [mounted]);
 
   return (
     <span
       className={className}
       style={{
         display: 'inline-block',
-        filter: blurred ? 'blur(10px)' : 'blur(0)',
+        filter: blurred ? 'blur(10px)' : 'blur(0px)',
         opacity: blurred ? 0 : 1,
         transition: 'filter 0.6s ease, opacity 0.6s ease',
       }}
@@ -53,7 +50,7 @@ export function RotatingWord({ className, gradient }: RotatingWordProps) {
           backgroundClip: 'text',
         }}
       >
-        {capitalized}
+        {WORDS[index]}
       </span>
       <span className="text-text-primary">
         {' '}за пару минут&nbsp;&mdash;

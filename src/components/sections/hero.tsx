@@ -1,3 +1,5 @@
+'use client';
+
 import { GradientText } from '@/components/ui/gradient-text';
 import { AiMagic } from '@/components/icons/ai-magic';
 import { ChatInput } from '@/components/ui/chat-input';
