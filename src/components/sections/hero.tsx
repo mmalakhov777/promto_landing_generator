@@ -15,20 +15,9 @@ export function Hero() {
         <div className="w-full max-w-[327px] lg:max-w-[1200px] flex flex-col items-center gap-6 lg:gap-10">
           {/* Headline */}
           <h1 className="w-full max-w-[299px] lg:max-w-[1200px] text-[28px] lg:text-[48px] font-medium leading-[1.24] lg:leading-[1.12]">
-            {/* Mobile: single gradient across rotating word + suffix */}
             <RotatingWord
-              className="block min-h-[70px] lg:hidden"
               gradient="var(--theme-gradient-text)"
-              suffix={' за пару минут\u00a0\u2014'}
             />
-            {/* Desktop: single gradient across rotating word + suffix */}
-            <RotatingWord
-              className="hidden lg:inline"
-              gradient="var(--theme-gradient-text)"
-              suffix={' за пару минут\u00a0\u2014'}
-            />
-            <br className="hidden lg:block" />
-            <span className="text-text-primary"> просто напишите, что вам нужно</span>
           </h1>
 
           {/* Subheadline — 14px mobile / 16px desktop */}

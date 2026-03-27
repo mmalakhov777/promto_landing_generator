@@ -9,10 +9,9 @@ const BLUR_DURATION = 600;
 interface RotatingWordProps {
   className?: string;
   gradient: string;
-  suffix: string;
 }
 
-export function RotatingWord({ className, gradient, suffix }: RotatingWordProps) {
+export function RotatingWord({ className, gradient }: RotatingWordProps) {
   const [index, setIndex] = useState(0);
   const [blurred, setBlurred] = useState(false);
   const intervalRef = useRef<ReturnType<typeof setInterval>>(undefined);
@@ -37,30 +36,31 @@ export function RotatingWord({ className, gradient, suffix }: RotatingWordProps)
   const capitalized = word.charAt(0).toUpperCase() + word.slice(1);
 
   return (
-    <span className={className}>
+    <span
+      className={className}
+      style={{
+        display: 'inline-block',
+        filter: blurred ? 'blur(10px)' : 'blur(0)',
+        opacity: blurred ? 0 : 1,
+        transition: 'filter 0.6s ease, opacity 0.6s ease',
+      }}
+    >
       <span
         style={{
-          display: 'inline-block',
           backgroundImage: `linear-gradient(${gradient})`,
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',
-          filter: blurred ? 'blur(10px)' : 'blur(0)',
-          opacity: blurred ? 0 : 1,
-          transition: 'filter 0.6s ease, opacity 0.6s ease',
         }}
       >
         {capitalized}
       </span>
-      <span
-        style={{
-          backgroundImage: `linear-gradient(${gradient})`,
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-        }}
-      >
-        {suffix}
+      <span className="text-text-primary">
+        {' '}за пару минут&nbsp;&mdash;
+      </span>
+      <br className="hidden lg:block" />
+      <span className="text-text-primary">
+        {' '}просто напишите, что вам нужно
       </span>
     </span>
   );
