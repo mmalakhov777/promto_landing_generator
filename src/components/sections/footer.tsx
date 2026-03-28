@@ -12,14 +12,14 @@ export function Footer() {
           {/* Logo + tagline */}
           <div className="w-[240px] flex-shrink-0 flex flex-col gap-8 lg:gap-10">
             <Image
-              src="/images/footer-logo.svg"
+              src="/images/footer-logo-black.svg"
               alt="Промто"
               width={142}
               height={34}
               className="w-[142px] h-[34px] block dark-hidden"
             />
             <Image
-              src="/images/footer-logo-white.svg"
+              src="/images/footer-logo-white-mono.svg"
               alt="Промто"
               width={142}
               height={34}
