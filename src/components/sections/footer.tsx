@@ -83,10 +83,16 @@ export function Footer() {
               Пользовательское соглашение
             </a>
             <a
-              href="https://app.promto.ai/policy.pdf"
+              href="https://app.promto.ai/privacy"
               className="text-xs text-text-muted leading-[1.25] hover:text-brand-blue transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded-sm"
             >
               Политика конфиденциальности
+            </a>
+            <a
+              href="https://app.promto.ai/consent"
+              className="text-xs text-text-muted leading-[1.25] hover:text-brand-blue transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded-sm"
+            >
+              Согласие на обработку данных
             </a>
           </div>
           <span className="text-xs text-text-muted leading-[1.25]">© Promto, 2026</span>
@@ -103,10 +109,16 @@ export function Footer() {
               Пользовательское соглашение
             </a>
             <a
-              href="https://app.promto.ai/policy.pdf"
+              href="https://app.promto.ai/privacy"
               className="text-xs text-text-secondary leading-[1.25] text-right hover:text-brand-blue transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded-sm"
             >
               Политика конфиденциальности
+            </a>
+            <a
+              href="https://app.promto.ai/consent"
+              className="text-xs text-text-secondary leading-[1.25] text-right hover:text-brand-blue transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded-sm"
+            >
+              Согласие на обработку данных
             </a>
           </div>
         </div>
