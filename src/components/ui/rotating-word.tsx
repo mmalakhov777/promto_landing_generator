@@ -28,26 +28,11 @@ export function RotatingWord({ className, gradient }: RotatingWordProps) {
         transition: 'filter 0.6s ease, opacity 0.6s ease',
       }}
     >
-      {/* Inline container that reserves width of the widest word */}
-      <span className="inline-grid" style={{ gridTemplateColumns: '1fr', verticalAlign: 'baseline', lineHeight: 'inherit' }}>
-        {/* Hidden words to reserve max width */}
-        {WORDS.map((word) => (
-          <span
-            key={word}
-            aria-hidden="true"
-            className="invisible"
-            style={{ ...gradientStyle, gridRow: 1, gridColumn: 1, lineHeight: 'inherit' }}
-          >
-            {word}
-          </span>
-        ))}
-        {/* Visible rotating word — same grid cell, stacked on top */}
-        <span
-          data-rotating-word=""
-          style={{ ...gradientStyle, gridRow: 1, gridColumn: 1, lineHeight: 'inherit' }}
-        >
-          {WORDS[0]}
-        </span>
+      <span
+        data-rotating-word=""
+        style={gradientStyle}
+      >
+        {WORDS[0]}
       </span>
       <span className="text-text-primary">
         {' '}за пару минут&nbsp;&mdash;
