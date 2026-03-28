@@ -54,7 +54,7 @@ export function Pricing() {
             <div className="flex flex-col gap-6">
               {/* style_D9SY3U: 24px/500/1.25 */}
               <h3 className="text-2xl font-semibold text-text-primary leading-[1.25]">
-                Безлимитный доступ без ограничений по токенам и запросам
+                Полный доступ без ограничений по токенам
               </h3>
 
               <div className="flex flex-col gap-3">
