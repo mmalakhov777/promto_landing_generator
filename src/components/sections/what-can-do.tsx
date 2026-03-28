@@ -113,6 +113,12 @@ export function WhatCanDo() {
             </div>
           ))}
         </div>
+
+        {/* Tech note */}
+        <p className="mt-[60px] lg:mt-20 text-center text-sm text-text-secondary leading-[1.5]">
+          Мы поддерживаем все популярные фреймворки и веб-технологии — от PHP до Redis.
+          Если хотите, Промто справится даже с&nbsp;1С.
+        </p>
       </SectionContainer>
     </section>
   );
