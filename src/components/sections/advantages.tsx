@@ -60,7 +60,7 @@ export function Advantages() {
 
         {/* CTA buttons — desktop only, reused from hero (same Figma spec) */}
         <div className="hidden lg:flex items-center justify-center gap-3 mt-20">
-          {/* Primary "Создать сайт" — exact Figma SVG gradient */}
+          {/* Primary "Создать проект" — exact Figma SVG gradient */}
           <a
             href="https://app.promto.ai"
             className="btn-primary relative overflow-hidden w-[180px] h-[52px] inline-flex items-center justify-center gap-2 rounded-[60px] text-sm font-medium text-white transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2"
@@ -72,7 +72,7 @@ export function Advantages() {
             />
             <span className="relative z-10 inline-flex items-center gap-2">
               <Monitor size={18} />
-              Создать сайт
+              Создать проект
             </span>
           </a>
 
