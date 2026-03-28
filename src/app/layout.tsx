@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { onest } from './fonts';
 import './globals.css';
 import { ThemeProvider } from '@/lib/theme-context';
+import { FAQ_ITEMS } from '@/lib/constants';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://promto.ai'),
@@ -53,26 +54,44 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-touch-icon.png',
   },
+  manifest: '/manifest.json',
+  other: {
+    'theme-color': '#FAFAFA',
+  },
   alternates: {
     canonical: 'https://promto.ai',
   },
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: 'Промто',
-  description:
-    'ИИ-сервис для создания сайтов, сервисов и чат-ботов по текстовому описанию',
-  applicationCategory: 'WebApplication',
-  operatingSystem: 'Web',
-  offers: {
-    '@type': 'AggregateOffer',
-    lowPrice: '2000',
-    highPrice: '10000',
-    priceCurrency: 'RUB',
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Промто',
+    description:
+      'ИИ-сервис для создания сайтов, сервисов и чат-ботов по текстовому описанию',
+    applicationCategory: 'WebApplication',
+    operatingSystem: 'Web',
+    offers: {
+      '@type': 'AggregateOffer',
+      lowPrice: '2000',
+      highPrice: '10000',
+      priceCurrency: 'RUB',
+    },
   },
-};
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQ_ITEMS.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.a,
+      },
+    })),
+  },
+];
 
 const themeScript = `(function(){
   try{
@@ -151,11 +170,16 @@ export default function RootLayout({
   return (
     <html lang="ru" className={`${onest.variable} antialiased`} suppressHydrationWarning>
       <head>
+        {/* Preconnect hints */}
+        <link rel="preconnect" href="https://mc.yandex.ru" />
+        <link rel="dns-prefetch" href="https://mc.yandex.ru" />
+        <link rel="dns-prefetch" href="https://app.promto.ai" />
+        {/* Theme script — must run before paint to prevent FOUC */}
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-        {/* Yandex.Metrika counter */}
+        {/* Yandex.Metrika — deferred to not block rendering */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=108237139','ym');ym(108237139,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});`,
+            __html: `window.addEventListener('load',function(){(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=108237139','ym');ym(108237139,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true})});`,
           }}
         />
         <noscript>

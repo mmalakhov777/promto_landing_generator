@@ -82,6 +82,7 @@ export function Header() {
               className="w-[42px] h-[42px] flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 rounded-[32px]"
               onClick={() => setMobileOpen(true)}
               aria-label="Открыть меню"
+              aria-expanded={mobileOpen}
             >
               <svg width="42" height="42" viewBox="0 0 42 42" fill="none" aria-hidden="true" style={{ pointerEvents: 'none' }} className="hamburger-icon">
                 <rect x="0.625" y="0.625" width="40.75" height="40.75" rx="20.375" stroke="url(#hb-border)" strokeWidth="1.25" />

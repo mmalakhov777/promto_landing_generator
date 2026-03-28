@@ -26,26 +26,26 @@ const STEP_TITLES: { desktop: ReactNode; mobile: ReactNode }[] = [
 
 const STEP_IMAGES = [
   {
-    desktop: '/images/steps/step1-desktop.png',
-    mobile: '/images/steps/step1-mobile.png',
+    desktop: '/images/steps/step1-desktop.webp',
+    mobile: '/images/steps/step1-mobile.webp',
     desktopSize: { w: 1300, h: 630 },
     mobileSize: { w: 670, h: 324 },
   },
   {
-    desktop: '/images/steps/step2-desktop.png',
-    mobile: '/images/steps/step2-mobile.png',
+    desktop: '/images/steps/step2-desktop.webp',
+    mobile: '/images/steps/step2-mobile.webp',
     desktopSize: { w: 1300, h: 630 },
     mobileSize: { w: 670, h: 324 },
   },
   {
-    desktop: '/images/steps/step3-desktop.png',
-    mobile: '/images/steps/step3-mobile.png',
+    desktop: '/images/steps/step3-desktop.webp',
+    mobile: '/images/steps/step3-mobile.webp',
     desktopSize: { w: 1348, h: 678 },
     mobileSize: { w: 710, h: 364 },
   },
   {
-    desktop: '/images/steps/step4-desktop.png',
-    mobile: '/images/steps/step4-mobile.png',
+    desktop: '/images/steps/step4-desktop.webp',
+    mobile: '/images/steps/step4-mobile.webp',
     desktopSize: { w: 1348, h: 678 },
     mobileSize: { w: 695, h: 349 },
   },

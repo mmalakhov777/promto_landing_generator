@@ -80,6 +80,7 @@ export function StepCard({
               height={desktopSize.h}
               className="w-full h-full object-cover"
               aria-hidden="true"
+              loading="lazy"
             />
           </div>
         </div>
@@ -108,6 +109,7 @@ export function StepCard({
                 height={mobileSize.h}
                 className="w-full h-full object-cover"
                 aria-hidden="true"
+                loading="lazy"
               />
             </div>
           </div>

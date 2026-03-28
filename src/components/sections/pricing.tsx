@@ -83,7 +83,7 @@ export function Pricing() {
           {/* Right: gradient preview panel — 582×557, exported from Figma */}
           <div className="flex-1 flex-shrink-0">
             <Image
-              src="/images/pricing/pricing-chat-panel.png"
+              src="/images/pricing/pricing-chat-panel.webp"
               alt="Пример интерфейса Промто"
               width={582}
               height={557}
