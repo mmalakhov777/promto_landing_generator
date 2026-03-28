@@ -37,7 +37,7 @@ export function ChatInput() {
   const [userValue, setUserValue] = useState('');
   const [focused, setFocused] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [selectedMode, setSelectedMode] = useState('Opus 4.6');
+  const [selectedMode, setSelectedMode] = useState('Pro Max');
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
