@@ -169,7 +169,7 @@ export function ChatInput() {
 
               {dropdownOpen && (
                 <div
-                  className="absolute left-0 bottom-full mb-2 rounded-2xl py-2 min-w-[180px] z-50"
+                  className="absolute left-0 bottom-full mb-2 rounded-2xl py-2 min-w-[220px] z-50"
                   style={{
                     backgroundColor: 'var(--theme-dropdown-bg)',
                     boxShadow: 'var(--theme-dropdown-shadow)',
@@ -178,7 +178,7 @@ export function ChatInput() {
                   {MODES.map((agent) => (
                     <button
                       key={agent}
-                      className="w-full text-left px-4 py-2.5 text-sm font-medium cursor-pointer transition-colors flex items-center gap-2"
+                      className="w-full text-left px-4 py-2.5 text-sm font-medium cursor-pointer transition-colors flex flex-col gap-0.5"
                       style={{
                         color: agent === selectedMode ? 'var(--color-brand-blue)' : 'var(--theme-text-primary)',
                         backgroundColor: agent === selectedMode ? 'rgba(70, 78, 255, 0.05)' : 'transparent',
@@ -196,8 +196,8 @@ export function ChatInput() {
                     >
                       {agent}
                       {MODE_MODELS[agent] && (
-                        <span className="flex items-center gap-1 opacity-50 font-normal">
-                          <IconAnthropic size={14} />
+                        <span className="flex items-center gap-1 opacity-50 font-normal text-xs">
+                          <IconAnthropic size={12} />
                           {MODE_MODELS[agent]}
                         </span>
                       )}
