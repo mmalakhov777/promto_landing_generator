@@ -290,9 +290,14 @@ body {
   display: none !important;
 }
 
-/* Icons white in dark theme outline buttons — override SVG gradient strokes */
+/* Icons white in dark theme outline buttons — override SVG gradient strokes and fills */
 [data-theme="dark"] .btn-outline-sm svg path {
   stroke: white !important;
+  fill: none !important;
+}
+
+[data-theme="dark"] .btn-outline-sm svg circle {
+  fill: white !important;
 }
 
 [data-theme="dark"] .btn-outline-sm svg {
