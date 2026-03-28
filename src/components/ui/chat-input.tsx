@@ -5,6 +5,14 @@ import { Microphone } from '@/components/icons/microphone';
 import { ChevronDown } from '@/components/icons/chevron-down';
 import { MODES, MODE_MODELS } from '@/lib/use-rotating-content';
 
+function IconAnthropic({ size = 16 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 46 32" fill="none" aria-hidden="true">
+      <path d="M32.73 0H26.2l13.27 32h6.53L32.73 0ZM13.27 0 0 32h6.53l2.72-6.57h13.9L25.87 32h6.53L19.13 0h-5.86Zm-.52 20.2 4.93-11.9 4.93 11.9H12.75Z" fill="currentColor"/>
+    </svg>
+  );
+}
+
 function IconFigma() {
   return (
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -170,7 +178,7 @@ export function ChatInput() {
                   {MODES.map((agent) => (
                     <button
                       key={agent}
-                      className="w-full text-left px-4 py-2.5 text-sm font-medium cursor-pointer transition-colors"
+                      className="w-full text-left px-4 py-2.5 text-sm font-medium cursor-pointer transition-colors flex items-center gap-2"
                       style={{
                         color: agent === selectedMode ? 'var(--color-brand-blue)' : 'var(--theme-text-primary)',
                         backgroundColor: agent === selectedMode ? 'rgba(70, 78, 255, 0.05)' : 'transparent',
@@ -188,7 +196,10 @@ export function ChatInput() {
                     >
                       {agent}
                       {MODE_MODELS[agent] && (
-                        <span className="ml-1.5 opacity-50 font-normal">{MODE_MODELS[agent]}</span>
+                        <span className="flex items-center gap-1 opacity-50 font-normal">
+                          <IconAnthropic size={14} />
+                          {MODE_MODELS[agent]}
+                        </span>
                       )}
                     </button>
                   ))}

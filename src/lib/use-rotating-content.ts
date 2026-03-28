@@ -41,9 +41,9 @@ const AGENT_CONTENT: Record<string, { words: string[]; placeholders: string[] }>
 export const MODES = Object.keys(AGENT_CONTENT);
 
 export const MODE_MODELS: Record<string, string> = {
-  'Про Макс': 'Opus 4.6',
-  'Про': 'Sonnet 4.6',
-  'Мини': 'Haiku 4.5',
+  'Про Макс': 'Claude Opus 4.6',
+  'Про': 'Claude Sonnet 4.6',
+  'Мини': 'Claude Haiku 4.5',
 };
 
 const ROTATE_INTERVAL = 4000;
