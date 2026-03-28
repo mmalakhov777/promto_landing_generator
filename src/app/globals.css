@@ -92,13 +92,13 @@
 
   /* Dark theme accent overrides: green gradient instead of blue-green */
   --theme-gradient-primary: linear-gradient(229deg, #78FF86 -56%, #289F35 80%);
-  --theme-gradient-primary-animated: rgba(255, 255, 255, 0.16);
+  --theme-gradient-primary-animated: linear-gradient(229deg, #78FF86 -56%, #289F35 80%);
   --theme-send-btn-bg: linear-gradient(135deg, #78FF86 0%, #289F35 50%, #78FF86 100%);
   --theme-gradient-border: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.5) 100%);
   --theme-gradient-text: 90deg, #78FF86 0%, #289F35 100%;
   --theme-gradient-border-static: 4deg, #78FF86 30%, #289F35 100%;
-  --theme-btn-primary-bg: rgba(255, 255, 255, 0.16);
-  --theme-btn-primary-hover-bg: rgba(255, 255, 255, 0.24);
+  --theme-btn-primary-bg: linear-gradient(229deg, #78FF86 -56%, #289F35 80%);
+  --theme-btn-primary-hover-bg: linear-gradient(229deg, #78FF86 -56%, #289F35 80%);
   --theme-btn-frosted-bg: rgba(255, 255, 255, 0.16);
   --theme-btn-frosted-hover: rgba(255, 255, 255, 0.24);
   --theme-card-border: rgba(255, 255, 255, 0.08);
@@ -219,16 +219,17 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* ── Dark theme: primary CTA buttons become frosted glass ── */
+/* ── Dark theme: primary CTA buttons — green gradient fill + white text ── */
 [data-theme="dark"] .btn-primary {
-  background: rgba(255, 255, 255, 0.16) !important;
+  background: linear-gradient(229deg, #78FF86 -56%, #289F35 80%) !important;
   color: white !important;
   border: none !important;
   box-shadow: none !important;
 }
 
 [data-theme="dark"] .btn-primary:hover {
-  background: rgba(255, 255, 255, 0.24) !important;
+  background: linear-gradient(229deg, #78FF86 -56%, #289F35 80%) !important;
+  opacity: 0.85;
 }
 
 /* ── Dark theme: outline CTA buttons become frosted glass ── */
@@ -267,15 +268,15 @@ body {
   stroke: white !important;
 }
 
-/* Outline buttons in dark theme: frosted glass */
+/* Outline/secondary buttons in dark theme: transparent 12% + white text */
 [data-theme="dark"] .btn-outline-sm {
-  background: rgba(255, 255, 255, 0.16) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
   border: none !important;
   color: white !important;
 }
 
 [data-theme="dark"] .btn-outline-sm:hover {
-  background: rgba(255, 255, 255, 0.24) !important;
+  background: rgba(255, 255, 255, 0.20) !important;
 }
 
 [data-theme="dark"] .btn-outline-sm .bg-clip-text {
