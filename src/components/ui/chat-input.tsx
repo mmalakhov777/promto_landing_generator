@@ -197,8 +197,9 @@ export function ChatInput() {
           {/* Right: Mic + Send */}
           <div className="flex items-center gap-3 lg:gap-5">
             <button
-              className="flex-shrink-0 text-text-placeholder hover:text-text-secondary transition-colors"
+              className="flex-shrink-0 text-text-placeholder hover:text-text-secondary transition-colors cursor-pointer"
               aria-label="Голосовой ввод"
+              onClick={() => fillInput('В Промто все запросы можно давать голосом')}
             >
               <Microphone size={24} className="lg:hidden" />
               <Microphone size={28} className="hidden lg:block" />
