@@ -84,17 +84,17 @@ export function WhatIsPromto() {
               <IconBox icon={<ScaleUp size={20} />} color="purple" size="sm" />
               <div className="flex flex-col gap-3">
                 <h3 className="text-xl font-medium text-text-primary leading-[1.24] sm:hidden">
-                  Нет ограничений по масштабированию
+                  Без ограничений по масштабированию
                 </h3>
                 <h3 className="text-xl font-medium text-text-primary leading-[1.24] hidden sm:block">
-                  Нет ограничений по&nbsp;масштабированию
+                  Без ограничений по&nbsp;масштабированию
                 </h3>
                 <p className="text-xs font-normal text-text-secondary leading-[1.3] sm:hidden">
-                  Создавайте проекты любой сложности
-                  <br />— от лендинга до полноценного сервиса
+                  Начни с небольшого лендинга
+                  <br />и развивай его до крупного сервиса
                 </p>
                 <p className="text-sm text-text-secondary leading-[1.3] hidden sm:block">
-                  Создавайте проекты любой сложности — от&nbsp;лендинга до&nbsp;полноценного сервиса
+                  Начни с&nbsp;небольшого лендинга и&nbsp;развивай его до&nbsp;крупного сервиса
                 </p>
               </div>
             </Card>
