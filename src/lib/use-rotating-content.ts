@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 
 const AGENT_CONTENT: Record<string, { words: string[]; placeholders: string[] }> = {
-  'Pro Max': {
+  'Про Макс': {
     words: ['Сайт', 'API', 'Бот', 'Сервис', 'Приложение', 'Бэкенд'],
     placeholders: [
       'Попроси Промто создать сайт на React...',
@@ -14,7 +14,7 @@ const AGENT_CONTENT: Record<string, { words: string[]; placeholders: string[] }>
       'Попроси Промто настроить бэкенд с авторизацией...',
     ],
   },
-  'Pro': {
+  'Про': {
     words: ['Сайт', 'API', 'Бот', 'Сервис', 'Приложение', 'Бэкенд'],
     placeholders: [
       'Попроси Промто создать сайт на React...',
@@ -25,7 +25,7 @@ const AGENT_CONTENT: Record<string, { words: string[]; placeholders: string[] }>
       'Попроси Промто настроить бэкенд с авторизацией...',
     ],
   },
-  'Mini': {
+  'Мини': {
     words: ['Сайт', 'API', 'Бот', 'Сервис', 'Приложение', 'Бэкенд'],
     placeholders: [
       'Попроси Промто создать сайт на React...',
@@ -44,7 +44,7 @@ const ROTATE_INTERVAL = 4000;
 const BLUR_DURATION = 600;
 
 export function useRotatingContent() {
-  const [mode, setModeState] = useState('Pro Max');
+  const [mode, setModeState] = useState('Про Макс');
   const [index, setIndex] = useState(0);
   const [blurred, setBlurred] = useState(false);
   const modeRef = useRef(mode);
