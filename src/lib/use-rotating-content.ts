@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 
 const AGENT_CONTENT: Record<string, { words: string[]; placeholders: string[] }> = {
-  'Claude Opus 4.6': {
+  'Opus 4.6': {
     words: ['Сайт', 'API', 'Бот', 'Сервис', 'Приложение', 'Бэкенд'],
     placeholders: [
       'Попроси Промто создать сайт на React...',
@@ -14,7 +14,7 @@ const AGENT_CONTENT: Record<string, { words: string[]; placeholders: string[] }>
       'Попроси Промто настроить бэкенд с авторизацией...',
     ],
   },
-  'Claude Sonnet 4.6': {
+  'Sonnet 4.6': {
     words: ['Сайт', 'API', 'Бот', 'Сервис', 'Приложение', 'Бэкенд'],
     placeholders: [
       'Попроси Промто создать сайт на React...',
@@ -25,7 +25,7 @@ const AGENT_CONTENT: Record<string, { words: string[]; placeholders: string[] }>
       'Попроси Промто настроить бэкенд с авторизацией...',
     ],
   },
-  'Claude Haiku 4.5': {
+  'Haiku 4.5': {
     words: ['Сайт', 'API', 'Бот', 'Сервис', 'Приложение', 'Бэкенд'],
     placeholders: [
       'Попроси Промто создать сайт на React...',
@@ -44,7 +44,7 @@ const ROTATE_INTERVAL = 4000;
 const BLUR_DURATION = 600;
 
 export function useRotatingContent() {
-  const [mode, setModeState] = useState('Claude Opus 4.6');
+  const [mode, setModeState] = useState('Opus 4.6');
   const [index, setIndex] = useState(0);
   const [blurred, setBlurred] = useState(false);
   const modeRef = useRef(mode);
