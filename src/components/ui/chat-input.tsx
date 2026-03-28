@@ -90,13 +90,13 @@ export function ChatInput() {
             onChange={(e) => setUserValue(e.target.value)}
             onFocus={() => setFocused(true)}
             onBlur={() => setFocused(false)}
-            className="w-full bg-transparent text-sm lg:text-base text-text-primary leading-[1.24] font-normal outline-none relative z-10"
+            className="w-full bg-transparent text-base text-text-primary leading-[1.24] font-normal outline-none relative z-10 text-left"
             aria-label="Описание задачи"
           />
           {showPlaceholder && (
             <div
               data-rotating-placeholder=""
-              className="absolute inset-0 flex items-center text-sm lg:text-base text-text-placeholder leading-[1.4] font-normal pointer-events-none"
+              className="absolute inset-0 flex items-center text-base text-text-placeholder leading-[1.4] font-normal pointer-events-none text-left"
               style={{
                 filter: 'blur(0px)',
                 opacity: 1,
