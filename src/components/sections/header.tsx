@@ -38,7 +38,7 @@ export function Header() {
           <div className="flex items-center gap-[60px] xl:gap-[162px]">
             <Link href="/" className="flex-shrink-0" aria-label="Промто — на главную">
               <img
-                src={theme === 'dark' ? '/images/footer-logo.svg' : '/logo-desktop.svg'}
+                src={theme === 'dark' ? '/images/footer-logo-white.svg' : '/logo-desktop.svg'}
                 alt="Промто"
                 width={121}
                 height={32}

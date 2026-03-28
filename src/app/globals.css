@@ -298,6 +298,14 @@ body {
   color: white !important;
 }
 
+/* Theme-based logo visibility */
+[data-theme="dark"] .dark-hidden {
+  display: none !important;
+}
+[data-theme="dark"] .dark-visible {
+  display: block !important;
+}
+
 /* Animated gradient border for chat input */
 @keyframes gradient-shift {
   0% { background-position: 0% 50%; }

@@ -16,7 +16,14 @@ export function Footer() {
               alt="Промто"
               width={142}
               height={34}
-              className="w-[142px] h-[34px]"
+              className="w-[142px] h-[34px] block dark-hidden"
+            />
+            <Image
+              src="/images/footer-logo-white.svg"
+              alt="Промто"
+              width={142}
+              height={34}
+              className="w-[142px] h-[34px] hidden dark-visible"
             />
             <p className="text-sm text-text-muted lg:text-text-secondary leading-[1.25]">
               Единая платформа для разработки.
