@@ -51,6 +51,14 @@ export function ChatInput() {
     return () => document.removeEventListener('mousedown', handleClick);
   }, [dropdownOpen]);
 
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const fillInput = (text: string) => {
+    setUserValue(text);
+    setFocused(true);
+    setTimeout(() => inputRef.current?.focus(), 0);
+  };
+
   const showPlaceholder = !focused && userValue.length === 0;
 
   return (
@@ -76,6 +84,7 @@ export function ChatInput() {
         {/* Input area with typewriter overlay */}
         <div className="relative w-full">
           <input
+            ref={inputRef}
             type="text"
             value={userValue}
             onChange={(e) => setUserValue(e.target.value)}
@@ -107,6 +116,7 @@ export function ChatInput() {
             <button
               className="flex-shrink-0 opacity-60 hover:opacity-100 transition-opacity cursor-pointer"
               aria-label="Подключить Figma"
+              onClick={() => fillInput('Расскажи как перенести дизайн из Фигмы')}
             >
               <IconFigma />
             </button>
@@ -115,6 +125,7 @@ export function ChatInput() {
             <button
               className="flex-shrink-0 text-text-placeholder hover:text-text-secondary transition-colors cursor-pointer"
               aria-label="Прикрепить файл"
+              onClick={() => fillInput('Как прикрепить файлы')}
             >
               <IconAttach />
             </button>
@@ -123,6 +134,7 @@ export function ChatInput() {
             <button
               className="flex-shrink-0 opacity-60 hover:opacity-100 transition-opacity cursor-pointer"
               aria-label="Подключить GitHub"
+              onClick={() => fillInput('Расскажи как подключить свой GitHub')}
             >
               <IconGitHub />
             </button>
