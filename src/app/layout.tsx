@@ -130,7 +130,7 @@ const themeScript = `(function(){
     });
 
     // ── Rotating title + placeholder animation (pure DOM, no React) ──
-    var WORDS = ['Сайт','API','Бота','Сервис','Приложение','Бэкенд'];
+    var WORDS = ['Сайт','API','Бот','Сервис','Приложение','Бэкенд'];
     var PLACEHOLDERS = [
       'Попроси Промто создать сайт на React...',
       'Попроси Промто написать REST API для магазина...',

@@ -1,6 +1,6 @@
 'use client';
 
-const WORDS = ['Сайт', 'API', 'Бота', 'Сервис', 'Приложение', 'Бэкенд'];
+const WORDS = ['Сайт', 'API', 'Бот', 'Сервис', 'Приложение', 'Бэкенд'];
 
 interface RotatingWordProps {
   className?: string;
