@@ -2,12 +2,13 @@ import { cn } from '@/lib/utils';
 
 interface GradientBorderProps {
   children: React.ReactNode;
-  as?: 'span' | 'div';
+  as?: 'span' | 'div' | 'a';
   borderWidth?: number;
   borderRadius?: number;
   gradientAngle?: string;
   className?: string;
   animated?: boolean;
+  href?: string;
 }
 
 export function GradientBorder({
@@ -18,11 +19,13 @@ export function GradientBorder({
   gradientAngle = '3deg, rgba(70,78,255,1) 10%, rgba(94,255,110,1) 100%',
   className,
   animated,
+  href,
 }: GradientBorderProps) {
   return (
     <Tag
-      className={cn(Tag === 'span' ? 'relative inline-flex' : 'relative flex', className)}
+      className={cn(Tag === 'div' ? 'relative flex' : 'relative inline-flex', className)}
       style={{ borderRadius }}
+      {...(Tag === 'a' && href ? { href } : {})}
     >
       <span
         className={cn('gradient-border-mask absolute inset-0 pointer-events-none', animated && 'animate-gradient-shift-slow')}

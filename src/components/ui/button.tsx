@@ -83,20 +83,33 @@ export function Button({
     className,
   );
 
-  const content = (
-    <GradientBorder
-      borderWidth={borderWidth}
-      borderRadius={60}
-      gradientAngle={gradientAngle}
-      className={cls}
-      animated={animated}
-    >
-      {inner}
-    </GradientBorder>
-  );
+  const borderProps = {
+    borderWidth,
+    borderRadius: 60,
+    gradientAngle,
+    animated,
+  };
 
   if (href) {
-    return <a href={href} className={cn('inline-flex rounded-[60px]', animated && 'animate-cta-glow', focusRing, className)}>{content}</a>;
+    return (
+      <GradientBorder
+        {...borderProps}
+        as="a"
+        href={href}
+        className={cn(cls, animated && 'animate-cta-glow', focusRing)}
+      >
+        {inner}
+      </GradientBorder>
+    );
   }
-  return <button className={cn('inline-flex rounded-[60px]', animated && 'animate-cta-glow', focusRing, className)} onClick={onClick}>{content}</button>;
+  return (
+    <GradientBorder
+      {...borderProps}
+      className={cn(cls, animated && 'animate-cta-glow', focusRing)}
+    >
+      <button className="inline-flex items-center justify-center gap-2 w-full h-full" onClick={onClick}>
+        {inner}
+      </button>
+    </GradientBorder>
+  );
 }
