@@ -77,13 +77,13 @@ export function Footer() {
         <div className="flex flex-col gap-6 lg:hidden">
           <div className="flex flex-col gap-6 w-[183px]">
             <a
-              href="/terms"
+              href="https://promto.ai/termsofuse"
               className="text-xs text-text-muted leading-[1.25] hover:text-brand-blue transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded-sm"
             >
               Пользовательское соглашение
             </a>
             <a
-              href="/privacy"
+              href="https://promto.ai/policy.pdf"
               className="text-xs text-text-muted leading-[1.25] hover:text-brand-blue transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded-sm"
             >
               Политика конфиденциальности
@@ -97,13 +97,13 @@ export function Footer() {
           <span className="text-xs text-text-secondary leading-[1.25]">© Promto, 2026</span>
           <div className="flex gap-[80px]">
             <a
-              href="/terms"
+              href="https://promto.ai/termsofuse"
               className="text-xs text-text-secondary leading-[1.25] text-right hover:text-brand-blue transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded-sm"
             >
               Пользовательское соглашение
             </a>
             <a
-              href="/privacy"
+              href="https://promto.ai/policy.pdf"
               className="text-xs text-text-secondary leading-[1.25] text-right hover:text-brand-blue transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded-sm"
             >
               Политика конфиденциальности
