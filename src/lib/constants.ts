@@ -23,7 +23,7 @@ export const FEATURES: Feature[] = [
   {
     iconColor: 'green',
     title: 'Без лимитов по токенам',
-    desc: 'Никаких ограничений по объёму и количеству выполненных задач',
+    desc: 'Без ограничений по объёму задач',
   },
   {
     iconColor: 'blue',

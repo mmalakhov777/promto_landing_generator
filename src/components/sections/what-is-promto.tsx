@@ -50,11 +50,10 @@ export function WhatIsPromto() {
                   Без лимитов по&nbsp;токенам
                 </h3>
                 <p className="text-xs font-normal text-text-secondary leading-[1.3] sm:hidden">
-                  Никаких ограничений по объёму
-                  <br />и количеству выполненных задач
+                  Без ограничений по объёму задач
                 </p>
                 <p className="text-sm text-text-secondary leading-[1.3] hidden sm:block">
-                  Никаких ограничений по&nbsp;объёму и&nbsp;количеству выполненных задач
+                  Без ограничений по&nbsp;объёму задач
                 </p>
               </div>
             </Card>
