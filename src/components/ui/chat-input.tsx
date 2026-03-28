@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Microphone } from '@/components/icons/microphone';
 import { ChevronDown } from '@/components/icons/chevron-down';
-import { MODES } from '@/lib/use-rotating-content';
+import { MODES, MODE_MODELS } from '@/lib/use-rotating-content';
 
 function IconFigma() {
   return (
@@ -187,6 +187,9 @@ export function ChatInput() {
                       }}
                     >
                       {agent}
+                      {MODE_MODELS[agent] && (
+                        <span className="ml-1.5 opacity-50 font-normal">{MODE_MODELS[agent]}</span>
+                      )}
                     </button>
                   ))}
                 </div>
