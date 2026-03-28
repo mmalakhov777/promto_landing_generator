@@ -12,13 +12,13 @@ import { ArrowUpRight } from '@/components/icons/arrow-up-right';
 import Image from 'next/image';
 
 const CTA_LABELS: Record<PricingTier, string> = {
-  junior: 'Выбрать джуниор-агента',
-  middle: 'Выбрать миддл-агента',
-  senior: 'Выбрать сеньор-агента',
+  mini: 'Выбрать Мини',
+  pro: 'Выбрать Про',
+  promax: 'Выбрать Про Макс',
 };
 
 export function Pricing() {
-  const [activePlan, setActivePlan] = useState<PricingTier>('middle');
+  const [activePlan, setActivePlan] = useState<PricingTier>('pro');
 
   return (
     <section
