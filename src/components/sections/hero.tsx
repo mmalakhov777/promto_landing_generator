@@ -37,7 +37,7 @@ export function Hero() {
         <div className="mt-10 lg:mt-[50px] w-full max-w-[327px] md:max-w-[442px] lg:max-w-[442px] flex flex-col items-center gap-4 lg:gap-5">
           {/* Buttons: column on mobile, row on desktop */}
           <div className="w-full flex flex-col md:flex-row items-center justify-center gap-3">
-            <Button variant="outline" size="md" icon={<AiMagic size={18} color="gradient" />} href="https://app.promto.ai" className="w-full md:w-auto justify-center" animated>
+            <Button variant="outline" size="md" icon={<AiMagic size={18} color="gradient" />} href="https://app.promto.ai" className="w-full md:w-auto justify-center">
               Попробовать бесплатно
             </Button>
           </div>

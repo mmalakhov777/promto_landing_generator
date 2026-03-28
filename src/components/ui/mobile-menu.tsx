@@ -124,7 +124,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
         <div className="px-6 flex flex-col items-center gap-4">
           <div className="w-full flex flex-col gap-3">
-            <Button variant="outline" size="md" icon={<AiMagic size={18} color="gradient" />} href="https://app.promto.ai" className="w-full justify-center" animated>
+            <Button variant="outline" size="md" icon={<AiMagic size={18} color="gradient" />} href="https://app.promto.ai" className="w-full justify-center">
               Попробовать бесплатно
             </Button>
           </div>

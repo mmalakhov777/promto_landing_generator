@@ -76,7 +76,7 @@ export function Advantages() {
             </span>
           </a>
 
-          <Button variant="outline" size="md" icon={<AiMagic size={18} color="gradient" />} href="https://app.promto.ai" animated>
+          <Button variant="outline" size="md" icon={<AiMagic size={18} color="gradient" />} href="https://app.promto.ai">
             Попробовать бесплатно
           </Button>
         </div>
