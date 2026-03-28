@@ -9,6 +9,13 @@ interface RotatingWordProps {
 
 export function RotatingWord({ className, gradient }: RotatingWordProps) {
   // Animation is handled by the inline script in layout.tsx (DOM-based, no React hydration needed)
+  const gradientStyle = {
+    backgroundImage: `linear-gradient(${gradient})`,
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    backgroundClip: 'text',
+  };
+
   return (
     <span
       className={className}
@@ -20,16 +27,26 @@ export function RotatingWord({ className, gradient }: RotatingWordProps) {
         transition: 'filter 0.6s ease, opacity 0.6s ease',
       }}
     >
-      <span
-        data-rotating-word=""
-        style={{
-          backgroundImage: `linear-gradient(${gradient})`,
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-        }}
-      >
-        {WORDS[0]}
+      {/* Inline container that reserves width of the widest word */}
+      <span className="inline-grid align-bottom" style={{ gridTemplateColumns: '1fr' }}>
+        {/* Hidden words to reserve max width */}
+        {WORDS.map((word) => (
+          <span
+            key={word}
+            aria-hidden="true"
+            className="invisible"
+            style={{ ...gradientStyle, gridRow: 1, gridColumn: 1 }}
+          >
+            {word}
+          </span>
+        ))}
+        {/* Visible rotating word — same grid cell, stacked on top */}
+        <span
+          data-rotating-word=""
+          style={{ ...gradientStyle, gridRow: 1, gridColumn: 1 }}
+        >
+          {WORDS[0]}
+        </span>
       </span>
       <span className="text-text-primary">
         {' '}за пару минут&nbsp;&mdash;
