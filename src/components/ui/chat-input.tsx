@@ -221,7 +221,7 @@ export function ChatInput() {
 
             {/* Send button — gradient circle with arrow up */}
             <a
-              href="https://app.promto.ai"
+              href={`https://app.promto.ai/home?prompt=${encodeURIComponent(userValue)}`}
               className="flex-shrink-0 relative transition-all duration-200 hover:opacity-85 hover:scale-[1.05] hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2 rounded-full w-8 h-8 lg:w-[39px] lg:h-[39px]"
               aria-label="Отправить"
             >
