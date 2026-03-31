@@ -4,6 +4,7 @@ import { onest } from './fonts';
 import './globals.css';
 import { ThemeProvider } from '@/lib/theme-context';
 import { FAQ_ITEMS } from '@/lib/constants';
+import { ScrollToTop } from '@/components/ui/scroll-to-top';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://promto.ai'),
@@ -68,16 +69,34 @@ const jsonLd = [
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: 'Промто',
+    url: 'https://promto.ai',
     description:
       'ИИ-сервис для создания сайтов, сервисов и чат-ботов по текстовому описанию',
     applicationCategory: 'WebApplication',
     operatingSystem: 'Web',
-    offers: {
-      '@type': 'AggregateOffer',
-      lowPrice: '2000',
-      highPrice: '10000',
-      priceCurrency: 'RUB',
-    },
+    offers: [
+      {
+        '@type': 'Offer',
+        name: 'Мини',
+        price: '2000',
+        priceCurrency: 'RUB',
+        url: 'https://promto.ai/#pricing',
+      },
+      {
+        '@type': 'Offer',
+        name: 'Про',
+        price: '4000',
+        priceCurrency: 'RUB',
+        url: 'https://promto.ai/#pricing',
+      },
+      {
+        '@type': 'Offer',
+        name: 'Про Макс',
+        price: '10000',
+        priceCurrency: 'RUB',
+        url: 'https://promto.ai/#pricing',
+      },
+    ],
   },
   {
     '@context': 'https://schema.org',
@@ -197,6 +216,7 @@ export default function RootLayout({
         />
         <ThemeProvider>
           {children}
+          <ScrollToTop />
         </ThemeProvider>
       </body>
     </html>

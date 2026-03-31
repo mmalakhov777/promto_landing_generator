@@ -1,0 +1,6 @@
+# 301 Redirects for promto.ai
+# Redirect /index.html to root
+/index.html / 301
+
+# Redirect multiple trailing slashes to root (handled at CDN level)
+# These rules are processed by Render.com static site hosting

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { NAV_LINKS } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
 import { MobileMenu } from '@/components/ui/mobile-menu';
@@ -10,6 +11,8 @@ import { ThemeToggle } from '@/components/ui/theme-toggle';
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const pathname = usePathname();
+  const isHome = pathname === '/';
 
   useEffect(() => {
     // Watch for data-theme attribute changes to update logo
@@ -36,14 +39,25 @@ export function Header() {
           aria-label="Основная навигация"
         >
           <div className="flex items-center gap-[60px] xl:gap-[162px]">
-            <Link href="/" className="flex-shrink-0" aria-label="Промто — на главную">
-              <img
-                src={theme === 'dark' ? '/images/footer-logo-white.svg' : '/logo-desktop.svg'}
-                alt="Промто"
-                width={121}
-                height={32}
-              />
-            </Link>
+            {isHome ? (
+              <span className="flex-shrink-0" aria-label="Промто">
+                <img
+                  src={theme === 'dark' ? '/images/footer-logo-white.svg' : '/logo-desktop.svg'}
+                  alt="Промто"
+                  width={121}
+                  height={32}
+                />
+              </span>
+            ) : (
+              <Link href="/" className="flex-shrink-0" aria-label="Промто — на главную">
+                <img
+                  src={theme === 'dark' ? '/images/footer-logo-white.svg' : '/logo-desktop.svg'}
+                  alt="Промто"
+                  width={121}
+                  height={32}
+                />
+              </Link>
+            )}
             <ul className="flex items-center gap-[30px] xl:gap-[60px]">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
@@ -68,9 +82,15 @@ export function Header() {
           className="flex lg:hidden items-center justify-between h-[72px] px-6"
           aria-label="Мобильная навигация"
         >
-          <Link href="/" className="flex-shrink-0" aria-label="Промто — на главную">
-            <img src="/logo-mobile.svg" alt="Промто" width={42} height={42} />
-          </Link>
+          {isHome ? (
+            <span className="flex-shrink-0" aria-label="Промто">
+              <img src="/logo-mobile.svg" alt="Промто" width={42} height={42} />
+            </span>
+          ) : (
+            <Link href="/" className="flex-shrink-0" aria-label="Промто — на главную">
+              <img src="/logo-mobile.svg" alt="Промто" width={42} height={42} />
+            </Link>
+          )}
 
           <div className="flex items-center gap-3">
             <ThemeToggle />
