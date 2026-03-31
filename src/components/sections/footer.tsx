@@ -41,9 +41,9 @@ export function Footer() {
                 aria-label={group.title}
                 className="flex flex-col gap-6 lg:gap-4"
               >
-                <h3 className="text-sm text-text-muted lg:text-text-secondary leading-[1.2]">
+                <p className="text-sm text-text-muted lg:text-text-secondary leading-[1.2] font-medium">
                   {group.title}
-                </h3>
+                </p>
                 <ul className="flex flex-col gap-6 lg:gap-4">
                   {group.links.map((link) => (
                     <li key={link.href}>

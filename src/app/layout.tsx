@@ -67,6 +67,14 @@ export const metadata: Metadata = {
 const jsonLd = [
   {
     '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Промто',
+    url: 'https://promto.ai',
+    logo: 'https://promto.ai/logo-desktop.svg',
+    sameAs: [],
+  },
+  {
+    '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: 'Промто',
     url: 'https://promto.ai',

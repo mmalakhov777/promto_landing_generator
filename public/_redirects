@@ -2,5 +2,8 @@
 # Redirect /index.html to root
 /index.html / 301
 
-# Redirect multiple trailing slashes to root (handled at CDN level)
-# These rules are processed by Render.com static site hosting
+# Redirect /index.php to root
+/index.php / 301
+
+# Redirect index.php/page/ to /page/
+/index.php/* /:splat 301

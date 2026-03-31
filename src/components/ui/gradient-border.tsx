@@ -9,6 +9,8 @@ interface GradientBorderProps {
   className?: string;
   animated?: boolean;
   href?: string;
+  rel?: string;
+  target?: string;
 }
 
 export function GradientBorder({
@@ -20,12 +22,14 @@ export function GradientBorder({
   className,
   animated,
   href,
+  rel,
+  target,
 }: GradientBorderProps) {
   return (
     <Tag
       className={cn(Tag === 'div' ? 'relative flex' : 'relative inline-flex', className)}
       style={{ borderRadius }}
-      {...(Tag === 'a' && href ? { href } : {})}
+      {...(Tag === 'a' && href ? { href, rel, target } : {})}
     >
       <span
         className={cn('gradient-border-mask absolute inset-0 pointer-events-none', animated && 'animate-gradient-shift-slow')}

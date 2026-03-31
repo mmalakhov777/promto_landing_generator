@@ -15,6 +15,8 @@ interface ButtonProps {
   onClick?: () => void;
   borderWidth?: number;
   animated?: boolean;
+  rel?: string;
+  target?: string;
 }
 
 const sizeStyles: Record<ButtonSize, string> = {
@@ -23,6 +25,10 @@ const sizeStyles: Record<ButtonSize, string> = {
 };
 
 const focusRing = 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2';
+
+function isExternal(href: string) {
+  return href.startsWith('http://') || href.startsWith('https://');
+}
 
 export function Button({
   variant = 'primary',
@@ -34,7 +40,11 @@ export function Button({
   onClick,
   borderWidth: borderWidthProp,
   animated,
+  rel: relProp,
+  target: targetProp,
 }: ButtonProps) {
+  const rel = relProp ?? (href && isExternal(href) ? 'noopener noreferrer' : undefined);
+  const target = targetProp ?? (href && isExternal(href) ? '_blank' : undefined);
   if (variant === 'primary') {
     const inner = (
       <>
@@ -59,7 +69,7 @@ export function Button({
           background: 'var(--theme-btn-primary-bg)',
         };
 
-    if (href) return <a href={href} className={cls} style={style}>{inner}</a>;
+    if (href) return <a href={href} className={cls} style={style} rel={rel} target={target}>{inner}</a>;
     return <button className={cls} style={style} onClick={onClick}>{inner}</button>;
   }
 
@@ -96,6 +106,8 @@ export function Button({
         {...borderProps}
         as="a"
         href={href}
+        rel={rel}
+        target={target}
         className={cn(cls, animated && 'animate-cta-glow', focusRing)}
       >
         {inner}

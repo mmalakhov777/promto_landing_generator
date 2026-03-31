@@ -4,11 +4,7 @@ export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
-    {
-      url: 'https://promto.ai',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1,
-    },
+    { url: 'https://promto.ai' },
+    { url: 'https://promto.ai/karta-sajta' },
   ];
 }
