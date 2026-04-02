@@ -9,7 +9,7 @@ import { ScrollToTop } from '@/components/ui/scroll-to-top';
 export const metadata: Metadata = {
   metadataBase: new URL('https://promto.ai'),
   title: {
-    default: 'Промто — от идеи до готового продукта с помощью ИИ',
+    default: 'Промто — создание сайтов, сервисов и ботов с помощью ИИ',
     template: '%s | Промто',
   },
   description:
@@ -64,61 +64,86 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = [
-  {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Промто',
-    url: 'https://promto.ai',
-    logo: 'https://promto.ai/logo-desktop.svg',
-    sameAs: [],
+const jsonLdOrganization = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://promto.ai/#organization',
+  name: 'Промто',
+  url: 'https://promto.ai',
+  logo: {
+    '@type': 'ImageObject',
+    url: 'https://promto.ai/logo-desktop.svg',
+    width: 121,
+    height: 32,
   },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: 'Промто',
-    url: 'https://promto.ai',
-    description:
-      'ИИ-сервис для создания сайтов, сервисов и чат-ботов по текстовому описанию',
-    applicationCategory: 'WebApplication',
-    operatingSystem: 'Web',
-    offers: [
-      {
-        '@type': 'Offer',
-        name: 'Мини',
-        price: '2000',
-        priceCurrency: 'RUB',
-        url: 'https://promto.ai/#pricing',
-      },
-      {
-        '@type': 'Offer',
-        name: 'Про',
-        price: '4000',
-        priceCurrency: 'RUB',
-        url: 'https://promto.ai/#pricing',
-      },
-      {
-        '@type': 'Offer',
-        name: 'Про Макс',
-        price: '10000',
-        priceCurrency: 'RUB',
-        url: 'https://promto.ai/#pricing',
-      },
-    ],
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: FAQ_ITEMS.map((item) => ({
-      '@type': 'Question',
-      name: item.q,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: item.a,
-      },
-    })),
-  },
-];
+  description:
+    'ИИ-платформа для создания сайтов, сервисов и чат-ботов по текстовому описанию.',
+};
+
+const jsonLdSoftwareApp = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  '@id': 'https://promto.ai/#software',
+  name: 'Промто',
+  url: 'https://promto.ai',
+  description:
+    'ИИ-сервис для создания сайтов, сервисов и чат-ботов по текстовому описанию',
+  applicationCategory: 'WebApplication',
+  operatingSystem: 'All',
+  offers: [
+    {
+      '@type': 'Offer',
+      name: 'Мини',
+      price: '2000',
+      priceCurrency: 'RUB',
+      url: 'https://promto.ai/#pricing',
+      availability: 'https://schema.org/InStock',
+      priceValidUntil: '2026-12-31',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Про',
+      price: '4000',
+      priceCurrency: 'RUB',
+      url: 'https://promto.ai/#pricing',
+      availability: 'https://schema.org/InStock',
+      priceValidUntil: '2026-12-31',
+    },
+    {
+      '@type': 'Offer',
+      name: 'Про Макс',
+      price: '10000',
+      priceCurrency: 'RUB',
+      url: 'https://promto.ai/#pricing',
+      availability: 'https://schema.org/InStock',
+      priceValidUntil: '2026-12-31',
+    },
+  ],
+};
+
+const jsonLdFaq = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': 'https://promto.ai/#faq',
+  mainEntity: FAQ_ITEMS.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.a,
+    },
+  })),
+};
+
+const jsonLdWebSite = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': 'https://promto.ai/#website',
+  name: 'Промто',
+  url: 'https://promto.ai',
+  publisher: { '@id': 'https://promto.ai/#organization' },
+  inLanguage: 'ru',
+};
 
 const themeScript = `(function(){
   try{
@@ -197,6 +222,9 @@ export default function RootLayout({
   return (
     <html lang="ru" className={`${onest.variable} antialiased`} suppressHydrationWarning>
       <head>
+        {/* Search engine verification */}
+        <meta name="google-site-verification" content="googleed94bd73087c7011" />
+        <meta name="yandex-verification" content="cff33828be7a82fd" />
         {/* Preconnect hints */}
         <link rel="preconnect" href="https://mc.yandex.ru" />
         <link rel="dns-prefetch" href="https://mc.yandex.ru" />
@@ -219,7 +247,25 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c'),
+            __html: JSON.stringify(jsonLdOrganization).replace(/</g, '\\u003c'),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLdSoftwareApp).replace(/</g, '\\u003c'),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLdFaq).replace(/</g, '\\u003c'),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLdWebSite).replace(/</g, '\\u003c'),
           }}
         />
         <ThemeProvider>

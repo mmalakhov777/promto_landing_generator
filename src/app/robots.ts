@@ -7,8 +7,10 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        disallow: '/',
+        allow: '/',
       },
     ],
+    sitemap: 'https://promto.ai/sitemap.xml',
+    host: 'https://promto.ai',
   };
 }

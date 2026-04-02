@@ -35,11 +35,11 @@ export function RotatingWord({ className, gradient }: RotatingWordProps) {
         {WORDS[0]}
       </span>
       <span className="text-text-primary">
-        {' '}за пару минут&nbsp;&mdash;
+        {' '}с помощью ИИ&nbsp;&mdash;
       </span>
       <br className="hidden lg:block" />
       <span className="text-text-primary">
-        {' '}просто напишите, что вам нужно
+        {' '}просто опишите идею в&nbsp;Промто
       </span>
     </span>
   );
