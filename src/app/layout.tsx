@@ -146,6 +146,14 @@ const jsonLdWebSite = {
 };
 
 const themeScript = `(function(){
+  // URL normalization: redirect multiple slashes and /index.html
+  try{
+    var p=location.pathname;
+    var c=p.replace(/\\/{2,}/g,'/');
+    if(c.length>1)c=c.replace(/\\/$/,'');
+    if(c==='/index.html')c='/';
+    if(c!==p){location.replace(c+location.search);return;}
+  }catch(e){}
   try{
     var t=localStorage.getItem('promto-theme');
     if(t==='dark'||t==='light'){
