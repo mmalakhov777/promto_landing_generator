@@ -40,20 +40,55 @@ export function PricingPlanCard({ plan, isSelected, onSelect }: PricingPlanCardP
     <>
       {isSelected ? (
         <span
-          className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0"
+          className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
           style={{ background: CHECK_GRADIENT }}
         >
           <Check size={16} className="text-white" />
         </span>
       ) : (
-        <span className="w-6 h-6 rounded-full border-[1.5px] border-border-muted flex-shrink-0" />
+        <span className="w-6 h-6 rounded-full border-[1.5px] border-border-muted flex-shrink-0 mt-1" />
       )}
 
-      <span className="flex flex-col gap-1">
-        <span className="text-sm font-semibold leading-[1.3] lg:leading-[1.25] text-text-primary whitespace-nowrap">
-          {plan.name}
+      <span className="flex flex-col gap-1 flex-1 min-w-0">
+        {/* Always visible: name + short feature */}
+        <span className="flex items-center justify-between gap-2">
+          <span className="text-sm font-semibold leading-[1.3] lg:leading-[1.25] text-text-primary">
+            {plan.name}
+          </span>
+          {!isSelected && (
+            <span className="text-xs text-text-secondary leading-[1.3] whitespace-nowrap">
+              {plan.shortFeature}
+            </span>
+          )}
         </span>
         <PriceDisplay plan={plan} />
+
+        {/* Expanded content — only when selected */}
+        {isSelected && (
+          <span className="flex flex-col gap-3 mt-2">
+            <span className="text-xs text-text-secondary leading-[1.4] font-medium">
+              {plan.model}
+            </span>
+            <span className="text-xs text-text-secondary leading-[1.5]">
+              {plan.description}
+            </span>
+            <span className="flex flex-col gap-1.5">
+              {plan.features.map((feature) => (
+                <span key={feature} className="flex items-start gap-2">
+                  <span
+                    className="w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                    style={{ background: CHECK_GRADIENT }}
+                  >
+                    <Check size={10} className="text-white" />
+                  </span>
+                  <span className="text-xs text-text-primary leading-[1.4]">
+                    {feature}
+                  </span>
+                </span>
+              ))}
+            </span>
+          </span>
+        )}
       </span>
     </>
   );
@@ -70,7 +105,7 @@ export function PricingPlanCard({ plan, isSelected, onSelect }: PricingPlanCardP
           style={{ background: STROKE_GRADIENT }}
         >
           <span
-            className="flex items-center gap-5 lg:gap-4 p-5 lg:p-4 rounded-[18.75px] lg:rounded-[18.5px]"
+            className="flex items-start gap-5 lg:gap-4 p-5 lg:p-4 rounded-[18.75px] lg:rounded-[18.5px]"
             style={{
               background: 'var(--theme-pricing-selected-overlay)',
               backgroundColor: 'var(--theme-pricing-selected-fill)',
@@ -81,7 +116,7 @@ export function PricingPlanCard({ plan, isSelected, onSelect }: PricingPlanCardP
         </span>
       ) : (
         <span className={cn(
-          'flex items-center rounded-[20px]',
+          'flex items-start rounded-[20px]',
           'gap-5 px-5 py-4',
           'lg:gap-4 lg:p-4',
           'bg-bg-inactive lg:bg-subtle',

@@ -90,8 +90,8 @@ const jsonLdSoftwareApp = {
   offers: [
     {
       '@type': 'Offer',
-      name: 'Мини',
-      price: '2000',
+      name: 'Старт',
+      price: '399',
       priceCurrency: 'RUB',
       url: 'https://promto.ai/#pricing',
       availability: 'https://schema.org/InStock',
@@ -100,7 +100,7 @@ const jsonLdSoftwareApp = {
     {
       '@type': 'Offer',
       name: 'Про',
-      price: '4000',
+      price: '2799',
       priceCurrency: 'RUB',
       url: 'https://promto.ai/#pricing',
       availability: 'https://schema.org/InStock',
@@ -108,8 +108,8 @@ const jsonLdSoftwareApp = {
     },
     {
       '@type': 'Offer',
-      name: 'Про Макс',
-      price: '10000',
+      name: 'Макс',
+      price: '6799',
       priceCurrency: 'RUB',
       url: 'https://promto.ai/#pricing',
       availability: 'https://schema.org/InStock',

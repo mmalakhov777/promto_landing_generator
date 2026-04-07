@@ -12,9 +12,9 @@ import { ArrowUpRight } from '@/components/icons/arrow-up-right';
 import Image from 'next/image';
 
 const CTA_LABELS: Record<PricingTier, string> = {
-  mini: 'Выбрать Мини',
+  start: 'Выбрать Старт',
   pro: 'Выбрать Про',
-  promax: 'Выбрать Про Макс',
+  max: 'Выбрать Макс',
 };
 
 export function Pricing() {
@@ -54,7 +54,7 @@ export function Pricing() {
             <div className="flex flex-col gap-6">
               {/* style_D9SY3U: 24px/500/1.25 */}
               <h3 className="text-2xl font-semibold text-text-primary leading-[1.25]">
-                Полный доступ без ограничений по токенам
+                Полный доступ к решению любых задач
               </h3>
 
               <div className="flex flex-col gap-3">
