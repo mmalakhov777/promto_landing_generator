@@ -22,8 +22,8 @@ export interface Feature {
 export const FEATURES: Feature[] = [
   {
     iconColor: 'green',
-    title: 'Без лимитов по токенам',
-    desc: 'Без ограничений по объёму задач',
+    title: 'Любая идея',
+    desc: 'Полная свобода творчества и идей, команда агентов решит любую задачу',
   },
   {
     iconColor: 'blue',

@@ -39,21 +39,21 @@ export function WhatIsPromto() {
 
           {/* Right: feature cards — 2×2 grid */}
           <div className="flex-1 w-full grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {/* Card 1: Без лимитов по токенам */}
+            {/* Card 1: Любая идея */}
             <Card className="p-6 xl:p-8 flex flex-col gap-6 xl:gap-8">
               <IconBox icon={<ChartLine size={20} />} color="green" size="sm" />
               <div className="flex flex-col gap-3">
                 <h3 className="text-xl font-medium text-text-primary leading-[1.24] sm:hidden">
-                  Без лимитов по токенам
+                  Любая идея
                 </h3>
                 <h3 className="text-xl font-medium text-text-primary leading-[1.24] hidden sm:block">
-                  Без лимитов по&nbsp;токенам
+                  Любая идея
                 </h3>
                 <p className="text-xs font-normal text-text-secondary leading-[1.3] sm:hidden">
-                  Без ограничений по объёму задач
+                  Полная свобода творчества и идей, команда агентов решит любую задачу
                 </p>
                 <p className="text-sm text-text-secondary leading-[1.3] hidden sm:block">
-                  Без ограничений по&nbsp;объёму задач
+                  Полная свобода творчества и&nbsp;идей, команда агентов решит любую задачу
                 </p>
               </div>
             </Card>
