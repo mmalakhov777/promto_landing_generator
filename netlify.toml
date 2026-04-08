@@ -21,6 +21,13 @@
   status = 301
   force = true
 
+# Clean URLs - remove double trailing slashes
+[[redirects]]
+  from = "/*//"
+  to = "/:splat"
+  status = 301
+  force = true
+
 # Clean URLs - remove trailing slashes
 [[redirects]]
   from = "/*/"
