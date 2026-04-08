@@ -1,10 +1,6 @@
 # 301 Redirects for promto.ai
 # Rules are processed top-to-bottom — first match wins.
 
-# Normalize multiple consecutive slashes to root
-/// / 301!
-// / 301!
-
 # Redirect /index.html to root
 /index.html / 301!
 
@@ -13,6 +9,3 @@
 
 # Redirect index.php/page/ to /page/
 /index.php/* /:splat 301!
-
-# Remove trailing slashes from all paths (e.g. /about/ → /about)
-/*/ /:splat 301!
