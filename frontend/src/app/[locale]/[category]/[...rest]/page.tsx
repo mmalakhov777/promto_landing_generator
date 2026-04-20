@@ -72,7 +72,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       const name = locale === "ru" ? cat.name_ru : cat.name_en;
       const pageLabel = locale === "ru" ? "страница" : "page";
       const siteName = locale === "ru" ? "Промто" : "Promto";
-      const title = `${cat.meta_title_ru || name} - ${pageLabel} ${pageNum} — ${siteName}`;
+      const metaTitle = locale === "ru" ? cat.meta_title_ru : cat.meta_title_en;
+      const title = `${metaTitle || name} - ${pageLabel} ${pageNum} — ${siteName}`;
       const canonical = `${SITE_URL}/${locale}/${categorySlug}/page${pageNum}/`;
 
       return {
@@ -257,6 +258,8 @@ export default async function CatchAllPage({ params }: Props) {
         reviews: "Отзывы",
         faq: "Часто задаваемые вопросы",
         popular: "Популярный",
+        ctaStart: "Начать",
+        ctaChoose: "Выбрать",
       }
     : {
         advantages: "Advantages",
@@ -267,6 +270,8 @@ export default async function CatchAllPage({ params }: Props) {
         reviews: "Reviews",
         faq: "Frequently asked questions",
         popular: "Popular",
+        ctaStart: "Get started",
+        ctaChoose: "Choose",
       };
 
   return (
@@ -345,6 +350,8 @@ export default async function CatchAllPage({ params }: Props) {
             title={t.pricing}
             plans={landing.pricing}
             popularLabel={t.popular}
+            ctaTextPrimary={t.ctaStart}
+            ctaTextSecondary={t.ctaChoose}
           />
         )}
 

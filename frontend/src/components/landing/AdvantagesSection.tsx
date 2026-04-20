@@ -5,7 +5,7 @@ const iconMap: Record<string, string> = {
   rocket: "🚀",
   shield: "🛡️",
   zap: "⚡",
-  heart: "❤��",
+  heart: "❤️",
   check: "✅",
   globe: "🌍",
   clock: "⏰",

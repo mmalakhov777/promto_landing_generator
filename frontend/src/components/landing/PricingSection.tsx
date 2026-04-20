@@ -4,9 +4,11 @@ interface PricingSectionProps {
   title: string;
   plans: PricingPlan[];
   popularLabel: string;
+  ctaTextPrimary: string;
+  ctaTextSecondary: string;
 }
 
-export function PricingSection({ title, plans, popularLabel }: PricingSectionProps) {
+export function PricingSection({ title, plans, popularLabel, ctaTextPrimary, ctaTextSecondary }: PricingSectionProps) {
   if (!plans.length) return null;
 
   return (
@@ -50,7 +52,7 @@ export function PricingSection({ title, plans, popularLabel }: PricingSectionPro
                       : "border border-primary text-primary hover:bg-primary/5"
                   }`}
                 >
-                  {plan.is_popular ? "Начать" : "Выбрать"}
+                  {plan.is_popular ? ctaTextPrimary : ctaTextSecondary}
                 </a>
               )}
             </div>

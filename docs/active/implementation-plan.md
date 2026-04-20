@@ -499,12 +499,27 @@
 - SEO: robots.ts, sitemap.ts, not-found.tsx, generateMetadata, JsonLd (Schema.org)
 - Revalidation: `api/revalidate/route.ts` с secret-проверкой
 
+**Найдено при ревью (детальный line-by-line, 30 файлов / ~1913 строк) и исправлено:**
+1. **(КРИТ)** `AdvantagesSection.tsx:8` — повреждённый emoji `"❤��"` для ключа `heart`. Заменён на корректный `"❤️"`
+2. **(КРИТ)** `PricingSection.tsx:53` — hardcoded русский текст CTA-кнопок `"Начать"/"Выбрать"`. Добавлены пропсы `ctaTextPrimary`/`ctaTextSecondary`, caller передаёт локализованные строки
+3. **(КРИТ)** `not-found.tsx` — весь текст на русском, ссылка `/ru/` игнорирует locale. Переписан как client component с определением locale из `usePathname()`
+4. **(КРИТ)** `JsonLd.tsx:56-100` — два отдельных `Product` schema.org объекта (pricing + reviews). Объединены в единый `Product` с `offers` + `aggregateRating` + `review`
+5. **(КРИТ)** `[...rest]/page.tsx:75` — в метаданных пагинации title всегда использовал `cat.meta_title_ru`. Исправлено: выбор по locale (`meta_title_ru` / `meta_title_en`)
+
+**Некритические проблемы (оставлены как техдолг):**
+- `[...rest]/page.tsx:250-270` — section titles inline-объектом вместо i18n message keys (работает, но дублирует переводы)
+- `messages/ru.json`, `messages/en.json` — мёртвые i18n-ключи (`landing.tryFree`, `landing.createNow`, `footer.copyright` и др.)
+- `CtaBlock.tsx` — `<div>` вместо `<section>` для семантической обёртки
+
+**ESLint:** 0 ошибок. **TypeScript:** 0 ошибок.
+
 **Критерии готовности:**
 - ✅ Лендинги рендерятся со всеми секциями на `/{locale}/{category}/{slug}/`
 - ✅ robots.txt и sitemap.xml корректны
-- ✅ 404-страница работает
-- ✅ Schema.org JSON-LD генерируется для FAQ, Pricing, Reviews, Breadcrumbs
+- ✅ 404-страница работает (обе локали)
+- ✅ Schema.org JSON-LD генерируется для FAQ, Pricing, Reviews, Breadcrumbs (единый Product entity)
 - ✅ Canonical URL и hreflang теги на каждой странице
+- ✅ i18n: все user-visible строки корректно локализованы (RU/EN)
 - ⚠️ Тесты — отложены
 - ⚠️ Slug redirects в proxy — требует backend endpoint
 - ⚠️ Backend hook для on-demand revalidation — требует backend изменений

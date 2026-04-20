@@ -48,45 +48,46 @@ export function JsonLd({ landing, locale, canonicalUrl, breadcrumbs }: JsonLdPro
     });
   }
 
-  // Product + Offer (pricing)
+  // Product — merge pricing (Offer) and reviews (AggregateRating) into one entity
   const pricingEnabled = landing.enabled_sections.includes("pricing");
   const plans = landing.pricing;
-  if (pricingEnabled && plans && plans.length > 0) {
-    schemas.push({
+  const reviewsEnabled = landing.enabled_sections.includes("reviews");
+  const reviews = landing.reviews;
+
+  const hasPricing = pricingEnabled && plans && plans.length > 0;
+  const hasReviews = reviewsEnabled && reviews && reviews.length > 0;
+
+  if (hasPricing || hasReviews) {
+    const product: Record<string, unknown> = {
       "@context": "https://schema.org",
       "@type": "Product",
       name: landing.h1,
       description: landing.meta_description,
       url: canonicalUrl,
-      offers: plans.map((plan: PricingPlan) => ({
+    };
+
+    if (hasPricing) {
+      product.offers = plans.map((plan: PricingPlan) => ({
         "@type": "Offer",
         name: plan.name,
         price: plan.price,
         priceCurrency: locale === "ru" ? "RUB" : "USD",
         url: plan.cta_url || canonicalUrl,
-      })),
-    });
-  }
+      }));
+    }
 
-  // Reviews + AggregateRating
-  const reviewsEnabled = landing.enabled_sections.includes("reviews");
-  const reviews = landing.reviews;
-  if (reviewsEnabled && reviews && reviews.length > 0) {
-    const avgRating =
-      reviews.reduce((sum: number, r: ReviewItem) => sum + r.rating, 0) /
-      reviews.length;
-    schemas.push({
-      "@context": "https://schema.org",
-      "@type": "Product",
-      name: landing.h1,
-      aggregateRating: {
+    if (hasReviews) {
+      const avgRating =
+        reviews.reduce((sum: number, r: ReviewItem) => sum + r.rating, 0) /
+        reviews.length;
+      product.aggregateRating = {
         "@type": "AggregateRating",
         ratingValue: avgRating.toFixed(1),
         reviewCount: reviews.length,
         bestRating: 5,
         worstRating: 1,
-      },
-      review: reviews.map((r: ReviewItem) => ({
+      };
+      product.review = reviews.map((r: ReviewItem) => ({
         "@type": "Review",
         author: { "@type": "Person", name: r.author },
         reviewRating: {
@@ -95,8 +96,10 @@ export function JsonLd({ landing, locale, canonicalUrl, breadcrumbs }: JsonLdPro
           bestRating: 5,
         },
         reviewBody: r.text,
-      })),
-    });
+      }));
+    }
+
+    schemas.push(product);
   }
 
   if (schemas.length === 0) return null;
