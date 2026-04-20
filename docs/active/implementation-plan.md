@@ -147,22 +147,25 @@
 
 ---
 
-### ФАЗА 2: Backend Core — Модели, Auth, API
+### ФАЗА 2: Backend Core — Модели, Auth, API 🔧 В РАБОТЕ
 
 **Цель:** Полностью рабочее API для всех операций. Фронтенд на этой фазе не затрагивается.
 
-#### 2.1 — Модели данных (Backend)
-- [ ] Модель `User` — пользователи админки
+**Статус:** Частично реализовано — готов data-слой (модели, схемы, сервисы, deps). API-роуты, скрипты, миграции и тесты ещё не созданы.
+
+#### 2.1 — Модели данных (Backend) — ЧАСТИЧНО
+- [x] Модель `User` — пользователи админки (`app/models/user.py`)
   - `id`, `email`, `hashed_password`, `role` (enum: admin/editor), `is_active`, `created_at`
-- [ ] Модель `Category` — категории конструкторов
+- [x] Модель `Category` — категории конструкторов (`app/models/category.py`)
   - `id`, `slug`, `name_ru`, `name_en`, `description_ru`, `description_en`, `meta_title_ru`, `meta_title_en`, `meta_description_ru`, `meta_description_en`, `is_active`, `sort_order`, `created_at`, `updated_at`
-- [ ] Модель `Landing` — отдельный лендинг
+- [x] Модель `Landing` — отдельный лендинг (`app/models/landing.py`)
   - `id`, `category_id` (FK), `slug`, `keyword_ru`, `keyword_en`, `search_volume`, `is_published`, `created_at`, `updated_at`
-- [ ] Модель `LandingContent` — локализованный контент лендинга
+  - UniqueConstraint(`category_id`, `slug`)
+- [x] Модель `LandingContent` — локализованный контент лендинга (`app/models/landing.py`)
   - `id`, `landing_id` (FK), `locale` (enum: ru/en), unique constraint (landing_id + locale)
   - SEO: `meta_title`, `meta_description`, `h1`, `og_title`, `og_description`, `og_image_url`
   - Hero: `hero_title`, `hero_subtitle`, `hero_cta_text`, `hero_placeholder`
-  - Секции (все JSONB):
+  - Секции (все JSON):
     - `social_proof` — массив `{label, value}`
     - `advantages` — массив `{icon, title, description}`
     - `how_it_works` — массив `{step, title, description, image_url}`
@@ -172,15 +175,21 @@
     - `reviews` — массив `{author, text, rating, avatar_url}`
     - `faq` — массив `{question, answer}`
   - CTA: `cta_mid_title`, `cta_mid_subtitle`, `cta_final_title`, `cta_final_subtitle`, `cta_final_button_text`
-- [ ] Модель `LandingSection` — включённость секций
-  - `id`, `landing_id` (FK), `section_type` (enum: social_proof, advantages, how_it_works, examples, cta_mid, video, pricing, reviews, faq), `is_enabled` (default: true)
-  - unique constraint (landing_id + section_type)
-- [ ] Модель `SiteSettings` — глобальные настройки (singleton)
-  - `id`, `metrika_id`, `smartcaptcha_client_key`, `default_pricing` (JSONB), `default_cta_texts` (JSONB), `platform_url` (default: "https://app.promto.ai"), `social_proof_defaults` (JSONB), `default_video_url`, `updated_at`
-- [ ] Модель `SlugRedirect` — редиректы при смене slug-ов **[RISK-09]**
-  - `id`, `old_category_slug`, `old_landing_slug`, `new_category_slug`, `new_landing_slug`, `created_at`
-- [ ] **[RISK-07]** Pydantic-модели для валидации JSONB-структур в `schemas/content.py`: `AdvantageItem`, `HowItWorksStep`, `ExampleItem`, `PricingPlan`, `ReviewItem`, `FaqItem`, `SocialProofItem`, `CtaTexts`
+  - **Адаптация:** Используется `sqlalchemy.types.JSON` вместо `postgresql.JSONB` — совместимо с SQLite для тестов и PostgreSQL в production. На PostgreSQL SQLAlchemy автоматически маппит JSON на встроенный JSONB-подобный тип.
+- [x] Модель `LandingSection` — включённость секций (`app/models/landing.py`)
+  - `id`, `landing_id` (FK), `section_type` (enum), `is_enabled` (default: true)
+  - UniqueConstraint(`landing_id`, `section_type`)
+- [x] Модель `SiteSettings` — глобальные настройки singleton (`app/models/settings.py`)
+  - `id`, `metrika_id`, `smartcaptcha_client_key`, `default_pricing` (JSON), `default_cta_texts` (JSON), `platform_url`, `social_proof_defaults` (JSON), `default_video_url`, `updated_at`
+- [x] Модель `SlugRedirect` — редиректы при смене slug-ов **[RISK-09]** (`app/models/redirect.py`)
+- [x] **[RISK-07]** Pydantic-модели для валидации JSONB-структур в `schemas/content.py`: `AdvantageItem`, `HowItWorksStep`, `ExampleItem`, `PricingPlan`, `ReviewItem`, `FaqItem`, `SocialProofItem`, `CtaTexts`
+- [x] Pydantic-схемы запросов/ответов: `schemas/auth.py`, `schemas/user.py`, `schemas/category.py`, `schemas/landing.py`, `schemas/settings.py`, `schemas/public.py`
+- [x] Сервис валидации slug-ов: `services/slug.py` **[RISK-05, RISK-01]**
+- [x] Сервис аутентификации: `services/auth.py` (JWT, bcrypt)
+  - **Адаптация:** `passlib` заменён на прямой `bcrypt` — passlib 1.7.4 заброшен и несовместим с bcrypt >= 4.x.
+- [x] FastAPI-зависимости: `api/deps.py` (`get_current_user`, `require_admin`)
 - [ ] Создать Alembic-миграцию, применить, проверить схему
+  - **Исправлено при ревью:** добавлен `import app.models` в `alembic/env.py` — без него autogenerate создавал пустые миграции
 - [ ] **[RISK-12]** В data-миграции — INSERT INTO site_settings с дефолтными значениями (platform_url="https://app.promto.ai")
 
 #### 2.2 — Auth API (Backend)
@@ -257,6 +266,22 @@
 - `scripts/import_from_excel.py` создаёт 62 лендинга в БД
 - `scripts/seed_data.py` создаёт тестовые лендинги с полным контентом
 - Все тесты проходят (pytest)
+
+**Найдено при ревью (промежуточном) и исправлено:**
+1. **(КРИТ)** `passlib` 1.7.4 несовместим с `bcrypt` 5.x — `hash_password()` падал с `ValueError`. Заменён на прямой `bcrypt` API (`services/auth.py`)
+2. **(КРИТ)** `sqlalchemy.dialects.postgresql.JSONB` несовместим с SQLite-тестами — `create_all` падал с `UnsupportedCompilationError`. Заменён на `sqlalchemy.types.JSON` (`models/landing.py`, `models/settings.py`)
+3. **(КРИТ)** `alembic/env.py` не импортировал модели — `Base.metadata.tables` был пустым, autogenerate создавал бы пустые миграции. Добавлен `import app.models`
+4. **(СРЕДН)** `api/deps.py` ловил `except Exception` при декодировании JWT — перехватывал любые ошибки, включая DB/IO. Сужено до `jwt.PyJWTError`
+
+**Не реализовано (ожидает продолжения):**
+- 2.1: Alembic-миграция, data-миграция SiteSettings
+- 2.2: Auth API endpoints (login, refresh, me), create_admin script
+- 2.3: Categories CRUD API
+- 2.4: Landings CRUD API
+- 2.5: Public API
+- 2.6: Service endpoints (settings, revalidate, captcha)
+- 2.7: Scripts (import_from_excel.py, seed_data.py)
+- 2.8: Все тесты
 
 ---
 
