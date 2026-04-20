@@ -383,14 +383,20 @@
 - ✅ Можно управлять категориями и настройками сайта
 - ⚠️ E2E и компонентные тесты — отложены
 
-**Коммиты:** `9617212` (реализация), `b4abf01` (исправления после ревью).
+**Коммиты:** `9617212` (реализация), `b4abf01` (исправления после ревью 1), TBD (исправления после ревью 2).
 
-**Найдено при ревью и исправлено:**
+**Найдено при ревью 1 и исправлено:**
 1. **(КРИТ)** `ContentEditor.tsx` — `import { useState }` был расположен после первого вызова `useState` (строка 84 vs строка 61). Перемещён в начало файла
 2. **(КРИТ)** `admin-api.ts` — неиспользуемая функция `serverFetch`. Удалена
 3. **(СРЕДН)** `landings/[id]/page.tsx` — 9 неиспользуемых деструктурированных переменных при omit SEO-полей. Заменено на `Object.fromEntries` + `Set` фильтр
 4. **(СРЕДН)** 6 ошибок ESLint `react-hooks/set-state-in-effect` во всех data-fetching components. Рефакторинг: удалён паттерн `useCallback` + `useEffect`, заменён на plain async functions + `eslint-disable` для легитимного data-fetching
 5. **(НЕЗНАЧИТ)** Toast: удалены несуществующие в Tailwind v4 классы `animate-in slide-in-from-right`
+
+**Найдено при ревью 2 (детальный line-by-line, 23 файла / ~2918 строк) и исправлено:**
+6. **(СРЕДН)** `ContentEditor.tsx:243` — небезопасный двойной type cast `as unknown as string` для поля `features` (передавался `string[]` в callback с типом `string | number | boolean`). Исправлено: расширен тип `DynamicList.update` callback до `string | number | boolean | string[]`, удалён cast
+7. **(СРЕДН)** `landings/page.tsx:62-66` — `setCreateOpen(true)` вызывался во время фазы рендера (setState during render). Исправлено: инициализация `createOpen` напрямую из `searchParams.get("new") === "1"` в `useState`
+
+**Критических проблем при ревью 2 не обнаружено.** ESLint: 0 ошибок, TypeScript: 0 ошибок.
 
 **Отложено:**
 - 3.8: Компонентные тесты (Vitest) и E2E тесты (Playwright) — требуют установки дополнительных dev-зависимостей

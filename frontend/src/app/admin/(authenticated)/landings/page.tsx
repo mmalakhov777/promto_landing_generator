@@ -29,8 +29,8 @@ export default function LandingsPage() {
   const [search, setSearch] = useState("");
   const [searchDebounced, setSearchDebounced] = useState("");
 
-  // Create modal
-  const [createOpen, setCreateOpen] = useState(false);
+  // Create modal — open immediately if ?new=1
+  const [createOpen, setCreateOpen] = useState(searchParams.get("new") === "1");
   const [createForm, setCreateForm] = useState({
     slug: "",
     category_id: 0,
@@ -57,13 +57,6 @@ export default function LandingsPage() {
   useEffect(() => {
     adminApi.get<Category[]>("/categories").then(setCategories).catch(() => {});
   }, []);
-
-  // Open create modal if ?new=1
-  const initialNew = searchParams.get("new") === "1";
-  const [createOpenInit] = useState(initialNew);
-  if (createOpenInit && !createOpen) {
-    setCreateOpen(true);
-  }
 
   const fetchLandings = async () => {
     setLoading(true);

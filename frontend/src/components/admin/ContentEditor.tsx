@@ -17,14 +17,14 @@ interface DynamicListProps<T> {
   label: string;
   items: T[];
   onChange: (items: T[]) => void;
-  renderItem: (item: T, index: number, update: (field: string, value: string | number | boolean) => void) => React.ReactNode;
+  renderItem: (item: T, index: number, update: (field: string, value: string | number | boolean | string[]) => void) => React.ReactNode;
   createItem: () => T;
 }
 
 function DynamicList<T>({ label, items, onChange, renderItem, createItem }: DynamicListProps<T>) {
   const addItem = () => onChange([...items, createItem()]);
   const removeItem = (idx: number) => onChange(items.filter((_, i) => i !== idx));
-  const updateItem = (idx: number, field: string, value: string | number | boolean) => {
+  const updateItem = (idx: number, field: string, value: string | number | boolean | string[]) => {
     const next = [...items];
     next[idx] = { ...next[idx], [field]: value };
     onChange(next);
@@ -240,7 +240,7 @@ export function ContentEditor({ content, onChange, locale }: ContentEditorProps)
                 label="Фичи (через Enter)"
                 multiline
                 value={(item.features || []).join("\n")}
-                onChange={(e) => upd("features", e.target.value.split("\n").filter(Boolean) as unknown as string)}
+                onChange={(e) => upd("features", e.target.value.split("\n").filter(Boolean))}
               />
               <div className="flex items-center gap-2">
                 <input
