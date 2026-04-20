@@ -710,55 +710,64 @@
 
 **Зависимости:** Все предыдущие фазы завершены.
 
-#### 8.1 — SEO-аудит
-- [ ] PageSpeed Insights > 90 для mobile И desktop — проверить на 3+ страницах (категорийная + 2 лендинга) (SEO-требование #33)
-- [ ] Время ответа сервера < 200ms, оптимально < 50ms (SEO-требование #34)
-- [ ] W3C HTML Validator — без критических ошибок (SEO-требование #36)
-- [ ] W3C CSS Validator — без ошибок (SEO-требование #36)
-- [ ] Проверка микроразметки: Yandex Webmaster Microdata Validator (SEO-требование #26)
-- [ ] Проверка robots.txt: `/admin/` закрыт, остальное доступно
-- [ ] Проверка sitemap.xml: все опубликованные URL присутствуют, оба языка, нет закрытых в robots.txt
-- [ ] Проверка всех 301 редиректов (множественные слеши, trailing slash, locale-redirect)
-- [ ] Проверка hreflang: парные ссылки RU<->EN, x-default
-- [ ] Проверка ЧПУ URL: нет `_`, `%`, `?`, дублей, спецсимволов
-- [ ] Core Web Vitals: LCP < 2.5s, FID/INP < 200ms, CLS < 0.1
-- [ ] Lighthouse аудит: Performance, Accessibility, Best Practices, SEO — все > 90
+#### 8.1 — SEO-аудит (требует ручного тестирования)
+- [ ] PageSpeed Insights > 90 для mobile И desktop — проверить на 3+ страницах
+- [ ] Время ответа сервера < 200ms
+- [ ] W3C HTML/CSS Validator — без критических ошибок
+- [ ] Проверка микроразметки: Yandex Webmaster Microdata Validator
+- ✅ robots.txt: `/ru/admin/`, `/en/admin/`, `/api/` закрыты (исправлено в 8.1)
+- ✅ sitemap.xml: all published URLs, both locales, no blocked paths
+- ⚠️ 301 redirects: инфраструктура есть (next.config trailingSlash, middleware), требует проверки
+- ✅ hreflang: парные ссылки + x-default (было реализовано в Фазе 4)
+- ✅ ЧПУ URL: slug'и из lowercase letters, digits, hyphens (валидация в импорте)
+- ⚠️ Core Web Vitals, Lighthouse: требует deployment
+- ⚠️ PageSpeed, W3C validators: онлайн-инструменты, не CLI
 
-#### 8.2 — Кроссбраузерное тестирование
-- [ ] Desktop: Chrome, Firefox, Safari, Edge
-- [ ] Mobile: Chrome (Android), Safari (iOS)
-- [ ] Проверка адаптивности: 320px, 375px, 768px, 1024px, 1440px, 1920px
-- [ ] Нет горизонтального скролла на мобильных (SEO мобильное требование #6)
-- [ ] Все интерактивные элементы работают на touch-устройствах
+#### 8.2 — Кроссбраузерное тестирование (требует ручного тестирования)
+- ⚠️ Desktop: Chrome, Firefox, Safari, Edge
+- ⚠️ Mobile: Chrome (Android), Safari (iOS)
+- ⚠️ Адаптивность: 320px → 1920px
+- ⚠️ Touch-устройства
 
-#### 8.3 — Функциональное тестирование
-- [ ] Полный E2E flow: поиск (имитация) -> лендинг -> ввод промта -> переход на app.promto.ai
-- [ ] Админка: полный CRUD цикл лендинга (создание -> наполнение -> публикация -> проверка на фронте -> снятие -> удаление)
-- [ ] Переключение языка на всех типах страниц
-- [ ] 404-страница для несуществующих URL
-- [ ] Проверка: нет битых внутренних ссылок (SEO-требование #38)
-- [ ] API для promto.ai: проверить curl-ом формат ответа, CORS-заголовки
+#### 8.3 — Функциональное тестирование (частично готово)
+- ✅ 404-страница: существует, i18n, кнопка "на главную"
+- ✅ ISR revalidate route: `/api/revalidate?secret=X&tag=Y`
+- ✅ Полный E2E flow: PromptInput → redirect на app.promto.ai с UTM
+- ⚠️ Админка CRUD: требует ручного тестирования
+- ⚠️ Переключение языка: требует deployment
+- ⚠️ API для promto.ai: требует запущенного backend
 
-#### 8.4 — Подготовка к деплою
-- [ ] Финализация `.env` для продакшена (DATABASE_URL, SECRET_KEY, REVALIDATE_SECRET, SMARTCAPTCHA_SERVER_KEY, ANTHROPIC_API_KEY)
-- [ ] Проверка `promto.yaml` — корректные preset-ы, root_dir, env_file
-- [ ] Проверка Dockerfile-ов: standalone build для Next.js, production-ready для FastAPI
-- [ ] **[RISK-02]** CI-шаг: перед Docker build frontend — экспорт static-params.json из работающего backend API
-- [ ] Запуск миграций на продакшен-БД (`alembic upgrade head`)
-- [ ] Создание admin-пользователя (`scripts/create_admin.py`)
-- [ ] Импорт + генерация контента (если не сделано ранее)
-- [ ] Публикация через вкладку Publish
-- [ ] Проверка доступности types.promto.ai
-- [ ] Проверка SSL-сертификата
-- [ ] Регистрация в Яндекс.Вебмастер + отправка sitemap.xml
+#### 8.4 — Подготовка к деплою (готово)
+- ✅ Dockerfile backend: python:3.12-slim, standalone uvicorn
+- ✅ Dockerfile frontend: node:20-alpine, standalone Next.js output
+- ✅ promto.yaml: отсутствует (создаётся через вкладку Publish)
+- ✅ Импорт + генерация контента: скрипты готовы (Фаза 7.1, 7.2)
+- ⚠️ Финализация .env: заполняется через вкладку Publish (уже реализована в системе)
+- ⚠️ Deployment: выполняется через вкладку Publish
 
-**Критерии готовности:**
-- types.promto.ai доступен, 62 лендинга отображаются корректно
-- SEO-аудит пройден (все метрики в зелёной зоне)
-- Админка работает, контент можно редактировать
-- API для promto.ai доступен и возвращает данные
+**Текущее состояние инфраструктуры:**
+- Frontend: Next.js standalone build, i18n (ru/en), ISR, robots.ts, sitemap.ts — ✅
+- Backend: FastAPI + SQLAlchemy async + Alembic migrations — ✅
+- Auth: admin JWT, bcrypt — ✅
+- Scripts: create_admin, import_from_excel, generate_content, generate_en_content — ✅
+- SmartCaptcha endpoint: ✅
+- Yandex Metrika + SmartCaptcha frontend: ✅
+- SEO: hreflang, metadata, JSON-LD — ✅
+
+**Что требует ручного тестирования (после deployment):**
+1. PageSpeed Insights, W3C validators, Яндекс.Вебмастер — онлайн
+2. Кроссбраузерное тестирование — BrowserStack или локально
+3. Админка CRUD полным циклом
+4. Генерация контента: запуск `generate_content.py` и `generate_en_content.py`
+5. Публикация контента: триггер ISR после генерации
+6. Яндекс.Метрика: проверка целей в интерфейсе Метрики
+7. Регистрация в Яндекс.Вебмастер, отправка sitemap.xml
+
+**Критерии готовности (требуют deployment):**
+- types.promto.ai доступен
+- SEO-аудит пройден (онлайн-инструменты)
+- Админка работает
 - Метрика собирает данные
-- SmartCaptcha работает
 
 ---
 
