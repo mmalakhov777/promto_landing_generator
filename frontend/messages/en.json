@@ -1,0 +1,10 @@
+{
+  "common": {
+    "siteName": "Promto",
+    "comingSoon": "Landing pages coming soon",
+    "description": "SEO landing page generator for the Promto platform"
+  },
+  "nav": {
+    "home": "Home"
+  }
+}
