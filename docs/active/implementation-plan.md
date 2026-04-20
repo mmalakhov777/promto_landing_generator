@@ -690,8 +690,17 @@
 - `[RISK-13]` стоимость не оценивается перед запуском (только dry-run без реальных вызовов)
 
 #### 7.2 — Генерация EN-контента (Backend)
-- ✅ `scripts/generate_en_content.py` — перевод RU→EN через Anthropic API (существовал с Фазы 5)
-- ⚠️ E2E тесты — отложены
+- ✅ `scripts/generate_en_content.py` — перевод RU→EN через Anthropic API
+- ✅ Retry logic: 3 попытки, exponential backoff (как в generate_content.py)
+- ✅ `extract_content_dict` включает `og_image_url` и `video_url` (ранее отсутствовали)
+
+**ESLint:** 0 ошибок. **Syntax:** OK. **Регрессий не обнаружено.**
+
+**Найдено при ревью (детальный line-by-line) и исправлено:**
+1. **(НЕЗНАЧИТ)** `generate_en_content.py:69,78` — отсутствовали `og_image_url` и `video_url` в `extract_content_dict`. Добавлены.
+2. **(НЕЗНАЧИТ)** `generate_en_content.py:97-126` — нет retry logic. Добавлен цикл с 3 попытками и exponential backoff.
+3. **(КРИТ)** `backend/app/schemas/public.py:57` — `SitemapItem.updated_at: datetime` без None. При нулевом `updated_at` Pydantic валидация падала. Исправлено на `datetime | None`.
+4. **(НЕЗНАЧИТ)** `Category.is_active` — проверено: `Boolean, default=True` в модели (строка 22) — дефолт задан корректно. Подтверждено.
 
 #### 7.3 — Ревью и публикация (Admin + Backend)
 - [ ] Ручной ревью сгенерированного контента через админку (Фаза 3)

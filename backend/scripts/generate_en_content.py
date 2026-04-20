@@ -35,6 +35,7 @@ import app.models  # noqa: F401 — ensure all models registered
 
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 MODEL = "claude-sonnet-4-20250514"
+MAX_RETRIES = 3
 
 SYSTEM_PROMPT = """You are a professional translator specializing in marketing and SEO content.
 Translate the provided Russian landing page content into natural, fluent English.
@@ -65,6 +66,7 @@ def extract_content_dict(content: LandingContent) -> dict:
         "h1": content.h1,
         "og_title": content.og_title,
         "og_description": content.og_description,
+        "og_image_url": content.og_image_url,
         "hero_title": content.hero_title,
         "hero_subtitle": content.hero_subtitle,
         "hero_cta_text": content.hero_cta_text,
@@ -73,6 +75,7 @@ def extract_content_dict(content: LandingContent) -> dict:
         "advantages": content.advantages,
         "how_it_works": content.how_it_works,
         "examples": content.examples,
+        "video_url": content.video_url,
         "video_title": content.video_title,
         "pricing": content.pricing,
         "reviews": content.reviews,
@@ -102,25 +105,35 @@ async def translate_content(ru_dict: dict) -> dict:
 
     client = anthropic.AsyncAnthropic(api_key=ANTHROPIC_API_KEY)
 
-    response = await client.messages.create(
-        model=MODEL,
-        max_tokens=4096,
-        system=SYSTEM_PROMPT,
-        messages=[
-            {"role": "user", "content": build_translation_prompt(ru_dict)},
-        ],
-    )
+    for attempt in range(1, MAX_RETRIES + 1):
+        try:
+            response = await client.messages.create(
+                model=MODEL,
+                max_tokens=4096,
+                system=SYSTEM_PROMPT,
+                messages=[
+                    {"role": "user", "content": build_translation_prompt(ru_dict)},
+                ],
+            )
 
-    response_text = response.content[0].text.strip()
+            response_text = response.content[0].text.strip()
 
-    # Strip markdown code fences if present
-    if response_text.startswith("```"):
-        lines = response_text.split("\n")
-        # Remove first line (```json) and last line (```)
-        lines = [l for l in lines if not l.strip().startswith("```")]
-        response_text = "\n".join(lines)
+            # Strip markdown code fences if present
+            if response_text.startswith("```"):
+                lines = response_text.split("\n")
+                lines = [l for l in lines if not l.strip().startswith("```")]
+                response_text = "\n".join(lines)
 
-    return json.loads(response_text)
+            return json.loads(response_text)
+        except json.JSONDecodeError as e:
+            print(f"  Attempt {attempt}/{MAX_RETRIES} failed (JSON error: {e})")
+            if attempt == MAX_RETRIES:
+                raise
+        except Exception as e:
+            print(f"  Attempt {attempt}/{MAX_RETRIES} failed: {e}")
+            if attempt == MAX_RETRIES:
+                raise
+        await asyncio.sleep(2 ** attempt)  # exponential backoff
 
 
 def has_content(content: LandingContent) -> bool:

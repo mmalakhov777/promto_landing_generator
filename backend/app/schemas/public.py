@@ -54,5 +54,5 @@ class PublicLandingDetail(BaseModel):
 class SitemapItem(BaseModel):
     category_slug: str
     landing_slug: str
-    updated_at: datetime
+    updated_at: datetime | None
     locales: list[str]
