@@ -28,7 +28,7 @@ sys.path.insert(0, ".")
 from sqlalchemy import select
 from sqlalchemy.orm import selectinload
 
-from app.core.database import async_session_factory, engine
+from app.core.database import async_session_factory
 from app.models.landing import Landing, LandingContent, Locale
 import app.models  # noqa: F401 — ensure all models registered
 
@@ -100,9 +100,9 @@ async def translate_content(ru_dict: dict) -> dict:
         print("ERROR: anthropic package not installed. Run: pip install anthropic")
         sys.exit(1)
 
-    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+    client = anthropic.AsyncAnthropic(api_key=ANTHROPIC_API_KEY)
 
-    response = client.messages.create(
+    response = await client.messages.create(
         model=MODEL,
         max_tokens=4096,
         system=SYSTEM_PROMPT,

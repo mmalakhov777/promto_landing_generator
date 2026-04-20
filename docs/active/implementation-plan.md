@@ -590,6 +590,13 @@
 - ✅ Скрипт перевода контента готов
 - ⚠️ E2E тесты — отложены
 
+**Найдено при ревью (детальный line-by-line, 10 файлов) и исправлено:**
+1. **(КРИТ)** `generate_en_content.py:103` — синхронный `anthropic.Anthropic` блокировал event loop. Заменён на `AsyncAnthropic` + `await`
+2. **(НЕЗНАЧИТ)** `generate_en_content.py:31` — неиспользуемый import `engine`. Удалён
+3. **(НЕЗНАЧИТ)** `messages/*.json` — мёртвый ключ `category.allLandings`. Удалён
+
+**ESLint:** 0 ошибок. **TypeScript:** 0 ошибок. **Регрессий не обнаружено.**
+
 ---
 
 ### ФАЗА 6: Интеграции
