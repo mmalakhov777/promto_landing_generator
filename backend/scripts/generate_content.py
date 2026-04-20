@@ -101,51 +101,6 @@ def get_example_images(category_slug: str) -> list[dict]:
     ]
 
 
-SYSTEM_PROMPT = """You are an expert landing page copywriter for the Promto AI website builder platform (promto.ai).
-
-Generate comprehensive, SEO-optimized Russian landing page content for the keyword: {keyword}
-
-Platform context: Promto is an AI-powered website builder that creates websites from a text prompt in 2 minutes. Target audience: Russian-speaking business owners, professionals, and entrepreneurs who need a website but lack technical skills.
-
-Return ONLY valid JSON (no markdown fences), with all fields below:
-
-{{json}}
-
-Field requirements:
-- meta_title: under 60 characters, includes the keyword
-- meta_description: under 160 characters, compelling, includes keyword
-- h1: includes keyword, clear value proposition (max 60 chars)
-- og_title: under 60 chars, different from h1
-- og_description: under 160 chars, different from meta_description
-- hero_title: matches h1
-- hero_subtitle: 1-2 sentences about the key benefit (60-120 chars)
-- hero_cta_text: "Создать сайт" or similar action-oriented phrase
-- hero_placeholder: "Опишите, какой сайт для {niche} вы хотите создать..." (replace niche with the target audience/niche)
-- social_proof: NOT generated — leave as null (filled from SiteSettings defaults at runtime)
-- advantages: 4-6 items with icon names (e.g. "zap", "shield", "star", "clock", "globe", "lock") and niche-adapted titles/descriptions
-- how_itworks: 3-4 steps: describe → AI generates → publish. Each step has step number, title, description, image_url=""
-- examples: NOT generated — filled from pre-selected Unsplash images. Return null.
-- video_url: "" (not used for MVP)
-- video_title: "" (not used for MVP)
-- pricing: NOT generated — leave as null (filled from SiteSettings defaults at runtime)
-- reviews: 4-5 realistic testimonials adapted to the niche. Each: author, text (1-2 sentences), rating (4-5), avatar_url=""
-- faq: 5-6 Q&A pairs: 3-4 niche-specific + 2 general about Promto. Questions should sound natural, not templated.
-- cta_mid_title: compelling, action-oriented (max 60 chars)
-- cta_mid_subtitle: supporting text (max 100 chars)
-- cta_final_title: urgency/conclusion (max 60 chars)
-- cta_final_subtitle: supporting text (max 100 chars)
-- cta_final_button_text: "Создать сайт бесплатно" or similar
-
-Important:
-- All text must be in Russian, natural, marketing-appropriate
-- Do NOT generate image URLs — leave image_url fields as ""
-- Do NOT generate social_proof or pricing — return null for those
-- Return null for examples (will be filled from pool)
-- Icon names for advantages: choose from "zap", "shield", "star", "clock", "globe", "lock", "check", "award", "trending", "users"
-- No markdown, no explanatory text — JSON only
-"""
-
-
 def build_generation_prompt(keyword: str, niche: str) -> str:
     template = SYSTEM_PROMPT.format(keyword=keyword, niche=niche, json="{}")
     # We'll ask for the full structure as JSON without a template
@@ -190,7 +145,7 @@ Rules:
 - Return ONLY the JSON object, no markdown fences or explanatory text"""
 
 
-def extract_content_dict(content: LandingContent, include_examples: bool = False) -> dict:
+def extract_content_dict(content: LandingContent) -> dict:
     """Extract fields that can be updated from LandingContent."""
     return {
         "meta_title": content.meta_title,
@@ -304,7 +259,7 @@ async def main():
 
         query = (
             select(Landing)
-            .options(selectinload(Landing.contents))
+            .options(selectinload(Landing.contents), selectinload(Landing.category))
             .where(Landing.is_published == True)  # noqa: E712
         )
         if args.slug:

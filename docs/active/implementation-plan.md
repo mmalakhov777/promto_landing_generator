@@ -676,7 +676,14 @@
 - ✅ Сохранение результатов напрямую в LandingContent(locale=ru)
 
 **Созданные файлы:**
-- `backend/scripts/generate_content.py` (275 строк) — генерация RU-контента
+- `backend/scripts/generate_content.py` (340 строк) — генерация RU-контента
+
+**ESLint:** 0 ошибок. **Syntax:** OK. **Регрессий не обнаружено.**
+
+**Найдено при ревью (детальный line-by-line) и исправлено:**
+1. **(НЕЗНАЧИТ)** `generate_content.py:149` — неиспользуемая переменная `template` из `SYSTEM_PROMPT.format(...)`. SYSTEM_PROMPT не использовался, вместо него сразу возвращался f-string. SYSTEM_PROMPT (мертвый код, 42 строки) удалён.
+2. **(НЕЗНАЧИТ)** `generate_content.py:193` — неиспользуемый параметр `include_examples` в `extract_content_dict`. Удалён.
+3. **(НЕЗНАЧИТ)** `generate_content.py:307` — `selectinload(Landing.category)` отсутствовал, хотя `landing.category.slug` используется в `apply_content_dict`. Добавлен.
 
 **Известные ограничения (не блокируют MVP):**
 - `[RISK-08]` images: examples заполняются из пула Unsplash URL (не нише-специфичные)
