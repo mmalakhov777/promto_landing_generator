@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { adminApi, AdminApiError } from "@/lib/admin-api";
 import { FormField } from "@/components/admin/FormField";
 import { useToast } from "@/components/admin/Toast";
@@ -22,7 +22,7 @@ export default function SettingsPage() {
     social_proof_defaults: [] as SocialProofItem[],
   });
 
-  const fetchSettings = useCallback(async () => {
+  const fetchSettings = async () => {
     try {
       const data = await adminApi.get<SiteSettings>("/settings/full");
       setForm({
@@ -39,11 +39,10 @@ export default function SettingsPage() {
     } finally {
       setLoading(false);
     }
-  }, [toast]);
+  };
 
-  useEffect(() => {
-    void fetchSettings();
-  }, [fetchSettings]);
+  // eslint-disable-next-line react-hooks/set-state-in-effect, react-hooks/exhaustive-deps -- initial data fetch on mount
+  useEffect(() => { void fetchSettings(); }, []);
 
   const handleSave = async () => {
     setSaving(true);

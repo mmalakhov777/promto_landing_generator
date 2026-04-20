@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { adminApi, AdminApiError } from "@/lib/admin-api";
 import { Badge } from "@/components/admin/Badge";
 import { DataTable, type Column } from "@/components/admin/DataTable";
@@ -36,7 +36,7 @@ export default function CategoriesPage() {
   const [deleteTarget, setDeleteTarget] = useState<Category | null>(null);
   const [deleting, setDeleting] = useState(false);
 
-  const fetchCategories = useCallback(async () => {
+  const fetchCategories = async () => {
     try {
       const data = await adminApi.get<Category[]>("/categories");
       setCategories(data);
@@ -45,11 +45,10 @@ export default function CategoriesPage() {
     } finally {
       setLoading(false);
     }
-  }, [toast]);
+  };
 
-  useEffect(() => {
-    void fetchCategories();
-  }, [fetchCategories]);
+  // eslint-disable-next-line react-hooks/set-state-in-effect, react-hooks/exhaustive-deps -- data fetch on mount
+  useEffect(() => { void fetchCategories(); }, []);
 
   const openCreate = () => {
     setEditing(null);

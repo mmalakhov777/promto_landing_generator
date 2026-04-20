@@ -2,7 +2,6 @@
 
 import {
   createContext,
-  useCallback,
   useContext,
   useEffect,
   useState,
@@ -35,7 +34,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const router = useRouter();
   const pathname = usePathname();
 
-  const fetchUser = useCallback(async () => {
+  const fetchUser = async () => {
     try {
       const res = await fetch("/api/auth/me");
       if (res.ok) {
@@ -49,11 +48,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     } finally {
       setLoading(false);
     }
-  }, []);
+  };
 
-  useEffect(() => {
-    void fetchUser();
-  }, [fetchUser]);
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- initial data fetch on mount
+  useEffect(() => { void fetchUser(); }, []);
 
   // Redirect to login if not authenticated (except on login page)
   useEffect(() => {
@@ -62,28 +60,25 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   }, [loading, user, pathname, router]);
 
-  const login = useCallback(
-    async (email: string, password: string) => {
-      const res = await fetch("/api/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
-      });
+  const login = async (email: string, password: string) => {
+    const res = await fetch("/api/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password }),
+    });
 
-      if (!res.ok) {
-        const data = await res.json().catch(() => ({ detail: "Login failed" }));
-        throw new Error(data.detail || "Login failed");
-      }
+    if (!res.ok) {
+      const data = await res.json().catch(() => ({ detail: "Login failed" }));
+      throw new Error(data.detail || "Login failed");
+    }
 
-      await fetchUser();
-    },
-    [fetchUser],
-  );
+    await fetchUser();
+  };
 
-  const logout = useCallback(async () => {
+  const logout = async () => {
     await fetch("/api/auth/logout", { method: "POST" });
     setUser(null);
-  }, []);
+  };
 
   return (
     <AuthContext.Provider value={{ user, loading, login, logout }}>

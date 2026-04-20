@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { adminApi, AdminApiError } from "@/lib/admin-api";
 import { FormField } from "@/components/admin/FormField";
@@ -54,7 +54,7 @@ export default function LandingEditorPage() {
     search_volume: 0,
   });
 
-  const fetchLanding = useCallback(async () => {
+  const fetchLanding = async () => {
     try {
       const [data, cats] = await Promise.all([
         adminApi.get<Landing>(`/landings/${id}`),
@@ -82,11 +82,10 @@ export default function LandingEditorPage() {
     } finally {
       setLoading(false);
     }
-  }, [id, toast, router]);
+  };
 
-  useEffect(() => {
-    void fetchLanding();
-  }, [fetchLanding]);
+  // eslint-disable-next-line react-hooks/set-state-in-effect, react-hooks/exhaustive-deps -- initial data fetch
+  useEffect(() => { void fetchLanding(); }, [id]);
 
   const saveMain = async () => {
     setSaving(true);

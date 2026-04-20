@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
 import { adminApi, AdminApiError } from "@/lib/admin-api";
@@ -59,13 +59,13 @@ export default function LandingsPage() {
   }, []);
 
   // Open create modal if ?new=1
-  useEffect(() => {
-    if (searchParams.get("new") === "1") {
-      setCreateOpen(true);
-    }
-  }, [searchParams]);
+  const initialNew = searchParams.get("new") === "1";
+  const [createOpenInit] = useState(initialNew);
+  if (createOpenInit && !createOpen) {
+    setCreateOpen(true);
+  }
 
-  const fetchLandings = useCallback(async () => {
+  const fetchLandings = async () => {
     setLoading(true);
     try {
       const params: Record<string, string> = {
@@ -84,11 +84,10 @@ export default function LandingsPage() {
     } finally {
       setLoading(false);
     }
-  }, [page, filterCategory, filterStatus, searchDebounced, toast]);
+  };
 
-  useEffect(() => {
-    void fetchLandings();
-  }, [fetchLandings]);
+  // eslint-disable-next-line react-hooks/set-state-in-effect, react-hooks/exhaustive-deps -- refetch when filters change
+  useEffect(() => { void fetchLandings(); }, [page, filterCategory, filterStatus, searchDebounced]);
 
   const handleCreate = async () => {
     if (!createForm.slug || !createForm.category_id) {
