@@ -8,18 +8,16 @@
     "home": "Главная"
   },
   "landing": {
-    "tryFree": "Попробовать бесплатно",
-    "createNow": "Создать сейчас",
-    "learnMore": "Узнать больше",
     "popular": "Популярный",
-    "step": "Шаг",
     "faqTitle": "Часто задаваемые вопросы",
     "videoTitle": "Видео",
     "pricingTitle": "Тарифы",
     "reviewsTitle": "Отзывы",
     "advantagesTitle": "Преимущества",
     "howItWorksTitle": "Как это работает",
-    "examplesTitle": "Примеры работ"
+    "examplesTitle": "Примеры работ",
+    "ctaStart": "Начать",
+    "ctaChoose": "Выбрать"
   },
   "category": {
     "allLandings": "Все лендинги",
@@ -31,8 +29,6 @@
     "backHome": "Вернуться на главную"
   },
   "footer": {
-    "copyright": "© {year} Промто. Все права защищены.",
-    "privacy": "Политика конфиденциальности",
-    "terms": "Условия использования"
+    "copyright": "© {year} Промто. Все права защищены."
   }
 }

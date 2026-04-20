@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import {
   getPublicCategories,
   getPublicLanding,
@@ -247,32 +248,8 @@ export default async function CatchAllPage({ params }: Props) {
 
   const enabled = new Set(landing.enabled_sections);
 
-  // i18n section titles
-  const t = locale === "ru"
-    ? {
-        advantages: "Преимущества",
-        howItWorks: "Как это работает",
-        examples: "Примеры работ",
-        video: "Видео",
-        pricing: "Тарифы",
-        reviews: "Отзывы",
-        faq: "Часто задаваемые вопросы",
-        popular: "Популярный",
-        ctaStart: "Начать",
-        ctaChoose: "Выбрать",
-      }
-    : {
-        advantages: "Advantages",
-        howItWorks: "How it works",
-        examples: "Examples",
-        video: "Video",
-        pricing: "Pricing",
-        reviews: "Reviews",
-        faq: "Frequently asked questions",
-        popular: "Popular",
-        ctaStart: "Get started",
-        ctaChoose: "Choose",
-      };
+  // i18n section titles from messages/{locale}.json
+  const t = await getTranslations({ locale, namespace: "landing" });
 
   return (
     <>
@@ -315,15 +292,15 @@ export default async function CatchAllPage({ params }: Props) {
         )}
 
         {enabled.has("advantages") && landing.advantages && (
-          <AdvantagesSection title={t.advantages} items={landing.advantages} />
+          <AdvantagesSection title={t("advantagesTitle")} items={landing.advantages} />
         )}
 
         {enabled.has("how_it_works") && landing.how_it_works && (
-          <HowItWorksSection title={t.howItWorks} steps={landing.how_it_works} />
+          <HowItWorksSection title={t("howItWorksTitle")} steps={landing.how_it_works} />
         )}
 
         {enabled.has("examples") && landing.examples && (
-          <ExamplesSection title={t.examples} items={landing.examples} />
+          <ExamplesSection title={t("examplesTitle")} items={landing.examples} />
         )}
 
         {enabled.has("cta_mid") && (
@@ -340,27 +317,27 @@ export default async function CatchAllPage({ params }: Props) {
 
         {enabled.has("video") && (
           <VideoSection
-            title={landing.video_title || t.video}
+            title={landing.video_title || t("videoTitle")}
             videoUrl={landing.video_url}
           />
         )}
 
         {enabled.has("pricing") && landing.pricing && (
           <PricingSection
-            title={t.pricing}
+            title={t("pricingTitle")}
             plans={landing.pricing}
-            popularLabel={t.popular}
-            ctaTextPrimary={t.ctaStart}
-            ctaTextSecondary={t.ctaChoose}
+            popularLabel={t("popular")}
+            ctaTextPrimary={t("ctaStart")}
+            ctaTextSecondary={t("ctaChoose")}
           />
         )}
 
         {enabled.has("reviews") && landing.reviews && (
-          <ReviewsSection title={t.reviews} reviews={landing.reviews} />
+          <ReviewsSection title={t("reviewsTitle")} reviews={landing.reviews} />
         )}
 
         {enabled.has("faq") && landing.faq && (
-          <FaqSection title={t.faq} items={landing.faq} />
+          <FaqSection title={t("faqTitle")} items={landing.faq} />
         )}
 
         {/* Final CTA */}

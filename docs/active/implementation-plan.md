@@ -506,10 +506,11 @@
 4. **(КРИТ)** `JsonLd.tsx:56-100` — два отдельных `Product` schema.org объекта (pricing + reviews). Объединены в единый `Product` с `offers` + `aggregateRating` + `review`
 5. **(КРИТ)** `[...rest]/page.tsx:75` — в метаданных пагинации title всегда использовал `cat.meta_title_ru`. Исправлено: выбор по locale (`meta_title_ru` / `meta_title_en`)
 
-**Некритические проблемы (оставлены как техдолг):**
-- `[...rest]/page.tsx:250-270` — section titles inline-объектом вместо i18n message keys (работает, но дублирует переводы)
-- `messages/ru.json`, `messages/en.json` — мёртвые i18n-ключи (`landing.tryFree`, `landing.createNow`, `footer.copyright` и др.)
-- `CtaBlock.tsx` — `<div>` вместо `<section>` для семантической обёртки
+**Некритические проблемы (исправлены во втором ревью-коммите):**
+6. `[...rest]/page.tsx:250-270` — inline section titles заменены на `getTranslations({locale, namespace: "landing"})` из next-intl
+7. `messages/ru.json`, `messages/en.json` — удалены мёртвые ключи (`tryFree`, `createNow`, `learnMore`, `step`, `footer.privacy`, `footer.terms`), добавлены `ctaStart`/`ctaChoose`
+8. `CtaBlock.tsx` — `<div>` заменён на `<section>` для семантической разметки
+9. `not-found.tsx` — переведён на `useTranslations("notFound")` вместо inline-объекта
 
 **ESLint:** 0 ошибок. **TypeScript:** 0 ошибок.
 

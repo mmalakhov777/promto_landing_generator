@@ -26,7 +26,7 @@ export function CtaBlock({
   const isFinal = variant === "final";
 
   return (
-    <div
+    <section
       className={`py-section ${
         isFinal ? "bg-primary text-white" : "bg-surface"
       }`}
@@ -64,6 +64,6 @@ export function CtaBlock({
           )}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

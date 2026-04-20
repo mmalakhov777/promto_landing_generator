@@ -8,31 +8,27 @@
     "home": "Home"
   },
   "landing": {
-    "tryFree": "Try for free",
-    "createNow": "Create now",
-    "learnMore": "Learn more",
     "popular": "Popular",
-    "step": "Step",
     "faqTitle": "Frequently asked questions",
     "videoTitle": "Video",
     "pricingTitle": "Pricing",
     "reviewsTitle": "Reviews",
     "advantagesTitle": "Advantages",
     "howItWorksTitle": "How it works",
-    "examplesTitle": "Examples"
+    "examplesTitle": "Examples",
+    "ctaStart": "Get started",
+    "ctaChoose": "Choose"
   },
   "category": {
     "allLandings": "All landing pages",
     "page": "page"
   },
   "notFound": {
-    "title": "This page does not exist!",
+    "title": "Page not found!",
     "description": "The page you are looking for has been removed or never existed.",
     "backHome": "Back to home"
   },
   "footer": {
-    "copyright": "© {year} Promto. All rights reserved.",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "copyright": "© {year} Promto. All rights reserved."
   }
 }
