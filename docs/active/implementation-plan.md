@@ -98,7 +98,7 @@
 #### 1.2 — Frontend: каркас Next.js
 - [ ] Создать Next.js 14+ приложение в `frontend/` (App Router, TypeScript, `output: "standalone"`)
 - [ ] Настроить Tailwind CSS по брендбуку (цвета, шрифты, spacing, breakpoints)
-- [ ] Настроить `next-intl`: middleware с определением локали из URL-префикса (`/ru/...`, `/en/...`), дефолтная локаль `ru`
+- [ ] Настроить `next-intl`: middleware с определением локали из URL-префикса (`/ru/...`, `/en/...`), дефолтная локаль `ru`. **[RISK-03]** Явно исключить `/admin/`, `/api/`, `/_next/`, `/robots.txt`, `/sitemap.xml`, `/favicon.ico` из i18n middleware через early return перед вызовом intlMiddleware
 - [ ] Создать файлы переводов UI: `messages/ru.json`, `messages/en.json` (пока пустые шаблоны)
 - [ ] Создать `frontend/Dockerfile` (Next.js standalone build)
 - [ ] Настроить базовый layout `[locale]/layout.tsx`: viewport meta, favicon (из брендбука), `next/font` для шрифта Onest
@@ -162,7 +162,11 @@
   - unique constraint (landing_id + section_type)
 - [ ] Модель `SiteSettings` — глобальные настройки (singleton)
   - `id`, `metrika_id`, `smartcaptcha_client_key`, `default_pricing` (JSONB), `default_cta_texts` (JSONB), `platform_url` (default: "https://app.promto.ai"), `social_proof_defaults` (JSONB), `default_video_url`, `updated_at`
+- [ ] Модель `SlugRedirect` — редиректы при смене slug-ов **[RISK-09]**
+  - `id`, `old_category_slug`, `old_landing_slug`, `new_category_slug`, `new_landing_slug`, `created_at`
+- [ ] **[RISK-07]** Pydantic-модели для валидации JSONB-структур в `schemas/content.py`: `AdvantageItem`, `HowItWorksStep`, `ExampleItem`, `PricingPlan`, `ReviewItem`, `FaqItem`, `SocialProofItem`, `CtaTexts`
 - [ ] Создать Alembic-миграцию, применить, проверить схему
+- [ ] **[RISK-12]** В data-миграции — INSERT INTO site_settings с дефолтными значениями (platform_url="https://app.promto.ai")
 
 #### 2.2 — Auth API (Backend)
 - [ ] `POST /api/v1/auth/login` — JWT-авторизация (access + refresh tokens)
@@ -174,19 +178,19 @@
 
 #### 2.3 — CRUD API категорий (Backend)
 - [ ] `GET /api/v1/categories` — список категорий (публичный, с фильтром `?is_active=true`)
-- [ ] `POST /api/v1/categories` — создать категорию (admin)
+- [ ] `POST /api/v1/categories` — создать категорию (admin). **[RISK-05]** Валидация slug: запрет зарезервированных значений (`admin`, `api`, `ru`, `en`, `_next`, `robots.txt`, `sitemap.xml`, `favicon.ico`)
 - [ ] `GET /api/v1/categories/{id}` — детали (admin)
-- [ ] `PATCH /api/v1/categories/{id}` — обновить (admin)
-- [ ] `DELETE /api/v1/categories/{id}` — мягкое удаление / деактивация (admin)
+- [ ] `PATCH /api/v1/categories/{id}` — обновить (admin). **[RISK-05]** Та же валидация slug
+- [ ] `DELETE /api/v1/categories/{id}` — мягкое удаление / деактивация (admin). **[RISK-11]** При деактивации — каскадно снять с публикации все лендинги категории, вернуть количество затронутых
 
 #### 2.4 — CRUD API лендингов (Backend)
 - [ ] `GET /api/v1/landings` — список с фильтрацией (category_id, is_published, search), пагинацией, сортировкой (admin)
 - [ ] `GET /api/v1/landings/{id}` — полные данные лендинга + контент обеих локалей + секции (admin)
-- [ ] `POST /api/v1/landings` — создать лендинг + пустой LandingContent(ru) + LandingContent(en) + все LandingSection (admin)
-- [ ] `PATCH /api/v1/landings/{id}` — обновить основные поля лендинга (admin)
-- [ ] `PATCH /api/v1/landings/{id}/content/{locale}` — обновить контент для конкретной локали (admin)
+- [ ] `POST /api/v1/landings` — создать лендинг + пустой LandingContent(ru) + LandingContent(en) + все LandingSection (admin). **[RISK-05]** Валидация slug: запрет зарезервированных + запрет паттерна `page\d+` **[RISK-01]**
+- [ ] `PATCH /api/v1/landings/{id}` — обновить основные поля лендинга (admin). **[RISK-09]** При изменении slug опубликованного лендинга — автоматическое создание записи в `SlugRedirect` + предупреждение в ответе
+- [ ] `PATCH /api/v1/landings/{id}/content/{locale}` — обновить контент для конкретной локали (admin). **[RISK-07]** Валидировать JSONB-поля через Pydantic-модели перед записью
 - [ ] `PATCH /api/v1/landings/{id}/sections` — массовое обновление is_enabled для секций (admin)
-- [ ] `PATCH /api/v1/landings/{id}/publish` — переключить is_published (admin)
+- [ ] `PATCH /api/v1/landings/{id}/publish` — переключить is_published (admin). **[RISK-10]** При публикации — проверка минимального контента (h1, hero_title, meta_title не пустые для хотя бы одной локали). Ошибка 400 со списком незаполненных полей
 - [ ] `DELETE /api/v1/landings/{id}` — удалить лендинг каскадно (admin)
 
 #### 2.5 — Публичное API (Backend)
@@ -211,9 +215,13 @@
 #### 2.7 — Импорт структуры из Excel (Backend)
 - [ ] `scripts/import_from_excel.py` — парсинг `docs/Структура Промто.xlsx` (строки 2-63)
   - Создание категории "ИИ-конструктор сайтов" (`site-generator`)
-  - Создание 62 лендингов: slug из URL (последний сегмент), keyword_ru из столбца "Запрос", search_volume из столбца "Частотность"
+  - Создание лендингов: slug из URL (последний сегмент), keyword_ru из столбца "Запрос", search_volume из столбца "Частотность"
   - Для каждого лендинга: пустые LandingContent(ru) + LandingContent(en) + все LandingSection(enabled=true)
   - Идемпотентный (можно запускать повторно без дублей)
+  - **[RISK-04]** Дедупликация slug-ов (perevodchika встречается дважды): при дубле — оставить строку с бОльшей частотностью, логировать предупреждение
+  - **[RISK-01]** Валидация slug: запрет паттерна `page\d+`
+  - **[RISK-05]** Валидация slug: запрет зарезервированных значений
+  - Итоговый отчёт: количество импортированных / пропущенных / конфликтных
 - [ ] `scripts/seed_data.py` — создание 3-5 тестовых лендингов с заполненным контентом (для разработки фронтенда)
 
 #### 2.8 — Тесты фазы (Backend)
@@ -223,6 +231,11 @@
 - [ ] Тесты CRUD лендингов: создание, список с фильтрацией, обновление контента, переключение секций, публикация
 - [ ] Тесты публичного API: список лендингов, фильтрация по категории/локали, данные для рендера, sitemap-data
 - [ ] Тест импорта из Excel: проверка количества созданных записей, корректность slug-ов, идемпотентность
+- [ ] **[RISK-04]** Тест: дубликат slug (perevodchika) — пропускается с предупреждением
+- [ ] **[RISK-05]** Тест: зарезервированный slug при создании категории/лендинга — ошибка 400
+- [ ] **[RISK-10]** Тест: публикация с пустым контентом — ошибка 400
+- [ ] **[RISK-11]** Тест: деактивация категории — каскадное снятие лендингов с публикации
+- [ ] **[RISK-09]** Тест: изменение slug опубликованного лендинга — создаётся запись SlugRedirect
 
 **Критерии готовности:**
 - Все API-эндпоинты отвечают корректно (проверка через OpenAPI docs `/api/docs`)
@@ -242,13 +255,17 @@
 - [ ] Роутинг: `/admin/login`, `/admin/dashboard`, `/admin/landings`, `/admin/landings/[id]`, `/admin/categories`, `/admin/settings`
 - [ ] Layout админки: sidebar навигация (Dashboard, Лендинги, Категории, Настройки), header с именем пользователя + logout
 - [ ] Защита роутов: Next.js middleware проверяет JWT в cookie, редирект на `/admin/login` при отсутствии
-- [ ] API-клиент для админки: fetch-обёртка с автоподстановкой JWT из cookie, автоматический refresh при 401
+- [ ] **[RISK-06]** Next.js API Routes для auth-прокси (серверная установка httpOnly cookie):
+  - `app/api/auth/login/route.ts` — принимает credentials, проксирует к FastAPI, устанавливает JWT как httpOnly cookie
+  - `app/api/auth/refresh/route.ts` — читает refresh token из cookie, обновляет, устанавливает новый
+  - `app/api/auth/logout/route.ts` — удаляет cookie
+- [ ] API-клиент для админки: fetch-обёртка (cookie отправляется автоматически браузером), автоматический refresh через Next.js API Route при 401
 - [ ] Базовые UI-компоненты: DataTable (сортировка, пагинация), FormField, Modal, Toast, Badge (статус), ConfirmDialog
 
 #### 3.2 — Страница логина (Frontend)
 - [ ] Форма: email + password
 - [ ] Валидация на клиенте
-- [ ] Сохранение JWT в httpOnly cookie
+- [ ] **[RISK-06]** Вызов Next.js API Route `/api/auth/login` (НЕ напрямую FastAPI). Route устанавливает httpOnly cookie server-side
 - [ ] Редирект на dashboard после успешного входа
 
 #### 3.3 — Dashboard (Frontend)
@@ -260,7 +277,7 @@
 - [ ] Таблица категорий: название (RU/EN), slug, кол-во лендингов, статус (активна/неактивна), действия
 - [ ] Создание категории: модальная форма (slug, название RU, название EN, описание RU, описание EN, meta title RU/EN, meta description RU/EN)
 - [ ] Редактирование категории: та же форма, предзаполненная
-- [ ] Деактивация/удаление: с подтверждением через ConfirmDialog
+- [ ] Деактивация/удаление: с подтверждением через ConfirmDialog. **[RISK-11]** Показать количество опубликованных лендингов, которые будут сняты с публикации
 
 #### 3.5 — Управление лендингами — список (Frontend)
 - [ ] Таблица: H1 (RU), категория, slug, статус (badge: опубликован/черновик), частотность, дата обновления, действия
@@ -322,9 +339,13 @@
 > **Примечание:** Эту фазу можно вести параллельно с Фазой 3, используя seed data из `scripts/seed_data.py` для визуальной разработки.
 
 #### 4.1 — Роутинг и SSG (Frontend)
-- [ ] Маршрут `/{locale}/{category_slug}/{landing_slug}/` — страница лендинга
-- [ ] Маршрут `/{locale}/{category_slug}/` — категорийная страница (листинг лендингов категории)
-- [ ] `generateStaticParams()` — генерация всех статических путей из `/api/v1/public/sitemap-data`
+- [ ] **[RISK-01]** Единый catch-all маршрут `/{locale}/{category}/[...rest]/page.tsx` вместо отдельных `[[...page]]/` и `[slug]/`:
+  - Если `rest[0]` соответствует `page\d+` — рендерить листинг категории с пагинацией (страница N)
+  - Иначе — рендерить лендинг с `slug = rest[0]`
+  - Это устраняет конфликт роутов между пагинацией и лендингами
+- [ ] Маршрут `/{locale}/{category_slug}/` — категорийная страница (листинг лендингов, страница 1) через `[category]/page.tsx`
+- [ ] **[RISK-02]** `generateStaticParams()` с fallback: try/catch при запросе `/api/v1/public/sitemap-data`; при ошибке — возвращает `[]`. В production CI — предварительный экспорт `static-params.json` перед Docker build
+- [ ] `dynamicParams = true` — незнакомые slug-и рендерятся at runtime и кешируются ISR
 - [ ] ISR: `revalidate: 3600` (обновление раз в час) + on-demand revalidation через secret token
 - [ ] Trailing slash enforcement в `next.config.ts` (`trailingSlash: true`) — SEO-требование #13
 
@@ -349,6 +370,8 @@
 - [ ] `FaqSection` — заголовок `<h2>`, `<details>/<summary>` аккордеон (нативный HTML, без JS). Schema.org `FAQPage` (SEO-требование #26)
 - [ ] `Breadcrumbs` — над `<h1>`, на всех страницах кроме главной (SEO-требование #8). Schema.org `BreadcrumbList`. Последний элемент — текущая страница, не ссылка.
 - [ ] Условный рендер: секция рендерится только если `is_enabled=true` в LandingSection
+- [ ] **[RISK-10]** Каждый компонент секции проверяет наличие данных и возвращает `null` при пустом/невалидном контенте (defensive rendering)
+- [ ] **[RISK-07]** TypeScript-типы для JSONB-структур (зеркалят Pydantic-модели): `AdvantageItem`, `FaqItem`, `PricingPlan` и т.д.
 
 #### 4.4 — Общие компоненты layout (Frontend)
 - [ ] `Header` — логотип (ссылка на promto.ai, `rel="nofollow"` — SEO-требование #37). На текущей странице пункт меню некликабелен (SEO-требование #29). Переключатель языка RU/EN. **Без `<h*>` тегов** (SEO-требование #15). Мобильное бургер-меню.
@@ -376,10 +399,12 @@
 - [ ] `robots.txt` через `app/robots.ts` — закрыть `/admin/`, разрешить остальное (SEO-требование #1)
 - [ ] `sitemap.xml` через `app/sitemap.ts` — генерация из `/api/v1/public/sitemap-data`, отдельные URL для каждой локали, без lastmod/changefreq/priority (SEO-требование #11)
 - [ ] 404-страница `not-found.tsx`: шапка + подвал сайта, `<h1>Данная страница не существует!</h1>`, ссылка на главную (SEO-требование #12)
-- [ ] 301 редиректы в `middleware.ts`:
-  - Множественные слеши -> одинарный (`///page///` -> `/page/`)
-  - URL без trailing slash -> с trailing slash (SEO-требование #13)
-  - URL без locale-префикса -> `/ru/...` (дефолтная локаль)
+- [ ] **[RISK-14]** 301 редиректы в `middleware.ts` — строгий порядок обработки (документировать в коде):
+  1. Исключить static files (`/_next/`), API routes (`/api/`), favicon — `NextResponse.next()`
+  2. **[RISK-03]** Проверка `/admin/` — если не авторизован, redirect на `/admin/login`; иначе `NextResponse.next()`
+  3. Нормализация URL: множественные слеши -> одинарный, добавление trailing slash (SEO-требование #13)
+  4. **[RISK-09]** Проверка slug-редиректов через API (`/api/v1/public/slug-redirect?path=...`) — 301 redirect
+  5. i18n middleware (next-intl) — определение/подстановка locale
 - [ ] ЧПУ URL: только латиница, только тире, без `_`, `%`, `?`, спецсимволов (SEO-требование #3, 9, 25). Валидация slug при создании в админке (Фаза 3).
 
 #### 4.8 — Производительность (Frontend)
@@ -413,6 +438,12 @@
   - 404 страница при несуществующем slug
   - Переключение RU/EN -> URL и контент меняются
   - Категорийная страница -> список лендингов, пагинация работает
+- [ ] **[RISK-14]** Юнит-тесты middleware.ts — матрица URL -> ожидаемый результат:
+  - `/admin/dashboard` -> pass through (не редиректить на `/ru/admin/dashboard`)
+  - `///ru///site-generator///` -> 301 на `/ru/site-generator/`
+  - `/site-generator/pedagoga` -> 301 на `/ru/site-generator/pedagoga/`
+  - `/ru/old-slug/` (slug в SlugRedirect) -> 301 на новый URL
+  - `/api/v1/health` -> pass through
 - [ ] **SEO audit (автоматизированный):** Lighthouse CI или скрипт проверки:
   - Единственный `<h1>` на странице
   - Нет `<h*>` тегов в header/footer
@@ -541,7 +572,11 @@
   - Тарифы: из SiteSettings.default_pricing
   - Видео: из SiteSettings.default_video_url
   - Примеры работ: общие скриншоты платформы (позже можно заменить на нише-специфичные)
-- [ ] Rate limiting: пауза между запросами к API, обработка ошибок, возможность продолжить с места остановки
+- [ ] **[RISK-08]** Изображения: для MVP — внешние URL (Unsplash по нише для примеров, placeholder для аватаров). В промте генерации — не генерировать image_url, а подставлять из заготовленного набора по категориям
+- [ ] **[RISK-13]** Rate limiting: пауза 1-2 секунды между запросами, обработка ошибок с retry (3 попытки, exponential backoff)
+- [ ] **[RISK-13]** Progress tracking: запись обработанных landing_id в файл `generation_progress.json`. Флаг `--resume` для продолжения с места остановки
+- [ ] **[RISK-13]** Dry-run режим (`--dry-run`): вывод списка лендингов для генерации и оценка стоимости (кол-во x средний размер промта) без реальных API-вызовов
+- [ ] **[RISK-13]** Использовать Claude Sonnet (баланс цена/качество). Оценочная стоимость: ~$5-10 за 124 генерации
 - [ ] Сохранение результатов в LandingContent(locale=ru) через API или напрямую в БД
 
 #### 7.2 — Генерация EN-контента (Backend)
@@ -611,6 +646,7 @@
 - [ ] Финализация `.env` для продакшена (DATABASE_URL, SECRET_KEY, REVALIDATE_SECRET, SMARTCAPTCHA_SERVER_KEY, ANTHROPIC_API_KEY)
 - [ ] Проверка `promto.yaml` — корректные preset-ы, root_dir, env_file
 - [ ] Проверка Dockerfile-ов: standalone build для Next.js, production-ready для FastAPI
+- [ ] **[RISK-02]** CI-шаг: перед Docker build frontend — экспорт static-params.json из работающего backend API
 - [ ] Запуск миграций на продакшен-БД (`alembic upgrade head`)
 - [ ] Создание admin-пользователя (`scripts/create_admin.py`)
 - [ ] Импорт + генерация контента (если не сделано ранее)
@@ -663,11 +699,13 @@ promto_landing_generator/
 │   │   │   ├── landing.py
 │   │   │   ├── landing_content.py
 │   │   │   ├── landing_section.py
+│   │   │   ├── slug_redirect.py       # [RISK-09]
 │   │   │   └── settings.py
 │   │   ├── schemas/
 │   │   │   ├── auth.py
 │   │   │   ├── category.py
 │   │   │   ├── landing.py
+│   │   │   ├── content.py             # [RISK-07] Pydantic-модели для JSONB
 │   │   │   └── settings.py
 │   │   ├── api/
 │   │   │   ├── router.py
@@ -713,17 +751,20 @@ promto_landing_generator/
 │   │   │   ├── robots.ts
 │   │   │   ├── sitemap.ts
 │   │   │   ├── api/
-│   │   │   │   └── revalidate/
-│   │   │   │       └── route.ts
+│   │   │   │   ├── revalidate/
+│   │   │   │   │   └── route.ts
+│   │   │   │   └── auth/              # [RISK-06] Auth proxy routes
+│   │   │   │       ├── login/route.ts
+│   │   │   │       ├── refresh/route.ts
+│   │   │   │       └── logout/route.ts
 │   │   │   ├── [locale]/
 │   │   │   │   ├── layout.tsx
 │   │   │   │   ├── page.tsx
 │   │   │   │   ├── not-found.tsx
 │   │   │   │   └── [category]/
-│   │   │   │       ├── page.tsx
-│   │   │   │       ├── [[...page]]/  # Пагинация /page2/, /page3/
-│   │   │   │       └── [slug]/
-│   │   │   │           └── page.tsx
+│   │   │   │       ├── page.tsx                # Категорийная стр. (стр. 1)
+│   │   │   │       └── [...rest]/              # [RISK-01] Единый catch-all
+│   │   │   │           └── page.tsx            # pageN -> пагинация, иначе -> лендинг
 │   │   │   └── admin/
 │   │   │       ├── layout.tsx
 │   │   │       ├── login/page.tsx
@@ -833,6 +874,240 @@ promto_landing_generator/
 - Фазы 5 и 6 последовательны (i18n -> интеграции) и зависят от Фазы 4
 
 **Критический путь:** 1 -> 2 -> 4 -> 5 -> 6 -> 8
+
+---
+
+## Реестр рисков
+
+### RISK-01: Конфликт роутов пагинации и лендинга [Фаза 4] — КРИТИЧЕСКИЙ
+
+**Риск:** В файловой структуре `[category]/[[...page]]/` (catch-all для пагинации) и `[category]/[slug]/` (лендинг) — оба сегмента конкурируют за один и тот же URL-паттерн. Next.js не может детерминированно выбрать между ними для URL вида `/ru/site-generator/pedagoga/`.
+
+**Митигация:** Удалить `[[...page]]/`. Использовать единый `[...rest]/page.tsx` под `[category]/`, который самостоятельно маршрутизирует:
+- Если сегмент соответствует `page{N}` — рендерить листинг категории с пагинацией
+- Иначе — рендерить лендинг
+
+На бэкенде и при импорте — запретить slug-и начинающиеся с `page` + цифры.
+
+**Изменения в плане:**
+- Фаза 2.7: добавить валидацию slug при импорте (запрет `pageN` паттерна)
+- Фаза 4.1: заменить `[[...page]]` + `[slug]` на единый `[...rest]`
+- Фаза 4.5: пагинация через `/{category}/page2/` вместо query-параметров
+
+---
+
+### RISK-02: Backend недоступен при Docker-билде SSG [Фаза 4] — КРИТИЧЕСКИЙ
+
+**Риск:** `generateStaticParams()` вызывает API бэкенда (`/api/v1/public/sitemap-data`) во время `docker build`. Но при Docker multi-stage build другие контейнеры (backend) недоступны по сети. Билд падает или создаёт пустой набор страниц.
+
+**Митигация:** Двойная стратегия:
+1. **Код:** `generateStaticParams()` с try/catch — при ошибке возвращает `[]` (пустой массив). С `dynamicParams = true` Next.js отрендерит страницу при первом запросе и закеширует через ISR.
+2. **CI/CD:** перед `docker build frontend` — скрипт `ci/export-static-params.sh` делает `curl` к работающему API и сохраняет результат в `frontend/static-params.json`. `generateStaticParams()` читает из файла, если он существует.
+
+**Изменения в плане:**
+- Фаза 4.1: добавить fallback-логику в `generateStaticParams()`
+- Фаза 8.4: добавить шаг CI — экспорт static params перед Docker build
+
+---
+
+### RISK-03: i18n middleware перехватывает /admin/ [Фаза 1, 4] — ВЫСОКИЙ
+
+**Риск:** next-intl middleware по умолчанию перехватывает все URL и редиректит на `/{locale}/...`. Запрос к `/admin/dashboard` будет перенаправлен на `/ru/admin/dashboard`, что сломает админку.
+
+**Митигация:** В `middleware.ts` явный early return для `/admin`, `/api/`, `/_next/`, `/robots.txt`, `/sitemap.xml`, `/favicon.ico` **перед** вызовом intlMiddleware.
+
+**Изменения в плане:**
+- Фаза 1.2: указать явное исключение `/admin/` при настройке next-intl middleware
+- Фаза 4.7: middleware.ts — порядок обработки задокументирован
+
+---
+
+### RISK-04: Дублирующиеся slug-и в Excel [Фаза 2] — СРЕДНИЙ
+
+**Риск:** В данных Excel slug `perevodchika` встречается дважды (строки 5 и 37) с разными keyword-ами ("создаем сайт переводчик" и "создать сайт переводчик"). Импорт скрипт создаст дубль или упадёт на unique constraint.
+
+**Митигация:** В `import_from_excel.py`:
+- Проверка уникальности slug перед вставкой
+- При дубле — пропуск с логированием предупреждения, приоритет строке с бОльшей частотностью
+- Отчёт после импорта: список пропущенных дублей
+
+**Изменения в плане:**
+- Фаза 2.7: добавить дедупликацию и отчёт о конфликтах
+- Фаза 2.8: тест на обработку дублей в импорте
+
+---
+
+### RISK-05: Коллизия slug-ов с зарезервированными путями [Фаза 2] — ВЫСОКИЙ
+
+**Риск:** Если создать категорию с slug `admin`, `api`, `ru` или `en`, URL сломается: `/ru/admin/` — это админка или категория? `/ru/ru/` — это locale+category или дубль locale?
+
+**Митигация:** Список зарезервированных slug-ов (`admin`, `api`, `ru`, `en`, `_next`, `robots.txt`, `sitemap.xml`, `favicon.ico`) — валидация на бэкенде при создании/обновлении категории И лендинга.
+
+**Изменения в плане:**
+- Фаза 2.3: добавить `RESERVED_SLUGS` валидацию в CRUD категорий
+- Фаза 2.4: добавить аналогичную валидацию для slug-ов лендингов (включая запрет `pageN` паттерна)
+
+---
+
+### RISK-06: JWT httpOnly cookie — архитектурный пробел [Фаза 3] — ВЫСОКИЙ
+
+**Риск:** httpOnly cookie нельзя установить из клиентского JavaScript. План указывает "сохранение JWT в httpOnly cookie", но не определяет КАК. Если фронтенд (браузер) напрямую вызывает FastAPI `/auth/login`, он получит JWT в теле ответа, но не сможет записать его в httpOnly cookie.
+
+**Митигация:** Добавить Next.js API Route `/api/auth/login` (серверный прокси):
+1. Клиент отправляет credentials на `/api/auth/login` (Next.js API Route)
+2. API Route вызывает FastAPI `/api/v1/auth/login` server-to-server
+3. API Route получает JWT и устанавливает его как httpOnly cookie через `Set-Cookie` header
+4. Аналогично для `/api/auth/refresh` и `/api/auth/logout`
+
+**Изменения в плане:**
+- Фаза 3.1: добавить Next.js API Routes для auth-прокси (`app/api/auth/login/route.ts`, `app/api/auth/refresh/route.ts`, `app/api/auth/logout/route.ts`)
+- Фаза 3.2: клиент вызывает Next.js API Route, не напрямую FastAPI
+
+---
+
+### RISK-07: Дрифт JSONB-схемы [Фаза 2-4] — СРЕДНИЙ
+
+**Риск:** JSONB-поля (advantages, pricing, faq и т.д.) не имеют схемной валидации на уровне БД. Фронтенд ожидает `{icon, title, description}`, а в БД может попасть `{icon, heading, desc}` (через скрипт генерации или прямое редактирование). Результат — молчаливое отображение пустых секций.
+
+**Митигация:**
+1. **Backend:** Pydantic-модели для каждого JSONB-поля (AdvantageItem, FaqItem, PricingItem и т.д.) — валидация при записи через API
+2. **Frontend:** TypeScript-типы, зеркалящие Pydantic-модели; defensive rendering (проверка наличия полей перед рендером)
+3. **Контракт:** единый файл описания JSONB-структур, из которого генерятся и Pydantic-модели, и TS-типы (или ручная синхронизация с тестом)
+
+**Изменения в плане:**
+- Фаза 2.1: добавить Pydantic-модели для валидации JSONB-полей в schemas/
+- Фаза 2.4: PATCH content — валидировать через Pydantic перед записью
+- Фаза 4.3: компоненты проверяют наличие обязательных полей и рендерят fallback/skip при пустых данных
+
+---
+
+### RISK-08: Отсутствие стратегии хранения изображений [Фаза 2-7] — ВЫСОКИЙ
+
+**Риск:** План содержит поля `image_url`, `og_image_url`, `avatar_url` в контенте, но нигде не определено, где хранятся изображения и как загружаются. Без загрузки изображений контент-менеджеры не смогут добавлять скриншоты примеров, аватары, OG-картинки.
+
+**Митигация:** Две стратегии (выбрать одну):
+- **A) Внешние URL:** изображения хостятся на внешнем CDN (Unsplash, imgbb, или YC S3 из promto-blog). В админке — поле ввода URL. Простая реализация, но зависимость от внешних сервисов.
+- **B) Загрузка через API + YC S3:** добавить `POST /api/v1/upload` (как в promto-blog). Файл → YC S3 → URL возвращается и сохраняется в контенте. Полный контроль.
+
+Для MVP рекомендую **A (внешние URL)** с планом миграции на B. Для AI-генерации контента — использовать placeholder-изображения (Unsplash) или генерацию через API.
+
+**Изменения в плане:**
+- Фаза 2.1: в описании полей image_url пометить "(внешний URL для MVP)"
+- Фаза 3.6: в редакторе — текстовое поле для URL изображения + превью
+- Фаза 7.1: для генерации контента — использовать placeholder-изображения из Unsplash по нише
+
+---
+
+### RISK-09: Изменение slug = битые URL без редиректа [Фаза 3] — СРЕДНИЙ
+
+**Риск:** Если контент-менеджер изменит slug опубликованного лендинга, старый URL станет 404. Поисковые системы продолжат индексировать старый URL, что ударит по SEO (SEO-требование #38 — нет битых ссылок).
+
+**Митигация:**
+1. Таблица `slug_redirects` (old_category_slug, old_landing_slug, new_category_slug, new_landing_slug, created_at)
+2. При изменении slug через API — автоматическое создание записи в `slug_redirects`
+3. Публичный API / Next.js middleware проверяет `slug_redirects` и делает 301-редирект
+4. В админке — предупреждение при изменении slug опубликованного лендинга
+
+**Изменения в плане:**
+- Фаза 2.1: добавить модель `SlugRedirect`
+- Фаза 2.4: PATCH landing — при изменении slug опубликованного лендинга создавать запись в `slug_redirects`
+- Фаза 4.7: middleware.ts — проверка `slug_redirects` через API и 301-редирект
+
+---
+
+### RISK-10: Пустой контент у опубликованного лендинга [Фаза 4] — СРЕДНИЙ
+
+**Риск:** Лендинг может быть опубликован (is_published=true), но иметь пустой контент (все JSONB null). Страница отрендерится с пустыми секциями — плохо для SEO и UX.
+
+**Митигация:**
+1. **Backend:** при `PATCH /publish` проверять обязательные поля (h1, hero_title, meta_title заполнены). Если пустые — возвращать 400 с указанием незаполненных полей.
+2. **Frontend:** компоненты секций не рендерятся при пустом контенте (а не показывают пустые блоки).
+
+**Изменения в плане:**
+- Фаза 2.4: `PATCH /publish` — валидация минимального контента перед публикацией
+- Фаза 4.3: каждый компонент проверяет данные и возвращает `null` при пустом контенте
+
+---
+
+### RISK-11: Деактивация категории с опубликованными лендингами [Фаза 2] — СРЕДНИЙ
+
+**Риск:** Если категория деактивирована (`is_active=false`), но её лендинги всё ещё `is_published=true`, публичное API вернёт лендинги без категории, а категорийная страница вернёт 404.
+
+**Митигация:**
+1. При деактивации категории — автоматически снимать с публикации все её лендинги
+2. Предупреждение в админке: "В категории N опубликованных лендингов. Деактивация снимет их с публикации."
+
+**Изменения в плане:**
+- Фаза 2.3: `DELETE /categories/{id}` — каскадная деактивация лендингов + предупреждение
+- Фаза 3.4: ConfirmDialog с информацией о количестве затронутых лендингов
+
+---
+
+### RISK-12: SiteSettings не существует при первом запуске [Фаза 2] — НИЗКИЙ
+
+**Риск:** Модель SiteSettings — singleton. Но при первом запуске запись не существует. API `GET /settings` вернёт 404 или null, фронтенд не получит metrika_id и platform_url.
+
+**Митигация:** Создавать запись SiteSettings с дефолтными значениями в Alembic-миграции (data migration) или в `scripts/seed_data.py`.
+
+**Изменения в плане:**
+- Фаза 2.1: в миграции — INSERT INTO site_settings с дефолтными значениями (platform_url = "https://app.promto.ai")
+
+---
+
+### RISK-13: Стоимость и надёжность AI-генерации контента [Фаза 7] — СРЕДНИЙ
+
+**Риск:** 62 лендинга x 2 локали = 124 API-вызова к Anthropic. При Sonnet ~$5-10, при Opus ~$50-100. Если API недоступен, rate limit или ключ невалиден — генерация останавливается частично. Повторный запуск может создать дубли.
+
+**Митигация:**
+1. Скрипт пишет прогресс в файл/БД (какие лендинги обработаны)
+2. Флаг `--resume` для продолжения с места остановки
+3. Сухой запуск (`--dry-run`) для оценки стоимости перед запуском
+4. Использовать Claude Sonnet для генерации (баланс цена/качество)
+5. Rate limiting: пауза 1-2 секунды между запросами
+
+**Изменения в плане:**
+- Фаза 7.1: добавить --resume, --dry-run, progress tracking
+
+---
+
+### RISK-14: Middleware как единая точка отказа [Фаза 4] — СРЕДНИЙ
+
+**Риск:** `middleware.ts` совмещает 5 задач: i18n routing, admin auth, trailing slash redirect, multiple slash cleanup, slug redirect. Сложность растёт нелинейно, ошибка в одном правиле ломает все URL.
+
+**Митигация:**
+1. Чёткий порядок обработки (документировать в коде):
+   - (1) Исключить static files, /_next/, /api/
+   - (2) Проверка /admin/ auth (early return)
+   - (3) Нормализация URL (множественные слеши, trailing slash)
+   - (4) Проверка slug-редиректов
+   - (5) i18n middleware (последний)
+2. Юнит-тесты на каждое правило в изоляции (не E2E)
+3. Матрица тестов: таблица URL -> ожидаемый результат
+
+**Изменения в плане:**
+- Фаза 4.7: добавить документированный порядок обработки в middleware
+- Фаза 4.10: добавить юнит-тесты middleware (матрица URL -> результат)
+
+---
+
+### Сводная матрица рисков
+
+| ID | Риск | Фаза | Уровень | Тип |
+|----|------|------|---------|-----|
+| RISK-01 | Конфликт роутов `[[...page]]` vs `[slug]` | 4 | Критический | Архитектура |
+| RISK-02 | SSG + Docker build — API недоступен | 4 | Критический | Инфраструктура |
+| RISK-03 | i18n middleware перехватывает /admin/ | 1, 4 | Высокий | Пересечение FE/BE |
+| RISK-04 | Дублирующиеся slug в Excel | 2 | Средний | Данные |
+| RISK-05 | Коллизия slug с зарезервированными путями | 2 | Высокий | Валидация |
+| RISK-06 | httpOnly cookie — архитектурный пробел | 3 | Высокий | Пересечение FE/BE |
+| RISK-07 | Дрифт JSONB-схемы между BE и FE | 2-4 | Средний | Контракт |
+| RISK-08 | Нет стратегии хранения изображений | 2-7 | Высокий | Пробел |
+| RISK-09 | Изменение slug = 404 без редиректа | 3 | Средний | SEO |
+| RISK-10 | Пустой контент у опубликованного лендинга | 4 | Средний | Валидация |
+| RISK-11 | Деактивация категории с лендингами | 2 | Средний | Каскад |
+| RISK-12 | SiteSettings не существует при старте | 2 | Низкий | Bootstrap |
+| RISK-13 | Стоимость и надёжность AI-генерации | 7 | Средний | Внешние API |
+| RISK-14 | Middleware как единая точка отказа | 4 | Средний | Сложность |
 
 ---
 
