@@ -1,0 +1,86 @@
+{
+  "meta_title": "SPA Website — Create in 2 Minutes | Promto",
+  "meta_description": "SPA website: services, procedures, booking. Create in 2 minutes with AI. Professional design.",
+  "h1": "SPA Website",
+  "og_title": "SPA Website — Promto",
+  "og_description": "AI builder creates a SPA website in 2 minutes.",
+  "hero_title": "SPA Website",
+  "hero_subtitle": "Create a SPA website in 2 minutes — with services and booking",
+  "hero_cta_text": "Create SPA Website",
+  "hero_placeholder": "Describe your SPA...",
+  "social_proof": [
+    {
+      "label": "SPA Websites",
+      "value": "2,800+"
+    },
+    {
+      "label": "SPA Centers",
+      "value": "1,600+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.9 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "sparkles",
+      "title": "Services",
+      "description": "Block with SPA procedures and prices"
+    },
+    {
+      "icon": "image",
+      "title": "Gallery",
+      "description": "Interior and procedure photos"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready website in 2 minutes"
+    },
+    {
+      "icon": "calendar",
+      "title": "Booking",
+      "description": "Booking form"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your SPA services",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — clients will find you",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add procedures?",
+      "answer": "Yes, services block is created."
+    },
+    {
+      "question": "Is there a gallery?",
+      "answer": "Yes, photo gallery is included."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan available."
+    }
+  ],
+  "cta_mid_title": "Create a SPA Website",
+  "cta_mid_subtitle": "Describe your services — get a ready website in 2 minutes",
+  "cta_final_title": "Ready for a SPA Website?",
+  "cta_final_subtitle": "Start free",
+  "cta_final_button_text": "Create SPA Website"
+}

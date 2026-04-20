@@ -1,0 +1,86 @@
+{
+  "meta_title": "Create Medical Center Website — AI Builder in 2 Minutes | Promto",
+  "meta_description": "Create a medical center website in 2 minutes with AI. Services, doctors, appointment. Professional design.",
+  "h1": "Create Medical Center Website",
+  "og_title": "Create Medical Center Website — Promto",
+  "og_description": "AI builder creates a medical center website in 2 minutes.",
+  "hero_title": "Create Medical Center Website",
+  "hero_subtitle": "Create a medical center website in 2 minutes",
+  "hero_cta_text": "Create Medical Website",
+  "hero_placeholder": "Describe your medical center...",
+  "social_proof": [
+    {
+      "label": "Medical Center Websites",
+      "value": "3,800+"
+    },
+    {
+      "label": "Medical Centers",
+      "value": "2,200+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.8 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "stethoscope",
+      "title": "Services",
+      "description": "Block with medical services"
+    },
+    {
+      "icon": "user-md",
+      "title": "Doctors",
+      "description": "Doctor pages"
+    },
+    {
+      "icon": "calendar",
+      "title": "Appointment",
+      "description": "Online booking"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready website in 2 minutes"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your center",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — patients will find you",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add services?",
+      "answer": "Yes."
+    },
+    {
+      "question": "Is there booking?",
+      "answer": "Yes."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan available."
+    }
+  ],
+  "cta_mid_title": "Create a Medical Center Website",
+  "cta_mid_subtitle": "Get a ready website in 2 minutes",
+  "cta_final_title": "Ready for a Website?",
+  "cta_final_subtitle": "Start free",
+  "cta_final_button_text": "Create Website Free"
+}

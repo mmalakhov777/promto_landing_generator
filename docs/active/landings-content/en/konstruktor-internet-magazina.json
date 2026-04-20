@@ -1,0 +1,90 @@
+{
+  "meta_title": "Online Store Builder — Create in 2 Minutes | Promto",
+  "meta_description": "Online store builder with AI. Create store with products in 2 minutes. No code. Try free.",
+  "h1": "Online Store Builder",
+  "og_title": "Online Store Builder — Promto",
+  "og_description": "AI builder creates an online store in 2 minutes.",
+  "hero_title": "Online Store Builder",
+  "hero_subtitle": "Create an online store in 2 minutes — AI adds products and description",
+  "hero_cta_text": "Create Store",
+  "hero_placeholder": "Describe what online store you want...",
+  "social_proof": [
+    {
+      "label": "Stores Created",
+      "value": "18,000+"
+    },
+    {
+      "label": "Products Added",
+      "value": "2.5M+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.8 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "shopping-cart",
+      "title": "With Catalog",
+      "description": "AI creates product catalog structure and cards"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready store in 2 minutes"
+    },
+    {
+      "icon": "credit-card",
+      "title": "Payment",
+      "description": "Built-in payment methods"
+    },
+    {
+      "icon": "truck",
+      "title": "Delivery",
+      "description": "Delivery conditions block"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe Store",
+      "description": "Tell AI about products you sell",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates Catalog",
+      "description": "Catalog structure and product cards are generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Add Price",
+      "description": "Add prices and delivery options, then publish",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I create a store for free?",
+      "answer": "Yes, free plan allows creating a store with limited products."
+    },
+    {
+      "question": "What payment methods?",
+      "answer": "Popular payment methods for your region."
+    },
+    {
+      "question": "Do I need coding?",
+      "answer": "No, builder is fully visual."
+    },
+    {
+      "question": "Can I add my own products?",
+      "answer": "Yes, you can add and edit products anytime."
+    }
+  ],
+  "cta_mid_title": "Create an Online Store Today",
+  "cta_mid_subtitle": "Describe your products — get a ready store in 2 minutes",
+  "cta_final_title": "Ready for Your Own Store?",
+  "cta_final_subtitle": "Start free — pay only when you sell",
+  "cta_final_button_text": "Create Store Free"
+}

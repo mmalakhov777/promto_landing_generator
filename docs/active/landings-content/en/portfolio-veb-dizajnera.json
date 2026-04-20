@@ -1,0 +1,86 @@
+{
+  "meta_title": "Web Designer Portfolio — Create in 2 Minutes | Promto",
+  "meta_description": "Web designer portfolio: works, skills, contacts. Create in 2 minutes with AI. Professional design.",
+  "h1": "Web Designer Portfolio",
+  "og_title": "Web Designer Portfolio — Promto",
+  "og_description": "AI builder creates a web designer portfolio in 2 minutes.",
+  "hero_title": "Web Designer Portfolio",
+  "hero_subtitle": "Create a portfolio for web designer in 2 minutes",
+  "hero_cta_text": "Create Portfolio",
+  "hero_placeholder": "Describe your web design works...",
+  "social_proof": [
+    {
+      "label": "Web Designer Portfolios",
+      "value": "5,400+"
+    },
+    {
+      "label": "Web Designers",
+      "value": "9,200+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.9 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "monitor",
+      "title": "Works",
+      "description": "Block with web design works"
+    },
+    {
+      "icon": "code",
+      "title": "Skills",
+      "description": "Technical skills block"
+    },
+    {
+      "icon": "mail",
+      "title": "Contacts",
+      "description": "Contact information"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready portfolio in 2 minutes"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your web design works",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Portfolio is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish and get clients",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add web works?",
+      "answer": "Yes."
+    },
+    {
+      "question": "Does it work for UI designer?",
+      "answer": "Yes."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan available."
+    }
+  ],
+  "cta_mid_title": "Create a Web Designer Portfolio",
+  "cta_mid_subtitle": "Get a ready portfolio in 2 minutes",
+  "cta_final_title": "Ready for a Portfolio?",
+  "cta_final_subtitle": "Start free",
+  "cta_final_button_text": "Create Portfolio Free"
+}

@@ -1,0 +1,86 @@
+{
+  "meta_title": "Portfolio Builder — Create in 2 Minutes | Promto",
+  "meta_description": "Portfolio builder with AI. Create portfolio for designer, photographer, developer. No code, in 2 minutes.",
+  "h1": "Portfolio Builder",
+  "og_title": "Portfolio Builder — Promto",
+  "og_description": "AI builder creates a portfolio in 2 minutes.",
+  "hero_title": "Portfolio Builder",
+  "hero_subtitle": "Create a portfolio in 2 minutes — for any creative",
+  "hero_cta_text": "Create Portfolio",
+  "hero_placeholder": "Describe what portfolio you want...",
+  "social_proof": [
+    {
+      "label": "Portfolios Created",
+      "value": "24,000+"
+    },
+    {
+      "label": "Creatives",
+      "value": "34,000+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.9 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "image",
+      "title": "Works Gallery",
+      "description": "Block with works"
+    },
+    {
+      "icon": "user",
+      "title": "About",
+      "description": "Skills and experience block"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready portfolio in 2 minutes"
+    },
+    {
+      "icon": "mail",
+      "title": "Contacts",
+      "description": "Contact block"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your works",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Portfolio is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish and get clients",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does it work for developers?",
+      "answer": "Yes, builder works for any creative."
+    },
+    {
+      "question": "Can I add works?",
+      "answer": "Yes."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan available."
+    }
+  ],
+  "cta_mid_title": "Create a Portfolio",
+  "cta_mid_subtitle": "Get a ready portfolio in 2 minutes",
+  "cta_final_title": "Ready for a Portfolio?",
+  "cta_final_subtitle": "Start free",
+  "cta_final_button_text": "Create Portfolio Free"
+}

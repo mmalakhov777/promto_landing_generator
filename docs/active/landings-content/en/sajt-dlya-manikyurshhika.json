@@ -1,0 +1,90 @@
+{
+  "meta_title": "Nail Technician Website — Create in 2 Minutes | Promto",
+  "meta_description": "Nail technician website: services, portfolio, booking. Create in 2 minutes with AI. Professional design.",
+  "h1": "Nail Technician Website",
+  "og_title": "Nail Technician Website — Promto",
+  "og_description": "AI builder creates a nail technician website in 2 minutes.",
+  "hero_title": "Nail Technician Website",
+  "hero_subtitle": "Create a website for nail technician in 2 minutes — with portfolio",
+  "hero_cta_text": "Create Nail Tech Website",
+  "hero_placeholder": "Describe your nail services...",
+  "social_proof": [
+    {
+      "label": "Nail Tech Websites",
+      "value": "8,900+"
+    },
+    {
+      "label": "Nail Technicians",
+      "value": "15,000+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.9 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "image",
+      "title": "Portfolio",
+      "description": "Gallery with nail work photos"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready website in 2 minutes with portfolio and prices"
+    },
+    {
+      "icon": "calendar",
+      "title": "Booking",
+      "description": "Online booking form"
+    },
+    {
+      "icon": "star",
+      "title": "Reviews",
+      "description": "Block with client reviews"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your services and style",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website with portfolio and prices is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Get Clients",
+      "description": "Publish — new clients will find you",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add photos of work?",
+      "answer": "Yes, gallery with nail photos is included."
+    },
+    {
+      "question": "Is there booking form?",
+      "answer": "Yes, online booking form."
+    },
+    {
+      "question": "Does it work for home-based master?",
+      "answer": "Yes, builder creates sites for any masters."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan allows creating a basic website."
+    }
+  ],
+  "cta_mid_title": "Create a Nail Technician Website",
+  "cta_mid_subtitle": "Describe your services — get a ready website in 2 minutes",
+  "cta_final_title": "Ready for a Nail Tech Website?",
+  "cta_final_subtitle": "Start free — new clients are looking for you",
+  "cta_final_button_text": "Create Nail Tech Website Free"
+}

@@ -1,0 +1,90 @@
+{
+  "meta_title": "Furniture Store Website — Create in 2 Minutes | Promto",
+  "meta_description": "Furniture store website: catalog, products, contacts. Create in 2 minutes. With furniture catalog.",
+  "h1": "Furniture Store Website",
+  "og_title": "Furniture Store Website — Promto",
+  "og_description": "AI builder creates a furniture store website in 2 minutes.",
+  "hero_title": "Furniture Store Website",
+  "hero_subtitle": "Create a furniture store website in 2 minutes",
+  "hero_cta_text": "Create Furniture Website",
+  "hero_placeholder": "Describe what furniture website you want...",
+  "social_proof": [
+    {
+      "label": "Furniture Websites",
+      "value": "3,800+"
+    },
+    {
+      "label": "Stores",
+      "value": "2,400+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.7 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "sofa",
+      "title": "Furniture Catalog",
+      "description": "Product cards with photos and descriptions"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready website in 2 minutes with catalog"
+    },
+    {
+      "icon": "map-pin",
+      "title": "Address & Map",
+      "description": "Store address and map"
+    },
+    {
+      "icon": "phone",
+      "title": "Contacts",
+      "description": "All contact methods"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about furniture, styles, brands",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website with catalog and contacts is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — buyers will find you",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add catalog?",
+      "answer": "Yes, product cards with photos and descriptions."
+    },
+    {
+      "question": "Does it work for upholstery?",
+      "answer": "Yes, builder works for any furniture type."
+    },
+    {
+      "question": "Can I add price?",
+      "answer": "Yes, in product cards."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan allows creating a basic website."
+    }
+  ],
+  "cta_mid_title": "Create a Furniture Store Website",
+  "cta_mid_subtitle": "Describe your store — get a ready website in 2 minutes",
+  "cta_final_title": "Ready for a Furniture Website?",
+  "cta_final_subtitle": "Start free — buyers will find you today",
+  "cta_final_button_text": "Create Furniture Website Free"
+}

@@ -1,0 +1,90 @@
+{
+  "meta_title": "Beauty Master Landing Page — Create in 2 Minutes | Promto",
+  "meta_description": "Landing page for beauty master: manicure, hairstylist, cosmetology. Create in 2 minutes. Professional design.",
+  "h1": "Beauty Master Landing Page",
+  "og_title": "Beauty Master Landing Page — Promto",
+  "og_description": "AI builder creates a beauty master landing page in 2 minutes.",
+  "hero_title": "Beauty Master Landing Page",
+  "hero_subtitle": "Sales page for nail tech, stylist, or cosmetologist",
+  "hero_cta_text": "Create Landing Page",
+  "hero_placeholder": "Describe what services you offer...",
+  "social_proof": [
+    {
+      "label": "Beauty Landing Pages",
+      "value": "9,800+"
+    },
+    {
+      "label": "Leads Received",
+      "value": "340,000+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.9 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "image",
+      "title": "With Portfolio",
+      "description": "Before/after gallery to attract clients"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready landing page in 2 minutes — with portfolio"
+    },
+    {
+      "icon": "star",
+      "title": "Sales-Ready",
+      "description": "Structure optimized for conversion"
+    },
+    {
+      "icon": "phone",
+      "title": "Online Booking",
+      "description": "Booking button and messenger link"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe Services",
+      "description": "Tell AI about your services and style",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Sales landing page with portfolio and booking form",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Get Leads",
+      "description": "Publish and start receiving client inquiries",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does it work for nail technician?",
+      "answer": "Yes, builder creates landing pages for any beauty masters."
+    },
+    {
+      "question": "Can I add photos of work?",
+      "answer": "Yes, gallery with photos is included."
+    },
+    {
+      "question": "Is there booking button?",
+      "answer": "Yes, online booking button or messenger link."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan allows creating a basic landing page."
+    }
+  ],
+  "cta_mid_title": "Create a Landing Page for Master",
+  "cta_mid_subtitle": "Describe your services — get a sales page in 2 minutes",
+  "cta_final_title": "Ready for a Master Landing Page?",
+  "cta_final_subtitle": "Start free — receive client inquiries",
+  "cta_final_button_text": "Create Landing Page Free"
+}

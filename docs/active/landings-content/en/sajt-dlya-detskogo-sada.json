@@ -1,0 +1,90 @@
+{
+  "meta_title": "Kindergarten Website — Create in 2 Minutes | Promto",
+  "meta_description": "Kindergarten website: groups, teachers, events. Create in 2 minutes with AI. Professional design.",
+  "h1": "Kindergarten Website",
+  "og_title": "Kindergarten Website — Promto",
+  "og_description": "AI builder creates a kindergarten website in 2 minutes.",
+  "hero_title": "Kindergarten Website",
+  "hero_subtitle": "Create a kindergarten website in 2 minutes — with groups and teachers",
+  "hero_cta_text": "Create Kindergarten Website",
+  "hero_placeholder": "Describe your kindergarten...",
+  "social_proof": [
+    {
+      "label": "Kindergarten Websites",
+      "value": "3,200+"
+    },
+    {
+      "label": "Kindergartens",
+      "value": "1,800+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.8 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "baby",
+      "title": "Groups",
+      "description": "Block with groups and ages"
+    },
+    {
+      "icon": "users",
+      "title": "Teachers",
+      "description": "Teacher and educator pages"
+    },
+    {
+      "icon": "calendar",
+      "title": "Events",
+      "description": "Calendar of events and holidays"
+    },
+    {
+      "icon": "image",
+      "title": "Gallery",
+      "description": "Photo gallery of kindergarten life"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about groups, teachers, directions",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website with groups, teachers, and gallery is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — parents will find you",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add schedule?",
+      "answer": "Yes, daily routine and schedule block is included."
+    },
+    {
+      "question": "Is there news section?",
+      "answer": "Yes, news and event announcements section."
+    },
+    {
+      "question": "Does it work for private kindergarten?",
+      "answer": "Yes, builder creates sites for any kindergarten."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan allows creating a basic website."
+    }
+  ],
+  "cta_mid_title": "Create a Kindergarten Website",
+  "cta_mid_subtitle": "Describe your kindergarten — get a ready website in 2 minutes",
+  "cta_final_title": "Ready for a Kindergarten Website?",
+  "cta_final_subtitle": "Start free — parents will find you online",
+  "cta_final_button_text": "Create Kindergarten Website Free"
+}

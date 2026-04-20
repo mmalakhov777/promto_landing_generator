@@ -1,0 +1,90 @@
+{
+  "meta_title": "Beauty Salon Website — Create in 2 Minutes | Promto",
+  "meta_description": "Beauty salon website: services, masters, booking. Create in 2 minutes with AI. Professional design.",
+  "h1": "Beauty Salon Website",
+  "og_title": "Beauty Salon Website — Promto",
+  "og_description": "AI builder creates a beauty salon website in 2 minutes.",
+  "hero_title": "Beauty Salon Website",
+  "hero_subtitle": "Create a beauty salon website in 2 minutes — with services and masters",
+  "hero_cta_text": "Create Salon Website",
+  "hero_placeholder": "Describe your beauty salon...",
+  "social_proof": [
+    {
+      "label": "Beauty Salon Websites",
+      "value": "7,200+"
+    },
+    {
+      "label": "Salons",
+      "value": "4,800+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.9 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "sparkles",
+      "title": "Services",
+      "description": "Block with services and prices"
+    },
+    {
+      "icon": "users",
+      "title": "Masters",
+      "description": "Pages for stylists and cosmetologists"
+    },
+    {
+      "icon": "image",
+      "title": "Portfolio",
+      "description": "Photo gallery of works"
+    },
+    {
+      "icon": "calendar",
+      "title": "Booking",
+      "description": "Online booking form"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your salon and services",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website with services and masters is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — clients will find you",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add services and prices?",
+      "answer": "Yes, services block with prices is created."
+    },
+    {
+      "question": "Is there online booking?",
+      "answer": "Yes, booking form is included."
+    },
+    {
+      "question": "Does it work for a hair salon?",
+      "answer": "Yes, builder works for any beauty business."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan available."
+    }
+  ],
+  "cta_mid_title": "Create a Beauty Salon Website",
+  "cta_mid_subtitle": "Describe your salon — get a ready website in 2 minutes",
+  "cta_final_title": "Ready for a Beauty Salon Website?",
+  "cta_final_subtitle": "Start free — clients will find you online",
+  "cta_final_button_text": "Create Salon Website"
+}

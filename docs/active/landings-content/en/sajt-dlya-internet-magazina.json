@@ -1,0 +1,90 @@
+{
+  "meta_title": "Online Store Website — Create in 2 Minutes | Promto",
+  "meta_description": "Online store website: catalog, products, cart. Create in 2 minutes with AI. No code, no experience.",
+  "h1": "Online Store Website",
+  "og_title": "Online Store Website — Promto",
+  "og_description": "AI builder creates an online store website in 2 minutes.",
+  "hero_title": "Online Store Website",
+  "hero_subtitle": "Create an online store in 2 minutes — with catalog and cart",
+  "hero_cta_text": "Create Online Store",
+  "hero_placeholder": "Describe what online store you want to create...",
+  "social_proof": [
+    {
+      "label": "Online Store Websites",
+      "value": "11,000+"
+    },
+    {
+      "label": "Products",
+      "value": "1.8M+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.8 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "shopping-cart",
+      "title": "With Catalog",
+      "description": "Full product catalog with cards"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready store in 2 minutes"
+    },
+    {
+      "icon": "credit-card",
+      "title": "Payment",
+      "description": "Popular payment methods"
+    },
+    {
+      "icon": "truck",
+      "title": "Delivery",
+      "description": "Delivery conditions block"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your products",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Store with catalog is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Configure and Sell",
+      "description": "Add prices, payment methods, and publish",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I create a full store?",
+      "answer": "Yes, website with catalog, product cards, and payment options."
+    },
+    {
+      "question": "What payment methods?",
+      "answer": "Popular methods for your region."
+    },
+    {
+      "question": "Do I need coding?",
+      "answer": "No, everything is visual."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan to start. Paid from $5.99/mo."
+    }
+  ],
+  "cta_mid_title": "Create an Online Store Today",
+  "cta_mid_subtitle": "Describe your products — get a ready store in 2 minutes",
+  "cta_final_title": "Ready for Your Own Online Store?",
+  "cta_final_subtitle": "Start free — sell today",
+  "cta_final_button_text": "Create Online Store Free"
+}

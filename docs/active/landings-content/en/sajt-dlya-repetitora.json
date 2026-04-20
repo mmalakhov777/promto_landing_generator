@@ -1,0 +1,90 @@
+{
+  "meta_title": "Tutor Website — Create in 2 Minutes | Promto",
+  "meta_description": "Tutor website: subjects, experience, enrollment. Create in 2 minutes with AI. Professional design.",
+  "h1": "Tutor Website",
+  "og_title": "Tutor Website — Promto",
+  "og_description": "AI builder creates a tutor website in 2 minutes.",
+  "hero_title": "Tutor Website",
+  "hero_subtitle": "Create a tutor website in 2 minutes — with subjects and enrollment",
+  "hero_cta_text": "Create Tutor Website",
+  "hero_placeholder": "Describe your tutoring...",
+  "social_proof": [
+    {
+      "label": "Tutor Websites",
+      "value": "9,200+"
+    },
+    {
+      "label": "Tutors",
+      "value": "18,000+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.9 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "book",
+      "title": "Subjects",
+      "description": "Block with subjects and tutoring areas"
+    },
+    {
+      "icon": "user",
+      "title": "Experience",
+      "description": "Experience and methodology description"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready website in 2 minutes"
+    },
+    {
+      "icon": "calendar",
+      "title": "Schedule",
+      "description": "Conditions and schedule block"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about subjects and experience",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website with subjects and enrollment form",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — parents and students will find you",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I specify subjects?",
+      "answer": "Yes, subjects and tuition block."
+    },
+    {
+      "question": "Is there enrollment form?",
+      "answer": "Yes, enrollment form is included."
+    },
+    {
+      "question": "Does it work for university teacher?",
+      "answer": "Yes, builder works for any teacher."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan allows creating a basic website."
+    }
+  ],
+  "cta_mid_title": "Create a Tutor Website",
+  "cta_mid_subtitle": "Describe your tutoring — get a ready website in 2 minutes",
+  "cta_final_title": "Ready for a Tutor Website?",
+  "cta_final_subtitle": "Start free — students are already looking for you",
+  "cta_final_button_text": "Create Tutor Website Free"
+}

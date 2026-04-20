@@ -1,0 +1,86 @@
+{
+  "meta_title": "Designer Website — Create in 2 Minutes | Promto",
+  "meta_description": "Designer portfolio website: works, skills, contacts. Create in 2 minutes with AI. Professional design.",
+  "h1": "Designer Website",
+  "og_title": "Designer Website — Promto",
+  "og_description": "AI builder creates a designer website in 2 minutes.",
+  "hero_title": "Designer Website",
+  "hero_subtitle": "Create a designer portfolio in 2 minutes — show your works",
+  "hero_cta_text": "Create Designer Website",
+  "hero_placeholder": "Describe your design style...",
+  "social_proof": [
+    {
+      "label": "Designer Websites",
+      "value": "9,600+"
+    },
+    {
+      "label": "Designers",
+      "value": "14,000+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.9 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "pen-tool",
+      "title": "Portfolio",
+      "description": "Block with design works"
+    },
+    {
+      "icon": "star",
+      "title": "Skills",
+      "description": "Skills and tools block"
+    },
+    {
+      "icon": "mail",
+      "title": "Contacts",
+      "description": "Contact information"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready website in 2 minutes"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your design works",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Portfolio is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — clients will find you",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add design works?",
+      "answer": "Yes, portfolio block is created."
+    },
+    {
+      "question": "Does it work for UX designer?",
+      "answer": "Yes, builder works for any designer."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan available."
+    }
+  ],
+  "cta_mid_title": "Create a Designer Website",
+  "cta_mid_subtitle": "Get a ready portfolio in 2 minutes",
+  "cta_final_title": "Ready for a Designer Website?",
+  "cta_final_subtitle": "Start free",
+  "cta_final_button_text": "Create Designer Website Free"
+}

@@ -1,0 +1,86 @@
+{
+  "meta_title": "Barbershop Website — Create in 2 Minutes | Promto",
+  "meta_description": "Barbershop website: services, masters, booking. Create in 2 minutes with AI. Professional design.",
+  "h1": "Barbershop Website",
+  "og_title": "Barbershop Website — Promto",
+  "og_description": "AI builder creates a barbershop website in 2 minutes.",
+  "hero_title": "Barbershop Website",
+  "hero_subtitle": "Create a barbershop website in 2 minutes — with services and masters",
+  "hero_cta_text": "Create Barbershop Website",
+  "hero_placeholder": "Describe your barbershop...",
+  "social_proof": [
+    {
+      "label": "Barbershop Websites",
+      "value": "3,800+"
+    },
+    {
+      "label": "Barbershops",
+      "value": "2,400+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.8 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "scissors",
+      "title": "Services",
+      "description": "Block with haircut and shaving services"
+    },
+    {
+      "icon": "user",
+      "title": "Masters",
+      "description": "Pages for barbers"
+    },
+    {
+      "icon": "calendar",
+      "title": "Booking",
+      "description": "Online booking form"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready website in 2 minutes"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your barbershop",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — clients will find you",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add services?",
+      "answer": "Yes, services block is created."
+    },
+    {
+      "question": "Is there booking?",
+      "answer": "Yes, booking form is included."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan available."
+    }
+  ],
+  "cta_mid_title": "Create a Barbershop Website",
+  "cta_mid_subtitle": "Describe your barbershop — get a ready website in 2 minutes",
+  "cta_final_title": "Ready for a Barbershop Website?",
+  "cta_final_subtitle": "Start free",
+  "cta_final_button_text": "Create Barbershop Website"
+}

@@ -1,0 +1,82 @@
+{
+  "meta_title": "Clinic Landing Page — Create in 2 Minutes | Promto",
+  "meta_description": "Landing page for clinic: services, appointment, reviews. Create in 2 minutes with AI. Sales-optimized.",
+  "h1": "Clinic Landing Page",
+  "og_title": "Clinic Landing Page — Promto",
+  "og_description": "AI builder creates a clinic landing page in 2 minutes.",
+  "hero_title": "Clinic Landing Page",
+  "hero_subtitle": "Create a sales page for clinic in 2 minutes",
+  "hero_cta_text": "Create Landing Page",
+  "hero_placeholder": "Describe your clinic...",
+  "social_proof": [
+    {
+      "label": "Clinic Landing Pages",
+      "value": "4,200+"
+    },
+    {
+      "label": "Leads",
+      "value": "180,000+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.8 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "stethoscope",
+      "title": "Services",
+      "description": "Block with key medical services"
+    },
+    {
+      "icon": "calendar",
+      "title": "Appointment",
+      "description": "Strong CTA for booking"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready landing page in 2 minutes"
+    },
+    {
+      "icon": "star",
+      "title": "Reviews",
+      "description": "Block with patient reviews"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your clinic",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Landing page is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish and get appointments",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is it good for getting appointments?",
+      "answer": "Yes, appointment CTA is included."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan available."
+    }
+  ],
+  "cta_mid_title": "Create a Clinic Landing Page",
+  "cta_mid_subtitle": "Get a sales page in 2 minutes",
+  "cta_final_title": "Ready for a Landing Page?",
+  "cta_final_subtitle": "Start free",
+  "cta_final_button_text": "Create Landing Page Free"
+}

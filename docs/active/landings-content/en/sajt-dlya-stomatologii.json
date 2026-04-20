@@ -1,0 +1,86 @@
+{
+  "meta_title": "Dental Clinic Website — Create in 2 Minutes | Promto",
+  "meta_description": "Dental clinic website: services, doctors, appointment. Create in 2 minutes with AI. Professional design.",
+  "h1": "Dental Clinic Website",
+  "og_title": "Dental Clinic Website — Promto",
+  "og_description": "AI builder creates a dental clinic website in 2 minutes.",
+  "hero_title": "Dental Clinic Website",
+  "hero_subtitle": "Create a dental clinic website in 2 minutes — with services and doctors",
+  "hero_cta_text": "Create Dental Website",
+  "hero_placeholder": "Describe your dental clinic...",
+  "social_proof": [
+    {
+      "label": "Dental Websites",
+      "value": "6,400+"
+    },
+    {
+      "label": "Dental Clinics",
+      "value": "3,800+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.8 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "smile",
+      "title": "Services",
+      "description": "Block with dental services"
+    },
+    {
+      "icon": "user-md",
+      "title": "Doctors",
+      "description": "Dentist pages with experience"
+    },
+    {
+      "icon": "calendar",
+      "title": "Appointment",
+      "description": "Online appointment form"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready website in 2 minutes"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your dental clinic",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — patients will find you",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add dental services?",
+      "answer": "Yes, services block is created."
+    },
+    {
+      "question": "Is there appointment form?",
+      "answer": "Yes, online booking form."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan available."
+    }
+  ],
+  "cta_mid_title": "Create a Dental Clinic Website",
+  "cta_mid_subtitle": "Describe your clinic — get a ready website in 2 minutes",
+  "cta_final_title": "Ready for a Dental Website?",
+  "cta_final_subtitle": "Start free",
+  "cta_final_button_text": "Create Dental Website Free"
+}

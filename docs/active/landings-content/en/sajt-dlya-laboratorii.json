@@ -1,0 +1,82 @@
+{
+  "meta_title": "Laboratory Website — Create in 2 Minutes | Promto",
+  "meta_description": "Laboratory website: tests, services, contacts. Create in 2 minutes with AI. Professional design.",
+  "h1": "Laboratory Website",
+  "og_title": "Laboratory Website — Promto",
+  "og_description": "AI builder creates a laboratory website in 2 minutes.",
+  "hero_title": "Laboratory Website",
+  "hero_subtitle": "Create a laboratory website in 2 minutes",
+  "hero_cta_text": "Create Laboratory Website",
+  "hero_placeholder": "Describe your laboratory...",
+  "social_proof": [
+    {
+      "label": "Laboratory Websites",
+      "value": "2,400+"
+    },
+    {
+      "label": "Laboratories",
+      "value": "1,400+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.7 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "flask",
+      "title": "Tests",
+      "description": "Block with test types and pricing"
+    },
+    {
+      "icon": "map-pin",
+      "title": "Address",
+      "description": "Address and map"
+    },
+    {
+      "icon": "clock",
+      "title": "Hours",
+      "description": "Operating hours"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready website in 2 minutes"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your laboratory",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — patients will find you",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add test list?",
+      "answer": "Yes."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan available."
+    }
+  ],
+  "cta_mid_title": "Create a Laboratory Website",
+  "cta_mid_subtitle": "Get a ready website in 2 minutes",
+  "cta_final_title": "Ready for a Website?",
+  "cta_final_subtitle": "Start free",
+  "cta_final_button_text": "Create Laboratory Website Free"
+}

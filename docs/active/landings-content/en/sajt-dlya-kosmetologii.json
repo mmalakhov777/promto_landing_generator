@@ -1,0 +1,90 @@
+{
+  "meta_title": "Cosmetology Website — Create in 2 Minutes | Promto",
+  "meta_description": "Cosmetology website: services, prices, doctors. Create in 2 minutes with AI. Professional design.",
+  "h1": "Cosmetology Website",
+  "og_title": "Cosmetology Website — Promto",
+  "og_description": "AI builder creates a cosmetology website in 2 minutes.",
+  "hero_title": "Cosmetology Website",
+  "hero_subtitle": "Create a cosmetology website in 2 minutes — with services and prices",
+  "hero_cta_text": "Create Cosmetology Website",
+  "hero_placeholder": "Describe your cosmetology...",
+  "social_proof": [
+    {
+      "label": "Cosmetology Websites",
+      "value": "4,800+"
+    },
+    {
+      "label": "Cosmetologists",
+      "value": "12,000+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.9 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "sparkles",
+      "title": "Services & Prices",
+      "description": "Block with cosmetology services and cost"
+    },
+    {
+      "icon": "user",
+      "title": "Doctors",
+      "description": "Specialist pages with experience"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready website in 2 minutes"
+    },
+    {
+      "icon": "calendar",
+      "title": "Online Booking",
+      "description": "Appointment booking form"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your services and specialists",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website with services, prices, and booking form",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — patients will find you",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add services and prices?",
+      "answer": "Yes, services and pricing block is created automatically."
+    },
+    {
+      "question": "Is there booking form?",
+      "answer": "Yes, online booking form."
+    },
+    {
+      "question": "Does it work for laser cosmetology?",
+      "answer": "Yes, builder creates sites for any cosmetology type."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan allows creating a basic website."
+    }
+  ],
+  "cta_mid_title": "Create a Cosmetology Website",
+  "cta_mid_subtitle": "Describe your services — get a ready website in 2 minutes",
+  "cta_final_title": "Ready for a Cosmetology Website?",
+  "cta_final_subtitle": "Start free — patients will find you online",
+  "cta_final_button_text": "Create Cosmetology Website Free"
+}

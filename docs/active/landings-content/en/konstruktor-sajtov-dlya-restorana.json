@@ -1,0 +1,86 @@
+{
+  "meta_title": "Restaurant Website Builder — Create in 2 Minutes | Promto",
+  "meta_description": "Restaurant website builder with AI. Create website for restaurant, cafe, or bar. No code, in 2 minutes.",
+  "h1": "Restaurant Website Builder",
+  "og_title": "Restaurant Website Builder — Promto",
+  "og_description": "AI builder creates restaurant website in 2 minutes.",
+  "hero_title": "Restaurant Website Builder",
+  "hero_subtitle": "Create a website for restaurant, cafe, or bar in 2 minutes",
+  "hero_cta_text": "Create Restaurant Website",
+  "hero_placeholder": "Describe what website you want...",
+  "social_proof": [
+    {
+      "label": "Restaurant Websites",
+      "value": "6,800+"
+    },
+    {
+      "label": "Restaurants",
+      "value": "4,200+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.8 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "utensils",
+      "title": "For Restaurants",
+      "description": "Website optimized for restaurants and cafes"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready website in 2 minutes"
+    },
+    {
+      "icon": "menu",
+      "title": "With Menu",
+      "description": "Menu block with dishes and prices"
+    },
+    {
+      "icon": "map-pin",
+      "title": "With Map",
+      "description": "Address and map block"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your restaurant",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website is generated automatically",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — guests will find you",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add a menu?",
+      "answer": "Yes, menu block is created."
+    },
+    {
+      "question": "Does it work for a food truck?",
+      "answer": "Yes, builder works for any food business."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan available."
+    }
+  ],
+  "cta_mid_title": "Create a Restaurant Website",
+  "cta_mid_subtitle": "Describe your restaurant — get a ready website in 2 minutes",
+  "cta_final_title": "Ready for a Restaurant Website?",
+  "cta_final_subtitle": "Start free",
+  "cta_final_button_text": "Create Restaurant Website"
+}

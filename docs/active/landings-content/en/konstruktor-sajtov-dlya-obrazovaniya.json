@@ -1,0 +1,90 @@
+{
+  "meta_title": "Education Website Builder — Create in 2 Minutes | Promto",
+  "meta_description": "Education website builder with AI. Create website for school, center, courses. No code, in 2 minutes.",
+  "h1": "Education Website Builder",
+  "og_title": "Education Website Builder — Promto",
+  "og_description": "AI builder creates education website in 2 minutes.",
+  "hero_title": "Education Website Builder",
+  "hero_subtitle": "Create an education website in 2 minutes — for any educational institution",
+  "hero_cta_text": "Create Education Website",
+  "hero_placeholder": "Describe what education website you want...",
+  "social_proof": [
+    {
+      "label": "Education Websites",
+      "value": "7,200+"
+    },
+    {
+      "label": "Institutions",
+      "value": "4,800+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.8 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "graduation-cap",
+      "title": "For Education",
+      "description": "Website optimized for educational organizations"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready website in 2 minutes"
+    },
+    {
+      "icon": "book-open",
+      "title": "Programs",
+      "description": "Block with education programs"
+    },
+    {
+      "icon": "users",
+      "title": "For Tutors",
+      "description": "Suitable for private teachers and tutors"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your educational center",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish and start receiving applications",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does it work for kindergarten?",
+      "answer": "Yes, builder creates sites for any educational institution."
+    },
+    {
+      "question": "Can I add schedule?",
+      "answer": "Yes, class schedule block can be added."
+    },
+    {
+      "question": "Is there enrollment form?",
+      "answer": "Yes, enrollment form is created."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan available. Paid from $5.99/mo."
+    }
+  ],
+  "cta_mid_title": "Create an Education Website",
+  "cta_mid_subtitle": "Describe your courses — get a ready website in 2 minutes",
+  "cta_final_title": "Ready for an Education Website?",
+  "cta_final_subtitle": "Start free — students will find you online",
+  "cta_final_button_text": "Create Education Website Free"
+}

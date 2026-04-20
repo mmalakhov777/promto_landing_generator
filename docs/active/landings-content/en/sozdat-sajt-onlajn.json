@@ -1,0 +1,101 @@
+{
+  "meta_title": "Create a Website Online — AI Builder in 2 Minutes | Promto",
+  "meta_description": "Create a website online with Promto's AI builder. No need to install anything — just describe your business in the browser. Ready website in 2 minutes.",
+  "h1": "Create a Website Online",
+  "og_title": "Create a Website Online — Promto AI",
+  "og_description": "Create a website online in 2 minutes with Promto's AI builder. Everything in the browser, no software to install, no code required.",
+  "hero_title": "Create a Website Online",
+  "hero_subtitle": "Online builder with AI: describe your business in the browser — and get a ready website. No installation, no code, in 2 minutes.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe the website you want to create...",
+  "social_proof": null,
+  "advantages": [
+    {
+      "icon": "globe",
+      "title": "Everything Online in Browser",
+      "description": "No need to install anything. Open your browser, go to promto.ai — and start creating websites."
+    },
+    {
+      "icon": "zap",
+      "title": "Website in 2 Minutes",
+      "description": "The AI builder generates a ready website immediately after your description."
+    },
+    {
+      "icon": "shield",
+      "title": "No Code or Software",
+      "description": "No programming knowledge needed. Everything works through a simple and intuitive interface."
+    },
+    {
+      "icon": "star",
+      "title": "Professional Result",
+      "description": "The website looks like work by a team of professionals — modern design and well-thought-out structure."
+    },
+    {
+      "icon": "trending",
+      "title": "Responsive for All Devices",
+      "description": "The website automatically adapts to any screen size — phones, tablets, computers."
+    },
+    {
+      "icon": "check",
+      "title": "Hosting Included",
+      "description": "Publish websites immediately on Promto hosting. No additional server payments."
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Open the Builder",
+      "description": "Go to promto.ai in your browser. No installation needed — work starts immediately.",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "Describe Your Business",
+      "description": "Write a few sentences about your business: what you do, what services you offer.",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "AI Creates the Website",
+      "description": "The neural network generates a ready website: structure, texts, colors, and images.",
+      "image_url": ""
+    },
+    {
+      "step": 4,
+      "title": "Publish",
+      "description": "Click the publish button — and the website immediately appears online.",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "How to create a website online?",
+      "answer": "Go to promto.ai, write a description of your business — and AI creates a ready website in 2 minutes. Everything works in the browser, nothing to install."
+    },
+    {
+      "question": "Do I need to install any software?",
+      "answer": "No. Promto works entirely in the browser. Open the site, describe your business — and get a ready website."
+    },
+    {
+      "question": "What kind of websites can I create online?",
+      "answer": "Any kind: landing pages, service websites, portfolios, sites for cafes, salons, workshops, and other businesses."
+    },
+    {
+      "question": "How much does it cost to create a website online?",
+      "answer": "The basic plan is free. You can create up to 3 websites without paying. Paid plans unlock more features."
+    },
+    {
+      "question": "Are technical skills required?",
+      "answer": "No. The builder is designed for people without experience. All you need is the ability to use a browser and write in Russian."
+    },
+    {
+      "question": "Can I work from my phone?",
+      "answer": "Yes. The interface is adapted for mobile devices. You can create and edit websites from any device."
+    }
+  ],
+  "cta_mid_title": "Create a Website Online Right Now",
+  "cta_mid_subtitle": "Nothing to install. Just open your browser — and start creating your website.",
+  "cta_final_title": "Your Website Is Ready to Launch",
+  "cta_final_subtitle": "Create a website online in 2 minutes. No code, no software — just a browser.",
+  "cta_final_button_text": "Create Website for Free"
+}

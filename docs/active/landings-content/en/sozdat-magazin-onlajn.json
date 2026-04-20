@@ -1,0 +1,90 @@
+{
+  "meta_title": "Create Online Shop — in 2 Minutes, No Code | Promto",
+  "meta_description": "Create an online shop in 2 minutes with AI builder. No code, no experience. Try free.",
+  "h1": "Create Online Shop",
+  "og_title": "Create Online Shop — Promto",
+  "og_description": "AI builder creates an online shop in 2 minutes without programming.",
+  "hero_title": "Create Online Shop",
+  "hero_subtitle": "Create an online shop in 2 minutes — with catalog and cart",
+  "hero_cta_text": "Create Shop",
+  "hero_placeholder": "Describe what online shop you want to create...",
+  "social_proof": [
+    {
+      "label": "Online Shops",
+      "value": "9,400+"
+    },
+    {
+      "label": "Products",
+      "value": "1.2M+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.8 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "shopping-bag",
+      "title": "Full Shop",
+      "description": "Catalog, product cards, cart, payment"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready shop in 2 minutes"
+    },
+    {
+      "icon": "credit-card",
+      "title": "Payment",
+      "description": "Popular payment methods"
+    },
+    {
+      "icon": "truck",
+      "title": "Delivery",
+      "description": "Delivery conditions"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your products",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Shop with catalog is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Configure and Sell",
+      "description": "Add prices and publish",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I create a shop for free?",
+      "answer": "Yes, free plan allows creating a basic shop."
+    },
+    {
+      "question": "What payment methods?",
+      "answer": "Popular methods for your region."
+    },
+    {
+      "question": "Do I need coding?",
+      "answer": "No, everything is visual."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free to start. Paid from $5.99/mo."
+    }
+  ],
+  "cta_mid_title": "Create an Online Shop Today",
+  "cta_mid_subtitle": "Describe your products — get a ready shop in 2 minutes",
+  "cta_final_title": "Ready for Your Own Shop?",
+  "cta_final_subtitle": "Start free — sell today",
+  "cta_final_button_text": "Create Shop Free"
+}

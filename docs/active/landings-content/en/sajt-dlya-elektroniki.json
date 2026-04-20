@@ -1,0 +1,90 @@
+{
+  "meta_title": "Electronics Store Website — Create in 2 Minutes | Promto",
+  "meta_description": "Electronics store website: phones, computers, appliances. Create in 2 minutes. With catalog.",
+  "h1": "Electronics Store Website",
+  "og_title": "Electronics Store Website — Promto",
+  "og_description": "AI builder creates an electronics store website in 2 minutes.",
+  "hero_title": "Electronics Store Website",
+  "hero_subtitle": "Create an electronics store website in 2 minutes",
+  "hero_cta_text": "Create Electronics Website",
+  "hero_placeholder": "Describe what electronics website you want...",
+  "social_proof": [
+    {
+      "label": "Electronics Websites",
+      "value": "4,100+"
+    },
+    {
+      "label": "Stores",
+      "value": "2,300+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.7 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "smartphone",
+      "title": "With Catalog",
+      "description": "Product catalog with specs and prices"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready website in 2 minutes"
+    },
+    {
+      "icon": "map-pin",
+      "title": "Address",
+      "description": "Store address and map"
+    },
+    {
+      "icon": "phone",
+      "title": "Contacts",
+      "description": "All store contact methods"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about products and brands",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website with catalog and contacts is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — buyers will find you",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add product catalog?",
+      "answer": "Yes, product cards with specs and prices."
+    },
+    {
+      "question": "Does it work for tech repair?",
+      "answer": "Yes, builder creates sites for any electronics business."
+    },
+    {
+      "question": "Can I add prices?",
+      "answer": "Yes, in product cards."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan allows creating a basic website."
+    }
+  ],
+  "cta_mid_title": "Create an Electronics Store Website",
+  "cta_mid_subtitle": "Describe your store — get a ready website in 2 minutes",
+  "cta_final_title": "Ready for an Electronics Website?",
+  "cta_final_subtitle": "Start free — start selling today",
+  "cta_final_button_text": "Create Electronics Website Free"
+}

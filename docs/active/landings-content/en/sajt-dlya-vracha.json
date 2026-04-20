@@ -1,0 +1,90 @@
+{
+  "meta_title": "Doctor Website — Create in 2 Minutes | Promto",
+  "meta_description": "Doctor personal website: specialization, experience, appointment. Create in 2 minutes with AI. Professional design.",
+  "h1": "Doctor Website",
+  "og_title": "Doctor Website — Promto",
+  "og_description": "AI builder creates a doctor website in 2 minutes.",
+  "hero_title": "Doctor Website",
+  "hero_subtitle": "Create a doctor personal website in 2 minutes",
+  "hero_cta_text": "Create Doctor Website",
+  "hero_placeholder": "Describe your specialization...",
+  "social_proof": [
+    {
+      "label": "Doctor Websites",
+      "value": "5,600+"
+    },
+    {
+      "label": "Doctors",
+      "value": "8,400+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.9 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "user-md",
+      "title": "Specialization",
+      "description": "Block with specialization and experience"
+    },
+    {
+      "icon": "file-text",
+      "title": "Education",
+      "description": "Education and certificates"
+    },
+    {
+      "icon": "calendar",
+      "title": "Appointment",
+      "description": "Online booking"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready website in 2 minutes"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your specialization",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — patients will find you",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add education?",
+      "answer": "Yes, education block is included."
+    },
+    {
+      "question": "Is there booking?",
+      "answer": "Yes."
+    },
+    {
+      "question": "Does it work for any doctor?",
+      "answer": "Yes."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan available."
+    }
+  ],
+  "cta_mid_title": "Create a Doctor Website",
+  "cta_mid_subtitle": "Get a ready website in 2 minutes",
+  "cta_final_title": "Ready for a Doctor Website?",
+  "cta_final_subtitle": "Start free — patients will find you",
+  "cta_final_button_text": "Create Doctor Website Free"
+}

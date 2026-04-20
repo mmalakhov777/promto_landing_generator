@@ -1,0 +1,86 @@
+{
+  "meta_title": "Create Course Website — in 2 Minutes | Promto",
+  "meta_description": "Course website: programs, teachers, enrollment. Create in 2 minutes with AI. Professional design.",
+  "h1": "Create Course Website",
+  "og_title": "Create Course Website — Promto",
+  "og_description": "AI builder creates a course website in 2 minutes.",
+  "hero_title": "Create Course Website",
+  "hero_subtitle": "Create a course website in 2 minutes — with programs and enrollment",
+  "hero_cta_text": "Create Course Website",
+  "hero_placeholder": "Describe your courses...",
+  "social_proof": [
+    {
+      "label": "Course Websites",
+      "value": "8,400+"
+    },
+    {
+      "label": "Courses",
+      "value": "42,000+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.8 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "book",
+      "title": "Programs",
+      "description": "Block with courses and programs"
+    },
+    {
+      "icon": "users",
+      "title": "Teachers",
+      "description": "Teacher and expert pages"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready website in 2 minutes"
+    },
+    {
+      "icon": "file-text",
+      "title": "Reviews",
+      "description": "Student reviews block"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about courses and teachers",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website with courses and enrollment form",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish and start enrolling",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add course programs?",
+      "answer": "Yes, courses block is created."
+    },
+    {
+      "question": "Is there enrollment form?",
+      "answer": "Yes."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan available."
+    }
+  ],
+  "cta_mid_title": "Create a Course Website",
+  "cta_mid_subtitle": "Get a ready website in 2 minutes",
+  "cta_final_title": "Ready for a Course Website?",
+  "cta_final_subtitle": "Start free",
+  "cta_final_button_text": "Create Course Website Free"
+}

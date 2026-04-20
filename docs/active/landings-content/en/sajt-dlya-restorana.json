@@ -1,0 +1,90 @@
+{
+  "meta_title": "Restaurant Website — Create in 2 Minutes | Promto",
+  "meta_description": "Restaurant website: menu, hours, photos. Create in 2 minutes with AI. Professional design, no code.",
+  "h1": "Restaurant Website",
+  "og_title": "Restaurant Website — Promto",
+  "og_description": "AI builder creates a restaurant website in 2 minutes.",
+  "hero_title": "Restaurant Website",
+  "hero_subtitle": "Create a restaurant website in 2 minutes — with menu and photos",
+  "hero_cta_text": "Create Restaurant Website",
+  "hero_placeholder": "Describe your restaurant...",
+  "social_proof": [
+    {
+      "label": "Restaurant Websites",
+      "value": "6,800+"
+    },
+    {
+      "label": "Restaurants",
+      "value": "4,200+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.8 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "utensils",
+      "title": "With Menu",
+      "description": "Block with menu, dishes, and prices"
+    },
+    {
+      "icon": "clock",
+      "title": "Hours",
+      "description": "Opening hours and schedule block"
+    },
+    {
+      "icon": "camera",
+      "title": "Photo Gallery",
+      "description": "Interior and dish photography"
+    },
+    {
+      "icon": "map-pin",
+      "title": "Address",
+      "description": "Block with address and map"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe Restaurant",
+      "description": "Tell AI about your cuisine, dishes, atmosphere",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website with menu and gallery is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — guests will find you",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add a menu?",
+      "answer": "Yes, menu block with dishes and prices is created automatically."
+    },
+    {
+      "question": "Does it work for a coffee shop?",
+      "answer": "Yes, the builder creates websites for any food establishments."
+    },
+    {
+      "question": "Is there a reservation form?",
+      "answer": "Yes, table reservation form can be added."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan allows creating a basic website."
+    }
+  ],
+  "cta_mid_title": "Create a Restaurant Website",
+  "cta_mid_subtitle": "Describe your restaurant — get a ready website in 2 minutes",
+  "cta_final_title": "Ready for a Restaurant Website?",
+  "cta_final_subtitle": "Start free — guests will find you online",
+  "cta_final_button_text": "Create Restaurant Website"
+}

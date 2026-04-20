@@ -1,0 +1,86 @@
+{
+  "meta_title": "Create Resume Website — in 2 Minutes | Promto",
+  "meta_description": "Resume website: experience, skills, education. Create in 2 minutes with AI. Professional online resume.",
+  "h1": "Create Resume Website",
+  "og_title": "Create Resume Website — Promto",
+  "og_description": "AI builder creates a resume website in 2 minutes.",
+  "hero_title": "Create Resume Website",
+  "hero_subtitle": "Create an online resume in 2 minutes — showcase your experience",
+  "hero_cta_text": "Create Resume",
+  "hero_placeholder": "Describe your work experience...",
+  "social_proof": [
+    {
+      "label": "Resume Websites",
+      "value": "6,200+"
+    },
+    {
+      "label": "Job Seekers",
+      "value": "12,000+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.8 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "briefcase",
+      "title": "Experience",
+      "description": "Block with work experience"
+    },
+    {
+      "icon": "graduation-cap",
+      "title": "Education",
+      "description": "Education block"
+    },
+    {
+      "icon": "star",
+      "title": "Skills",
+      "description": "Skills block"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready resume in 2 minutes"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your experience",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Resume website is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — share with employers",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add work experience?",
+      "answer": "Yes, experience block is created."
+    },
+    {
+      "question": "Can I add education?",
+      "answer": "Yes."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan available."
+    }
+  ],
+  "cta_mid_title": "Create a Resume Website",
+  "cta_mid_subtitle": "Get a ready resume in 2 minutes",
+  "cta_final_title": "Ready for a Resume Website?",
+  "cta_final_subtitle": "Start free",
+  "cta_final_button_text": "Create Resume Free"
+}

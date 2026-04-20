@@ -1,0 +1,90 @@
+{
+  "meta_title": "Bar Website — Create in 2 Minutes | Promto",
+  "meta_description": "Bar website: cocktails, events, atmosphere. Create in 2 minutes with AI. Professional design.",
+  "h1": "Bar Website",
+  "og_title": "Bar Website — Promto",
+  "og_description": "AI builder creates a bar website in 2 minutes.",
+  "hero_title": "Bar Website",
+  "hero_subtitle": "Create a bar website in 2 minutes — with cocktails and events",
+  "hero_cta_text": "Create Bar Website",
+  "hero_placeholder": "Describe your bar...",
+  "social_proof": [
+    {
+      "label": "Bar Websites",
+      "value": "2,100+"
+    },
+    {
+      "label": "Bars",
+      "value": "1,400+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.7 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "glass",
+      "title": "Cocktail Menu",
+      "description": "Block with cocktails and drinks"
+    },
+    {
+      "icon": "music",
+      "title": "Events",
+      "description": "Block with upcoming events and parties"
+    },
+    {
+      "icon": "image",
+      "title": "Atmosphere",
+      "description": "Photo gallery of the bar"
+    },
+    {
+      "icon": "clock",
+      "title": "Hours",
+      "description": "Opening hours and closing time"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe Bar",
+      "description": "Tell AI about your cocktails, events, music",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website with cocktail menu and events is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — guests will find you",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add an events calendar?",
+      "answer": "Yes, events block is included."
+    },
+    {
+      "question": "Does it work for a nightclub?",
+      "answer": "Yes, builder works for any entertainment venue."
+    },
+    {
+      "question": "Is there a cocktail menu?",
+      "answer": "Yes, cocktail menu block is created."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan available."
+    }
+  ],
+  "cta_mid_title": "Create a Bar Website",
+  "cta_mid_subtitle": "Describe your bar — get a ready website in 2 minutes",
+  "cta_final_title": "Ready for a Bar Website?",
+  "cta_final_subtitle": "Start free — guests will find you online",
+  "cta_final_button_text": "Create Bar Website"
+}

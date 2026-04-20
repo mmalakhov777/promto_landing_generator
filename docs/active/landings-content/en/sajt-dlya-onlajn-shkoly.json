@@ -1,0 +1,90 @@
+{
+  "meta_title": "Online School Website — Create in 2 Minutes | Promto",
+  "meta_description": "Online school website: courses, programs, enrollment. Create in 2 minutes with AI. Professional design.",
+  "h1": "Online School Website",
+  "og_title": "Online School Website — Promto",
+  "og_description": "AI builder creates an online school website in 2 minutes.",
+  "hero_title": "Online School Website",
+  "hero_subtitle": "Create an online school website in 2 minutes — with courses and enrollment",
+  "hero_cta_text": "Create School Website",
+  "hero_placeholder": "Describe your online school...",
+  "social_proof": [
+    {
+      "label": "Online School Websites",
+      "value": "7,800+"
+    },
+    {
+      "label": "Students",
+      "value": "450,000+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.8 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "monitor",
+      "title": "Online Learning",
+      "description": "Website optimized for online schools"
+    },
+    {
+      "icon": "book",
+      "title": "Programs",
+      "description": "Block with courses and programs"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready website in 2 minutes"
+    },
+    {
+      "icon": "users",
+      "title": "For Teachers",
+      "description": "Suitable for experts and private teachers"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about courses and format",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website with courses and enrollment form",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish and start enrolling students",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add video courses?",
+      "answer": "Yes, block with video and course links."
+    },
+    {
+      "question": "Is there enrollment form?",
+      "answer": "Yes, course enrollment form is created."
+    },
+    {
+      "question": "Does it work for tutor?",
+      "answer": "Yes, builder works for both large schools and private tutors."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan allows creating a basic website."
+    }
+  ],
+  "cta_mid_title": "Create an Online School Website",
+  "cta_mid_subtitle": "Describe your courses — get a ready website in 2 minutes",
+  "cta_final_title": "Ready for an Online School Website?",
+  "cta_final_subtitle": "Start free — students are already looking for you",
+  "cta_final_button_text": "Create School Website Free"
+}

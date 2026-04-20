@@ -1,0 +1,101 @@
+{
+  "meta_title": "Free Website Builder — No Skills or Code Required | Promto",
+  "meta_description": "Free AI website builder. Create a professional website for free in 2 minutes. No programming, no designer needed. Start now.",
+  "h1": "Free Website Builder",
+  "og_title": "Free AI Website Builder — Promto",
+  "og_description": "Create a free website in 2 minutes with AI. No skills, no code — just describe your business.",
+  "hero_title": "Free Website Builder",
+  "hero_subtitle": "Create a professional website for free in 2 minutes. No programming or designer required.",
+  "hero_cta_text": "Create Website for Free",
+  "hero_placeholder": "Describe the website you want to create...",
+  "social_proof": null,
+  "advantages": [
+    {
+      "icon": "check",
+      "title": "Free Forever",
+      "description": "Basic features are free forever. Create up to 3 websites without paying."
+    },
+    {
+      "icon": "zap",
+      "title": "In Just 2 Minutes",
+      "description": "AI instantly generates a website from your description — faster than any other method."
+    },
+    {
+      "icon": "star",
+      "title": "Professional Results",
+      "description": "The website looks like it was made by an experienced designer — modern and polished."
+    },
+    {
+      "icon": "shield",
+      "title": "No Hidden Fees",
+      "description": "Use the builder for free as long as you need. Paid features are optional."
+    },
+    {
+      "icon": "globe",
+      "title": "SEO Optimization Included",
+      "description": "Free websites are also optimized for search engines — meta tags and loading speed are taken care of."
+    },
+    {
+      "icon": "users",
+      "title": "89,000+ Users",
+      "description": "More than 89,000 entrepreneurs have already created their websites through Promto."
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Write a Description",
+      "description": "Tell us about your business in a few sentences. For example: 'Beauty salon in Saint Petersburg, manicure and pedicure services.'",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Generates Your Website",
+      "description": "The neural network creates a ready website with texts, structure, colors, and blocks.",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Edit If Needed",
+      "description": "Change anything: texts, block order, images, colors.",
+      "image_url": ""
+    },
+    {
+      "step": 4,
+      "title": "Publish",
+      "description": "Click the button — and your website is live. Share the link with your customers.",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is the builder really free?",
+      "answer": "Yes. The basic plan lets you create up to 3 websites free forever. Paid plans offer more features but aren't required to get started."
+    },
+    {
+      "question": "What websites can I create for free?",
+      "answer": "Landing pages, service websites, portfolios, sites for cafes, salons, workshops, and other businesses are all suitable. No topic restrictions."
+    },
+    {
+      "question": "Will there be a watermark on my website?",
+      "answer": "On the free plan, there's a small Promto logo in the website footer. On paid plans, the watermark can be removed."
+    },
+    {
+      "question": "Can I use my own domain for free?",
+      "answer": "On the free plan, websites are hosted on a Promto subdomain. Connecting a custom domain is available on paid plans."
+    },
+    {
+      "question": "How quickly is a free website created?",
+      "answer": "The website is generated in 2 minutes — regardless of the plan. This is one of Promto's main advantages."
+    },
+    {
+      "question": "Do I need experience creating websites?",
+      "answer": "No. The builder is designed for beginners. All you need is the ability to write in Russian and a desire to tell people about your business."
+    }
+  ],
+  "cta_mid_title": "Start Creating Websites for Free",
+  "cta_mid_subtitle": "Three simple steps — and your business is online. No registration required.",
+  "cta_final_title": "Your Website Is Ready in 2 Minutes",
+  "cta_final_subtitle": "Free, no code, no skills needed. Try it right now.",
+  "cta_final_button_text": "Create Website for Free"
+}

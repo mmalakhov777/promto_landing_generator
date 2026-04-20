@@ -1,0 +1,82 @@
+{
+  "meta_title": "Restaurant Landing Page — Create Sales Page in 2 Minutes | Promto",
+  "meta_description": "Landing page for restaurant: menu, reservation, events. Create in 2 minutes with AI. Sales-optimized.",
+  "h1": "Restaurant Landing Page",
+  "og_title": "Restaurant Landing Page — Promto",
+  "og_description": "AI builder creates a restaurant landing page in 2 minutes.",
+  "hero_title": "Restaurant Landing Page",
+  "hero_subtitle": "Create a sales page for restaurant in 2 minutes",
+  "hero_cta_text": "Create Landing Page",
+  "hero_placeholder": "Describe your restaurant...",
+  "social_proof": [
+    {
+      "label": "Restaurant Landing Pages",
+      "value": "3,200+"
+    },
+    {
+      "label": "Conversion Boost",
+      "value": "+28%"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.8 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "utensils",
+      "title": "Menu",
+      "description": "Block with signature dishes"
+    },
+    {
+      "icon": "calendar",
+      "title": "Reservation",
+      "description": "Table reservation CTA"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready landing page in 2 minutes"
+    },
+    {
+      "icon": "trending",
+      "title": "Sales-Ready",
+      "description": "Optimized for conversions"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your restaurant",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Landing page is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish and get reservations",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is it good for reservations?",
+      "answer": "Yes, reservation CTA is included."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan available."
+    }
+  ],
+  "cta_mid_title": "Create a Restaurant Landing Page",
+  "cta_mid_subtitle": "Describe your restaurant — get a ready landing page",
+  "cta_final_title": "Ready for a Restaurant Landing Page?",
+  "cta_final_subtitle": "Start free",
+  "cta_final_button_text": "Create Landing Page"
+}

@@ -1,0 +1,86 @@
+{
+  "meta_title": "Medical Website Builder — Create in 2 Minutes | Promto",
+  "meta_description": "Medical website builder with AI. Create website for clinic, hospital, pharmacy. No code, in 2 minutes.",
+  "h1": "Medical Website Builder",
+  "og_title": "Medical Website Builder — Promto",
+  "og_description": "AI builder creates medical website in 2 minutes.",
+  "hero_title": "Medical Website Builder",
+  "hero_subtitle": "Create a medical website in 2 minutes — for any medical facility",
+  "hero_cta_text": "Create Medical Website",
+  "hero_placeholder": "Describe what medical website you want...",
+  "social_proof": [
+    {
+      "label": "Medical Websites",
+      "value": "12,000+"
+    },
+    {
+      "label": "Medical Facilities",
+      "value": "7,200+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.8 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "stethoscope",
+      "title": "For Medicine",
+      "description": "Website optimized for medical facilities"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready website in 2 minutes"
+    },
+    {
+      "icon": "calendar",
+      "title": "Appointments",
+      "description": "Online appointment block"
+    },
+    {
+      "icon": "user-md",
+      "title": "Doctors",
+      "description": "Doctor pages"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your medical facility",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — patients will find you",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does it work for pharmacy?",
+      "answer": "Yes, builder works for any medical facility."
+    },
+    {
+      "question": "Can I add appointment form?",
+      "answer": "Yes."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan available."
+    }
+  ],
+  "cta_mid_title": "Create a Medical Website",
+  "cta_mid_subtitle": "Get a ready website in 2 minutes",
+  "cta_final_title": "Ready for a Medical Website?",
+  "cta_final_subtitle": "Start free",
+  "cta_final_button_text": "Create Medical Website Free"
+}

@@ -1,0 +1,86 @@
+{
+  "meta_title": "SMM Specialist Website — Create in 2 Minutes | Promto",
+  "meta_description": "SMM specialist portfolio: cases, services, contacts. Create in 2 minutes with AI. Professional design.",
+  "h1": "SMM Specialist Website",
+  "og_title": "SMM Specialist Website — Promto",
+  "og_description": "AI builder creates an SMM specialist website in 2 minutes.",
+  "hero_title": "SMM Specialist Website",
+  "hero_subtitle": "Create a portfolio for SMM specialist in 2 minutes",
+  "hero_cta_text": "Create SMM Portfolio",
+  "hero_placeholder": "Describe your SMM services...",
+  "social_proof": [
+    {
+      "label": "SMM Portfolios",
+      "value": "4,200+"
+    },
+    {
+      "label": "SMM Specialists",
+      "value": "8,600+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.8 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "bar-chart",
+      "title": "Cases",
+      "description": "Block with SMM cases and results"
+    },
+    {
+      "icon": "star",
+      "title": "Services",
+      "description": "Services and pricing"
+    },
+    {
+      "icon": "mail",
+      "title": "Contacts",
+      "description": "Contact information"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready website in 2 minutes"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your SMM cases",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Portfolio is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — clients will find you",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add cases?",
+      "answer": "Yes, cases block is created."
+    },
+    {
+      "question": "Does it work for content creator?",
+      "answer": "Yes."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan available."
+    }
+  ],
+  "cta_mid_title": "Create an SMM Portfolio",
+  "cta_mid_subtitle": "Get a ready portfolio in 2 minutes",
+  "cta_final_title": "Ready for an SMM Portfolio?",
+  "cta_final_subtitle": "Start free",
+  "cta_final_button_text": "Create SMM Portfolio Free"
+}

@@ -1,0 +1,90 @@
+{
+  "meta_title": "Beauty Website Builder — Create in 2 Minutes | Promto",
+  "meta_description": "Website builder for beauty industry: salons, masters, cosmetology. Create website in 2 minutes. No code.",
+  "h1": "Beauty Industry Website Builder",
+  "og_title": "Beauty Website Builder — Promto",
+  "og_description": "AI builder creates beauty industry website in 2 minutes.",
+  "hero_title": "Beauty Website Builder",
+  "hero_subtitle": "Create a website for salon or master in 2 minutes — no code",
+  "hero_cta_text": "Create Beauty Website",
+  "hero_placeholder": "Describe what website for beauty business you want...",
+  "social_proof": [
+    {
+      "label": "Beauty Websites",
+      "value": "12,000+"
+    },
+    {
+      "label": "Masters",
+      "value": "24,000+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.9 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "sparkles",
+      "title": "Beautiful Design",
+      "description": "Premium design for beauty industry"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready website in 2 minutes"
+    },
+    {
+      "icon": "image",
+      "title": "With Gallery",
+      "description": "Built-in portfolio gallery"
+    },
+    {
+      "icon": "calendar",
+      "title": "Online Booking",
+      "description": "Service booking block"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your services",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish and accept bookings",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does it work for a private master?",
+      "answer": "Yes, builder creates sites for both large salons and private masters."
+    },
+    {
+      "question": "Can I add photos of work?",
+      "answer": "Yes, portfolio gallery is included."
+    },
+    {
+      "question": "Is there online booking?",
+      "answer": "Yes, booking form is created automatically."
+    },
+    {
+      "question": "What services can I list?",
+      "answer": "Any: manicure, pedicure, haircuts, cosmetology, massage, SPA and others."
+    }
+  ],
+  "cta_mid_title": "Create a Beauty Business Website",
+  "cta_mid_subtitle": "Describe your services — get a ready website in 2 minutes",
+  "cta_final_title": "Ready for a Beauty Website?",
+  "cta_final_subtitle": "Start free — clients will find you online",
+  "cta_final_button_text": "Create Beauty Website Free"
+}

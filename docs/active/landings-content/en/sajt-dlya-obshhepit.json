@@ -1,0 +1,86 @@
+{
+  "meta_title": "Catering Website — Create in 2 Minutes | Promto",
+  "meta_description": "Catering website: menu, services, contacts. Create in 2 minutes with AI. Professional design.",
+  "h1": "Catering Website",
+  "og_title": "Catering Website — Promto",
+  "og_description": "AI builder creates a catering website in 2 minutes.",
+  "hero_title": "Catering Website",
+  "hero_subtitle": "Create a catering website in 2 minutes — with services and menu",
+  "hero_cta_text": "Create Catering Website",
+  "hero_placeholder": "Describe your catering...",
+  "social_proof": [
+    {
+      "label": "Catering Websites",
+      "value": "2,400+"
+    },
+    {
+      "label": "Catering Services",
+      "value": "1,600+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.7 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "tray",
+      "title": "Services",
+      "description": "Block with catering services"
+    },
+    {
+      "icon": "menu",
+      "title": "Menu",
+      "description": "Block with menu and pricing"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready website in 2 minutes"
+    },
+    {
+      "icon": "phone",
+      "title": "Contacts",
+      "description": "All contact information"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your catering services",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — clients will find you",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add a menu?",
+      "answer": "Yes, menu block is created."
+    },
+    {
+      "question": "Does it work for event catering?",
+      "answer": "Yes, builder works for any catering."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan available."
+    }
+  ],
+  "cta_mid_title": "Create a Catering Website",
+  "cta_mid_subtitle": "Describe your services — get a ready website in 2 minutes",
+  "cta_final_title": "Ready for a Catering Website?",
+  "cta_final_subtitle": "Start free",
+  "cta_final_button_text": "Create Catering Website"
+}

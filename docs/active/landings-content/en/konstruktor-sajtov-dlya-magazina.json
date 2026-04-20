@@ -1,0 +1,90 @@
+{
+  "meta_title": "Store Website Builder — Create in 2 Minutes | Promto",
+  "meta_description": "Store website builder with AI. Create website for offline store or boutique. With catalog and product cards.",
+  "h1": "Store Website Builder",
+  "og_title": "Store Website Builder — Promto",
+  "og_description": "AI builder creates store website in 2 minutes.",
+  "hero_title": "Store Website Builder",
+  "hero_subtitle": "Create a store website in 2 minutes — with catalog and product cards",
+  "hero_cta_text": "Create Store Website",
+  "hero_placeholder": "Describe what store website you want...",
+  "social_proof": [
+    {
+      "label": "Store Websites",
+      "value": "15,000+"
+    },
+    {
+      "label": "Products",
+      "value": "1.2M+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.8 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "store",
+      "title": "For Offline Store",
+      "description": "Website with address, hours, product catalog"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready website in 2 minutes"
+    },
+    {
+      "icon": "package",
+      "title": "Product Catalog",
+      "description": "AI creates product cards with description and photos"
+    },
+    {
+      "icon": "map-pin",
+      "title": "With Map",
+      "description": "Address and map block"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your store and products",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website with catalog and cards is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Add contacts and publish",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does it work for grocery store?",
+      "answer": "Yes, builder creates sites for any store types."
+    },
+    {
+      "question": "Can I add product catalog?",
+      "answer": "Yes, product cards are created automatically."
+    },
+    {
+      "question": "Is there address block?",
+      "answer": "Yes, address, hours, and map are included."
+    },
+    {
+      "question": "Can I add prices?",
+      "answer": "Yes, prices can be specified in product cards."
+    }
+  ],
+  "cta_mid_title": "Create a Store Website Today",
+  "cta_mid_subtitle": "Describe your store — get a ready website with catalog",
+  "cta_final_title": "Ready for a Store Website?",
+  "cta_final_subtitle": "Start free — customers will find you online",
+  "cta_final_button_text": "Create Store Website Free"
+}

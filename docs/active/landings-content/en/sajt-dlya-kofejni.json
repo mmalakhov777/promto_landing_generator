@@ -1,0 +1,90 @@
+{
+  "meta_title": "Coffee Shop Website — Create in 2 Minutes | Promto",
+  "meta_description": "Coffee shop website: drinks, pastries, atmosphere. Create in 2 minutes with AI. Professional design.",
+  "h1": "Coffee Shop Website",
+  "og_title": "Coffee Shop Website — Promto",
+  "og_description": "AI builder creates a coffee shop website in 2 minutes.",
+  "hero_title": "Coffee Shop Website",
+  "hero_subtitle": "Create a coffee shop website in 2 minutes — with menu and photos",
+  "hero_cta_text": "Create Coffee Shop Website",
+  "hero_placeholder": "Describe your coffee shop...",
+  "social_proof": [
+    {
+      "label": "Coffee Shop Websites",
+      "value": "3,400+"
+    },
+    {
+      "label": "Coffee Shops",
+      "value": "2,100+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.8 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "coffee",
+      "title": "Drink Menu",
+      "description": "Block with coffee, tea, and pastries"
+    },
+    {
+      "icon": "camera",
+      "title": "Photo Gallery",
+      "description": "Interior and drink photos"
+    },
+    {
+      "icon": "map-pin",
+      "title": "Address",
+      "description": "Block with address and map"
+    },
+    {
+      "icon": "clock",
+      "title": "Hours",
+      "description": "Opening hours"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe Coffee Shop",
+      "description": "Tell AI about your drinks, pastries, atmosphere",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website with menu and gallery is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — customers will find you",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add a full menu?",
+      "answer": "Yes, menu with drinks and food is created."
+    },
+    {
+      "question": "Is there a photo gallery?",
+      "answer": "Yes, photo gallery included."
+    },
+    {
+      "question": "Does it work for a roastery?",
+      "answer": "Yes, builder works for any coffee business."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan available."
+    }
+  ],
+  "cta_mid_title": "Create a Coffee Shop Website",
+  "cta_mid_subtitle": "Describe your coffee shop — get a ready website in 2 minutes",
+  "cta_final_title": "Ready for a Coffee Shop Website?",
+  "cta_final_subtitle": "Start free — customers will find you online",
+  "cta_final_button_text": "Create Coffee Shop Website"
+}

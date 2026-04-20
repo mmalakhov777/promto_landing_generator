@@ -1,0 +1,101 @@
+{
+  "meta_title": "Create a Website for Free — No Code or Skills Required | Promto",
+  "meta_description": "Create a website for free without programming skills. Promto AI builder generates a professional website in 2 minutes. Try it now.",
+  "h1": "Create a Website for Free",
+  "og_title": "Free Website in 2 Minutes — Promto AI",
+  "og_description": "Promto AI builder lets you create a website for free without code or skills. Just describe your business — and get a ready website.",
+  "hero_title": "Create a Website for Free",
+  "hero_subtitle": "Professional website in 2 minutes — free and no skills needed. Describe your business and get a ready result.",
+  "hero_cta_text": "Create Website for Free",
+  "hero_placeholder": "Describe the website you want to create...",
+  "social_proof": null,
+  "advantages": [
+    {
+      "icon": "check",
+      "title": "Free from the First Website",
+      "description": "Create websites for free on the basic plan. No time limits."
+    },
+    {
+      "icon": "zap",
+      "title": "Generation in 2 Minutes",
+      "description": "AI creates a complete website instantly — faster than any other method."
+    },
+    {
+      "icon": "star",
+      "title": "Professional Design",
+      "description": "The website looks like a whole team of designers worked on it."
+    },
+    {
+      "icon": "shield",
+      "title": "No Hidden Conditions",
+      "description": "The free plan is honest: create, edit, publish — without restrictions."
+    },
+    {
+      "icon": "trending",
+      "title": "SEO for Search Engines",
+      "description": "The website is immediately visible on Google and Yandex — without additional setup."
+    },
+    {
+      "icon": "clock",
+      "title": "Update Anytime",
+      "description": "Change texts, photos, blocks — at any moment and without developer help."
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Write About Your Business",
+      "description": "Tell us in a few sentences what you do. For example: 'English courses for children in Moscow.'",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates Your Website",
+      "description": "The neural network generates the structure, texts, colors, and images for your website.",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Edit",
+      "description": "Add your own photo, change texts or block order — all in the visual editor.",
+      "image_url": ""
+    },
+    {
+      "step": 4,
+      "title": "Publish",
+      "description": "Click the button — and your website is live. Share the link with your customers.",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "How to create a website for free without skills?",
+      "answer": "Simply sign up at Promto and describe your business. AI will automatically create the website — no programming, design, or technical knowledge needed."
+    },
+    {
+      "question": "Is there a free plan with real capabilities?",
+      "answer": "Yes. The basic plan lets you create up to 3 websites, edit them, and publish for free. That's enough to get started."
+    },
+    {
+      "question": "How many websites can I create for free?",
+      "answer": "Up to 3 websites on the free plan. If you need more — upgrade to a paid plan."
+    },
+    {
+      "question": "Will there be a watermark on my website?",
+      "answer": "On the free plan, there's a small Promto logo in the website footer. On paid plans, the watermark is removed."
+    },
+    {
+      "question": "Can I use my own domain for free?",
+      "answer": "Connecting a custom domain is available on paid plans. The free plan uses a Promto subdomain."
+    },
+    {
+      "question": "How quickly will the ready website appear?",
+      "answer": "Generation takes about 2 minutes. That's many times faster than using a manual builder or ordering from a developer."
+    }
+  ],
+  "cta_mid_title": "Create a Website for Free Right Now",
+  "cta_mid_subtitle": "No obligations, no payments. Just describe your business — and the website is ready.",
+  "cta_final_title": "Start for Free Today",
+  "cta_final_subtitle": "Your first website — in 2 minutes and at no cost. Try it right now.",
+  "cta_final_button_text": "Create Website for Free"
+}

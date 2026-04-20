@@ -1,0 +1,86 @@
+{
+  "meta_title": "Food Delivery Website — Create in 2 Minutes | Promto",
+  "meta_description": "Food delivery website: menu, delivery zones, ordering. Create in 2 minutes with AI. Professional design.",
+  "h1": "Food Delivery Website",
+  "og_title": "Food Delivery Website — Promto",
+  "og_description": "AI builder creates a food delivery website in 2 minutes.",
+  "hero_title": "Food Delivery Website",
+  "hero_subtitle": "Create a food delivery website in 2 minutes — with menu and ordering",
+  "hero_cta_text": "Create Delivery Website",
+  "hero_placeholder": "Describe your delivery service...",
+  "social_proof": [
+    {
+      "label": "Delivery Websites",
+      "value": "5,400+"
+    },
+    {
+      "label": "Delivery Services",
+      "value": "3,200+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.7 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "menu",
+      "title": "Menu",
+      "description": "Block with food menu and categories"
+    },
+    {
+      "icon": "truck",
+      "title": "Delivery",
+      "description": "Delivery zones and conditions"
+    },
+    {
+      "icon": "phone",
+      "title": "Order",
+      "description": "Block with order contacts"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready website in 2 minutes"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your food and delivery",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website with menu is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — customers will order",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add a menu?",
+      "answer": "Yes, menu block is created."
+    },
+    {
+      "question": "Does it work for pizza delivery?",
+      "answer": "Yes, builder works for any food delivery."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan available."
+    }
+  ],
+  "cta_mid_title": "Create a Food Delivery Website",
+  "cta_mid_subtitle": "Describe your delivery — get a ready website in 2 minutes",
+  "cta_final_title": "Ready for a Delivery Website?",
+  "cta_final_subtitle": "Start free",
+  "cta_final_button_text": "Create Delivery Website"
+}

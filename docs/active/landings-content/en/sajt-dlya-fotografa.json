@@ -1,0 +1,90 @@
+{
+  "meta_title": "Photographer Website — Create in 2 Minutes | Promto",
+  "meta_description": "Photographer website: portfolio, services, booking. Create in 2 minutes with AI. Professional design.",
+  "h1": "Photographer Website",
+  "og_title": "Photographer Website — Promto",
+  "og_description": "AI builder creates a photographer website in 2 minutes.",
+  "hero_title": "Photographer Website",
+  "hero_subtitle": "Create a photographer website in 2 minutes — with portfolio",
+  "hero_cta_text": "Create Photographer Website",
+  "hero_placeholder": "Describe your photography style...",
+  "social_proof": [
+    {
+      "label": "Photographer Websites",
+      "value": "12,400+"
+    },
+    {
+      "label": "Photographers",
+      "value": "18,000+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.9 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "camera",
+      "title": "Portfolio",
+      "description": "Photo gallery with best works"
+    },
+    {
+      "icon": "image",
+      "title": "Albums",
+      "description": "Organized photo albums"
+    },
+    {
+      "icon": "calendar",
+      "title": "Booking",
+      "description": "Shooting booking form"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready website in 2 minutes"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your photography style",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website with portfolio is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — clients will book you",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add photo albums?",
+      "answer": "Yes, organized photo galleries are included."
+    },
+    {
+      "question": "Does it work for wedding photographer?",
+      "answer": "Yes, builder works for any photography type."
+    },
+    {
+      "question": "Is there booking?",
+      "answer": "Yes, booking form is included."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan allows creating a basic website."
+    }
+  ],
+  "cta_mid_title": "Create a Photographer Website",
+  "cta_mid_subtitle": "Describe your style — get a ready portfolio in 2 minutes",
+  "cta_final_title": "Ready for a Photographer Website?",
+  "cta_final_subtitle": "Start free — clients will find you",
+  "cta_final_button_text": "Create Photographer Website Free"
+}

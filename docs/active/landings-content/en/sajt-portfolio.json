@@ -1,0 +1,90 @@
+{
+  "meta_title": "Portfolio Website — Create in 2 Minutes | Promto",
+  "meta_description": "Portfolio website: works, skills, contacts. Create in 2 minutes with AI. Professional design for creatives.",
+  "h1": "Portfolio Website",
+  "og_title": "Portfolio Website — Promto",
+  "og_description": "AI builder creates a portfolio website in 2 minutes.",
+  "hero_title": "Portfolio Website",
+  "hero_subtitle": "Create a portfolio website in 2 minutes — show your best works",
+  "hero_cta_text": "Create Portfolio",
+  "hero_placeholder": "Describe your portfolio...",
+  "social_proof": [
+    {
+      "label": "Portfolio Websites",
+      "value": "18,000+"
+    },
+    {
+      "label": "Creatives",
+      "value": "34,000+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.9 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "image",
+      "title": "Works Gallery",
+      "description": "Block with portfolio works"
+    },
+    {
+      "icon": "user",
+      "title": "About",
+      "description": "Block with skills and experience"
+    },
+    {
+      "icon": "mail",
+      "title": "Contacts",
+      "description": "Contact information and form"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready portfolio in 2 minutes"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about your works and skills",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Portfolio with works and contacts is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — clients will find you",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add my works?",
+      "answer": "Yes, gallery with works is created."
+    },
+    {
+      "question": "Does it work for designers?",
+      "answer": "Yes, builder works for any creative."
+    },
+    {
+      "question": "Is there contact form?",
+      "answer": "Yes, contact block is included."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan allows creating a basic portfolio."
+    }
+  ],
+  "cta_mid_title": "Create a Portfolio Website",
+  "cta_mid_subtitle": "Describe your works — get a ready portfolio in 2 minutes",
+  "cta_final_title": "Ready for a Portfolio?",
+  "cta_final_subtitle": "Start free — showcase your talent",
+  "cta_final_button_text": "Create Portfolio Free"
+}

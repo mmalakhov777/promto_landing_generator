@@ -1,0 +1,90 @@
+{
+  "meta_title": "Small Business Website — Create in 2 Minutes | Promto",
+  "meta_description": "Small business website: services, contacts, description. Create in 2 minutes. No code, no experience, free.",
+  "h1": "Small Business Website",
+  "og_title": "Small Business Website — Promto",
+  "og_description": "AI builder creates a small business website in 2 minutes.",
+  "hero_title": "Small Business Website",
+  "hero_subtitle": "Create a business website in 2 minutes — just describe the task",
+  "hero_cta_text": "Create Business Website",
+  "hero_placeholder": "Describe what business website you want...",
+  "social_proof": [
+    {
+      "label": "Business Websites",
+      "value": "42,000+"
+    },
+    {
+      "label": "Entrepreneurs",
+      "value": "38,000+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.9 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "briefcase",
+      "title": "For Business",
+      "description": "Website optimized for small business and self-employed"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready website in 2 minutes"
+    },
+    {
+      "icon": "phone",
+      "title": "With Contacts",
+      "description": "All ways to contact you"
+    },
+    {
+      "icon": "star",
+      "title": "Professional",
+      "description": "Modern design for any niche"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe Business",
+      "description": "Tell AI about your business, services, customers",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website with description and contacts is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — clients are already looking for you online",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does it work for self-employed?",
+      "answer": "Yes, builder is perfect for self-employed and sole proprietors."
+    },
+    {
+      "question": "Can I add services?",
+      "answer": "Yes, services and pricing block is created automatically."
+    },
+    {
+      "question": "Do I need coding?",
+      "answer": "No, everything is visual and simple."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan available for everyone."
+    }
+  ],
+  "cta_mid_title": "Create a Business Website",
+  "cta_mid_subtitle": "Describe your business — get a ready website in 2 minutes",
+  "cta_final_title": "Ready for a Business Website?",
+  "cta_final_subtitle": "Start free — clients will find you today",
+  "cta_final_button_text": "Create Business Website Free"
+}

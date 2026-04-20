@@ -1,0 +1,90 @@
+{
+  "meta_title": "Cafe Website — Create in 2 Minutes | Promto",
+  "meta_description": "Cafe website: menu, atmosphere, location. Create in 2 minutes with AI. Professional design, no code.",
+  "h1": "Cafe Website",
+  "og_title": "Cafe Website — Promto",
+  "og_description": "AI builder creates a cafe website in 2 minutes.",
+  "hero_title": "Cafe Website",
+  "hero_subtitle": "Create a cafe website in 2 minutes — with menu and atmosphere",
+  "hero_cta_text": "Create Cafe Website",
+  "hero_placeholder": "Describe your cafe...",
+  "social_proof": [
+    {
+      "label": "Cafe Websites",
+      "value": "4,200+"
+    },
+    {
+      "label": "Cafes",
+      "value": "2,800+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.8 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "coffee",
+      "title": "With Menu",
+      "description": "Block with drinks, dishes, and prices"
+    },
+    {
+      "icon": "image",
+      "title": "Atmosphere",
+      "description": "Photo gallery of interior and drinks"
+    },
+    {
+      "icon": "clock",
+      "title": "Hours",
+      "description": "Opening hours block"
+    },
+    {
+      "icon": "map-pin",
+      "title": "Location",
+      "description": "Address and map"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe Cafe",
+      "description": "Tell AI about your drinks, snacks, atmosphere",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Website with menu and gallery is generated",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish — customers will find you",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I add a menu?",
+      "answer": "Yes, menu with drinks and prices is created."
+    },
+    {
+      "question": "Does it work for a coffee shop?",
+      "answer": "Yes, works for any cafe or coffee shop."
+    },
+    {
+      "question": "Is there a gallery?",
+      "answer": "Yes, photo gallery is included."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan available."
+    }
+  ],
+  "cta_mid_title": "Create a Cafe Website",
+  "cta_mid_subtitle": "Describe your cafe — get a ready website in 2 minutes",
+  "cta_final_title": "Ready for a Cafe Website?",
+  "cta_final_subtitle": "Start free — customers will find you online",
+  "cta_final_button_text": "Create Cafe Website"
+}

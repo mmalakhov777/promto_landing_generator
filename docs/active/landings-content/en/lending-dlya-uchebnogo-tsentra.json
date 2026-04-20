@@ -1,0 +1,90 @@
+{
+  "meta_title": "Learning Center Landing Page — Create in 2 Minutes | Promto",
+  "meta_description": "Landing page for learning center: courses, programs, enrollment. Create in 2 minutes with AI. Sales-optimized.",
+  "h1": "Learning Center Landing Page",
+  "og_title": "Learning Center Landing Page — Promto",
+  "og_description": "AI builder creates a learning center landing page in 2 minutes.",
+  "hero_title": "Learning Center Landing Page",
+  "hero_subtitle": "Sales page with courses and enrollment — create in 2 minutes",
+  "hero_cta_text": "Create Landing Page",
+  "hero_placeholder": "Describe your learning center...",
+  "social_proof": [
+    {
+      "label": "Learning Center Landing Pages",
+      "value": "3,400+"
+    },
+    {
+      "label": "Enrollments",
+      "value": "85,000+"
+    },
+    {
+      "label": "Average Rating",
+      "value": "4.8 out of 5"
+    }
+  ],
+  "advantages": [
+    {
+      "icon": "book",
+      "title": "Programs",
+      "description": "Block with courses and pricing"
+    },
+    {
+      "icon": "zap",
+      "title": "In 2 Minutes",
+      "description": "Ready landing page in 2 minutes with course descriptions"
+    },
+    {
+      "icon": "users",
+      "title": "For Teachers",
+      "description": "Suitable for private and corporate centers"
+    },
+    {
+      "icon": "file-text",
+      "title": "Reviews",
+      "description": "Student reviews block"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Describe",
+      "description": "Tell AI about courses, teachers, format",
+      "image_url": ""
+    },
+    {
+      "step": 2,
+      "title": "AI Creates",
+      "description": "Landing page with programs and enrollment form",
+      "image_url": ""
+    },
+    {
+      "step": 3,
+      "title": "Publish",
+      "description": "Publish and receive applications",
+      "image_url": ""
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does it work for driving school?",
+      "answer": "Yes, builder creates landing pages for any learning center."
+    },
+    {
+      "question": "Can I add schedule?",
+      "answer": "Yes, class schedule block is included."
+    },
+    {
+      "question": "Is there enrollment form?",
+      "answer": "Yes, course enrollment form is created."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Free plan allows creating a basic landing page."
+    }
+  ],
+  "cta_mid_title": "Create a Learning Center Landing Page",
+  "cta_mid_subtitle": "Describe your courses — get a sales page in 2 minutes",
+  "cta_final_title": "Ready for a Learning Center Landing Page?",
+  "cta_final_subtitle": "Start free — students will find you",
+  "cta_final_button_text": "Create Landing Page Free"
+}
