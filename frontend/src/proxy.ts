@@ -5,8 +5,8 @@ import { routing } from "./i18n/routing";
 const intlMiddleware = createMiddleware(routing);
 
 // [RISK-03] Paths excluded from i18n middleware
-const EXCLUDED_PREFIXES = ["/admin", "/api/", "/_next/", "/favicon.ico"];
-const EXCLUDED_EXACT = ["/robots.txt", "/sitemap.xml"];
+const EXCLUDED_PREFIXES = ["/admin/", "/api/", "/_next/"];
+const EXCLUDED_EXACT = ["/admin", "/robots.txt", "/sitemap.xml", "/favicon.ico"];
 
 export function proxy(request: NextRequest): NextResponse {
   const { pathname } = request.nextUrl;

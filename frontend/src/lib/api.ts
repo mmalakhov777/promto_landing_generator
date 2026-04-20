@@ -1,5 +1,9 @@
+// Server-side: use internal Docker network URL
+// Client-side: use public URL (NEXT_PUBLIC_ prefix is exposed to browser)
 const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+  typeof window === "undefined"
+    ? process.env.API_URL || process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"
+    : process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 type FetchOptions = RequestInit & {
   params?: Record<string, string>;

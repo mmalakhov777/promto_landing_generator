@@ -80,55 +80,70 @@
 
 ---
 
-### ФАЗА 1: Фундамент и инфраструктура
+### ФАЗА 1: Фундамент и инфраструктура ✅ ЗАВЕРШЕНА
 
 **Цель:** Рабочий скелет проекта — оба сервиса запускаются локально, общаются между собой, i18n-роутинг на месте.
 
+**Статус:** Реализовано и проверено. Коммиты: `d135e6f` (реализация), `review-fix` (исправления после ревью).
+
 #### 1.1 — Backend: каркас FastAPI
-- [ ] Создать структуру `backend/` (FastAPI-приложение)
-- [ ] Настроить `pyproject.toml` с зависимостями (fastapi, uvicorn, sqlalchemy, asyncpg, alembic, pydantic-settings, pyjwt, passlib, python-slugify, httpx, openpyxl)
-- [ ] Создать `backend/Dockerfile`
-- [ ] Настроить `app/core/config.py` (Pydantic Settings — DATABASE_URL, SECRET_KEY, CORS_ORIGINS, FRONTEND_URL, SMARTCAPTCHA_SERVER_KEY)
-- [ ] Создать `app/core/database.py` (async SQLAlchemy engine + session factory)
-- [ ] Настроить `app/core/logging.py`
-- [ ] Настроить `app/core/exceptions.py` (базовые обработчики ошибок)
-- [ ] Добавить health-check endpoint: `GET /api/v1/health` (проверка связи с БД)
-- [ ] Настроить CORS middleware (origins из конфига)
+- [x] Создать структуру `backend/` (FastAPI-приложение)
+- [x] Настроить `pyproject.toml` с зависимостями (fastapi, uvicorn, sqlalchemy, asyncpg, alembic, pydantic-settings, pyjwt, passlib, python-slugify, httpx, openpyxl)
+- [x] Создать `backend/Dockerfile`
+- [x] Настроить `app/core/config.py` (Pydantic Settings — DATABASE_URL, SECRET_KEY, CORS_ORIGINS, FRONTEND_URL, SMARTCAPTCHA_SERVER_KEY)
+- [x] Создать `app/core/database.py` (async SQLAlchemy engine + session factory)
+- [x] Настроить `app/core/logging.py`
+- [x] Настроить `app/core/exceptions.py` (базовые обработчики ошибок)
+- [x] Добавить health-check endpoint: `GET /api/v1/health` (проверка связи с БД)
+- [x] Настроить CORS middleware (origins из конфига)
 
 #### 1.2 — Frontend: каркас Next.js
-- [ ] Создать Next.js 14+ приложение в `frontend/` (App Router, TypeScript, `output: "standalone"`)
-- [ ] Настроить Tailwind CSS по брендбуку (цвета, шрифты, spacing, breakpoints)
-- [ ] Настроить `next-intl`: middleware с определением локали из URL-префикса (`/ru/...`, `/en/...`), дефолтная локаль `ru`. **[RISK-03]** Явно исключить `/admin/`, `/api/`, `/_next/`, `/robots.txt`, `/sitemap.xml`, `/favicon.ico` из i18n middleware через early return перед вызовом intlMiddleware
-- [ ] Создать файлы переводов UI: `messages/ru.json`, `messages/en.json` (пока пустые шаблоны)
-- [ ] Создать `frontend/Dockerfile` (Next.js standalone build)
-- [ ] Настроить базовый layout `[locale]/layout.tsx`: viewport meta, favicon (из брендбука), `next/font` для шрифта Onest
-- [ ] Создать placeholder-страницу `[locale]/page.tsx` ("Landing Generator — coming soon")
-- [ ] Настроить `src/lib/api.ts` — базовый fetch-клиент для обращения к backend API (NEXT_PUBLIC_API_URL)
+- [x] Создать Next.js 16 приложение в `frontend/` (App Router, TypeScript, `output: "standalone"`)
+  - **Адаптация:** Использован Next.js 16.2.4 (вместо 14+). Ключевые отличия: `middleware.ts` → `proxy.ts`, `params` — async (Promise), Tailwind CSS v4 (Vite-based, `@theme` вместо `tailwind.config.ts`).
+- [x] Настроить Tailwind CSS по брендбуку (цвета, шрифты, spacing, breakpoints)
+  - **Адаптация:** Tailwind v4 использует CSS-native `@theme` вместо JS-конфига. Шрифт Onest отсутствует в `next/font/google`, используется Inter с plan миграции на Onest через CSS `@font-face` при наличии файлов шрифта.
+- [x] Настроить `next-intl`: proxy (бывший middleware) с определением локали из URL-префикса (`/ru/...`, `/en/...`), дефолтная локаль `ru`. **[RISK-03]** Явно исключить `/admin/`, `/api/`, `/_next/`, `/robots.txt`, `/sitemap.xml`, `/favicon.ico` из i18n proxy через early return перед вызовом intlMiddleware
+- [x] Создать файлы переводов UI: `messages/ru.json`, `messages/en.json` (пока шаблоны с common + nav)
+- [x] Создать `frontend/Dockerfile` (Next.js standalone multi-stage build)
+- [x] Настроить базовый layout `[locale]/layout.tsx`: viewport meta, `next/font` для Inter (с CSS-variable `--font-inter`)
+- [x] Создать placeholder-страницу `[locale]/page.tsx` с переводами и generateMetadata
+- [x] Настроить `src/lib/api.ts` — базовый fetch-клиент с разделением server-side (`API_URL`) и client-side (`NEXT_PUBLIC_API_URL`)
 
 #### 1.3 — Docker и локальный запуск
-- [ ] Создать `docker-compose.yml` (frontend:3000 + backend:8000 + postgres:5432)
-- [ ] Создать `docker-compose.dev.yml` (override с volume mounts для hot-reload)
-- [ ] Подготовить `.env.example` с описанием всех переменных
-- [ ] Проверить, что `docker-compose up` запускает все три сервиса
+- [x] Создать `docker-compose.yml` (frontend:3000 + backend:8000 + postgres:5432)
+- [x] Создать `docker-compose.dev.yml` (override с volume mounts для hot-reload)
+- [x] Подготовить `.env.example` с описанием всех переменных (включая `API_URL` для server-side)
+- [ ] Проверить, что `docker-compose up` запускает все три сервиса — **не проверено** (нет Docker в sandbox). Конфигурация валидна синтаксически.
 
 #### 1.4 — Конфигурация деплоя
-- [ ] Создать `/home/user/promto.yaml`:
-  - web: type backend, framework docker, root_dir frontend/ (Next.js SSR)
-  - api: type backend, framework docker, root_dir backend/ (FastAPI)
+- [x] Создать `/home/user/promto.yaml`:
+  - web: type backend, framework docker, root_dir frontend/, preset_id 1005 (Next.js SSR)
+  - api: type backend, framework docker, root_dir backend/, preset_id 1003 (FastAPI)
   - db: type database, framework postgresql, preset_id 357
-- [ ] Проверить соответствие структуре Dockerfile-ов (не в корне, а в поддиректориях)
+- [x] Проверить соответствие структуре Dockerfile-ов (не в корне, а в поддиректориях)
 
 #### 1.5 — Тесты фазы
-- [ ] **Backend:** тест health-check endpoint (pytest + httpx AsyncClient)
-- [ ] **Backend:** тест подключения к БД
-- [ ] **Frontend:** `npm run build` завершается без ошибок
-- [ ] **Infra:** `docker-compose up` — все сервисы стартуют, health-check возвращает 200
+- [x] **Backend:** тест health-check endpoint (pytest + httpx AsyncClient) — 2/2 passed
+- [x] **Backend:** тест подключения к БД (входит в health-check тест, проверяет `SELECT 1`)
+- [x] **Frontend:** `npm run build` завершается без ошибок
+- [x] **Frontend:** TypeScript `tsc --noEmit` — 0 ошибок
+- [x] **Frontend:** ESLint — 0 ошибок
+- [ ] **Infra:** `docker-compose up` — не проверено (нет Docker в sandbox)
 
 **Критерии готовности:**
-- `curl http://localhost:8000/api/v1/health` -> `{"status":"ok","db":"ok"}`
-- `curl http://localhost:3000/ru/` -> HTML с placeholder-страницей
-- `curl http://localhost:3000/en/` -> HTML с placeholder-страницей (EN)
-- Все тесты проходят
+- ✅ `curl http://localhost:8002/api/v1/health` → `{"status":"ok","db":"ok"}`
+- ✅ `curl http://localhost:3001/ru/` → HTML с placeholder-страницей (содержит "Промто")
+- ✅ `curl http://localhost:3001/en/` → HTML с placeholder-страницей (содержит "Promto")
+- ✅ `/admin/` не перенаправляется i18n middleware (RISK-03)
+- ✅ `/` → redirect на `/ru/`
+- ✅ Все тесты проходят (pytest 2/2, tsc 0 errors, build success, eslint clean)
+
+**Найдено при ревью и исправлено:**
+1. **(КРИТ)** API client не разделял server/client URL — добавлен `API_URL` для SSR
+2. **(КРИТ)** docker-compose.yml: `NEXT_PUBLIC_API_URL` указывал на Docker-internal URL — исправлен на `${NEXT_PUBLIC_API_URL:-https://types.promto.ai}`
+3. **(КРИТ)** docker-compose.dev.yml: добавлен `API_URL: http://backend:8000` для server-side
+4. **(СРЕДН)** proxy.ts: `/admin` prefix match ловил `/admin-panel` — разделён на exact `/admin` + prefix `/admin/`
+5. **(СРЕДН)** .env.example: добавлено разделение `API_URL` / `NEXT_PUBLIC_API_URL` с описанием
 
 ---
 
