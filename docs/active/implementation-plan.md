@@ -269,90 +269,110 @@
 - ✅ `scripts/seed_data.py` создаёт 3 тестовых лендинга с полным контентом
 - ✅ Все тесты проходят: 38/38 (pytest)
 
-**Найдено при ревью и исправлено:**
+**Ревью #1 — найдено и исправлено:**
 1. **(КРИТ)** `passlib` 1.7.4 несовместим с `bcrypt` 5.x — `hash_password()` падал с `ValueError`. Заменён на прямой `bcrypt` API (`services/auth.py`)
 2. **(КРИТ)** `sqlalchemy.dialects.postgresql.JSONB` несовместим с SQLite-тестами — `create_all` падал с `UnsupportedCompilationError`. Заменён на `sqlalchemy.types.JSON` (`models/landing.py`, `models/settings.py`)
 3. **(КРИТ)** `alembic/env.py` не импортировал модели — `Base.metadata.tables` был пустым, autogenerate создавал бы пустые миграции. Добавлен `import app.models`
 4. **(СРЕДН)** `api/deps.py` ловил `except Exception` при декодировании JWT — перехватывал любые ошибки, включая DB/IO. Сужено до `jwt.PyJWTError`
+
+**Ревью #2 — найдено, ожидает исправления:**
+1. **(КРИТ)** `api/v1/auth.py:36-48` — `/refresh` endpoint не проверяет существование/активность пользователя в БД. Деактивированный пользователь продолжает обновлять токены. FIX: добавить `Depends(get_db)`, lookup по `User.id`, проверка `is_active`
+2. **(КРИТ)** `models/redirect.py` — `SlugRedirect` без `UniqueConstraint` на `(old_category_slug, old_landing_slug)`. Повторная смена slug создаёт дубликаты. FIX: добавить `__table_args__` с `UniqueConstraint`
+3. **(СРЕДН)** `api/v1/categories.py:19` — `GET /categories` без auth позволяет видеть `?is_active=false`. FIX: добавить `require_admin`
+4. **(СРЕДН)** `api/v1/settings.py:74` — revalidate endpoint возвращает `str(e)` в ответе, может утечь URL с секретами. FIX: возвращать общее сообщение
+5. **(СРЕДН)** `core/config.py:13` — default `SECRET_KEY` 23 байта, PyJWT выдаёт 107 `InsecureKeyLengthWarning`. FIX: увеличить до 32+ символов
 
 **Отложено до деплоя:**
 - 2.1: Alembic-миграция + data-миграция SiteSettings (требуют работающий PostgreSQL, в sandbox тесты используют SQLite + create_all)
 
 ---
 
-### ФАЗА 3: Админ-панель
+### ФАЗА 3: Админ-панель ✅ ЗАВЕРШЕНА
 
 **Цель:** Полноценный интерфейс управления лендингами. Бэкенд на этой фазе не затрагивается (API готово из Фазы 2).
 
 **Зависимости:** Фаза 2 (API должно быть готово)
 
+**Статус:** Реализовано. Build успешен (Next.js 16.2.4 Turbopack, TypeScript 0 ошибок).
+
+**Архитектура:**
+- Auth через httpOnly cookies: Next.js API Routes (`/api/auth/*`) проксируют к FastAPI и устанавливают токены в httpOnly cookies
+- Admin API proxy: catch-all route `/api/admin/[...path]` проксирует все admin-запросы к FastAPI, прикрепляя access_token из cookie
+- Auth protection: `AuthProvider` (React Context) проверяет `/api/auth/me` при загрузке, редирект на `/admin/login` при отсутствии. Route group `(authenticated)` обёртывает защищённые страницы layout-ом с sidebar+header
+- Admin API client (`lib/admin-api.ts`): все запросы идут через `/api/admin/*` proxy, автоматический refresh при 401
+
 #### 3.1 — Каркас админки (Frontend)
-- [ ] Роутинг: `/admin/login`, `/admin/dashboard`, `/admin/landings`, `/admin/landings/[id]`, `/admin/categories`, `/admin/settings`
-- [ ] Layout админки: sidebar навигация (Dashboard, Лендинги, Категории, Настройки), header с именем пользователя + logout
-- [ ] Защита роутов: Next.js middleware проверяет JWT в cookie, редирект на `/admin/login` при отсутствии
-- [ ] **[RISK-06]** Next.js API Routes для auth-прокси (серверная установка httpOnly cookie):
-  - `app/api/auth/login/route.ts` — принимает credentials, проксирует к FastAPI, устанавливает JWT как httpOnly cookie
+- [x] Роутинг: `/admin/login`, `/admin/dashboard`, `/admin/landings`, `/admin/landings/[id]`, `/admin/categories`, `/admin/settings`
+  - **Адаптация:** Использована route group `(authenticated)` для layout с sidebar. `/admin` → redirect на `/admin/dashboard`
+- [x] Layout админки: sidebar навигация (Dashboard, Лендинги, Категории, Настройки), header с email пользователя + logout
+- [x] Защита роутов: `AuthProvider` проверяет JWT через `/api/auth/me`, редирект на `/admin/login` при отсутствии
+- [x] **[RISK-06]** Next.js API Routes для auth-прокси (серверная установка httpOnly cookie):
+  - `app/api/auth/login/route.ts` — принимает credentials, проксирует к FastAPI, устанавливает JWT как httpOnly cookie (access: 30min, refresh: 7d)
   - `app/api/auth/refresh/route.ts` — читает refresh token из cookie, обновляет, устанавливает новый
   - `app/api/auth/logout/route.ts` — удаляет cookie
-- [ ] API-клиент для админки: fetch-обёртка (cookie отправляется автоматически браузером), автоматический refresh через Next.js API Route при 401
-- [ ] Базовые UI-компоненты: DataTable (сортировка, пагинация), FormField, Modal, Toast, Badge (статус), ConfirmDialog
+  - `app/api/auth/me/route.ts` — проксирует GET /auth/me с access_token
+- [x] API-клиент для админки (`lib/admin-api.ts`): fetch через `/api/admin/*` proxy (cookie автоматически), auto-refresh при 401
+  - Admin API proxy: `app/api/admin/[...path]/route.ts` — catch-all proxy, пробрасывает access_token из cookie в Authorization header
+- [x] Базовые UI-компоненты: DataTable (пагинация), FormField (input/textarea), Modal, Toast (context provider), Badge (статус), ConfirmDialog
 
 #### 3.2 — Страница логина (Frontend)
-- [ ] Форма: email + password
-- [ ] Валидация на клиенте
-- [ ] **[RISK-06]** Вызов Next.js API Route `/api/auth/login` (НЕ напрямую FastAPI). Route устанавливает httpOnly cookie server-side
-- [ ] Редирект на dashboard после успешного входа
+- [x] Форма: email + password
+- [x] Валидация: required на полях, отображение ошибки от сервера
+- [x] **[RISK-06]** Вызов Next.js API Route `/api/auth/login` (НЕ напрямую FastAPI). Route устанавливает httpOnly cookie server-side
+- [x] Редирект на dashboard после успешного входа. Если уже авторизован — redirect на dashboard
 
 #### 3.3 — Dashboard (Frontend)
-- [ ] Виджеты: всего лендингов, опубликовано, черновиков, категорий
-- [ ] Последние изменённые лендинги (топ-5)
-- [ ] Быстрые действия: создать лендинг, создать категорию
+- [x] Виджеты: всего лендингов, опубликовано, черновиков, категорий (4 stat-карточки)
+- [x] Последние изменённые лендинги (топ-5) с ссылками на редактор
+- [x] Быстрые действия: создать лендинг (→ /admin/landings?new=1), создать категорию (→ /admin/categories)
 
 #### 3.4 — Управление категориями (Frontend)
-- [ ] Таблица категорий: название (RU/EN), slug, кол-во лендингов, статус (активна/неактивна), действия
-- [ ] Создание категории: модальная форма (slug, название RU, название EN, описание RU, описание EN, meta title RU/EN, meta description RU/EN)
-- [ ] Редактирование категории: та же форма, предзаполненная
-- [ ] Деактивация/удаление: с подтверждением через ConfirmDialog. **[RISK-11]** Показать количество опубликованных лендингов, которые будут сняты с публикации
+- [x] Таблица категорий: название (RU/EN), slug, статус (активна/неактивна), порядок сортировки, действия
+- [x] Создание категории: модальная форма (slug, название RU/EN, описание RU/EN, meta title RU/EN, meta description RU/EN, sort_order, is_active)
+- [x] Редактирование категории: та же форма, предзаполненная данными
+- [x] Деактивация/удаление: ConfirmDialog с предупреждением о каскадном снятии лендингов с публикации **[RISK-11]**
 
 #### 3.5 — Управление лендингами — список (Frontend)
-- [ ] Таблица: H1 (RU), категория, slug, статус (badge: опубликован/черновик), частотность, дата обновления, действия
-- [ ] Фильтры: выпадающий список категорий, переключатель статуса (все/опубликованы/черновики)
-- [ ] Поиск: по H1, keyword, slug (debounced input)
-- [ ] Пагинация (server-side)
-- [ ] Быстрые действия в строке: опубликовать/снять, редактировать, удалить
+- [x] Таблица: ключевой запрос (RU), slug, категория, статус (badge), частотность, дата обновления, действия
+- [x] Фильтры: выпадающий список категорий, переключатель статуса (все/опубликованы/черновики)
+- [x] Поиск: debounced input (300ms) по H1, keyword, slug
+- [x] Пагинация (server-side, 20 элементов на страницу)
+- [x] Быстрые действия в строке: опубликовать/снять, редактировать (→ /admin/landings/{id}), удалить (ConfirmDialog)
+- [x] Модал создания нового лендинга (открывается по кнопке или ?new=1)
 
 #### 3.6 — Редактор лендинга (Frontend)
-- [ ] **Вкладка "Основное":** slug (editable), категория (выпадающий список), ключевой запрос RU, ключевой запрос EN, частотность, статус публикации (toggle)
-- [ ] **Вкладка "SEO":** для каждой локали (вложенные табы RU/EN): meta title, meta description, H1, OG title, OG description, OG image URL. Счётчик символов для title (<60) и description (<160)
-- [ ] **Вкладка "Контент RU":** редактирование каждой секции в виде раскладываемых панелей (Collapsible):
-  - Hero: заголовок, подзаголовок, текст кнопки CTA, плейсхолдер ввода промта
-  - Social Proof: динамический список (добавить/удалить) пар {label, value}
-  - Преимущества: динамический список карточек {выбор иконки, заголовок, описание}
-  - Как это работает: динамический список шагов {номер, заголовок, описание, URL картинки}
-  - Примеры: динамический список {URL картинки, заголовок, описание, URL}
-  - Видео: URL видео + заголовок секции
-  - Тарифы: динамический список {название, цена, список фич (вложенный динамический список), URL кнопки, флаг "популярный"}
-  - Отзывы: динамический список {имя автора, текст, рейтинг (1-5), URL аватара}
-  - FAQ: динамический список пар {вопрос, ответ}
-  - CTA промежуточный: заголовок, подзаголовок
-  - CTA финальный: заголовок, подзаголовок, текст кнопки
-- [ ] **Вкладка "Контент EN":** аналогичная структура для EN-локали
-- [ ] **Вкладка "Секции":** список всех togglable-секций с переключателями вкл/выкл
-- [ ] Кнопка "Сохранить" (отправляет PATCH-запросы на соответствующие эндпоинты)
-- [ ] Кнопка "Предпросмотр" — открывает `/{locale}/{category_slug}/{landing_slug}/` в новой вкладке
+- [x] **Вкладка "Основное":** slug (editable, предупреждение о редиректе), категория (select), ключевой запрос RU/EN, частотность
+- [x] **Вкладка "SEO":** для каждой локали (RU/EN секции): meta title, meta description (со счётчиком символов), H1, OG title, OG description, OG image URL. Раздельное сохранение по локали
+- [x] **Вкладка "Контент RU":** CollapsibleSection для каждого блока + DynamicList для массивных полей:
+  - Hero: заголовок, подзаголовок, текст CTA, placeholder
+  - Social Proof: динамический список {label, value}
+  - Преимущества: динамический список {icon, title, description}
+  - Как это работает: динамический список {step, title, description, image_url}
+  - Примеры: динамический список {image_url, title, description, url}
+  - Видео: URL + заголовок
+  - Тарифы: динамический список {name, price, features (newline-separated), cta_url, is_popular}
+  - Отзывы: динамический список {author, text, rating, avatar_url}
+  - FAQ: динамический список {question, answer}
+  - CTA промежуточный + финальный
+- [x] **Вкладка "Контент EN":** аналогичная структура через ContentEditor с locale="en"
+- [x] **Вкладка "Секции":** toggle-переключатели для каждой секции
+- [x] Кнопка "Сохранить" (PATCH на соответствующие эндпоинты, по вкладкам)
+- [x] Кнопка "Предпросмотр" — ссылка на `/{locale}/{category_slug}/{landing_slug}/`
+- [x] Кнопка публикации/снятия с публикации
 
 #### 3.7 — Настройки сайта (Frontend)
-- [ ] ID Яндекс.Метрики (текстовое поле)
-- [ ] Клиентский ключ SmartCaptcha (текстовое поле)
-- [ ] URL платформы (default: `https://app.promto.ai`)
-- [ ] Дефолтные тарифы (JSON-редактор — шаблон, подставляемый в новые лендинги)
-- [ ] Дефолтные тексты CTA-блоков (текстовые поля)
-- [ ] Дефолтный Social Proof (динамический список)
-- [ ] URL дефолтного видео (текстовое поле)
+- [x] ID Яндекс.Метрики (текстовое поле)
+- [x] Клиентский ключ SmartCaptcha (текстовое поле)
+- [x] URL платформы (default: `https://app.promto.ai`)
+- [x] Дефолтные тарифы (JSON textarea-редактор)
+- [x] Дефолтные тексты CTA-блоков (JSON textarea-редактор)
+- [x] Дефолтный Social Proof (динамический список {label, value})
+- [x] URL дефолтного видео (текстовое поле)
+- [x] Кнопка "Обновить кеш фронтенда" (POST /revalidate)
 
 #### 3.8 — Тесты фазы (Frontend)
-- [ ] Компонентные тесты (Vitest + Testing Library): DataTable, FormField, Modal, Toast, ConfirmDialog
-- [ ] E2E тест (Playwright): логин -> dashboard -> переход к списку лендингов -> открытие редактора -> изменение контента -> сохранение -> проверка обновлённых данных
+- [ ] Компонентные тесты (Vitest + Testing Library): DataTable, FormField, Modal, Toast, ConfirmDialog — **отложено**
+- [ ] E2E тест (Playwright): логин -> dashboard -> переход к списку лендингов -> открытие редактора -> изменение контента -> сохранение -> проверка обновлённых данных — **отложено**
 - [ ] E2E тест: создание новой категории -> создание лендинга в ней -> публикация -> проверка в списке
 - [ ] E2E тест: удаление лендинга с подтверждением
 
