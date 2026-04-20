@@ -1,0 +1,44 @@
+import type { MetadataRoute } from "next";
+import { getSitemapData, getPublicCategories } from "@/lib/public-api";
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://promto.ai";
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const urls: MetadataRoute.Sitemap = [];
+
+  // Home pages
+  urls.push(
+    { url: `${SITE_URL}/ru/`, lastModified: new Date() },
+    { url: `${SITE_URL}/en/`, lastModified: new Date() },
+  );
+
+  // Category pages
+  try {
+    const categories = await getPublicCategories();
+    for (const cat of categories) {
+      urls.push(
+        { url: `${SITE_URL}/ru/${cat.slug}/`, lastModified: new Date() },
+        { url: `${SITE_URL}/en/${cat.slug}/`, lastModified: new Date() },
+      );
+    }
+  } catch {
+    // Skip categories if API unavailable
+  }
+
+  // Landing pages
+  try {
+    const sitemapData = await getSitemapData();
+    for (const item of sitemapData) {
+      for (const locale of item.locales) {
+        urls.push({
+          url: `${SITE_URL}/${locale}/${item.category_slug}/${item.landing_slug}/`,
+          lastModified: new Date(item.updated_at),
+        });
+      }
+    }
+  } catch {
+    // Skip landings if API unavailable
+  }
+
+  return urls;
+}

@@ -3,6 +3,11 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
+import { Header } from "@/components/landing/Header";
+import { Footer } from "@/components/landing/Footer";
+import { ScrollToTop } from "@/components/landing/ScrollToTop";
+import { getPublicSettings } from "@/lib/public-api";
+import type { Locale } from "@/types/public";
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
@@ -23,11 +28,22 @@ export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
   const messages = await getMessages();
 
+  let platformUrl = "https://app.promto.ai";
+  try {
+    const settings = await getPublicSettings();
+    platformUrl = settings.platform_url || platformUrl;
+  } catch {
+    // Use default if API unavailable
+  }
+
   return (
     <html lang={locale} className={inter.variable}>
       <body className="font-sans bg-background text-text antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
+          <Header locale={locale as Locale} platformUrl={platformUrl} />
+          <main className="min-h-screen">{children}</main>
+          <Footer locale={locale as Locale} platformUrl={platformUrl} />
+          <ScrollToTop />
         </NextIntlClientProvider>
       </body>
     </html>
