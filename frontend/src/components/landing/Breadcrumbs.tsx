@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import type { Locale } from "@/types/public";
 
 interface BreadcrumbItem {
@@ -10,13 +11,15 @@ interface BreadcrumbsProps {
   locale: Locale;
 }
 
-export function Breadcrumbs({ items, locale }: BreadcrumbsProps) {
+export async function Breadcrumbs({ items, locale }: BreadcrumbsProps) {
+  const t = await getTranslations({ locale, namespace: "nav" });
+
   return (
     <nav aria-label="Breadcrumb" className="mb-4 text-sm text-text-muted">
       <ol className="flex flex-wrap items-center gap-1">
         <li>
           <a href={`/${locale}/`} className="hover:text-primary transition-colors">
-            {locale === "ru" ? "Главная" : "Home"}
+            {t("home")}
           </a>
         </li>
         {items.map((item, idx) => (

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import type { Locale } from "@/types/public";
 
 interface HeaderProps {
@@ -12,6 +13,8 @@ interface HeaderProps {
 export function Header({ locale, platformUrl }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  const tCommon = useTranslations("common");
+  const tNav = useTranslations("nav");
 
   const otherLocale = locale === "ru" ? "en" : "ru";
   const localeLabel = locale === "ru" ? "EN" : "RU";
@@ -31,7 +34,7 @@ export function Header({ locale, platformUrl }: HeaderProps) {
           rel="nofollow noopener"
           className="text-xl font-bold text-primary"
         >
-          {locale === "ru" ? "Промто" : "Promto"}
+          {tCommon("siteName")}
         </a>
 
         {/* Desktop nav */}
@@ -47,7 +50,7 @@ export function Header({ locale, platformUrl }: HeaderProps) {
             rel="nofollow noopener"
             className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white hover:bg-primary-hover transition-colors"
           >
-            {locale === "ru" ? "Попробовать" : "Try it"}
+            {tNav("tryIt")}
           </a>
         </nav>
 
@@ -82,7 +85,7 @@ export function Header({ locale, platformUrl }: HeaderProps) {
               rel="nofollow noopener"
               className="rounded-lg bg-primary px-4 py-2 text-center text-sm font-medium text-white hover:bg-primary-hover transition-colors"
             >
-              {locale === "ru" ? "Попробовать" : "Try it"}
+              {tNav("tryIt")}
             </a>
           </div>
         </div>

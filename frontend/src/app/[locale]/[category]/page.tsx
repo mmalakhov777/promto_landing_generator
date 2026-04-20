@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { getPublicCategories, getPublicLandings } from "@/lib/public-api";
 import { Breadcrumbs } from "@/components/landing/Breadcrumbs";
 import type { Locale } from "@/types/public";
@@ -29,14 +30,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, category: categorySlug } = await params;
 
   try {
-    const categories = await getPublicCategories();
+    const [categories, tCommon] = await Promise.all([
+      getPublicCategories(),
+      getTranslations({ locale, namespace: "common" }),
+    ]);
     const cat = categories.find((c) => c.slug === categorySlug);
     if (!cat) return {};
 
-    const title =
-      locale === "ru"
-        ? `${cat.meta_title_ru || cat.name_ru} — Промто`
-        : `${cat.meta_title_en || cat.name_en} — Promto`;
+    const metaTitle = locale === "ru" ? cat.meta_title_ru : cat.meta_title_en;
+    const name = locale === "ru" ? cat.name_ru : cat.name_en;
+    const title = `${metaTitle || name} — ${tCommon("siteName")}`;
     const description =
       locale === "ru"
         ? cat.meta_description_ru || cat.description_ru
@@ -70,11 +73,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function CategoryPage({ params }: Props) {
   const { locale, category: categorySlug } = await params;
 
-  const [categories, landingsData] = await Promise.all([
+  const [categories, landingsData, tCategory] = await Promise.all([
     getPublicCategories().catch(() => []),
     getPublicLandings({ category: categorySlug, locale, page: 1, per_page: 50 }).catch(
       () => null,
     ),
+    getTranslations({ locale, namespace: "category" }),
   ]);
 
   const cat = categories.find((c) => c.slug === categorySlug);
@@ -112,7 +116,7 @@ export default async function CategoryPage({ params }: Props) {
 
       {(!landingsData || landingsData.items.length === 0) && (
         <p className="mt-10 text-center text-text-muted">
-          {locale === "ru" ? "Лендинги скоро появятся" : "Landing pages coming soon"}
+          {tCategory("comingSoon")}
         </p>
       )}
     </div>

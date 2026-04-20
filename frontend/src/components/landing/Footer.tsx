@@ -1,11 +1,15 @@
-import type { Locale } from "@/types/public";
+"use client";
+
+import { useTranslations } from "next-intl";
 
 interface FooterProps {
-  locale: Locale;
   platformUrl: string;
 }
 
-export function Footer({ locale, platformUrl }: FooterProps) {
+export function Footer({ platformUrl }: FooterProps) {
+  const tCommon = useTranslations("common");
+  const tNav = useTranslations("nav");
+  const tFooter = useTranslations("footer");
   const year = new Date().getFullYear();
 
   return (
@@ -18,7 +22,7 @@ export function Footer({ locale, platformUrl }: FooterProps) {
             rel="nofollow noopener"
             className="text-lg font-bold text-white hover:text-primary-light transition-colors"
           >
-            {locale === "ru" ? "Промто" : "Promto"}
+            {tCommon("siteName")}
           </a>
 
           {/* Links */}
@@ -28,15 +32,13 @@ export function Footer({ locale, platformUrl }: FooterProps) {
               rel="nofollow noopener"
               className="hover:text-white transition-colors"
             >
-              {locale === "ru" ? "Платформа" : "Platform"}
+              {tNav("platform")}
             </a>
           </div>
         </div>
 
         <div className="mt-8 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
-          {locale === "ru"
-            ? `© ${year} Промто. Все права защищены.`
-            : `© ${year} Promto. All rights reserved.`}
+          {tFooter("copyright", { year: String(year), siteName: tCommon("siteName") })}
         </div>
       </div>
     </footer>

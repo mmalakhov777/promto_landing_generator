@@ -66,15 +66,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // Pagination page metadata
   if (pageNum !== null) {
     try {
-      const categories = await getPublicCategories();
+      const [categories, tCommon, tCategory] = await Promise.all([
+        getPublicCategories(),
+        getTranslations({ locale, namespace: "common" }),
+        getTranslations({ locale, namespace: "category" }),
+      ]);
       const cat = categories.find((c) => c.slug === categorySlug);
       if (!cat) return {};
 
       const name = locale === "ru" ? cat.name_ru : cat.name_en;
-      const pageLabel = locale === "ru" ? "страница" : "page";
-      const siteName = locale === "ru" ? "Промто" : "Promto";
       const metaTitle = locale === "ru" ? cat.meta_title_ru : cat.meta_title_en;
-      const title = `${metaTitle || name} - ${pageLabel} ${pageNum} — ${siteName}`;
+      const title = `${metaTitle || name} - ${tCategory("page")} ${pageNum} — ${tCommon("siteName")}`;
       const canonical = `${SITE_URL}/${locale}/${categorySlug}/page${pageNum}/`;
 
       return {
@@ -99,9 +101,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!landingSlug || rest.length > 1) return {};
 
   try {
-    const landing = await getPublicLanding(categorySlug, landingSlug, locale);
-    const siteName = locale === "ru" ? "Промто" : "Promto";
-    const title = landing.meta_title || `${landing.h1} — ${siteName}`;
+    const [landing, tCommon] = await Promise.all([
+      getPublicLanding(categorySlug, landingSlug, locale),
+      getTranslations({ locale, namespace: "common" }),
+    ]);
+    const title = landing.meta_title || `${landing.h1} — ${tCommon("siteName")}`;
     const canonical = `${SITE_URL}/${locale}/${categorySlug}/${landingSlug}/`;
 
     return {
@@ -138,7 +142,7 @@ export default async function CatchAllPage({ params }: Props) {
   if (pageNum !== null) {
     if (pageNum < 2) notFound(); // page1 should be the category index
 
-    const [categories, landingsData] = await Promise.all([
+    const [categories, landingsData, tCategory] = await Promise.all([
       getPublicCategories().catch(() => []),
       getPublicLandings({
         category: categorySlug,
@@ -146,6 +150,7 @@ export default async function CatchAllPage({ params }: Props) {
         page: pageNum,
         per_page: PER_PAGE,
       }).catch(() => null),
+      getTranslations({ locale, namespace: "category" }),
     ]);
 
     const cat = categories.find((c) => c.slug === categorySlug);
@@ -155,7 +160,7 @@ export default async function CatchAllPage({ params }: Props) {
     if (pageNum > totalPages) notFound();
 
     const name = locale === "ru" ? cat.name_ru : cat.name_en;
-    const pageLabel = locale === "ru" ? "страница" : "page";
+    const pageLabel = tCategory("page");
 
     return (
       <div className="mx-auto max-w-6xl px-4 py-8">
@@ -249,7 +254,10 @@ export default async function CatchAllPage({ params }: Props) {
   const enabled = new Set(landing.enabled_sections);
 
   // i18n section titles from messages/{locale}.json
-  const t = await getTranslations({ locale, namespace: "landing" });
+  const [t, tNav] = await Promise.all([
+    getTranslations({ locale, namespace: "landing" }),
+    getTranslations({ locale, namespace: "nav" }),
+  ]);
 
   return (
     <>
@@ -258,7 +266,7 @@ export default async function CatchAllPage({ params }: Props) {
         locale={locale as Locale}
         canonicalUrl={canonicalUrl}
         breadcrumbs={[
-          { name: locale === "ru" ? "Главная" : "Home", url: `${SITE_URL}/${locale}/` },
+          { name: tNav("home"), url: `${SITE_URL}/${locale}/` },
           { name: catName, url: `${SITE_URL}/${locale}/${categorySlug}/` },
           { name: landing.h1, url: canonicalUrl },
         ]}

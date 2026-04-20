@@ -42,7 +42,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header locale={locale as Locale} platformUrl={platformUrl} />
           <main className="min-h-screen">{children}</main>
-          <Footer locale={locale as Locale} platformUrl={platformUrl} />
+          <Footer platformUrl={platformUrl} />
           <ScrollToTop />
         </NextIntlClientProvider>
       </body>
