@@ -8,6 +8,9 @@ interface HeroSectionProps {
   platformUrl: string;
   categorySlug: string;
   landingSlug: string;
+  metrikaId?: string;
+  captchaClientKey?: string;
+  apiUrl?: string;
 }
 
 export function HeroSection({
@@ -18,6 +21,9 @@ export function HeroSection({
   platformUrl,
   categorySlug,
   landingSlug,
+  metrikaId,
+  captchaClientKey,
+  apiUrl,
 }: HeroSectionProps) {
   return (
     <section className="py-16 md:py-24">
@@ -35,6 +41,9 @@ export function HeroSection({
             platformUrl={platformUrl}
             categorySlug={categorySlug}
             landingSlug={landingSlug}
+            metrikaId={metrikaId}
+            captchaClientKey={captchaClientKey}
+            apiUrl={apiUrl}
           />
         </div>
       </div>

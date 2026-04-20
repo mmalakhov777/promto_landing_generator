@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import { reachGoal } from "@/lib/metrika";
 import type { PricingPlan } from "@/types/public";
 
 interface PricingSectionProps {
@@ -6,13 +10,52 @@ interface PricingSectionProps {
   popularLabel: string;
   ctaTextPrimary: string;
   ctaTextSecondary: string;
+  metrikaId?: string;
 }
 
-export function PricingSection({ title, plans, popularLabel, ctaTextPrimary, ctaTextSecondary }: PricingSectionProps) {
+export function PricingSection({
+  title,
+  plans,
+  popularLabel,
+  ctaTextPrimary,
+  ctaTextSecondary,
+  metrikaId,
+}: PricingSectionProps) {
+  const sectionRef = useRef<HTMLElement>(null);
+  const trackedRef = useRef(false);
+
+  // Track pricing_view when section scrolls into view
+  useEffect(() => {
+    if (!metrikaId || trackedRef.current) return;
+
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !trackedRef.current) {
+          trackedRef.current = true;
+          reachGoal(metrikaId, "pricing_view");
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 },
+    );
+    observer.observe(el);
+
+    return () => observer.disconnect();
+  }, [metrikaId]);
+
   if (!plans.length) return null;
 
+  const handleCtaClick = () => {
+    if (metrikaId) {
+      reachGoal(metrikaId, "cta_click");
+    }
+  };
+
   return (
-    <section className="py-section">
+    <section ref={sectionRef} className="py-section">
       <div className="mx-auto max-w-6xl px-4">
         <h2 className="mb-12 text-center text-3xl font-bold text-text">{title}</h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -46,6 +89,7 @@ export function PricingSection({ title, plans, popularLabel, ctaTextPrimary, cta
                 <a
                   href={plan.cta_url}
                   rel="nofollow noopener"
+                  onClick={handleCtaClick}
                   className={`mt-6 block rounded-xl py-3 text-center text-sm font-medium transition-colors ${
                     plan.is_popular
                       ? "bg-primary text-white hover:bg-primary-hover"

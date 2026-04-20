@@ -249,6 +249,9 @@ export default async function CatchAllPage({ params }: Props) {
     : categorySlug;
 
   const platformUrl = settings.platform_url || "https://app.promto.ai";
+  const metrikaId = settings.metrika_id || "";
+  const captchaClientKey = settings.smartcaptcha_client_key || "";
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
   const canonicalUrl = `${SITE_URL}/${locale}/${categorySlug}/${landingSlug}/`;
 
   const enabled = new Set(landing.enabled_sections);
@@ -293,6 +296,9 @@ export default async function CatchAllPage({ params }: Props) {
           platformUrl={platformUrl}
           categorySlug={categorySlug}
           landingSlug={landingSlug}
+          metrikaId={metrikaId}
+          captchaClientKey={captchaClientKey}
+          apiUrl={apiUrl}
         />
 
         {enabled.has("social_proof") && landing.social_proof && (
@@ -320,6 +326,9 @@ export default async function CatchAllPage({ params }: Props) {
             landingSlug={landingSlug}
             placeholder={landing.hero_placeholder}
             variant="mid"
+            metrikaId={metrikaId}
+            captchaClientKey={captchaClientKey}
+            apiUrl={apiUrl}
           />
         )}
 
@@ -337,6 +346,7 @@ export default async function CatchAllPage({ params }: Props) {
             popularLabel={t("popular")}
             ctaTextPrimary={t("ctaStart")}
             ctaTextSecondary={t("ctaChoose")}
+            metrikaId={metrikaId}
           />
         )}
 
@@ -345,7 +355,7 @@ export default async function CatchAllPage({ params }: Props) {
         )}
 
         {enabled.has("faq") && landing.faq && (
-          <FaqSection title={t("faqTitle")} items={landing.faq} />
+          <FaqSection title={t("faqTitle")} items={landing.faq} metrikaId={metrikaId} />
         )}
 
         {/* Final CTA */}
@@ -357,6 +367,7 @@ export default async function CatchAllPage({ params }: Props) {
           categorySlug={categorySlug}
           landingSlug={landingSlug}
           variant="final"
+          metrikaId={metrikaId}
         />
       </article>
     </>

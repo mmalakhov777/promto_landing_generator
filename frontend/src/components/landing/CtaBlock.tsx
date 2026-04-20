@@ -1,3 +1,7 @@
+"use client";
+
+import { useRef } from "react";
+import { reachGoal } from "@/lib/metrika";
 import { PromptInput } from "./PromptInput";
 
 interface CtaBlockProps {
@@ -9,6 +13,9 @@ interface CtaBlockProps {
   landingSlug: string;
   placeholder?: string;
   variant?: "mid" | "final";
+  metrikaId?: string;
+  captchaClientKey?: string;
+  apiUrl?: string;
 }
 
 export function CtaBlock({
@@ -20,10 +27,21 @@ export function CtaBlock({
   landingSlug,
   placeholder,
   variant = "mid",
+  metrikaId,
+  captchaClientKey,
+  apiUrl,
 }: CtaBlockProps) {
+  const trackedRef = useRef(false);
+  const isFinal = variant === "final";
+
   if (!title) return null;
 
-  const isFinal = variant === "final";
+  const handleLinkClick = () => {
+    if (metrikaId && !trackedRef.current) {
+      trackedRef.current = true;
+      reachGoal(metrikaId, "cta_click");
+    }
+  };
 
   return (
     <section
@@ -48,11 +66,15 @@ export function CtaBlock({
               platformUrl={platformUrl}
               categorySlug={categorySlug}
               landingSlug={landingSlug}
+              metrikaId={metrikaId}
+              captchaClientKey={captchaClientKey}
+              apiUrl={apiUrl}
             />
           ) : (
             <a
               href={`${platformUrl}?utm_source=types&utm_medium=landing&utm_campaign=${categorySlug}&utm_content=${landingSlug}`}
               rel="nofollow noopener"
+              onClick={handleLinkClick}
               className={`rounded-xl px-8 py-3 text-sm font-medium transition-colors ${
                 isFinal
                   ? "bg-white text-primary hover:bg-primary-light"

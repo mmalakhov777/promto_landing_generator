@@ -6,6 +6,7 @@ import "@/styles/globals.css";
 import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
 import { ScrollToTop } from "@/components/landing/ScrollToTop";
+import { YandexMetrika } from "@/components/landing/YandexMetrika";
 import { getPublicSettings } from "@/lib/public-api";
 import type { Locale } from "@/types/public";
 
@@ -29,11 +30,13 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages();
 
   let platformUrl = "https://app.promto.ai";
+  let metrikaId = "";
   try {
     const settings = await getPublicSettings();
     platformUrl = settings.platform_url || platformUrl;
+    metrikaId = settings.metrika_id || "";
   } catch {
-    // Use default if API unavailable
+    // Use defaults if API unavailable
   }
 
   return (
@@ -44,6 +47,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <main className="min-h-screen">{children}</main>
           <Footer platformUrl={platformUrl} />
           <ScrollToTop />
+          <YandexMetrika id={metrikaId} />
         </NextIntlClientProvider>
       </body>
     </html>

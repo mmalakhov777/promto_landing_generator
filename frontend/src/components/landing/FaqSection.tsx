@@ -1,12 +1,24 @@
+"use client";
+
+import { reachGoal } from "@/lib/metrika";
 import type { FaqItem } from "@/types/public";
 
 interface FaqSectionProps {
   title: string;
   items: FaqItem[];
+  metrikaId?: string;
 }
 
-export function FaqSection({ title, items }: FaqSectionProps) {
+export function FaqSection({ title, items, metrikaId }: FaqSectionProps) {
   if (!items.length) return null;
+
+  const handleToggle = (e: React.MouseEvent<HTMLElement>) => {
+    // Track only when opening (details doesn't have "open" attribute yet)
+    const details = e.currentTarget.closest("details");
+    if (details && !details.open && metrikaId) {
+      reachGoal(metrikaId, "faq_open");
+    }
+  };
 
   return (
     <section className="py-section">
@@ -18,7 +30,10 @@ export function FaqSection({ title, items }: FaqSectionProps) {
               key={idx}
               className="group rounded-2xl border border-border bg-white transition-shadow hover:shadow-sm"
             >
-              <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-left text-text font-medium [&::-webkit-details-marker]:hidden">
+              <summary
+                onClick={handleToggle}
+                className="flex cursor-pointer items-center justify-between px-6 py-4 text-left text-text font-medium [&::-webkit-details-marker]:hidden"
+              >
                 {item.question}
                 <svg
                   className="ml-4 h-5 w-5 shrink-0 text-text-muted transition-transform group-open:rotate-180"
