@@ -25,6 +25,14 @@
     "page": "page",
     "comingSoon": "Landing pages coming soon"
   },
+  "sitemap": {
+    "title": "Site Map",
+    "metaTitle": "Site Map — Promto",
+    "metaDescription": "All pages and sections of Promto. Navigate categories and landing pages.",
+    "mainPages": "Main Pages",
+    "categories": "Categories",
+    "landings": "Landings"
+  },
   "notFound": {
     "title": "Page not found!",
     "description": "The page you are looking for has been removed or never existed.",

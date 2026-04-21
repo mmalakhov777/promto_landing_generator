@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import type { Metadata, Viewport } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Onest } from "next/font/google";
@@ -15,6 +16,22 @@ const onest = Onest({
   display: "swap",
   variable: "--font-onest",
 });
+
+export const metadata: Metadata = {
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/manifest.json",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 type Props = {
   children: ReactNode;

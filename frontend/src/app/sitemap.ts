@@ -8,8 +8,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Home pages
   urls.push(
-    { url: `${SITE_URL}/ru/`, lastModified: new Date() },
-    { url: `${SITE_URL}/en/`, lastModified: new Date() },
+    { url: `${SITE_URL}/ru/` },
+    { url: `${SITE_URL}/en/` },
+  );
+
+  // Sitemap (karta-sajta) pages
+  urls.push(
+    { url: `${SITE_URL}/ru/karta-sajta/` },
+    { url: `${SITE_URL}/en/karta-sajta/` },
   );
 
   // Category pages
@@ -17,8 +23,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const categories = await getPublicCategories();
     for (const cat of categories) {
       urls.push(
-        { url: `${SITE_URL}/ru/${cat.slug}/`, lastModified: new Date() },
-        { url: `${SITE_URL}/en/${cat.slug}/`, lastModified: new Date() },
+        { url: `${SITE_URL}/ru/${cat.slug}/` },
+        { url: `${SITE_URL}/en/${cat.slug}/` },
       );
     }
   } catch {
