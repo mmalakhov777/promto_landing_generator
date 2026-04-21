@@ -1,0 +1,45 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: promto_landings
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql+asyncpg://postgres:postgres@postgres:5432/promto_landings
+      SECRET_KEY: ${SECRET_KEY:-dev-secret-key-change-in-production}
+      CORS_ORIGINS: '["http://localhost:3000","https://types.promto.ai"]'
+      FRONTEND_URL: http://frontend:3000
+      REVALIDATE_SECRET: ${REVALIDATE_SECRET:-dev-revalidate-secret}
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-https://types.promto.ai}
+      API_URL: http://backend:8000
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:

@@ -1,0 +1,36 @@
+{
+  "common": {
+    "siteName": "Промто",
+    "comingSoon": "Скоро здесь появятся лендинги",
+    "description": "Генератор SEO-лендингов для платформы Промто"
+  },
+  "nav": {
+    "home": "Главная",
+    "tryIt": "Попробовать",
+    "platform": "Платформа"
+  },
+  "landing": {
+    "popular": "Популярный",
+    "faqTitle": "Часто задаваемые вопросы",
+    "videoTitle": "Видео",
+    "pricingTitle": "Тарифы",
+    "reviewsTitle": "Отзывы",
+    "advantagesTitle": "Преимущества",
+    "howItWorksTitle": "Как это работает",
+    "examplesTitle": "Примеры работ",
+    "ctaStart": "Начать",
+    "ctaChoose": "Выбрать"
+  },
+  "category": {
+    "page": "страница",
+    "comingSoon": "Лендинги скоро появятся"
+  },
+  "notFound": {
+    "title": "Данная страница не существует!",
+    "description": "Страница, которую вы ищете, была удалена или никогда не существовала.",
+    "backHome": "Вернуться на главную"
+  },
+  "footer": {
+    "copyright": "© {year} {siteName}. Все права защищены."
+  }
+}

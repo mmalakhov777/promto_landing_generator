@@ -1,0 +1,36 @@
+{
+  "common": {
+    "siteName": "Promto",
+    "comingSoon": "Landing pages coming soon",
+    "description": "SEO landing page generator for the Promto platform"
+  },
+  "nav": {
+    "home": "Home",
+    "tryIt": "Try it",
+    "platform": "Platform"
+  },
+  "landing": {
+    "popular": "Popular",
+    "faqTitle": "Frequently asked questions",
+    "videoTitle": "Video",
+    "pricingTitle": "Pricing",
+    "reviewsTitle": "Reviews",
+    "advantagesTitle": "Advantages",
+    "howItWorksTitle": "How it works",
+    "examplesTitle": "Examples",
+    "ctaStart": "Get started",
+    "ctaChoose": "Choose"
+  },
+  "category": {
+    "page": "page",
+    "comingSoon": "Landing pages coming soon"
+  },
+  "notFound": {
+    "title": "Page not found!",
+    "description": "The page you are looking for has been removed or never existed.",
+    "backHome": "Back to home"
+  },
+  "footer": {
+    "copyright": "© {year} {siteName}. All rights reserved."
+  }
+}
