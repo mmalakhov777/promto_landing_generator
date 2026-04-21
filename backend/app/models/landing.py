@@ -39,7 +39,7 @@ class Landing(Base):
     __tablename__ = "landings"
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    category_id: Mapped[int] = mapped_column(ForeignKey("categories.id", ondelete="CASCADE"), nullable=False, index=True)
+    category_id: Mapped[int] = mapped_column(ForeignKey("landing_categories.id", ondelete="CASCADE"), nullable=False, index=True)
     slug: Mapped[str] = mapped_column(String(255), nullable=False, index=True)
     keyword_ru: Mapped[str] = mapped_column(String(500), nullable=False, default="")
     keyword_en: Mapped[str] = mapped_column(String(500), nullable=False, default="")

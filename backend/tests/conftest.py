@@ -59,7 +59,7 @@ async def admin_token(client: AsyncClient, db_session: AsyncSession):
 
     user = User(
         email="admin@test.com",
-        hashed_password=hash_password("adminpass123"),
+        password_hash=hash_password("adminpass123"),
         role=UserRole.admin,
         is_active=True,
     )
@@ -76,7 +76,7 @@ async def editor_token(db_session: AsyncSession):
 
     user = User(
         email="editor@test.com",
-        hashed_password=hash_password("editorpass123"),
+        password_hash=hash_password("editorpass123"),
         role=UserRole.editor,
         is_active=True,
     )

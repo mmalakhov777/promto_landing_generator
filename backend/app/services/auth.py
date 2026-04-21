@@ -46,7 +46,7 @@ async def authenticate_user(db: AsyncSession, email: str, password: str) -> User
     """Verify credentials and return user, or None if invalid."""
     result = await db.execute(select(User).where(User.email == email))
     user = result.scalar_one_or_none()
-    if user is None or not verify_password(password, user.hashed_password):
+    if user is None or not verify_password(password, user.password_hash):
         return None
     if not user.is_active:
         return None

@@ -91,7 +91,7 @@ async def main():
 
         # Seed admin
         if not (await session.execute(select(User).where(User.role == UserRole.admin))).scalar_one_or_none():
-            session.add(User(email="admin@promto.ai", hashed_password=hash_password("admin123"), role=UserRole.admin))
+            session.add(User(email="admin@promto.ai", password_hash=hash_password("admin123"), role=UserRole.admin))
             print("Admin seeded: admin@promto.ai / admin123")
 
         # Seed category

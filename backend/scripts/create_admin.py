@@ -34,7 +34,7 @@ async def main():
         if result.scalar_one_or_none():
             print(f"Error: user with email '{email}' already exists"); sys.exit(1)
 
-        user = User(email=email, hashed_password=hash_password(password), role=UserRole.admin, is_active=True)
+        user = User(email=email, password_hash=hash_password(password), role=UserRole.admin, is_active=True)
         session.add(user)
         await session.commit()
         print(f"Admin user created: {email} (id={user.id})")

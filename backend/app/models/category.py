@@ -7,7 +7,7 @@ from app.core.database import Base
 
 
 class Category(Base):
-    __tablename__ = "categories"
+    __tablename__ = "landing_categories"
 
     id: Mapped[int] = mapped_column(primary_key=True)
     slug: Mapped[str] = mapped_column(String(255), unique=True, nullable=False, index=True)
