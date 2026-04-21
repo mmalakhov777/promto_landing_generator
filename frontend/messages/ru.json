@@ -15,7 +15,15 @@
   "nav": {
     "home": "Главная",
     "tryIt": "Попробовать",
-    "platform": "Платформа"
+    "platform": "Платформа",
+    "about": "О компании",
+    "services": "Услуги",
+    "pricing": "Тарифы",
+    "blog": "Блог",
+    "partners": "Партнерам",
+    "cases": "Кейсы",
+    "contacts": "Контакты",
+    "faq": "FAQ"
   },
   "landing": {
     "popular": "Популярный",

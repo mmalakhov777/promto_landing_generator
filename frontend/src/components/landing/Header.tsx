@@ -1,15 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { buildPlatformUrl, campaignFromPathname } from "@/lib/utm";
-import { useActiveSections } from "@/contexts/ActiveSectionsContext";
-import type { Locale } from "@/types/public";
+import { useLayoutContext } from "@/contexts/LayoutContext";
 
 interface NavAnchor {
   id: string;
   label: string;
+}
+
+interface MainNavItem {
+  id: string;
+  label: string;
+  href: string;
 }
 
 // Figma reference: node 1-503 (desktop) and 1-1006 (mobile menu)
@@ -32,17 +37,58 @@ const SECTION_ANCHORS_EN: Record<string, string> = {
   faq: "Integrations",
 };
 
-interface HeaderProps {
-  locale: Locale;
-  platformUrl: string;
-}
+// Site-wide main navigation — section 4 of ТЗ дизайнеру
+const MAIN_NAV_RU: MainNavItem[] = [
+  { id: "about", label: "О компании", href: "https://app.promto.ai/about" },
+  { id: "services", label: "Услуги", href: "https://app.promto.ai/services" },
+  { id: "pricing", label: "Тарифы", href: "https://app.promto.ai/pricing" },
+  { id: "blog", label: "Блог", href: "https://promto.ai/blog" },
+  { id: "cases", label: "Кейсы", href: "https://app.promto.ai/cases" },
+  { id: "contacts", label: "Контакты", href: "https://app.promto.ai/contacts" },
+  { id: "faq", label: "FAQ", href: "https://promto.ai/faq" },
+];
 
-export function Header({ locale, platformUrl }: HeaderProps) {
-  const activeSections = useActiveSections();
+const MAIN_NAV_EN: MainNavItem[] = [
+  { id: "about", label: "About", href: "https://app.promto.ai/about" },
+  { id: "services", label: "Services", href: "https://app.promto.ai/services" },
+  { id: "pricing", label: "Pricing", href: "https://app.promto.ai/pricing" },
+  { id: "blog", label: "Blog", href: "https://promto.ai/blog" },
+  { id: "cases", label: "Cases", href: "https://app.promto.ai/cases" },
+  { id: "contacts", label: "Contacts", href: "https://app.promto.ai/contacts" },
+  { id: "faq", label: "FAQ", href: "https://promto.ai/faq" },
+];
+
+const ALL_ANCHOR_IDS = ["advantages", "how-it-works", "pricing", "examples", "reviews", "faq"];
+
+export function Header() {
+  const { locale, platformUrl } = useLayoutContext();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSections, setActiveSections] = useState<string[]>([]);
   const pathname = usePathname();
   const tCommon = useTranslations("common");
   const tNav = useTranslations("nav");
+
+  // Fetch active sections on mount or when pathname changes
+  useEffect(() => {
+    const match = pathname.match(/^\/(.+)-(ru|en)\/?$/);
+    if (!match) {
+      setActiveSections([]);
+      return;
+    }
+    const slug = match[1];
+    const url = `/api/v1/public/landing-by-slug/${slug}?locale=${locale}`;
+    fetch(url)
+      .then((r) => r.json())
+      .then((data) => {
+        const allSections = [
+          "social_proof", "advantages", "how_it_works",
+          "examples", "cta_mid", "video", "pricing", "reviews", "faq",
+        ];
+        const sections = allSections.filter((s) => data[s] !== null);
+        setActiveSections(sections);
+      })
+      .catch(() => setActiveSections([]));
+  }, [pathname, locale]);
 
   const otherLocale = locale === "ru" ? "en" : "ru";
   const localeLabel = locale === "ru" ? "EN" : "RU";
@@ -57,11 +103,23 @@ export function Header({ locale, platformUrl }: HeaderProps) {
 
   // Build anchors: only show anchors for sections that exist on this landing
   const labelMap = locale === "ru" ? SECTION_ANCHORS_RU : SECTION_ANCHORS_EN;
-  const allAnchorIds = ["advantages", "how-it-works", "pricing", "examples", "reviews", "faq"];
-  const activeSet = new Set(activeSections ?? []);
-  const anchors: NavAnchor[] = allAnchorIds
-    .filter((id) => activeSet.has(id))
-    .map((id) => ({ id, label: labelMap[id] ?? id }));
+  // Map landing field names (how_it_works) to URL anchor ids (how-it-works)
+  const anchorIdMap: Record<string, string> = {
+    social_proof: "social_proof",
+    advantages: "advantages",
+    how_it_works: "how-it-works",
+    examples: "examples",
+    cta_mid: "cta_mid",
+    video: "video",
+    pricing: "pricing",
+    reviews: "reviews",
+    faq: "faq",
+  };
+  const anchors: NavAnchor[] = activeSections
+    .map((s) => ({ id: anchorIdMap[s] ?? s, label: labelMap[anchorIdMap[s]] ?? labelMap[s] }))
+    .filter((a) => labelMap[a.id]);
+
+  const mainNav = locale === "ru" ? MAIN_NAV_RU : MAIN_NAV_EN;
 
   // Build the alternate locale URL
   let localeSwitchHref: string;
@@ -106,7 +164,21 @@ export function Header({ locale, platformUrl }: HeaderProps) {
             />
           </a>
 
-          {/* Desktop nav — right side */}
+          {/* Desktop nav — main nav links */}
+          <nav className="hidden items-center gap-6 lg:flex">
+            {mainNav.map((item) => (
+              <a
+                key={item.id}
+                href={item.href}
+                rel="nofollow noopener"
+                className="text-sm text-text-muted transition-colors hover:text-text"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+
+          {/* Desktop nav — right side: locale + CTA */}
           <div className="hidden items-center gap-4 md:flex">
             <a
               href={localeSwitchHref}
@@ -167,17 +239,18 @@ export function Header({ locale, platformUrl }: HeaderProps) {
 
           {/* Menu panel */}
           <div className="fixed inset-x-0 bottom-0 z-50 rounded-t-[40px] bg-[#FAFAFA] px-6 pb-8 pt-4 md:hidden">
-            {/* Navigation links */}
+            {/* Main navigation links */}
             <nav className="mb-8 flex flex-col gap-6">
-              {anchors.map((anchor) => (
+              {mainNav.map((item) => (
                 <a
-                  key={anchor.id}
-                  href={`#${anchor.id}`}
+                  key={item.id}
+                  href={item.href}
+                  rel="nofollow noopener"
                   onClick={closeMenu}
                   className="text-left text-base font-medium text-text transition-colors hover:text-primary"
                   style={{ fontFamily: "var(--font-onest, inherit)" }}
                 >
-                  {anchor.label}
+                  {item.label}
                 </a>
               ))}
             </nav>

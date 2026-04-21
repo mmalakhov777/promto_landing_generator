@@ -15,7 +15,15 @@
   "nav": {
     "home": "Home",
     "tryIt": "Try it",
-    "platform": "Platform"
+    "platform": "Platform",
+    "about": "About",
+    "services": "Services",
+    "pricing": "Pricing",
+    "blog": "Blog",
+    "partners": "Partners",
+    "cases": "Cases",
+    "contacts": "Contacts",
+    "faq": "FAQ"
   },
   "landing": {
     "popular": "Popular",

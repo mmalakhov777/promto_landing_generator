@@ -8,6 +8,7 @@ import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
 import { ScrollToTop } from "@/components/landing/ScrollToTop";
 import { YandexMetrika } from "@/components/landing/YandexMetrika";
+import { LayoutContextProvider } from "@/contexts/LayoutContext";
 import { getPublicSettings } from "@/lib/public-api";
 import type { Locale } from "@/types/public";
 
@@ -60,11 +61,18 @@ export default async function LpLocaleLayout({ children, params }: Props) {
     <html lang={locale} className={onest.variable}>
       <body className="font-sans bg-background text-text antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Header locale={locale as Locale} platformUrl={platformUrl} />
-          <main className="min-h-screen">{children}</main>
-          <Footer platformUrl={platformUrl} />
-          <ScrollToTop />
-          <YandexMetrika id={metrikaId} />
+          <LayoutContextProvider
+            platformUrl={platformUrl}
+            metrikaId={metrikaId}
+            locale={locale}
+            activeSections={[]}
+          >
+            <Header />
+            <main className="min-h-screen">{children}</main>
+            <Footer platformUrl={platformUrl} />
+            <ScrollToTop />
+            <YandexMetrika id={metrikaId} />
+          </LayoutContextProvider>
         </NextIntlClientProvider>
       </body>
     </html>
