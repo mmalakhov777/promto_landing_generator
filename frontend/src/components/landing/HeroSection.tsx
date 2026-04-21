@@ -73,7 +73,7 @@ export function HeroSection({
           <span className="flex items-center gap-1.5">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/icons/arrow-up.svg" alt="" width={14} height={14} className="opacity-50" />
-            Без регистрации
+            Готов за 2 минуты
           </span>
         </div>
       </div>
