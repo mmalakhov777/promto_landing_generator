@@ -48,21 +48,36 @@ export function CtaBlock({
       <div className={`mx-auto max-w-6xl px-4 ${isFinal ? "" : ""}`}>
         <div className={`rounded-[32px] px-8 py-16 text-center md:px-16 ${
           isFinal
-            ? "relative overflow-hidden bg-surface"
-            : "bg-surface shadow-card"
+            ? "relative overflow-hidden bg-secondary"
+            : "relative overflow-hidden bg-surface shadow-card"
         }`}>
-          {isFinal && (
+          {isFinal ? (
             <>
-              {/* Decorative gradient background for final CTA */}
-              <div className="absolute -top-10 -left-10 h-60 w-60 rounded-full opacity-20 blur-[60px]" style={{ background: '#464EFF' }} />
-              <div className="absolute -bottom-10 -right-10 h-60 w-60 rounded-full opacity-20 blur-[60px]" style={{ background: '#5EFF6E' }} />
+              {/* Decorative gradient orbs for dark final CTA */}
+              <div className="absolute -top-20 -left-20 h-80 w-80 rounded-full opacity-30 blur-[80px]" style={{ background: '#464EFF' }} />
+              <div className="absolute -bottom-20 -right-20 h-80 w-80 rounded-full opacity-30 blur-[80px]" style={{ background: '#5EFF6E' }} />
+              <div className="absolute top-1/2 left-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-20 blur-[60px]" style={{ background: '#E478FF' }} />
+            </>
+          ) : (
+            <>
+              <div className="absolute -top-10 right-0 h-40 w-40 rounded-full opacity-10 blur-[60px]" style={{ background: '#464EFF' }} />
+              <div className="absolute -bottom-10 left-0 h-40 w-40 rounded-full opacity-10 blur-[60px]" style={{ background: '#5EFF6E' }} />
             </>
           )}
-          <div className={`relative text-[38px] font-medium leading-[1.12] ${isFinal ? "text-text" : "text-text"}`}>
+          {/* Urgency icon */}
+          <div className="relative mb-4 inline-flex h-14 w-14 items-center justify-center rounded-[14px]" style={{
+            background: isFinal
+              ? 'linear-gradient(196deg, #575EFF 0%, #E478FF 91%)'
+              : 'linear-gradient(196deg, #FFD478 0%, #FF9854 91%)'
+          }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/icons/arrow-up.svg" alt="" width={24} height={24} className="brightness-0 invert" />
+          </div>
+          <div className={`relative text-[38px] font-medium leading-[1.12] ${isFinal ? "text-white" : "text-text"}`}>
             {title}
           </div>
           {subtitle && (
-            <p className={`relative mt-4 text-base ${isFinal ? "text-text-muted" : "text-text-muted"}`}>
+            <p className={`relative mt-4 text-base ${isFinal ? "text-white/70" : "text-text-muted"}`}>
               {subtitle}
             </p>
           )}

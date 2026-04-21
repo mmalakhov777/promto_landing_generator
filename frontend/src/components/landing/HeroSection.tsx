@@ -34,11 +34,17 @@ export function HeroSection({
       <div className="hero-orb top-1/2 right-1/4 h-32 w-32" style={{ background: '#5EFF6E' }} />
 
       <div className="relative mx-auto max-w-4xl px-4 text-center">
-        <h1 className="text-4xl font-medium leading-[1.12] text-text md:text-5xl lg:text-[48px]">
+        {/* Trust badge */}
+        <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-primary/5 px-4 py-2 text-sm text-primary">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/icons/like.svg" alt="" width={16} height={16} style={{ filter: 'brightness(0) saturate(100%) invert(26%) sepia(95%) saturate(4800%) hue-rotate(233deg) brightness(100%) contrast(101%)' }} />
+          <span className="font-medium">AI-платформа №1</span>
+        </div>
+        <h1 className="text-4xl font-medium leading-[1.12] text-text md:text-5xl lg:text-[56px]">
           {h1}
         </h1>
         {subtitle && (
-          <p className="mt-6 text-base leading-relaxed text-text-muted md:text-lg">{subtitle}</p>
+          <p className="mt-6 text-lg leading-relaxed text-text-muted md:text-xl">{subtitle}</p>
         )}
         <div className="mt-10 flex justify-center">
           <PromptInput
@@ -51,6 +57,24 @@ export function HeroSection({
             captchaClientKey={captchaClientKey}
             apiUrl={apiUrl}
           />
+        </div>
+        {/* Micro trust indicators */}
+        <div className="mt-6 flex items-center justify-center gap-6 text-xs text-text-muted">
+          <span className="flex items-center gap-1.5">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/icons/lock.svg" alt="" width={14} height={14} className="opacity-50" />
+            Безопасно
+          </span>
+          <span className="flex items-center gap-1.5">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/icons/play.svg" alt="" width={14} height={14} className="opacity-50" />
+            Бесплатный старт
+          </span>
+          <span className="flex items-center gap-1.5">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/icons/arrow-up.svg" alt="" width={14} height={14} className="opacity-50" />
+            Без регистрации
+          </span>
         </div>
       </div>
     </section>

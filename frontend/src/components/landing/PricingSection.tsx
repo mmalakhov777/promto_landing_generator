@@ -78,8 +78,11 @@ export function PricingSection({
               {plan.features.length > 0 && (
                 <ul className="mt-6 flex-1 space-y-3">
                   {plan.features.map((feature, fidx) => (
-                    <li key={fidx} className="flex items-start gap-2 text-sm text-text-muted">
-                      <span className="mt-0.5 text-success">✓</span>
+                    <li key={fidx} className="flex items-start gap-3 text-sm text-text-muted">
+                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src="/icons/plus-square.svg" alt="" width={12} height={12} className="text-primary opacity-80" style={{ filter: 'brightness(0) saturate(100%) invert(26%) sepia(95%) saturate(4800%) hue-rotate(233deg) brightness(100%) contrast(101%)' }} />
+                      </span>
                       {feature}
                     </li>
                   ))}

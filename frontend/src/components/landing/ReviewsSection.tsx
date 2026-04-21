@@ -27,20 +27,27 @@ export function ReviewsSection({ title, reviews }: ReviewsSectionProps) {
             .map((review, idx) => (
               <div
                 key={idx}
-                className="flex flex-col rounded-[20px] bg-surface p-6 shadow-card"
+                className="flex flex-col rounded-[20px] bg-surface p-6 shadow-card shadow-card-hover transition-all"
               >
-                <div className="mb-3 flex items-center gap-1">
-                  {Array.from({ length: 5 }, (_, i) => (
-                    <span
-                      key={i}
-                      className={`text-lg ${i < review.rating ? "text-warning" : "text-text-light"}`}
-                    >
-                      ★
-                    </span>
-                  ))}
+                <div className="mb-4 flex items-center justify-between">
+                  <div className="flex items-center gap-1">
+                    {Array.from({ length: 5 }, (_, i) => (
+                      <span
+                        key={i}
+                        className={`text-lg ${i < review.rating ? "text-warning" : "text-text-light"}`}
+                      >
+                        ★
+                      </span>
+                    ))}
+                  </div>
+                  {/* Quote icon */}
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/5">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/icons/new-chat.svg" alt="" width={16} height={16} style={{ filter: 'brightness(0) saturate(100%) invert(26%) sepia(95%) saturate(4800%) hue-rotate(233deg) brightness(100%) contrast(101%)' }} />
+                  </div>
                 </div>
                 <p className="flex-1 text-sm leading-relaxed text-text-muted">
-                  {review.text}
+                  &ldquo;{review.text}&rdquo;
                 </p>
                 <div className="mt-4 flex items-center gap-3 pt-4">
                   {review.avatar_url ? (
