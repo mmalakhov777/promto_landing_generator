@@ -1,86 +1,92 @@
 {
-  "meta_title": "Restaurant Website Builder — Create in 2 Minutes | Promto",
-  "meta_description": "Restaurant website builder with AI. Create website for restaurant, cafe, or bar. No code, in 2 minutes.",
-  "h1": "Restaurant Website Builder",
-  "og_title": "Restaurant Website Builder — Promto",
-  "og_description": "AI builder creates restaurant website in 2 minutes.",
-  "hero_title": "Restaurant Website Builder",
-  "hero_subtitle": "Create a website for restaurant, cafe, or bar in 2 minutes",
-  "hero_cta_text": "Create Restaurant Website",
-  "hero_placeholder": "Describe what website you want...",
-  "social_proof": [
-    {
-      "label": "Restaurant Websites",
-      "value": "6,800+"
-    },
-    {
-      "label": "Restaurants",
-      "value": "4,200+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.8 out of 5"
-    }
-  ],
+  "meta_title": "Restaurant Website Builder — Promto AI",
+  "meta_description": "AI-powered restaurant website builder. Create a website with menu, reservations, and gallery in 5 minutes. No coders or designers needed.",
+  "h1": "Restaurant Website Builder — AI-Powered",
+  "og_title": "Restaurant Website Builder | Promto AI",
+  "og_description": "Create a restaurant website in the Promto builder — AI design, menu, booking, and SEO for your venue.",
+  "hero_title": "Restaurant Website Builder — AI-Powered",
+  "hero_subtitle": "Create a professional restaurant website without programmers and designers.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe the website for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "utensils",
-      "title": "For Restaurants",
-      "description": "Website optimized for restaurants and cafes"
-    },
-    {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready website in 2 minutes"
+      "title": "AI Design",
+      "description": "AI-powered builder will select the style and create the website in seconds."
     },
     {
-      "icon": "menu",
-      "title": "With Menu",
-      "description": "Menu block with dishes and prices"
+      "icon": "star",
+      "title": "Templates for HoReCa",
+      "description": "Ready solutions for restaurants, cafes, and bars — tailored to industry specifics."
     },
     {
-      "icon": "map-pin",
-      "title": "With Map",
-      "description": "Address and map block"
+      "icon": "globe",
+      "title": "Menu and Booking",
+      "description": "Everything for restaurant business: online menu, table reservations, and specials."
+    },
+    {
+      "icon": "clock",
+      "title": "Time Savings",
+      "description": "Weeks of work instead of minutes — AI generates content automatically."
+    },
+    {
+      "icon": "trending",
+      "title": "SEO for Venues",
+      "description": "Website ranks in search engines — guests find the restaurant online."
+    },
+    {
+      "icon": "shield",
+      "title": "Reliability",
+      "description": "SSL, fast hosting, and backups — included by default."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about your restaurant",
-      "image_url": ""
+      "title": "Select Venue Type",
+      "description": "Specify what's open — restaurant, cafe, bar, or food delivery."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Website is generated automatically",
-      "image_url": ""
+      "title": "Launch AI",
+      "description": "AI will generate structure, texts, and design — with menu and booking."
     },
     {
       "step": 3,
-      "title": "Publish",
-      "description": "Publish — guests will find you",
-      "image_url": ""
+      "title": "Customize Details",
+      "description": "Add dish photos, prices, and publish — website is ready to welcome guests."
     }
   ],
   "faq": [
     {
-      "question": "Can I add a menu?",
-      "answer": "Yes, menu block is created."
+      "question": "How is Promto different from regular website builders?",
+      "answer": "Promto uses AI for content generation — you don't need to create texts and design manually. Describe the restaurant and get a ready website."
     },
     {
-      "question": "Does it work for a food truck?",
-      "answer": "Yes, builder works for any food business."
+      "question": "Can I make a menu with prices in the builder?",
+      "answer": "Yes, the builder has ready-made blocks for menus with dish descriptions, photos, and prices."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan available."
+      "question": "Is the builder suitable for a restaurant chain?",
+      "answer": "Yes, you can create separate websites for each venue or a multi-restaurant platform."
+    },
+    {
+      "question": "Do I need a programmer for setup?",
+      "answer": "No, the builder is fully visual — any user without technical knowledge can manage it."
+    },
+    {
+      "question": "How will the website look on mobile devices?",
+      "answer": "All websites are responsive — they automatically adapt to smartphone or tablet screen size."
+    },
+    {
+      "question": "How much does the builder cost?",
+      "answer": "Start for free. Paid plans unlock additional features and the ability to connect your own domain."
     }
   ],
-  "cta_mid_title": "Create a Restaurant Website",
-  "cta_mid_subtitle": "Describe your restaurant — get a ready website in 2 minutes",
-  "cta_final_title": "Ready for a Restaurant Website?",
-  "cta_final_subtitle": "Start free",
-  "cta_final_button_text": "Create Restaurant Website"
+  "cta_mid_title": "Create a Website in the Promto Builder",
+  "cta_mid_subtitle": "AI builder does all the work — from design to content population.",
+  "cta_final_title": "Your Restaurant Deserves the Best Website",
+  "cta_final_subtitle": "AI builder — professional results without programmers.",
+  "cta_final_button_text": "Create Website Free"
 }

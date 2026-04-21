@@ -1,90 +1,96 @@
 {
-  "meta_title": "Electronics Store Website — Create in 2 Minutes | Promto",
-  "meta_description": "Electronics store website: phones, computers, appliances. Create in 2 minutes. With catalog.",
-  "h1": "Electronics Store Website",
-  "og_title": "Electronics Store Website — Promto",
-  "og_description": "AI builder creates an electronics store website in 2 minutes.",
-  "hero_title": "Electronics Store Website",
-  "hero_subtitle": "Create an electronics store website in 2 minutes",
-  "hero_cta_text": "Create Electronics Website",
-  "hero_placeholder": "Describe what electronics website you want...",
-  "social_proof": [
-    {
-      "label": "Electronics Websites",
-      "value": "4,100+"
-    },
-    {
-      "label": "Stores",
-      "value": "2,300+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.7 out of 5"
-    }
-  ],
+  "meta_title": "Electronics Website — Online Store Without Code | Promto",
+  "meta_description": "Create an electronics store website: catalog, specs, comparison, and payment. No programmers. Launch gadget sales online.",
+  "h1": "Electronics Website — Sell Gadgets Online",
+  "og_title": "Electronics Store Website | Promto",
+  "og_description": "Electronics online store with catalog, product specs, comparison, and online payment. Create without code on Promto.",
+  "hero_title": "Electronics Website — Sell Gadgets Online",
+  "hero_subtitle": "Professional electronics store with detailed specifications and convenient search.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe the website for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "smartphone",
-      "title": "With Catalog",
-      "description": "Product catalog with specs and prices"
+      "icon": "star",
+      "title": "Detailed Specifications",
+      "description": "Product cards with full technical specs, photos, and customer reviews."
+    },
+    {
+      "icon": "check",
+      "title": "Product Comparison",
+      "description": "Customers compare several models side-by-side — and make purchase decisions more often."
+    },
+    {
+      "icon": "trending",
+      "title": "Online Payment",
+      "description": "Accept card payments, QR payments (SBP), and installments directly on the site."
+    },
+    {
+      "icon": "globe",
+      "title": "SEO for Gadgets",
+      "description": "Pages with models and categories optimized for searching specific products."
     },
     {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready website in 2 minutes"
+      "title": "Quick Launch",
+      "description": "Describe your assortment — AI creates the electronics store structure in 5 minutes."
     },
     {
-      "icon": "map-pin",
-      "title": "Address",
-      "description": "Store address and map"
-    },
-    {
-      "icon": "phone",
-      "title": "Contacts",
-      "description": "All store contact methods"
+      "icon": "shield",
+      "title": "Warranty and Returns",
+      "description": "Warranty and return policy block reduces objections and increases buyer trust."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about products and brands",
-      "image_url": ""
+      "title": "Describe Your Assortment",
+      "description": "Specify electronics categories — AI will create the structure with the right fields for specs."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Website with catalog and contacts is generated",
-      "image_url": ""
+      "title": "Add Products",
+      "description": "Upload photos, fill in specs and prices through a convenient editor."
     },
     {
       "step": 3,
-      "title": "Publish",
-      "description": "Publish — buyers will find you",
-      "image_url": ""
+      "title": "Launch and Sell",
+      "description": "Publish the store — customers will find the right gadget and order online."
     }
   ],
   "faq": [
     {
-      "question": "Can I add product catalog?",
-      "answer": "Yes, product cards with specs and prices."
+      "question": "How do I add technical specifications to products?",
+      "answer": "Product cards have special fields for technical specifications of any electronics."
     },
     {
-      "question": "Does it work for tech repair?",
-      "answer": "Yes, builder creates sites for any electronics business."
+      "question": "Can I implement product comparison?",
+      "answer": "Yes, the comparison block is available for electronics and appliance stores on paid plans."
     },
     {
-      "question": "Can I add prices?",
-      "answer": "Yes, in product cards."
+      "question": "How do I add installment or credit for purchase?",
+      "answer": "Connect partner installment services — integrations available in payment method settings."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan allows creating a basic website."
+      "question": "How do I manage product stock?",
+      "answer": "Manage stock in the editor — when stock reaches zero, the Buy button is automatically blocked."
+    },
+    {
+      "question": "How much does an electronics store website cost?",
+      "answer": "Free plan to start. Unlimited catalog and advanced features on paid plans."
+    },
+    {
+      "question": "Can I integrate the site with suppliers?",
+      "answer": "Yes, integration with supplier YML feeds is available for automatic price and stock updates."
     }
   ],
-  "cta_mid_title": "Create an Electronics Store Website",
-  "cta_mid_subtitle": "Describe your store — get a ready website in 2 minutes",
-  "cta_final_title": "Ready for an Electronics Website?",
-  "cta_final_subtitle": "Start free — start selling today",
-  "cta_final_button_text": "Create Electronics Website Free"
+  "cta_mid_title": "Launch Your Electronics Store Today",
+  "cta_mid_subtitle": "Customers search for gadgets online — be where they're looking.",
+  "cta_final_title": "Your Electronics Store Online",
+  "cta_final_subtitle": "Create an electronics store website for free on Promto.",
+  "cta_final_button_text": "Create Website Free",
+  "social_proof_data": null,
+  "pricing": null,
+  "examples": null,
+  "reviews": null
 }

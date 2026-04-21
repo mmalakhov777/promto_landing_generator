@@ -1,82 +1,97 @@
 {
-  "meta_title": "Architect Landing Page — Create in 2 Minutes | Promto",
-  "meta_description": "Landing page for architect: projects, experience, contact. Create in 2 minutes with AI. Professional design.",
-  "h1": "Architect Landing Page",
-  "og_title": "Architect Landing Page — Promto",
-  "og_description": "AI builder creates an architect landing page in 2 minutes.",
-  "hero_title": "Architect Landing Page",
-  "hero_subtitle": "Create a sales page for architect in 2 minutes",
-  "hero_cta_text": "Create Landing Page",
-  "hero_placeholder": "Describe your architecture style...",
-  "social_proof": [
-    {
-      "label": "Architect Landing Pages",
-      "value": "2,400+"
-    },
-    {
-      "label": "Architects",
-      "value": "3,200+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.8 out of 5"
-    }
-  ],
+  "meta_title": "Landing Page for Architect — Create in 5 Minutes | Promto",
+  "meta_description": "Create an architect landing page with AI in 5 minutes. Showcase projects, attract orders. Professional design without code or agency. Try free.",
+  "h1": "Landing Page for Architect in 5 Minutes",
+  "og_title": "Landing Page for Architect | Promto",
+  "og_description": "AI will create an architect landing page in 5 minutes: project portfolio, inquiry form, SEO. No code or agency needed.",
+  "hero_title": "Landing Page for Architect in 5 Minutes",
+  "hero_subtitle": "Describe your projects — AI will create a landing page that brings clients for design work.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe what website you need for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "building",
-      "title": "Projects",
-      "description": "Block with architectural projects"
+      "icon": "star",
+      "title": "Project Portfolio",
+      "description": "Showcase completed projects: facades, interiors, layouts — in a professional gallery with project details."
     },
     {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready landing page in 2 minutes"
+      "title": "Quick Launch",
+      "description": "Architect landing page ready in 5 minutes: describe your specialization and project types — AI will do the rest."
     },
     {
-      "icon": "mail",
-      "title": "Contact",
-      "description": "Contact information"
+      "icon": "award",
+      "title": "Status Design",
+      "description": "Restrained, elegant design emphasizes professionalism and attracts clients with high budgets."
     },
     {
-      "icon": "trending",
-      "title": "Sales-Ready",
-      "description": "Optimized for getting clients"
+      "icon": "users",
+      "title": "Project Inquiry Form",
+      "description": "Client describes the task right on the site — you get quality leads ready for dialogue."
+    },
+    {
+      "icon": "globe",
+      "title": "Visible in Search",
+      "description": "SEO optimization helps you be found by queries like \"architect + city\", \"house design\" and similar."
+    },
+    {
+      "icon": "shield",
+      "title": "Reliable Platform",
+      "description": "Site works 24/7 with SSL certificate and high loading speed — even with dozens of project images."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about your projects",
-      "image_url": ""
+      "title": "Describe Your Specialization",
+      "description": "Tell about project types: private homes, interiors, commercial real estate, landscape design."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Landing page is generated",
-      "image_url": ""
+      "title": "AI Creates Landing Page",
+      "description": "System generates structure with portfolio, service description, work stages, and inquiry form."
     },
     {
       "step": 3,
-      "title": "Publish",
-      "description": "Publish and get clients",
-      "image_url": ""
+      "title": "Add Projects",
+      "description": "Upload photos of completed projects, plans, and visualizations — show the scale of work."
+    },
+    {
+      "step": 4,
+      "title": "Receive Inquiries",
+      "description": "Publish the landing page and start receiving inquiries from clients looking for an architect."
     }
   ],
   "faq": [
     {
-      "question": "Can I add projects?",
-      "answer": "Yes."
+      "question": "Is a landing page suitable for an architecture firm or only for individuals?",
+      "answer": "Suitable for both. AI adapts the structure and tone for a private architect or an architecture firm with a team."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan available."
+      "question": "Can I show 3D visualizations on the landing page?",
+      "answer": "Yes. Upload images of any format: photos of completed projects, 3D visualizations, drawings — the gallery supports all content types."
+    },
+    {
+      "question": "How to describe architect services on the landing page?",
+      "answer": "Promto automatically generates a services section based on your description. You can edit texts to match your actual offerings."
+    },
+    {
+      "question": "Can I specify my work geography?",
+      "answer": "Yes. Specify cities and regions where you work — this helps attract target clients from relevant locations through search engines."
+    },
+    {
+      "question": "What is Promto?",
+      "answer": "Promto is an AI website builder. Describe your activity — the system creates a ready landing page with texts, design, and structure in minutes."
+    },
+    {
+      "question": "How much does an architect landing page cost?",
+      "answer": "You can create a basic landing page for free. Paid plans add custom domain, visitor analytics, and additional sections."
     }
   ],
-  "cta_mid_title": "Create an Architect Landing Page",
-  "cta_mid_subtitle": "Get a sales page in 2 minutes",
-  "cta_final_title": "Ready for a Landing Page?",
-  "cta_final_subtitle": "Start free",
-  "cta_final_button_text": "Create Landing Page Free"
+  "cta_mid_title": "Attract Clients for Design Work",
+  "cta_mid_subtitle": "Create an architect landing page in 5 minutes and start receiving project inquiries today.",
+  "cta_final_title": "Launch Your Architect Landing Page",
+  "cta_final_subtitle": "AI will create a professional landing page with portfolio. Free and fast.",
+  "cta_final_button_text": "Create Website Free"
 }

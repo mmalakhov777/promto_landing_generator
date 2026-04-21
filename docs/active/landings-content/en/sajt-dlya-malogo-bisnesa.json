@@ -1,90 +1,96 @@
 {
-  "meta_title": "Small Business Website — Create in 2 Minutes | Promto",
-  "meta_description": "Small business website: services, contacts, description. Create in 2 minutes. No code, no experience, free.",
-  "h1": "Small Business Website",
-  "og_title": "Small Business Website — Promto",
-  "og_description": "AI builder creates a small business website in 2 minutes.",
-  "hero_title": "Small Business Website",
-  "hero_subtitle": "Create a business website in 2 minutes — just describe the task",
-  "hero_cta_text": "Create Business Website",
-  "hero_placeholder": "Describe what business website you want...",
-  "social_proof": [
-    {
-      "label": "Business Websites",
-      "value": "42,000+"
-    },
-    {
-      "label": "Entrepreneurs",
-      "value": "38,000+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.9 out of 5"
-    }
-  ],
+  "meta_title": "Small Business Website — Fast and No Code | Promto",
+  "meta_description": "Create a small business website in 5 minutes: catalog, online requests, and sales. No programmers. Affordable and professional on Promto.",
+  "h1": "Small Business Website — Affordable and Professional",
+  "og_title": "Small Business Website | Promto",
+  "og_description": "Professional small business website: sales, online requests, and catalog. Create in 5 minutes without code on Promto.",
+  "hero_title": "Small Business Website — Affordable and Professional",
+  "hero_subtitle": "A full-featured website for a small shop or service — fast, affordable, no technical knowledge needed.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe the website for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "briefcase",
-      "title": "For Business",
-      "description": "Website optimized for small business and self-employed"
-    },
-    {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready website in 2 minutes"
+      "title": "Quick Start",
+      "description": "Describe your business — AI creates a complete website in 5 minutes without a designer or programmer."
     },
     {
-      "icon": "phone",
-      "title": "With Contacts",
-      "description": "All ways to contact you"
+      "icon": "trending",
+      "title": "Online Sales and Requests",
+      "description": "Accept orders and requests directly from the site — increase revenue without additional costs."
+    },
+    {
+      "icon": "shield",
+      "title": "Affordable Cost",
+      "description": "Start for free. Paid plans are accessible to small businesses without major investment."
+    },
+    {
+      "icon": "globe",
+      "title": "Online Visibility",
+      "description": "SEO optimization helps customers find your business in search for relevant queries."
     },
     {
       "icon": "star",
-      "title": "Professional",
-      "description": "Modern design for any niche"
+      "title": "Professional Appearance",
+      "description": "Modern design builds trust in the business and increases visitor conversion."
+    },
+    {
+      "icon": "clock",
+      "title": "Works 24/7",
+      "description": "The site accepts requests and orders around the clock, even when you're not at your computer."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe Business",
-      "description": "Tell AI about your business, services, customers",
-      "image_url": ""
+      "title": "Tell About Your Business",
+      "description": "What are you selling or offering — AI will create suitable structure and copy."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Website with description and contacts is generated",
-      "image_url": ""
+      "title": "Customize Content",
+      "description": "Add products or services, contacts, and request forms through a simple editor."
     },
     {
       "step": 3,
-      "title": "Publish",
-      "description": "Publish — clients are already looking for you online",
-      "image_url": ""
+      "title": "Launch and Grow",
+      "description": "Publish the site and expand it as your business grows."
     }
   ],
   "faq": [
     {
-      "question": "Does it work for self-employed?",
-      "answer": "Yes, builder is perfect for self-employed and sole proprietors."
+      "question": "Is Promto suitable for self-employed and sole proprietors?",
+      "answer": "Yes, Promto works great for any business size — from self-employed to small companies."
     },
     {
-      "question": "Can I add services?",
-      "answer": "Yes, services and pricing block is created automatically."
+      "question": "How will the site help increase sales?",
+      "answer": "Attracts customers from search, accepts requests 24/7, and creates a professional impression."
     },
     {
-      "question": "Do I need coding?",
-      "answer": "No, everything is visual and simple."
+      "question": "Do I need a programmer for site maintenance?",
+      "answer": "No. Update content yourself through the editor — it takes minutes."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan available for everyone."
+      "question": "Can I start with a simple page and expand later?",
+      "answer": "Yes, start with one page and add sections and features as your business grows."
+    },
+    {
+      "question": "How much does a small business website cost?",
+      "answer": "Basic website is free. Advanced features on affordable paid plans starting from a small monthly amount."
+    },
+    {
+      "question": "What is Promto and how does it create websites?",
+      "answer": "Promto is an AI website builder. You describe your business in words, and AI generates a ready website with design and copy."
     }
   ],
-  "cta_mid_title": "Create a Business Website",
-  "cta_mid_subtitle": "Describe your business — get a ready website in 2 minutes",
-  "cta_final_title": "Ready for a Business Website?",
-  "cta_final_subtitle": "Start free — clients will find you today",
-  "cta_final_button_text": "Create Business Website Free"
+  "cta_mid_title": "Take Your Small Business Online",
+  "cta_mid_subtitle": "A website for your business is the best investment in your company's growth.",
+  "cta_final_title": "Your Business Deserves a Good Website",
+  "cta_final_subtitle": "Create a small business website for free on Promto — in 5 minutes.",
+  "cta_final_button_text": "Create Website Free",
+  "social_proof_data": null,
+  "pricing": null,
+  "examples": null,
+  "reviews": null
 }

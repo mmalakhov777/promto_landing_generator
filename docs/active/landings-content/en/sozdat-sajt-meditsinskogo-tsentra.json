@@ -1,86 +1,96 @@
 {
-  "meta_title": "Create Medical Center Website — AI Builder in 2 Minutes | Promto",
-  "meta_description": "Create a medical center website in 2 minutes with AI. Services, doctors, appointment. Professional design.",
-  "h1": "Create Medical Center Website",
-  "og_title": "Create Medical Center Website — Promto",
-  "og_description": "AI builder creates a medical center website in 2 minutes.",
-  "hero_title": "Create Medical Center Website",
-  "hero_subtitle": "Create a medical center website in 2 minutes",
-  "hero_cta_text": "Create Medical Website",
-  "hero_placeholder": "Describe your medical center...",
-  "social_proof": [
-    {
-      "label": "Medical Center Websites",
-      "value": "3,800+"
-    },
-    {
-      "label": "Medical Centers",
-      "value": "2,200+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.8 out of 5"
-    }
-  ],
+  "meta_title": "Create Medical Center Website — Fast, No Code | Promto",
+  "meta_description": "Create a medical center website in 5 minutes: online booking, doctors, services, pricing. Professional design without programmers. Try free.",
+  "h1": "Create Medical Center Website — in 5 Minutes",
+  "og_title": "Create Medical Center Website | Promto",
+  "og_description": "Create a medical center website with online booking, doctor team, and price list. No code, fast, on Promto.",
+  "hero_title": "Create Medical Center Website — in 5 Minutes",
+  "hero_subtitle": "Your multi-specialty medical center deserves a website that works for you around the clock.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe the website for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "stethoscope",
-      "title": "Services",
-      "description": "Block with medical services"
-    },
-    {
-      "icon": "user-md",
-      "title": "Doctors",
-      "description": "Doctor pages"
-    },
-    {
-      "icon": "calendar",
-      "title": "Appointment",
-      "description": "Online booking"
-    },
-    {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready website in 2 minutes"
+      "title": "Creation in 5 Minutes",
+      "description": "Describe the medical center — AI generates the site with departments, doctors, and services."
+    },
+    {
+      "icon": "users",
+      "title": "Multi-Specialty Structure",
+      "description": "Sections by department: therapy, surgery, pediatrics, diagnostics — all on one website."
+    },
+    {
+      "icon": "clock",
+      "title": "Online Booking and Schedule",
+      "description": "Patients select department, doctor, and convenient time — no burden on the reception desk."
+    },
+    {
+      "icon": "shield",
+      "title": "Licenses and Accreditation",
+      "description": "Publish documents confirming the medical center's status and reliability."
+    },
+    {
+      "icon": "globe",
+      "title": "SEO and City Visibility",
+      "description": "Website optimized for search queries in your city and medical specialties."
+    },
+    {
+      "icon": "star",
+      "title": "Patient Reviews Block",
+      "description": "Social proof builds trust and increases appointment conversion."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about your center",
-      "image_url": ""
+      "title": "Describe the Medical Center",
+      "description": "Enter departments, services, and number of doctors — AI will create a multi-page structure."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Website is generated",
-      "image_url": ""
+      "title": "Add Doctors and Departments",
+      "description": "Fill in specialist profiles and specify services for each department."
     },
     {
       "step": 3,
-      "title": "Publish",
-      "description": "Publish — patients will find you",
-      "image_url": ""
+      "title": "Launch and Scale",
+      "description": "Publish the site and add new departments and doctors as the center grows."
     }
   ],
   "faq": [
     {
-      "question": "Can I add services?",
-      "answer": "Yes."
+      "question": "Can I create separate pages for each department?",
+      "answer": "Yes, for a medical center, separate pages are created for each specialty with descriptions and doctors."
     },
     {
-      "question": "Is there booking?",
-      "answer": "Yes."
+      "question": "How do I set up online booking for a specific doctor?",
+      "answer": "In the booking form, the patient first selects a department, then a doctor, and then a convenient time slot."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan available."
+      "question": "Can I add a section for equipment and diagnostics?",
+      "answer": "Yes, equipment and laboratory blocks are standard elements for medical centers in Promto."
+    },
+    {
+      "question": "Does the website support multiple languages?",
+      "answer": "Multi-language support is available on paid plans — convenient for clinics with international patients."
+    },
+    {
+      "question": "How long does it take to create a medical center website?",
+      "answer": "Basic version in 5 minutes. Full content with doctor team and services in a few hours."
+    },
+    {
+      "question": "Do I need a designer or programmer?",
+      "answer": "No. Promto creates and publishes the site completely without technical specialists."
     }
   ],
-  "cta_mid_title": "Create a Medical Center Website",
-  "cta_mid_subtitle": "Get a ready website in 2 minutes",
-  "cta_final_title": "Ready for a Website?",
-  "cta_final_subtitle": "Start free",
-  "cta_final_button_text": "Create Website Free"
+  "cta_mid_title": "Create Your Medical Center Website Now",
+  "cta_mid_subtitle": "Attract patients from search starting from the first day your site goes live.",
+  "cta_final_title": "Your Medical Center Online",
+  "cta_final_subtitle": "Create a medical center website for free — fast and professional.",
+  "cta_final_button_text": "Create Website Free",
+  "social_proof_data": null,
+  "pricing": null,
+  "examples": null,
+  "reviews": null
 }

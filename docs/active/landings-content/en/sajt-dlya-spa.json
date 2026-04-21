@@ -1,86 +1,92 @@
 {
-  "meta_title": "SPA Website — Create in 2 Minutes | Promto",
-  "meta_description": "SPA website: services, procedures, booking. Create in 2 minutes with AI. Professional design.",
-  "h1": "SPA Website",
-  "og_title": "SPA Website — Promto",
-  "og_description": "AI builder creates a SPA website in 2 minutes.",
-  "hero_title": "SPA Website",
-  "hero_subtitle": "Create a SPA website in 2 minutes — with services and booking",
-  "hero_cta_text": "Create SPA Website",
-  "hero_placeholder": "Describe your SPA...",
-  "social_proof": [
-    {
-      "label": "SPA Websites",
-      "value": "2,800+"
-    },
-    {
-      "label": "SPA Centers",
-      "value": "1,600+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.9 out of 5"
-    }
-  ],
+  "meta_title": "SPA Website — Create Online in 5 Minutes | Promto",
+  "meta_description": "Create an SPA website with procedure catalog, prices, and online booking. Promto AI builder — relaxing design and convenient booking.",
+  "h1": "SPA Website — with Procedures and Online Booking",
+  "og_title": "SPA Website | Promto AI",
+  "og_description": "Create an SPA salon website: procedure catalog, prices, and online booking. Promto AI — in 5 minutes without coders.",
+  "hero_title": "SPA Website — with Procedures and Online Booking",
+  "hero_subtitle": "AI will create an elegant SPA website with service catalog and online booking.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe the website for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "sparkles",
-      "title": "Services",
-      "description": "Block with SPA procedures and prices"
-    },
-    {
-      "icon": "image",
-      "title": "Gallery",
-      "description": "Interior and procedure photos"
-    },
-    {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready website in 2 minutes"
+      "title": "Ready in 5 Minutes",
+      "description": "Describe your SPA — AI will generate a website with services and relaxing design."
     },
     {
-      "icon": "calendar",
-      "title": "Booking",
-      "description": "Booking form"
+      "icon": "star",
+      "title": "Relaxing Design",
+      "description": "Elegant templates for SPA with soft tones and calm atmosphere."
+    },
+    {
+      "icon": "users",
+      "title": "Online Booking",
+      "description": "Procedure booking form — clients book time directly from the website."
+    },
+    {
+      "icon": "globe",
+      "title": "Procedure Catalog",
+      "description": "Price list for massage, wraps, skincare — updates in a few clicks."
+    },
+    {
+      "icon": "trending",
+      "title": "SEO for SPA",
+      "description": "Website ranks in search engines — clients find the SPA in their city."
+    },
+    {
+      "icon": "shield",
+      "title": "Reliable Hosting",
+      "description": "SSL and stable 24/7 operation — included in every plan."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about your SPA services",
-      "image_url": ""
+      "title": "Describe Your SPA",
+      "description": "Services, atmosphere, specialists — AI will understand your SPA concept."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Website is generated",
-      "image_url": ""
+      "title": "AI Creates the Website",
+      "description": "Ready website with procedure catalog, prices, and booking form will appear in seconds."
     },
     {
       "step": 3,
       "title": "Publish",
-      "description": "Publish — clients will find you",
-      "image_url": ""
+      "description": "Add interior photos, set prices, and launch — clients are already looking for you."
     }
   ],
   "faq": [
     {
-      "question": "Can I add procedures?",
-      "answer": "Yes, services block is created."
+      "question": "Can I show all procedures and prices on the website?",
+      "answer": "Yes, a catalog of procedures with descriptions, duration, and prices is easily added to the website."
     },
     {
-      "question": "Is there a gallery?",
-      "answer": "Yes, photo gallery is included."
+      "question": "How will clients book procedures?",
+      "answer": "Built-in booking form allows selecting procedure, specialist, and convenient time — request comes to you."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan available."
+      "question": "Is the design suitable for an SPA salon?",
+      "answer": "Yes, there are elegant templates with soft colors, calm typography, and relaxation atmosphere."
+    },
+    {
+      "question": "Will the SPA appear in search results?",
+      "answer": "Yes, websites are SEO-optimized — the SPA will appear in city and services search results."
+    },
+    {
+      "question": "How much does it cost to create an SPA website?",
+      "answer": "You can create a website for free. Paid plans unlock custom domain and advanced features."
+    },
+    {
+      "question": "Can I add interior photos and specialist work?",
+      "answer": "Yes, the gallery allows showing the SPA interior, equipment, and procedure examples."
     }
   ],
-  "cta_mid_title": "Create a SPA Website",
-  "cta_mid_subtitle": "Describe your services — get a ready website in 2 minutes",
-  "cta_final_title": "Ready for a SPA Website?",
-  "cta_final_subtitle": "Start free",
-  "cta_final_button_text": "Create SPA Website"
+  "cta_mid_title": "Create an SPA Website",
+  "cta_mid_subtitle": "AI will generate an elegant website with procedure catalog and booking — in 5 minutes.",
+  "cta_final_title": "Your SPA Needs a Website",
+  "cta_final_subtitle": "Attract clients from the internet — create a website in 5 minutes without coders.",
+  "cta_final_button_text": "Create Website Free"
 }

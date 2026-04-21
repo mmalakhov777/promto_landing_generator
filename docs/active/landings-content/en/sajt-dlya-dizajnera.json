@@ -1,86 +1,97 @@
 {
-  "meta_title": "Designer Website — Create in 2 Minutes | Promto",
-  "meta_description": "Designer portfolio website: works, skills, contacts. Create in 2 minutes with AI. Professional design.",
-  "h1": "Designer Website",
-  "og_title": "Designer Website — Promto",
-  "og_description": "AI builder creates a designer website in 2 minutes.",
-  "hero_title": "Designer Website",
-  "hero_subtitle": "Create a designer portfolio in 2 minutes — show your works",
-  "hero_cta_text": "Create Designer Website",
-  "hero_placeholder": "Describe your design style...",
-  "social_proof": [
-    {
-      "label": "Designer Websites",
-      "value": "9,600+"
-    },
-    {
-      "label": "Designers",
-      "value": "14,000+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.9 out of 5"
-    }
-  ],
+  "meta_title": "Website for Designer — Portfolio in 5 Minutes | Promto",
+  "meta_description": "Create a designer website with AI in 5 minutes. Showcase case studies, attract clients. Professional design without code. For graphic and web designers.",
+  "h1": "Website for Designer in 5 Minutes",
+  "og_title": "Website for Designer | Promto",
+  "og_description": "AI will create a designer website in 5 minutes: case studies, portfolio, inquiry form. No code or agency needed.",
+  "hero_title": "Website for Designer in 5 Minutes",
+  "hero_subtitle": "Describe your projects — AI will create a portfolio site that impresses clients.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe what website you need for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "pen-tool",
-      "title": "Portfolio",
-      "description": "Block with design works"
-    },
-    {
       "icon": "star",
-      "title": "Skills",
-      "description": "Skills and tools block"
-    },
-    {
-      "icon": "mail",
-      "title": "Contacts",
-      "description": "Contact information"
+      "title": "Case Study Showcase",
+      "description": "Present projects in professional format: before/after, task description, process, and result."
     },
     {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready website in 2 minutes"
+      "title": "Created in 5 Minutes",
+      "description": "Describe your specialization — AI will select the structure and design optimal for a designer's portfolio."
+    },
+    {
+      "icon": "award",
+      "title": "Looks Premium",
+      "description": "Minimalist professional design that speaks of taste and experience without extra words."
+    },
+    {
+      "icon": "users",
+      "title": "Attracts Clients",
+      "description": "Built-in contact forms and clear CTAs convert visitors into real customers."
+    },
+    {
+      "icon": "globe",
+      "title": "SEO & Visibility",
+      "description": "Site is optimized for search engines — you'll be found by queries like \"logo designer\", \"graphic designer\", and others."
+    },
+    {
+      "icon": "check",
+      "title": "Easy Updates",
+      "description": "Finished a new project — add it to the site in a couple minutes with no additional costs."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about your design works",
-      "image_url": ""
+      "title": "Describe Your Specialization",
+      "description": "Tell what you do: logos, web design, brand identity, illustrations, motion design."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Portfolio is generated",
-      "image_url": ""
+      "title": "AI Creates the Site",
+      "description": "System generates a site with case study gallery, services section, pricing, and contact form."
     },
     {
       "step": 3,
+      "title": "Add Case Studies",
+      "description": "Upload project images and describe the tasks — show clients how you think."
+    },
+    {
+      "step": 4,
       "title": "Publish",
-      "description": "Publish — clients will find you",
-      "image_url": ""
+      "description": "Share the site link on social media, Behance, and in correspondence with clients."
     }
   ],
   "faq": [
     {
-      "question": "Can I add design works?",
-      "answer": "Yes, portfolio block is created."
+      "question": "Is the site suitable for graphic designers and web designers?",
+      "answer": "Yes. AI adapts the structure and presentation to your specialization: logos, web design, branding, packaging, illustrations, and other directions."
     },
     {
-      "question": "Does it work for UX designer?",
-      "answer": "Yes, builder works for any designer."
+      "question": "How should I format case studies on a designer's website?",
+      "answer": "Promto generates case study structure: task description, work process, result, and metrics. You supplement with your images and details."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan available."
+      "question": "Can I include pricing for designer services?",
+      "answer": "Yes. Add a section with service packages and prices — this saves time on correspondence and attracts clients with the right budget."
+    },
+    {
+      "question": "Can I link the site to Behance or Dribbble?",
+      "answer": "Yes. You can add links to external platforms right on the site so clients can see all your work."
+    },
+    {
+      "question": "What is Promto?",
+      "answer": "Promto is an AI website builder that creates a ready site from a text description in minutes. No code needed."
+    },
+    {
+      "question": "How much does a designer website cost on Promto?",
+      "answer": "You can create a site for free. Paid plans add custom domain, analytics, and additional customization options."
     }
   ],
-  "cta_mid_title": "Create a Designer Website",
-  "cta_mid_subtitle": "Get a ready portfolio in 2 minutes",
-  "cta_final_title": "Ready for a Designer Website?",
-  "cta_final_subtitle": "Start free",
-  "cta_final_button_text": "Create Designer Website Free"
+  "cta_mid_title": "Showcase Your Craft",
+  "cta_mid_subtitle": "Create a designer website in 5 minutes and attract new clients.",
+  "cta_final_title": "Launch Your Designer Site Today",
+  "cta_final_subtitle": "AI will create a professional site with case studies. Free, no code.",
+  "cta_final_button_text": "Create Website Free"
 }

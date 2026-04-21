@@ -1,90 +1,92 @@
 {
-  "meta_title": "Cosmetology Website — Create in 2 Minutes | Promto",
-  "meta_description": "Cosmetology website: services, prices, doctors. Create in 2 minutes with AI. Professional design.",
-  "h1": "Cosmetology Website",
-  "og_title": "Cosmetology Website — Promto",
-  "og_description": "AI builder creates a cosmetology website in 2 minutes.",
-  "hero_title": "Cosmetology Website",
-  "hero_subtitle": "Create a cosmetology website in 2 minutes — with services and prices",
-  "hero_cta_text": "Create Cosmetology Website",
-  "hero_placeholder": "Describe your cosmetology...",
-  "social_proof": [
-    {
-      "label": "Cosmetology Websites",
-      "value": "4,800+"
-    },
-    {
-      "label": "Cosmetologists",
-      "value": "12,000+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.9 out of 5"
-    }
-  ],
+  "meta_title": "Cosmetology Website — Create in 5 Minutes | Promto",
+  "meta_description": "Create a cosmetology website with services, prices, and online booking. Promto AI builder — professional, beautiful, and no coding required.",
+  "h1": "Cosmetology Website — with Services and Booking",
+  "og_title": "Cosmetology Website | Promto AI",
+  "og_description": "Create a cosmetology website: procedure catalog, prices, and online booking. Promto AI — in 5 minutes.",
+  "hero_title": "Cosmetology Website — with Services and Booking",
+  "hero_subtitle": "AI will create a professional cosmetology website with service catalog and booking.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe the website for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "sparkles",
-      "title": "Services & Prices",
-      "description": "Block with cosmetology services and cost"
-    },
-    {
-      "icon": "user",
-      "title": "Doctors",
-      "description": "Specialist pages with experience"
-    },
-    {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready website in 2 minutes"
+      "title": "Ready in 5 Minutes",
+      "description": "Describe your cosmetology clinic — AI will create a website with services and design in seconds."
     },
     {
-      "icon": "calendar",
+      "icon": "star",
+      "title": "Professional Design",
+      "description": "Elegant templates for cosmetology with emphasis on trust and results."
+    },
+    {
+      "icon": "users",
       "title": "Online Booking",
-      "description": "Appointment booking form"
+      "description": "Procedure booking form — clients book directly from the website."
+    },
+    {
+      "icon": "globe",
+      "title": "Procedure Catalog",
+      "description": "Price list for injections, peels, skincare — updates without a programmer."
+    },
+    {
+      "icon": "trending",
+      "title": "SEO for Cosmetology",
+      "description": "Website ranks in search engines — clients find the cosmetology clinic in the city."
+    },
+    {
+      "icon": "shield",
+      "title": "Reliable Hosting",
+      "description": "SSL and stable 24/7 operation — included in every plan."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about your services and specialists",
-      "image_url": ""
+      "title": "Describe Your Cosmetology Clinic",
+      "description": "Services, specialists, procedures — AI will understand the profile and audience."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Website with services, prices, and booking form",
-      "image_url": ""
+      "title": "AI Creates the Website",
+      "description": "Ready website with procedure catalog, prices, and booking form will appear in seconds."
     },
     {
       "step": 3,
       "title": "Publish",
-      "description": "Publish — patients will find you",
-      "image_url": ""
+      "description": "Add clinic photos, set prices, and launch — patients are already looking for you."
     }
   ],
   "faq": [
     {
-      "question": "Can I add services and prices?",
-      "answer": "Yes, services and pricing block is created automatically."
+      "question": "Can I display a catalog of cosmetology procedures on the website?",
+      "answer": "Yes, a catalog with procedure descriptions, indications, contraindications, and prices is easily added to the website."
     },
     {
-      "question": "Is there booking form?",
-      "answer": "Yes, online booking form."
+      "question": "How will clients book appointments?",
+      "answer": "Built-in booking form allows selecting procedure, doctor, and convenient time — request comes to you."
     },
     {
-      "question": "Does it work for laser cosmetology?",
-      "answer": "Yes, builder creates sites for any cosmetology type."
+      "question": "Is it suitable for a cosmetology clinic with multiple specialists?",
+      "answer": "Yes, you can add profiles of cosmetic doctors with their specializations, education, and experience."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan allows creating a basic website."
+      "question": "Will the cosmetology clinic appear in search results?",
+      "answer": "Yes, websites are SEO-optimized — the clinic will appear in city and services search results."
+    },
+    {
+      "question": "How much does it cost to create a cosmetology website?",
+      "answer": "You can create a website for free. Paid plans unlock custom domain and advanced features."
+    },
+    {
+      "question": "Can I add before and after procedure photos?",
+      "answer": "Yes, the gallery allows showing work examples and results of cosmetology procedures."
     }
   ],
   "cta_mid_title": "Create a Cosmetology Website",
-  "cta_mid_subtitle": "Describe your services — get a ready website in 2 minutes",
-  "cta_final_title": "Ready for a Cosmetology Website?",
-  "cta_final_subtitle": "Start free — patients will find you online",
-  "cta_final_button_text": "Create Cosmetology Website Free"
+  "cta_mid_subtitle": "AI will generate a professional website with procedure catalog and booking — in 5 minutes.",
+  "cta_final_title": "Your Cosmetology Clinic Needs a Website",
+  "cta_final_subtitle": "Attract patients from the internet — create a website in 5 minutes without programmers.",
+  "cta_final_button_text": "Create Website Free"
 }

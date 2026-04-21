@@ -1,86 +1,96 @@
 {
-  "meta_title": "Medical Website Builder — Create in 2 Minutes | Promto",
-  "meta_description": "Medical website builder with AI. Create website for clinic, hospital, pharmacy. No code, in 2 minutes.",
-  "h1": "Medical Website Builder",
-  "og_title": "Medical Website Builder — Promto",
-  "og_description": "AI builder creates medical website in 2 minutes.",
-  "hero_title": "Medical Website Builder",
-  "hero_subtitle": "Create a medical website in 2 minutes — for any medical facility",
-  "hero_cta_text": "Create Medical Website",
-  "hero_placeholder": "Describe what medical website you want...",
-  "social_proof": [
-    {
-      "label": "Medical Websites",
-      "value": "12,000+"
-    },
-    {
-      "label": "Medical Facilities",
-      "value": "7,200+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.8 out of 5"
-    }
-  ],
+  "meta_title": "Medical Website Builder — No Code Required | Promto",
+  "meta_description": "Medical website builder: create a clinic, lab, or doctor website in 5 minutes. Medical design, online booking, SEO. Free.",
+  "h1": "Medical Website Builder — Create Without Code",
+  "og_title": "Medical Website Builder | Promto",
+  "og_description": "Specialized website builder for healthcare. Clinics, doctors, pharmacies, labs. Medical design and online booking out of the box.",
+  "hero_title": "Medical Website Builder — Create Without Code",
+  "hero_subtitle": "Specialized tool for clinics, doctors, and medical centers. Launch in 5 minutes.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe the website for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "stethoscope",
-      "title": "For Medicine",
-      "description": "Website optimized for medical facilities"
-    },
-    {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready website in 2 minutes"
+      "title": "Healthcare Specialization",
+      "description": "Ready-made blocks and templates for clinics, doctors, pharmacies, labs — no need to adapt a generic builder."
     },
     {
-      "icon": "calendar",
-      "title": "Appointments",
-      "description": "Online appointment block"
+      "icon": "shield",
+      "title": "Compliance Ready",
+      "description": "Built-in sections for licenses, privacy policy, and personal data processing."
     },
     {
-      "icon": "user-md",
-      "title": "Doctors",
-      "description": "Doctor pages"
+      "icon": "users",
+      "title": "Online Patient Booking",
+      "description": "Built-in booking form configured to doctor schedules and sends notifications."
+    },
+    {
+      "icon": "globe",
+      "title": "SEO for Healthcare",
+      "description": "Meta tag templates and page structure optimized for medical services search."
+    },
+    {
+      "icon": "star",
+      "title": "Trust Blocks",
+      "description": "Blocks for reviews, certificates, awards, and doctor teams increase visitor-to-patient conversion."
+    },
+    {
+      "icon": "clock",
+      "title": "Quick Start",
+      "description": "Describe your organization — AI populates the site with copy and structure. Edit in the visual editor."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about your medical facility",
-      "image_url": ""
+      "title": "Choose Medical Organization Type",
+      "description": "Clinic, doctor, lab, or pharmacy — AI will select the optimal structure."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Website is generated",
-      "image_url": ""
+      "title": "Fill in Data",
+      "description": "Add doctors, services, prices, and contacts through a simple code-free editor."
     },
     {
       "step": 3,
-      "title": "Publish",
-      "description": "Publish — patients will find you",
-      "image_url": ""
+      "title": "Publish Site",
+      "description": "Click Publish — the site is immediately accessible to patients online."
     }
   ],
   "faq": [
     {
-      "question": "Does it work for pharmacy?",
-      "answer": "Yes, builder works for any medical facility."
+      "question": "How does a medical builder differ from a regular one?",
+      "answer": "Ready-made blocks for doctors, schedules, licenses, and online booking — no need to build from scratch with generic components."
     },
     {
-      "question": "Can I add appointment form?",
-      "answer": "Yes."
+      "question": "Is it suitable for a solo private practice doctor?",
+      "answer": "Yes, the builder works equally well for a large clinic or a private practice physician."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan available."
+      "question": "Can I create multiple websites for different specialties?",
+      "answer": "Yes, on paid plans you can manage multiple websites from a single account."
+    },
+    {
+      "question": "How does the builder help with SEO?",
+      "answer": "Automatically generates meta tags, headings, and page structure optimized for search."
+    },
+    {
+      "question": "Are technical skills required to use the builder?",
+      "answer": "No. The entire process is visual — describe in words, and AI and the editor do the rest."
+    },
+    {
+      "question": "What's included in the free plan?",
+      "answer": "Website creation and publishing, basic blocks, contact form, and hosting on Promto subdomain."
     }
   ],
-  "cta_mid_title": "Create a Medical Website",
-  "cta_mid_subtitle": "Get a ready website in 2 minutes",
-  "cta_final_title": "Ready for a Medical Website?",
-  "cta_final_subtitle": "Start free",
-  "cta_final_button_text": "Create Medical Website Free"
+  "cta_mid_title": "Try the Medical Website Builder",
+  "cta_mid_subtitle": "Create a medical website in 5 minutes — no code and no designer.",
+  "cta_final_title": "Best Website Builder for Healthcare",
+  "cta_final_subtitle": "Launch your medical organization website for free right now.",
+  "cta_final_button_text": "Create Website Free",
+  "social_proof_data": null,
+  "pricing": null,
+  "examples": null,
+  "reviews": null
 }

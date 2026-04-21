@@ -1,86 +1,97 @@
 {
-  "meta_title": "SMM Specialist Website — Create in 2 Minutes | Promto",
-  "meta_description": "SMM specialist portfolio: cases, services, contacts. Create in 2 minutes with AI. Professional design.",
-  "h1": "SMM Specialist Website",
-  "og_title": "SMM Specialist Website — Promto",
-  "og_description": "AI builder creates an SMM specialist website in 2 minutes.",
-  "hero_title": "SMM Specialist Website",
-  "hero_subtitle": "Create a portfolio for SMM specialist in 2 minutes",
-  "hero_cta_text": "Create SMM Portfolio",
-  "hero_placeholder": "Describe your SMM services...",
-  "social_proof": [
-    {
-      "label": "SMM Portfolios",
-      "value": "4,200+"
-    },
-    {
-      "label": "SMM Specialists",
-      "value": "8,600+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.8 out of 5"
-    }
-  ],
+  "meta_title": "Website for SMM Specialist — Create in 5 Minutes | Promto",
+  "meta_description": "Create an SMM specialist website with AI in 5 minutes. Showcase case studies, services, attract clients. Professional landing page without code. Try free.",
+  "h1": "Website for SMM Specialist in 5 Minutes",
+  "og_title": "Website for SMM Specialist | Promto",
+  "og_description": "AI will create an SMM specialist website in 5 minutes: case studies, services, inquiry form. No code or designer needed.",
+  "hero_title": "Website for SMM Specialist in 5 Minutes",
+  "hero_subtitle": "AI will build a landing page with case studies and services — start receiving client inquiries.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe what website you need for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "bar-chart",
-      "title": "Cases",
-      "description": "Block with SMM cases and results"
-    },
-    {
       "icon": "star",
-      "title": "Services",
-      "description": "Services and pricing"
-    },
-    {
-      "icon": "mail",
-      "title": "Contacts",
-      "description": "Contact information"
+      "title": "Promotion Case Studies",
+      "description": "Show results: follower growth, reach, engagement — in a format clients understand."
     },
     {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready website in 2 minutes"
+      "title": "Ready in 5 Minutes",
+      "description": "Describe your services and work examples — AI will create a landing site without programming or a designer."
+    },
+    {
+      "icon": "trending",
+      "title": "Grows With You",
+      "description": "Add new case studies, services, and prices anytime — the site updates instantly."
+    },
+    {
+      "icon": "users",
+      "title": "Attracts Clients",
+      "description": "Inquiry form and clear CTAs turn visitors into SMM service customers."
+    },
+    {
+      "icon": "globe",
+      "title": "Visible in Search",
+      "description": "SEO helps you be found by queries like \"SMM specialist\", \"social media promotion\" and similar."
+    },
+    {
+      "icon": "check",
+      "title": "No Code or Pain",
+      "description": "Edit texts, change design, and add content through a convenient interface — no code needed."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about your SMM cases",
-      "image_url": ""
+      "title": "Describe Your Services",
+      "description": "Tell what services you offer: account management, advertising setup, content, SMM audit."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Portfolio is generated",
-      "image_url": ""
+      "title": "AI Creates Landing Page",
+      "description": "System generates a site with service blocks, case studies, reviews, and contact form for clients."
     },
     {
       "step": 3,
-      "title": "Publish",
-      "description": "Publish — clients will find you",
-      "image_url": ""
+      "title": "Add Case Studies",
+      "description": "Describe projects: what goals you set, what you did, what results you achieved — this sells your expertise."
+    },
+    {
+      "step": 4,
+      "title": "Receive Inquiries",
+      "description": "Publish the site and share the link — clients will start reaching out through the form on the site."
     }
   ],
   "faq": [
     {
-      "question": "Can I add cases?",
-      "answer": "Yes, cases block is created."
+      "question": "Does an SMM specialist site need a blog?",
+      "answer": "Not required, but useful. A blog on the site improves SEO and demonstrates expertise. In Promto, a blog is added in a couple clicks if needed."
     },
     {
-      "question": "Does it work for content creator?",
-      "answer": "Yes."
+      "question": "How to show case studies without disclosing client data?",
+      "answer": "Case studies can be described without names and logos: specify the niche, results in percentages and growth dynamics. This looks professional and doesn't violate NDA."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan available."
+      "question": "Can I add screenshots from social networks?",
+      "answer": "Yes, you can upload any images. Screenshots from accounts, statistics graphs, content examples — everything displays in the gallery."
+    },
+    {
+      "question": "Is the site suitable for a beginner SMM specialist?",
+      "answer": "Perfectly suitable. Even without a large portfolio, a site creates a professional image and simplifies communication with first clients."
+    },
+    {
+      "question": "What is Promto?",
+      "answer": "Promto is an AI website builder. You describe your business, and the system creates a ready site with texts, design, and structure in minutes."
+    },
+    {
+      "question": "How much does an SMM specialist website cost?",
+      "answer": "You can create a site for free. Paid plans unlock custom domain, extended analytics, and additional features."
     }
   ],
-  "cta_mid_title": "Create an SMM Portfolio",
-  "cta_mid_subtitle": "Get a ready portfolio in 2 minutes",
-  "cta_final_title": "Ready for an SMM Portfolio?",
-  "cta_final_subtitle": "Start free",
-  "cta_final_button_text": "Create SMM Portfolio Free"
+  "cta_mid_title": "Show Your Results to Clients",
+  "cta_mid_subtitle": "Create an SMM specialist website in 5 minutes and start receiving inquiries.",
+  "cta_final_title": "Your SMM Site Awaits Clients",
+  "cta_final_subtitle": "AI will create a landing page with case studies and services. Free, no code.",
+  "cta_final_button_text": "Create Website Free"
 }

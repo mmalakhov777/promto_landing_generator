@@ -1,90 +1,92 @@
 {
-  "meta_title": "Beauty Salon Website — Create in 2 Minutes | Promto",
-  "meta_description": "Beauty salon website: services, masters, booking. Create in 2 minutes with AI. Professional design.",
-  "h1": "Beauty Salon Website",
-  "og_title": "Beauty Salon Website — Promto",
-  "og_description": "AI builder creates a beauty salon website in 2 minutes.",
-  "hero_title": "Beauty Salon Website",
-  "hero_subtitle": "Create a beauty salon website in 2 minutes — with services and masters",
-  "hero_cta_text": "Create Salon Website",
-  "hero_placeholder": "Describe your beauty salon...",
-  "social_proof": [
-    {
-      "label": "Beauty Salon Websites",
-      "value": "7,200+"
-    },
-    {
-      "label": "Salons",
-      "value": "4,800+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.9 out of 5"
-    }
-  ],
+  "meta_title": "Beauty Salon Website — Create in 5 Minutes | Promto",
+  "meta_description": "Create a professional beauty salon website with services, prices, and online booking. Promto AI builder — beautiful and fast.",
+  "h1": "Beauty Salon Website — with Online Booking",
+  "og_title": "Beauty Salon Website | Promto AI",
+  "og_description": "Create a beauty salon website with service catalog, prices, and online booking. Promto AI — in 5 minutes without coders.",
+  "hero_title": "Beauty Salon Website — with Online Booking",
+  "hero_subtitle": "AI will create a beautiful website for your salon with services, specialists, and online booking.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe the website for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "sparkles",
-      "title": "Services",
-      "description": "Block with services and prices"
+      "icon": "zap",
+      "title": "Ready in 5 Minutes",
+      "description": "Describe your salon — AI will create a website with services, prices, and design in seconds."
+    },
+    {
+      "icon": "star",
+      "title": "Beautiful Design",
+      "description": "Elegant templates for beauty salons with emphasis on style and atmosphere."
     },
     {
       "icon": "users",
-      "title": "Masters",
-      "description": "Pages for stylists and cosmetologists"
+      "title": "Online Booking",
+      "description": "Built-in service booking form — clients book directly from the website."
     },
     {
-      "icon": "image",
-      "title": "Portfolio",
-      "description": "Photo gallery of works"
+      "icon": "globe",
+      "title": "Service Catalog",
+      "description": "Publish price lists with service descriptions and prices — easy to update."
     },
     {
-      "icon": "calendar",
-      "title": "Booking",
-      "description": "Online booking form"
+      "icon": "trending",
+      "title": "SEO for Salons",
+      "description": "Website ranks in search engines — clients find the salon in their city."
+    },
+    {
+      "icon": "shield",
+      "title": "Reliable Hosting",
+      "description": "SSL and stable 24/7 operation — included in every plan."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about your salon and services",
-      "image_url": ""
+      "title": "Describe Your Salon",
+      "description": "Name, services, specialists, and atmosphere — AI will understand the concept."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Website with services and masters is generated",
-      "image_url": ""
+      "title": "AI Generates the Website",
+      "description": "Ready website with service catalog, prices, and booking form will appear in seconds."
     },
     {
       "step": 3,
       "title": "Publish",
-      "description": "Publish — clients will find you",
-      "image_url": ""
+      "description": "Add work photos, set prices, and launch — clients are already looking for you."
     }
   ],
   "faq": [
     {
-      "question": "Can I add services and prices?",
-      "answer": "Yes, services block with prices is created."
+      "question": "Can I add a service price list to the website?",
+      "answer": "Yes, in the builder you can easily create a service catalog with descriptions, prices, and categories."
     },
     {
-      "question": "Is there online booking?",
-      "answer": "Yes, booking form is included."
+      "question": "How does online booking for services work?",
+      "answer": "The booking form allows the client to select service, specialist, and convenient time — data comes to you."
     },
     {
-      "question": "Does it work for a hair salon?",
-      "answer": "Yes, builder works for any beauty business."
+      "question": "Is it suitable for a salon with multiple specialists?",
+      "answer": "Yes, you can add specialist profiles with their specializations, experience, and work photos."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan available."
+      "question": "Will the salon appear in search engines?",
+      "answer": "Yes, websites are SEO-optimized — the salon will appear in city search results."
+    },
+    {
+      "question": "How much does it cost to create a salon website?",
+      "answer": "You can create a website for free. Paid plans unlock custom domain and advanced features."
+    },
+    {
+      "question": "Can I show specialist work photos?",
+      "answer": "Yes, the website has a gallery for work photos — add specialist portfolios and service examples."
     }
   ],
-  "cta_mid_title": "Create a Beauty Salon Website",
-  "cta_mid_subtitle": "Describe your salon — get a ready website in 2 minutes",
-  "cta_final_title": "Ready for a Beauty Salon Website?",
-  "cta_final_subtitle": "Start free — clients will find you online",
-  "cta_final_button_text": "Create Salon Website"
+  "cta_mid_title": "Create Your Beauty Salon Website",
+  "cta_mid_subtitle": "AI will generate a website with services, prices, and online booking — in 5 minutes.",
+  "cta_final_title": "Your Salon Deserves a Website",
+  "cta_final_subtitle": "Attract clients from the internet — create a website in 5 minutes.",
+  "cta_final_button_text": "Create Website Free"
 }

@@ -1,90 +1,96 @@
 {
-  "meta_title": "Online Store Website — Create in 2 Minutes | Promto",
-  "meta_description": "Online store website: catalog, products, cart. Create in 2 minutes with AI. No code, no experience.",
-  "h1": "Online Store Website",
-  "og_title": "Online Store Website — Promto",
-  "og_description": "AI builder creates an online store website in 2 minutes.",
-  "hero_title": "Online Store Website",
-  "hero_subtitle": "Create an online store in 2 minutes — with catalog and cart",
-  "hero_cta_text": "Create Online Store",
-  "hero_placeholder": "Describe what online store you want to create...",
-  "social_proof": [
-    {
-      "label": "Online Store Websites",
-      "value": "11,000+"
-    },
-    {
-      "label": "Products",
-      "value": "1.8M+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.8 out of 5"
-    }
-  ],
+  "meta_title": "Online Store Website — Create in 5 Minutes | Promto",
+  "meta_description": "Create an online store website with product catalog, cart, and payment. No code, fast, professional. Try free on Promto.",
+  "h1": "Online Store Website — Sell Online",
+  "og_title": "Online Store Website | Promto",
+  "og_description": "Professional online store with catalog, cart, and online payment. Create in 5 minutes without code on Promto.",
+  "hero_title": "Online Store Website — Sell Online",
+  "hero_subtitle": "Launch a full-featured online store in 5 minutes and start receiving orders today.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe the website for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "shopping-cart",
-      "title": "With Catalog",
-      "description": "Full product catalog with cards"
-    },
-    {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready store in 2 minutes"
+      "title": "Launch in 5 Minutes",
+      "description": "Describe your store — AI will create the catalog, product cards, and checkout page."
     },
     {
-      "icon": "credit-card",
-      "title": "Payment",
-      "description": "Popular payment methods"
+      "icon": "star",
+      "title": "Catalog and Product Cards",
+      "description": "Photos, descriptions, prices, variants, and stock — everything needed to sell products online."
     },
     {
-      "icon": "truck",
-      "title": "Delivery",
-      "description": "Delivery conditions block"
+      "icon": "trending",
+      "title": "Online Payment",
+      "description": "Accept card payments, QR payments (SBP), and popular payment systems directly on the site."
+    },
+    {
+      "icon": "globe",
+      "title": "Store SEO",
+      "description": "Product cards and categories optimized for search — customers will find you on Google and Yandex."
+    },
+    {
+      "icon": "shield",
+      "title": "Customer Security",
+      "description": "SSL certificate, data protection, and reliable payment processing included by default."
+    },
+    {
+      "icon": "clock",
+      "title": "Order Management",
+      "description": "All orders in one place: statuses, history, notifications to customers and managers."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about your products",
-      "image_url": ""
+      "title": "Describe Your Store and Products",
+      "description": "Specify categories, price range, and description — AI will create the store structure."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Store with catalog is generated",
-      "image_url": ""
+      "title": "Upload Products",
+      "description": "Add photos and product descriptions through the editor or upload via Excel spreadsheet."
     },
     {
       "step": 3,
-      "title": "Configure and Sell",
-      "description": "Add prices, payment methods, and publish",
-      "image_url": ""
+      "title": "Connect Payment and Launch",
+      "description": "Set up the payment system and delivery — your store is ready to accept orders."
     }
   ],
   "faq": [
     {
-      "question": "Can I create a full store?",
-      "answer": "Yes, website with catalog, product cards, and payment options."
+      "question": "Can I add a large product catalog?",
+      "answer": "Yes, the number of products depends on the plan. Unlimited catalog on paid plans."
     },
     {
-      "question": "What payment methods?",
-      "answer": "Popular methods for your region."
+      "question": "What payment methods are supported?",
+      "answer": "Bank cards, QR payments (SBP), Yookassa, Stripe, and other popular payment systems."
     },
     {
-      "question": "Do I need coding?",
-      "answer": "No, everything is visual."
+      "question": "How do I set up delivery and its cost?",
+      "answer": "Set delivery zones and rates: free above a certain amount, fixed, or calculated."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan to start. Paid from $5.99/mo."
+      "question": "Is there a mobile version of the store?",
+      "answer": "Yes, all Promto sites are mobile-responsive — most purchases happen from smartphones."
+    },
+    {
+      "question": "How much does it cost to create an online store on Promto?",
+      "answer": "Start for free. Paid plans unlock unlimited catalog, analytics, and custom domain."
+    },
+    {
+      "question": "Are technical skills required?",
+      "answer": "No. Promto creates a store completely code-free — just describe, and AI does the work."
     }
   ],
-  "cta_mid_title": "Create an Online Store Today",
-  "cta_mid_subtitle": "Describe your products — get a ready store in 2 minutes",
-  "cta_final_title": "Ready for Your Own Online Store?",
-  "cta_final_subtitle": "Start free — sell today",
-  "cta_final_button_text": "Create Online Store Free"
+  "cta_mid_title": "Launch Your Online Store Today",
+  "cta_mid_subtitle": "First orders can come in on the very day your store opens.",
+  "cta_final_title": "Your Online Store in 5 Minutes",
+  "cta_final_subtitle": "Create an online store website for free and start selling online.",
+  "cta_final_button_text": "Create Website Free",
+  "social_proof_data": null,
+  "pricing": null,
+  "examples": null,
+  "reviews": null
 }

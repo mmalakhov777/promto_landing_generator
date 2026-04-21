@@ -1,90 +1,96 @@
 {
-  "meta_title": "Furniture Store Website — Create in 2 Minutes | Promto",
-  "meta_description": "Furniture store website: catalog, products, contacts. Create in 2 minutes. With furniture catalog.",
-  "h1": "Furniture Store Website",
-  "og_title": "Furniture Store Website — Promto",
-  "og_description": "AI builder creates a furniture store website in 2 minutes.",
-  "hero_title": "Furniture Store Website",
-  "hero_subtitle": "Create a furniture store website in 2 minutes",
-  "hero_cta_text": "Create Furniture Website",
-  "hero_placeholder": "Describe what furniture website you want...",
-  "social_proof": [
-    {
-      "label": "Furniture Websites",
-      "value": "3,800+"
-    },
-    {
-      "label": "Stores",
-      "value": "2,400+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.7 out of 5"
-    }
-  ],
+  "meta_title": "Furniture Store Website — Online Catalog | Promto",
+  "meta_description": "Create a furniture store website with catalog, interior photos, and online ordering. No programmers. Attract furniture buyers online.",
+  "h1": "Furniture Store Website — Beautiful Online Catalog",
+  "og_title": "Furniture Store Website | Promto",
+  "og_description": "Furniture store website with beautiful catalog, interior photos, and online inquiries. Create without code on Promto.",
+  "hero_title": "Furniture Store Website — Beautiful Online Catalog",
+  "hero_subtitle": "Showcase furniture at its best — quality photos and convenient catalog attract buyers.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe the website for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "sofa",
-      "title": "Furniture Catalog",
-      "description": "Product cards with photos and descriptions"
+      "icon": "star",
+      "title": "Beautiful Furniture Gallery",
+      "description": "Large photos in interiors, detailed shots, and 360° view — buyers fall in love with the product."
+    },
+    {
+      "icon": "check",
+      "title": "Parameter Filtering",
+      "description": "Buyers filter by style, material, color, and size — quickly find what they need."
+    },
+    {
+      "icon": "users",
+      "title": "Online Inquiry and Measurement",
+      "description": "Form to request a measurer or purchase inquiry — directly from the product card."
+    },
+    {
+      "icon": "trending",
+      "title": "Online Payment",
+      "description": "Accept prepayment and full payment online, reducing customer drop-off."
     },
     {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready website in 2 minutes with catalog"
+      "title": "Launch in 5 Minutes",
+      "description": "Describe the furniture store — AI will create the catalog structure and design for your niche."
     },
     {
-      "icon": "map-pin",
-      "title": "Address & Map",
-      "description": "Store address and map"
-    },
-    {
-      "icon": "phone",
-      "title": "Contacts",
-      "description": "All contact methods"
+      "icon": "globe",
+      "title": "SEO for Furniture",
+      "description": "Category and product pages optimized for furniture search in your city."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about furniture, styles, brands",
-      "image_url": ""
+      "title": "Describe the Store and Assortment",
+      "description": "Specify furniture style and categories — AI will create a suitable catalog with needed filters."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Website with catalog and contacts is generated",
-      "image_url": ""
+      "title": "Upload Photos and Fill Cards",
+      "description": "Add furniture photos in interiors, dimensions, materials, and prices."
     },
     {
       "step": 3,
-      "title": "Publish",
-      "description": "Publish — buyers will find you",
-      "image_url": ""
+      "title": "Launch and Receive Inquiries",
+      "description": "Publish the site — buyers will find furniture in search and submit inquiries online."
     }
   ],
   "faq": [
     {
-      "question": "Can I add catalog?",
-      "answer": "Yes, product cards with photos and descriptions."
+      "question": "How do I show furniture in different colors on the site?",
+      "answer": "In the product card, add color or material variants with separate photos for each."
     },
     {
-      "question": "Does it work for upholstery?",
-      "answer": "Yes, builder works for any furniture type."
+      "question": "Can I add 3D visualization or AR viewing?",
+      "answer": "Advanced plans include integration with 3D viewers for furniture."
     },
     {
-      "question": "Can I add price?",
-      "answer": "Yes, in product cards."
+      "question": "How do I accept inquiries for custom furniture?",
+      "answer": "Add a form with fields for dimensions, materials, and preferences — inquiries come to your email."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan allows creating a basic website."
+      "question": "Can I add delivery and assembly terms?",
+      "answer": "Yes, delivery and assembly section is a standard block for furniture stores in Promto."
+    },
+    {
+      "question": "How much does a furniture store website cost?",
+      "answer": "Basic catalog is free. Extended functionality and custom domain on paid plans."
+    },
+    {
+      "question": "How quickly will buyers find my site in search?",
+      "answer": "Promto SEO optimization ensures search engine indexing within a few days of publishing."
     }
   ],
-  "cta_mid_title": "Create a Furniture Store Website",
-  "cta_mid_subtitle": "Describe your store — get a ready website in 2 minutes",
-  "cta_final_title": "Ready for a Furniture Website?",
-  "cta_final_subtitle": "Start free — buyers will find you today",
-  "cta_final_button_text": "Create Furniture Website Free"
+  "cta_mid_title": "Launch Your Furniture Store Website",
+  "cta_mid_subtitle": "A beautiful online catalog is the best salesperson for your furniture.",
+  "cta_final_title": "Your Furniture Deserves a Beautiful Website",
+  "cta_final_subtitle": "Create a furniture store website for free with Promto.",
+  "cta_final_button_text": "Create Website Free",
+  "social_proof_data": null,
+  "pricing": null,
+  "examples": null,
+  "reviews": null
 }

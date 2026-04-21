@@ -1,82 +1,96 @@
 {
-  "meta_title": "Pharmacy Website — Create in 2 Minutes | Promto",
-  "meta_description": "Pharmacy website: medications, services, contacts. Create in 2 minutes with AI. Professional design.",
-  "h1": "Pharmacy Website",
-  "og_title": "Pharmacy Website — Promto",
-  "og_description": "AI builder creates a pharmacy website in 2 minutes.",
-  "hero_title": "Pharmacy Website",
-  "hero_subtitle": "Create a pharmacy website in 2 minutes",
-  "hero_cta_text": "Create Pharmacy Website",
-  "hero_placeholder": "Describe your pharmacy...",
-  "social_proof": [
-    {
-      "label": "Pharmacy Websites",
-      "value": "3,200+"
-    },
-    {
-      "label": "Pharmacies",
-      "value": "2,100+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.7 out of 5"
-    }
-  ],
+  "meta_title": "Pharmacy Website — Create Online, No Code | Promto",
+  "meta_description": "Create a pharmacy website with product catalog, promotions, and pharmacy map. Professional design without programmers. Try free on Promto.",
+  "h1": "Pharmacy Website — Catalog, Promotions, and Pharmacy Map",
+  "og_title": "Pharmacy Website | Promto",
+  "og_description": "Modern pharmacy website: medication catalog, promotions, pharmacy map, and online reservation. Create without code on Promto.",
+  "hero_title": "Pharmacy Website — Catalog, Promotions, and Pharmacy Map",
+  "hero_subtitle": "Help customers find the right medication and your pharmacy — directly from search.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe the website for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "pill",
-      "title": "Medications",
-      "description": "Block with medication categories"
+      "icon": "star",
+      "title": "Medication Catalog",
+      "description": "Structured catalog with search by name, category, and active ingredient."
     },
     {
-      "icon": "map-pin",
-      "title": "Address",
-      "description": "Address and map"
+      "icon": "trending",
+      "title": "Promotions and Discounts",
+      "description": "Promotions block attracts buyers and increases average receipt at your pharmacy."
+    },
+    {
+      "icon": "globe",
+      "title": "Chain Pharmacy Map",
+      "description": "Customers find the nearest pharmacy with operating hours and contacts."
     },
     {
       "icon": "clock",
-      "title": "Hours",
-      "description": "Operating hours"
+      "title": "Product Reservation",
+      "description": "Customer reserves the needed medication online and picks it up at the nearest pharmacy."
     },
     {
-      "icon": "phone",
-      "title": "Contacts",
-      "description": "Phone and online ordering"
+      "icon": "zap",
+      "title": "Quick Launch",
+      "description": "Pharmacy website ready in 5 minutes — no programmers or complex setup."
+    },
+    {
+      "icon": "shield",
+      "title": "License and Trust",
+      "description": "Section for pharmacy organization license and pharmacist information."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about your pharmacy",
-      "image_url": ""
+      "title": "Describe the Pharmacy or Chain",
+      "description": "Specify addresses, operating hours, and main assortment — AI will create the structure."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Website is generated",
-      "image_url": ""
+      "title": "Add Catalog and Promotions",
+      "description": "Fill in medications, prices, and current promotions through a code-free editor."
     },
     {
       "step": 3,
-      "title": "Publish",
-      "description": "Publish — customers will find you",
-      "image_url": ""
+      "title": "Publish and Attract Buyers",
+      "description": "The site will appear in search and help customers find what they need in your pharmacy."
     }
   ],
   "faq": [
     {
-      "question": "Can I add medications?",
-      "answer": "Yes, medication categories block is created."
+      "question": "Can I create a website for a pharmacy chain with multiple addresses?",
+      "answer": "Yes, add all locations with addresses, operating hours, and contacts in the pharmacy block."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan available."
+      "question": "How do I display the medication catalog?",
+      "answer": "In the editor, add a catalog block — enter medication names, prices, and categories."
+    },
+    {
+      "question": "Can I accept online orders through the site?",
+      "answer": "Product reservation with self-pickup is available. Delivery on paid plans with integration."
+    },
+    {
+      "question": "How do I publish weekly promotions?",
+      "answer": "The promotions section updates in the editor — change content anytime without a developer's help."
+    },
+    {
+      "question": "How much does a pharmacy website cost?",
+      "answer": "Basic website is free. Catalog with large number of items and integrations on paid plans."
+    },
+    {
+      "question": "How will customers find my pharmacy through search?",
+      "answer": "Site optimized for local search: pharmacy name + district/city are indexed by search engines."
     }
   ],
-  "cta_mid_title": "Create a Pharmacy Website",
-  "cta_mid_subtitle": "Get a ready website in 2 minutes",
-  "cta_final_title": "Ready for a Website?",
-  "cta_final_subtitle": "Start free",
-  "cta_final_button_text": "Create Pharmacy Website Free"
+  "cta_mid_title": "Launch Your Pharmacy Website Today",
+  "cta_mid_subtitle": "Customers will find you in search and come for the medications they need.",
+  "cta_final_title": "Your Pharmacy Online",
+  "cta_final_subtitle": "Create a pharmacy website for free: catalog, promotions, and pharmacy map.",
+  "cta_final_button_text": "Create Website Free",
+  "social_proof_data": null,
+  "pricing": null,
+  "examples": null,
+  "reviews": null
 }

@@ -1,86 +1,97 @@
 {
-  "meta_title": "Create Course Website — in 2 Minutes | Promto",
-  "meta_description": "Course website: programs, teachers, enrollment. Create in 2 minutes with AI. Professional design.",
-  "h1": "Create Course Website",
-  "og_title": "Create Course Website — Promto",
-  "og_description": "AI builder creates a course website in 2 minutes.",
-  "hero_title": "Create Course Website",
-  "hero_subtitle": "Create a course website in 2 minutes — with programs and enrollment",
-  "hero_cta_text": "Create Course Website",
-  "hero_placeholder": "Describe your courses...",
-  "social_proof": [
-    {
-      "label": "Course Websites",
-      "value": "8,400+"
-    },
-    {
-      "label": "Courses",
-      "value": "42,000+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.8 out of 5"
-    }
-  ],
+  "meta_title": "Create Course Website Online in 5 Minutes | Promto",
+  "meta_description": "Create a course website with AI in 5 minutes. List programs, prices, accept applications. No code or agency. Try Promto free.",
+  "h1": "Create Course Website Online in 5 Minutes",
+  "og_title": "Course Website Online | Promto",
+  "og_description": "AI will create a course website in 5 minutes: programs, prices, enrollment form. No code or developer. Try Promto.",
+  "hero_title": "Create Course Website Online in 5 Minutes",
+  "hero_subtitle": "Describe your courses — AI will create a site with catalog and enrollment form for students.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe what website you need for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "book",
-      "title": "Programs",
-      "description": "Block with courses and programs"
-    },
-    {
-      "icon": "users",
-      "title": "Teachers",
-      "description": "Teacher and expert pages"
+      "icon": "star",
+      "title": "Program Catalog",
+      "description": "Create course cards with program, schedule, prices, and description — students see everything in one place."
     },
     {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready website in 2 minutes"
+      "title": "Ready in 5 Minutes",
+      "description": "Describe the topic and format of courses — AI instantly creates a site without programming or a designer."
     },
     {
-      "icon": "file-text",
-      "title": "Reviews",
-      "description": "Student reviews block"
+      "icon": "users",
+      "title": "Course Enrollment",
+      "description": "Built-in enrollment form collects student applications — you get contacts and start working."
+    },
+    {
+      "icon": "globe",
+      "title": "Search Visibility",
+      "description": "Site is optimized for queries like \"courses + topic\" — students find you through Google and Yandex."
+    },
+    {
+      "icon": "trending",
+      "title": "Grows With You",
+      "description": "Add new courses, change prices, update programs — the site updates in real time."
+    },
+    {
+      "icon": "check",
+      "title": "Easy Editing",
+      "description": "Edit texts, add images, change information without programming skills."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about courses and teachers",
-      "image_url": ""
+      "title": "Describe Your Courses",
+      "description": "Tell about training directions, format (online/offline), duration, and target audience."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Website with courses and enrollment form",
-      "image_url": ""
+      "title": "AI Creates the Site",
+      "description": "System generates a site with course catalog, program cards, and enrollment form for students."
     },
     {
       "step": 3,
-      "title": "Publish",
-      "description": "Publish and start enrolling",
-      "image_url": ""
+      "title": "Fill in Programs",
+      "description": "Add course descriptions, modules, teachers, and prices — students will see the full picture."
+    },
+    {
+      "step": 4,
+      "title": "Accept Applications",
+      "description": "Publish the site and share the link — start receiving applications from new students."
     }
   ],
   "faq": [
     {
-      "question": "Can I add course programs?",
-      "answer": "Yes, courses block is created."
+      "question": "Can I add multiple course directions on one site?",
+      "answer": "Yes. The catalog supports any number of directions and courses within each — structure as you like."
     },
     {
-      "question": "Is there enrollment form?",
-      "answer": "Yes."
+      "question": "Is there an option to add student reviews?",
+      "answer": "Yes. A reviews section increases trust and conversion. Add screenshots, videos, or text reviews."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan available."
+      "question": "Can I list course instructors?",
+      "answer": "Yes. Add a section with instructor information: photo, experience, student achievements under their guidance."
+    },
+    {
+      "question": "Is the site suitable for programming courses?",
+      "answer": "Yes. Describe languages and technologies, format (intensive, basic course), duration — AI adapts the presentation for IT direction."
+    },
+    {
+      "question": "What is Promto?",
+      "answer": "Promto is an AI website builder. You describe your business, and the system creates a ready site with texts, structure, and design in minutes."
+    },
+    {
+      "question": "How much does it cost to create a course website?",
+      "answer": "You can create a basic site for free. Paid plans unlock custom domain, analytics, and additional integrations."
     }
   ],
-  "cta_mid_title": "Create a Course Website",
-  "cta_mid_subtitle": "Get a ready website in 2 minutes",
-  "cta_final_title": "Ready for a Course Website?",
-  "cta_final_subtitle": "Start free",
-  "cta_final_button_text": "Create Course Website Free"
+  "cta_mid_title": "Launch Your Course Website",
+  "cta_mid_subtitle": "Create a course website in 5 minutes and start accepting applications from students.",
+  "cta_final_title": "Your Course Website is Ready to Launch",
+  "cta_final_subtitle": "AI will create a catalog with programs and enrollment. Free, no code, in 5 minutes.",
+  "cta_final_button_text": "Create Website Free"
 }

@@ -1,90 +1,97 @@
 {
-  "meta_title": "Learning Center Landing Page — Create in 2 Minutes | Promto",
-  "meta_description": "Landing page for learning center: courses, programs, enrollment. Create in 2 minutes with AI. Sales-optimized.",
-  "h1": "Learning Center Landing Page",
-  "og_title": "Learning Center Landing Page — Promto",
-  "og_description": "AI builder creates a learning center landing page in 2 minutes.",
-  "hero_title": "Learning Center Landing Page",
-  "hero_subtitle": "Sales page with courses and enrollment — create in 2 minutes",
-  "hero_cta_text": "Create Landing Page",
-  "hero_placeholder": "Describe your learning center...",
-  "social_proof": [
-    {
-      "label": "Learning Center Landing Pages",
-      "value": "3,400+"
-    },
-    {
-      "label": "Enrollments",
-      "value": "85,000+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.8 out of 5"
-    }
-  ],
+  "meta_title": "Landing Page for Training Center — Create in 5 Minutes | Promto",
+  "meta_description": "Create a training center landing page with AI in 5 minutes. Showcase courses, programs, attract students. No code or agency. Try Promto.",
+  "h1": "Landing Page for Training Center in 5 Minutes",
+  "og_title": "Landing Page for Training Center | Promto",
+  "og_description": "AI will create a training center landing page in 5 minutes: courses, programs, enrollment form. No code. Try Promto.",
+  "hero_title": "Landing Page for Training Center in 5 Minutes",
+  "hero_subtitle": "AI will create a landing page with courses and enrollment form — the training center will start enrolling students.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe what website you need for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "book",
-      "title": "Programs",
-      "description": "Block with courses and pricing"
+      "icon": "star",
+      "title": "Course Catalog",
+      "description": "Place training programs with description, duration, cost, and enrollment form."
     },
     {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready landing page in 2 minutes with course descriptions"
+      "title": "Quick Launch",
+      "description": "Describe the training center and its programs — AI will create a landing page without programming in 5 minutes."
     },
     {
       "icon": "users",
-      "title": "For Teachers",
-      "description": "Suitable for private and corporate centers"
+      "title": "Student Enrollment Form",
+      "description": "Built-in application form allows students to enroll in courses directly from the landing page."
     },
     {
-      "icon": "file-text",
-      "title": "Reviews",
-      "description": "Student reviews block"
+      "icon": "globe",
+      "title": "SEO for Students",
+      "description": "Landing page is optimized for search engines — parents and adult students will find you through Google."
+    },
+    {
+      "icon": "trending",
+      "title": "Grows With the Center",
+      "description": "Add new courses, branches, teachers — landing page scales along with the training center."
+    },
+    {
+      "icon": "shield",
+      "title": "Reliability",
+      "description": "SSL certificate, fast loading, stable operation — the site works anytime without failures."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about courses, teachers, format",
-      "image_url": ""
+      "title": "Describe the Training Center",
+      "description": "Tell about training directions, course formats, target audience, and center's advantages."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Landing page with programs and enrollment form",
-      "image_url": ""
+      "title": "AI Creates Landing Page",
+      "description": "System generates a landing page with course catalog, advantages section, and enrollment form for students."
     },
     {
       "step": 3,
-      "title": "Publish",
-      "description": "Publish and receive applications",
-      "image_url": ""
+      "title": "Fill in Programs",
+      "description": "Add course descriptions, modules, teachers, prices — students will see the complete offering."
+    },
+    {
+      "step": 4,
+      "title": "Attract Students",
+      "description": "Publish the landing page and launch advertising — start enrolling groups for courses."
     }
   ],
   "faq": [
     {
-      "question": "Does it work for driving school?",
-      "answer": "Yes, builder creates landing pages for any learning center."
+      "question": "Can I add training center branches?",
+      "answer": "Yes. Specify addresses and contacts for all branches — information is displayed on the landing page for student convenience."
     },
     {
-      "question": "Can I add schedule?",
-      "answer": "Yes, class schedule block is included."
+      "question": "Is the landing page suitable for business trainings?",
+      "answer": "Yes. Describe the format (corporate/open training), training topics, and target audience — AI adapts the presentation."
     },
     {
-      "question": "Is there enrollment form?",
-      "answer": "Yes, course enrollment form is created."
+      "question": "Can I add graduate reviews?",
+      "answer": "Yes. A reviews section increases trust and conversion. Add screenshots, videos, or text reviews."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan allows creating a basic landing page."
+      "question": "How will students enroll in courses?",
+      "answer": "The enrollment form on the landing page collects applications with student contacts — you receive them and reach out to enroll in the course."
+    },
+    {
+      "question": "What is Promto?",
+      "answer": "Promto is an AI website builder. You describe your business, and the system creates a ready landing page in minutes without code."
+    },
+    {
+      "question": "How much does a training center landing page cost?",
+      "answer": "You can create a basic landing page for free. Paid plans unlock custom domain and extended features."
     }
   ],
-  "cta_mid_title": "Create a Learning Center Landing Page",
-  "cta_mid_subtitle": "Describe your courses — get a sales page in 2 minutes",
-  "cta_final_title": "Ready for a Learning Center Landing Page?",
-  "cta_final_subtitle": "Start free — students will find you",
-  "cta_final_button_text": "Create Landing Page Free"
+  "cta_mid_title": "Attract Students to the Training Center",
+  "cta_mid_subtitle": "Create a landing page in 5 minutes and start enrolling groups for courses today.",
+  "cta_final_title": "Training Center Landing Page is Ready",
+  "cta_final_subtitle": "AI will create a course catalog with enrollment. Free, no code, in 5 minutes.",
+  "cta_final_button_text": "Create Website Free"
 }

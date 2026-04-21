@@ -1,86 +1,97 @@
 {
-  "meta_title": "Create Resume Website — in 2 Minutes | Promto",
-  "meta_description": "Resume website: experience, skills, education. Create in 2 minutes with AI. Professional online resume.",
-  "h1": "Create Resume Website",
-  "og_title": "Create Resume Website — Promto",
-  "og_description": "AI builder creates a resume website in 2 minutes.",
-  "hero_title": "Create Resume Website",
-  "hero_subtitle": "Create an online resume in 2 minutes — showcase your experience",
-  "hero_cta_text": "Create Resume",
-  "hero_placeholder": "Describe your work experience...",
-  "social_proof": [
-    {
-      "label": "Resume Websites",
-      "value": "6,200+"
-    },
-    {
-      "label": "Job Seekers",
-      "value": "12,000+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.8 out of 5"
-    }
-  ],
+  "meta_title": "Create Resume Website Online Free | Promto",
+  "meta_description": "Create a resume website online in 5 minutes with AI. Personal page instead of a boring PDF — impress the employer. Try free.",
+  "h1": "Create Resume Website Online in 5 Minutes",
+  "og_title": "Resume Website Online | Promto",
+  "og_description": "AI will create a resume website in 5 minutes. Personal page that speaks louder than any PDF. No code. Try Promto.",
+  "hero_title": "Create Resume Website Online in 5 Minutes",
+  "hero_subtitle": "Forget PDF resumes — AI will create a page that sets you apart from other candidates.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe what website you need for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "briefcase",
-      "title": "Experience",
-      "description": "Block with work experience"
-    },
-    {
-      "icon": "graduation-cap",
-      "title": "Education",
-      "description": "Education block"
+      "icon": "zap",
+      "title": "Ready in 5 Minutes",
+      "description": "Describe your experience, skills, and achievements — AI will create a personal resume website without a single line of code."
     },
     {
       "icon": "star",
-      "title": "Skills",
-      "description": "Skills block"
+      "title": "Stands Out From the Crowd",
+      "description": "Resume website impresses more than a standard PDF. The employer will remember you."
     },
     {
-      "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready resume in 2 minutes"
+      "icon": "globe",
+      "title": "Easy to Share",
+      "description": "Send the link in a cover letter or include in your resume — the link looks more professional than a file."
+    },
+    {
+      "icon": "award",
+      "title": "Showcases Achievements",
+      "description": "Add metrics, projects, case studies — visualize your experience so the employer immediately sees your value."
+    },
+    {
+      "icon": "clock",
+      "title": "Always Up to Date",
+      "description": "Update your resume in real time — new experience, skills, achievements. No need to recreate the file."
+    },
+    {
+      "icon": "shield",
+      "title": "Safe & Secure",
+      "description": "Site runs on reliable servers with SSL. You control who sees your page."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about your experience",
-      "image_url": ""
+      "title": "Tell About Yourself",
+      "description": "Describe experience, key skills, achievements, and the type of position you're targeting."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Resume website is generated",
-      "image_url": ""
+      "title": "AI Creates Resume",
+      "description": "System generates a personal page with proper structure, presentation, and visual design."
     },
     {
       "step": 3,
-      "title": "Publish",
-      "description": "Publish — share with employers",
-      "image_url": ""
+      "title": "Add Details",
+      "description": "Upload photo, add project links, specify contacts — make the resume come alive."
+    },
+    {
+      "step": 4,
+      "title": "Share with Employer",
+      "description": "Insert the link in your resume or cover letter — and stand out from other candidates."
     }
   ],
   "faq": [
     {
-      "question": "Can I add work experience?",
-      "answer": "Yes, experience block is created."
+      "question": "Why is a resume website better than PDF?",
+      "answer": "Resume website is more interactive, easier to share, looks more modern, and demonstrates the candidate's digital skills. Employers more often click on links than open files."
     },
     {
-      "question": "Can I add education?",
-      "answer": "Yes."
+      "question": "Can I use a resume website for freelancing?",
+      "answer": "Yes, it's an excellent self-presentation tool. Personal page works as a service showcase and portfolio simultaneously."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan available."
+      "question": "Is the resume website visible in search?",
+      "answer": "By default, the site is search-optimized. You can hide it from indexing if you want only people with the link to see it."
+    },
+    {
+      "question": "Can I add a portfolio to the resume page?",
+      "answer": "Yes. Add links to projects, GitHub, Behance, work examples — everything that confirms your experience and skills."
+    },
+    {
+      "question": "What is Promto?",
+      "answer": "Promto is an AI website builder. You describe yourself, and the system creates a personal page with texts and design in minutes."
+    },
+    {
+      "question": "How much does it cost to create a resume website?",
+      "answer": "You can create a resume website for free. Paid plans allow connecting your own domain and removing Promto branding."
     }
   ],
-  "cta_mid_title": "Create a Resume Website",
-  "cta_mid_subtitle": "Get a ready resume in 2 minutes",
-  "cta_final_title": "Ready for a Resume Website?",
-  "cta_final_subtitle": "Start free",
-  "cta_final_button_text": "Create Resume Free"
+  "cta_mid_title": "Stand Out From Other Candidates",
+  "cta_mid_subtitle": "Create a resume website in 5 minutes and make an impression on the employer.",
+  "cta_final_title": "Your Resume Deserves More",
+  "cta_final_subtitle": "Resume website instead of PDF — it's simple, fast, and sets you distinctly apart.",
+  "cta_final_button_text": "Create Website Free"
 }

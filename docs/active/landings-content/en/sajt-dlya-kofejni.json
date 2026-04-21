@@ -1,90 +1,92 @@
 {
-  "meta_title": "Coffee Shop Website — Create in 2 Minutes | Promto",
-  "meta_description": "Coffee shop website: drinks, pastries, atmosphere. Create in 2 minutes with AI. Professional design.",
-  "h1": "Coffee Shop Website",
-  "og_title": "Coffee Shop Website — Promto",
-  "og_description": "AI builder creates a coffee shop website in 2 minutes.",
-  "hero_title": "Coffee Shop Website",
-  "hero_subtitle": "Create a coffee shop website in 2 minutes — with menu and photos",
-  "hero_cta_text": "Create Coffee Shop Website",
-  "hero_placeholder": "Describe your coffee shop...",
-  "social_proof": [
-    {
-      "label": "Coffee Shop Websites",
-      "value": "3,400+"
-    },
-    {
-      "label": "Coffee Shops",
-      "value": "2,100+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.8 out of 5"
-    }
-  ],
+  "meta_title": "Coffee Shop Website — Create Online in 5 Minutes | Promto",
+  "meta_description": "Create a coffee shop website with drinks menu, interior photos, and contacts. Promto AI builder — beautiful, fast, and no coding required.",
+  "h1": "Coffee Shop Website — Cozy and Modern",
+  "og_title": "Coffee Shop Website | Promto AI",
+  "og_description": "Create a coffee shop website with menu, address, and online ordering. Promto AI — professional results in minutes.",
+  "hero_title": "Coffee Shop Website — Cozy and Modern",
+  "hero_subtitle": "Show your menu, atmosphere, and location — create a website in 5 minutes.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe the website for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "coffee",
-      "title": "Drink Menu",
-      "description": "Block with coffee, tea, and pastries"
+      "icon": "zap",
+      "title": "Ready in 5 Minutes",
+      "description": "Describe your coffee shop — AI will create a beautiful website with menu and photos."
     },
     {
-      "icon": "camera",
-      "title": "Photo Gallery",
-      "description": "Interior and drink photos"
+      "icon": "star",
+      "title": "Cozy Design",
+      "description": "Warm templates for coffee shops with emphasis on atmosphere and interior."
     },
     {
-      "icon": "map-pin",
-      "title": "Address",
-      "description": "Block with address and map"
+      "icon": "globe",
+      "title": "Drinks Menu",
+      "description": "Publish coffee, tea, and dessert menus with prices and descriptions."
+    },
+    {
+      "icon": "trending",
+      "title": "SEO for Coffee Shops",
+      "description": "Website will appear in search when people look for a coffee shop in your city."
     },
     {
       "icon": "clock",
-      "title": "Hours",
-      "description": "Opening hours"
+      "title": "Up-to-date Schedule",
+      "description": "Display opening hours — customers always know when to expect you."
+    },
+    {
+      "icon": "shield",
+      "title": "Reliable Hosting",
+      "description": "SSL and stable website operation 24/7 — included in every plan."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe Coffee Shop",
-      "description": "Tell AI about your drinks, pastries, atmosphere",
-      "image_url": ""
+      "title": "Describe Your Coffee Shop",
+      "description": "Tell us about the concept, signature coffee, and atmosphere — AI will understand the style."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Website with menu and gallery is generated",
-      "image_url": ""
+      "title": "AI Creates the Website",
+      "description": "Ready design with menu, contacts, and photos will appear in seconds."
     },
     {
       "step": 3,
       "title": "Publish",
-      "description": "Publish — customers will find you",
-      "image_url": ""
+      "description": "Add photos, enter address, and publish — website goes live immediately."
     }
   ],
   "faq": [
     {
-      "question": "Can I add a full menu?",
-      "answer": "Yes, menu with drinks and food is created."
+      "question": "Can I add a menu with prices for coffee and desserts?",
+      "answer": "Yes, drinks and pastries menus with prices are easily published on the website and updated anytime."
     },
     {
-      "question": "Is there a photo gallery?",
-      "answer": "Yes, photo gallery included."
+      "question": "How will customers find my coffee shop online?",
+      "answer": "Website is SEO-optimized — it will appear in Google and Yandex results for coffee shop queries in your city."
     },
     {
-      "question": "Does it work for a roastery?",
-      "answer": "Yes, builder works for any coffee business."
+      "question": "Is it suitable for a small coffee corner?",
+      "answer": "Yes, the builder works for any format — from a mini coffee corner to a full-fledged establishment."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan available."
+      "question": "Can I show opening hours and address?",
+      "answer": "Of course — a contact block with address, phone, and opening hours is displayed on every page."
+    },
+    {
+      "question": "How much does it cost to create a coffee shop website?",
+      "answer": "You can create a website for free. Paid plans unlock custom domain and advanced features."
+    },
+    {
+      "question": "Will the website work on smartphones?",
+      "answer": "Yes, Promto websites are fully responsive for mobile devices and tablets."
     }
   ],
-  "cta_mid_title": "Create a Coffee Shop Website",
-  "cta_mid_subtitle": "Describe your coffee shop — get a ready website in 2 minutes",
-  "cta_final_title": "Ready for a Coffee Shop Website?",
-  "cta_final_subtitle": "Start free — customers will find you online",
-  "cta_final_button_text": "Create Coffee Shop Website"
+  "cta_mid_title": "Create Your Coffee Shop Website in 5 Minutes",
+  "cta_mid_subtitle": "AI will generate a beautiful design — menu and contacts appear automatically.",
+  "cta_final_title": "Your Coffee Shop Deserves a Website",
+  "cta_final_subtitle": "Launch a cozy website and attract coffee enthusiasts from the internet.",
+  "cta_final_button_text": "Create Website Free"
 }

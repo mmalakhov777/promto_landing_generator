@@ -1,90 +1,96 @@
 {
-  "meta_title": "Clothing Store Landing Page — Create in 2 Minutes | Promto",
-  "meta_description": "Landing page for clothing store: catalog, collection, buy button. Create in 2 minutes. Professional design.",
-  "h1": "Clothing Store Landing Page",
-  "og_title": "Clothing Store Landing Page — Promto",
-  "og_description": "AI builder creates a clothing store landing page in 2 minutes.",
-  "hero_title": "Clothing Store Landing Page",
-  "hero_subtitle": "Sales page with catalog — create in 2 minutes",
-  "hero_cta_text": "Create Landing Page",
-  "hero_placeholder": "Describe what clothing store you want...",
-  "social_proof": [
-    {
-      "label": "Clothing Landing Pages",
-      "value": "6,500+"
-    },
-    {
-      "label": "Sales Boost",
-      "value": "+45% average"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.8 out of 5"
-    }
-  ],
+  "meta_title": "Clothing Store Landing Page — High Sales | Promto",
+  "meta_description": "Create a clothing store landing page: promotions, collections, online order. Attract buyers from ads and social media. Free on Promto.",
+  "h1": "Clothing Store Landing Page — Sell More",
+  "og_title": "Clothing Store Landing Page | Promto",
+  "og_description": "High-converting landing page for clothing stores. New collections, promotions, and online orders. Create without code on Promto.",
+  "hero_title": "Clothing Store Landing Page — Sell More",
+  "hero_subtitle": "Turn visitors from social media and ads into buyers with a sales-focused landing page.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe the website for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "shirt",
-      "title": "With Catalog",
-      "description": "Block with clothing catalog and product cards"
+      "icon": "trending",
+      "title": "Ad Conversion",
+      "description": "Landing page structure optimized for purchasing — fewer distractions, more orders."
+    },
+    {
+      "icon": "star",
+      "title": "Collection Showcase",
+      "description": "Beautiful gallery of new arrivals and bestsellers with photos, prices, and order button."
     },
     {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready landing page in 2 minutes with catalog"
+      "title": "Timed Promotions",
+      "description": "Promotion block with countdown creates urgency and increases conversion."
     },
     {
-      "icon": "camera",
-      "title": "With Gallery",
-      "description": "Photo gallery of collections and models"
+      "icon": "clock",
+      "title": "Quick Order",
+      "description": "Minimum steps from viewing a product to checkout — the buyer doesn't have time to change their mind."
     },
     {
-      "icon": "shopping-bag",
-      "title": "Buy Button",
-      "description": "Link to purchase or cart"
+      "icon": "users",
+      "title": "Customer Reviews",
+      "description": "Photos of customers in your store's clothing and reviews build brand trust."
+    },
+    {
+      "icon": "globe",
+      "title": "Social Media Integration",
+      "description": "Connect Instagram, VK, and Telegram for traffic from social networks."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe Store",
-      "description": "Tell AI about store, clothing style, collections",
-      "image_url": ""
+      "title": "Describe the Collection or Promotion",
+      "description": "Specify the landing page theme — AI will create the structure with the right blocks for clothing."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Landing page with catalog and gallery is generated",
-      "image_url": ""
+      "title": "Upload Product Photos",
+      "description": "Add clothing photos with descriptions, sizes, and prices."
     },
     {
       "step": 3,
-      "title": "Publish",
-      "description": "Publish landing page and start selling",
-      "image_url": ""
+      "title": "Launch Advertising",
+      "description": "Connect the landing page to ads on social media or search and receive orders."
     }
   ],
   "faq": [
     {
-      "question": "Can I add catalog?",
-      "answer": "Yes, product cards with photos and descriptions are created."
+      "question": "How does a clothing landing page differ from a full store?",
+      "answer": "A landing page is one page for a specific collection or promotion. Ideal for ads and social media."
     },
     {
-      "question": "Does it work for secondhand store?",
-      "answer": "Yes, builder creates sites for any clothing store types."
+      "question": "Can I add a size chart to the landing page?",
+      "answer": "Yes, a size chart is a standard block for clothing stores in the Promto editor."
     },
     {
-      "question": "Can I add prices?",
-      "answer": "Yes, prices are specified in product cards."
+      "question": "How do I add customer photos in the clothing?",
+      "answer": "Customer photo block connects to Instagram or uploads manually."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan allows creating a basic landing page."
+      "question": "Can I accept orders through the landing page?",
+      "answer": "Yes, the order form sends requests to email, messenger, or CRM system."
+    },
+    {
+      "question": "How much does a clothing store landing page cost?",
+      "answer": "Creation is free. Publishing on your own domain and additional blocks on paid plans."
+    },
+    {
+      "question": "How quickly can I launch a landing page for a new collection?",
+      "answer": "In 5–15 minutes. Describe the collection, upload photos — the landing page is ready to publish."
     }
   ],
-  "cta_mid_title": "Create a Clothing Store Landing Page",
-  "cta_mid_subtitle": "Describe your collection — get a sales page in 2 minutes",
-  "cta_final_title": "Ready for a Clothing Store Landing Page?",
-  "cta_final_subtitle": "Start free — start selling today",
-  "cta_final_button_text": "Create Landing Page Free"
+  "cta_mid_title": "Create a Clothing Landing Page in 5 Minutes",
+  "cta_mid_subtitle": "Launch advertising and sell the new collection starting today.",
+  "cta_final_title": "Your Collection — a Beautiful Landing Page",
+  "cta_final_subtitle": "Create a clothing store landing page for free on Promto.",
+  "cta_final_button_text": "Create Website Free",
+  "social_proof_data": null,
+  "pricing": null,
+  "examples": null,
+  "reviews": null
 }

@@ -1,90 +1,97 @@
 {
-  "meta_title": "Tutor Website — Create in 2 Minutes | Promto",
-  "meta_description": "Tutor website: subjects, experience, enrollment. Create in 2 minutes with AI. Professional design.",
-  "h1": "Tutor Website",
-  "og_title": "Tutor Website — Promto",
-  "og_description": "AI builder creates a tutor website in 2 minutes.",
-  "hero_title": "Tutor Website",
-  "hero_subtitle": "Create a tutor website in 2 minutes — with subjects and enrollment",
-  "hero_cta_text": "Create Tutor Website",
-  "hero_placeholder": "Describe your tutoring...",
-  "social_proof": [
-    {
-      "label": "Tutor Websites",
-      "value": "9,200+"
-    },
-    {
-      "label": "Tutors",
-      "value": "18,000+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.9 out of 5"
-    }
-  ],
+  "meta_title": "Website for Tutor — Create in 5 Minutes | Promto",
+  "meta_description": "Create a tutor website with AI in 5 minutes. Show subjects, experience, reviews. Attract students without code. Try Promto free.",
+  "h1": "Website for Tutor in 5 Minutes",
+  "og_title": "Website for Tutor | Promto",
+  "og_description": "AI will create a tutor website in 5 minutes: subjects, experience, reviews, enrollment form. No code. Try Promto.",
+  "hero_title": "Website for Tutor in 5 Minutes",
+  "hero_subtitle": "AI will create a personal tutor website — students will find you through search and enroll in lessons.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe what website you need for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "book",
-      "title": "Subjects",
-      "description": "Block with subjects and tutoring areas"
-    },
-    {
-      "icon": "user",
-      "title": "Experience",
-      "description": "Experience and methodology description"
+      "icon": "star",
+      "title": "Your Subjects & Experience",
+      "description": "List subjects, grades, lesson format (online/in-person), and student proficiency levels."
     },
     {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready website in 2 minutes"
+      "title": "Ready in 5 Minutes",
+      "description": "Describe subjects and work format — AI will create a site without programming or a designer in a few minutes."
     },
     {
-      "icon": "calendar",
-      "title": "Schedule",
-      "description": "Conditions and schedule block"
+      "icon": "award",
+      "title": "Professional Look",
+      "description": "Personal website distinguishes a tutor among competitors on classified boards and aggregators."
+    },
+    {
+      "icon": "users",
+      "title": "Enrollment Form",
+      "description": "Students and parents enroll in lessons directly through the site — you get an application with contacts."
+    },
+    {
+      "icon": "globe",
+      "title": "Search Visibility",
+      "description": "Site is optimized for queries like \"tutor + subject + city\" — students find you on Google and Yandex."
+    },
+    {
+      "icon": "check",
+      "title": "Easy to Update",
+      "description": "Change schedule, prices, add student reviews — updates appear on the site instantly."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about subjects and experience",
-      "image_url": ""
+      "title": "Describe Your Services",
+      "description": "List subjects, grades, lesson format, city, and your qualifications as a tutor."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Website with subjects and enrollment form",
-      "image_url": ""
+      "title": "AI Creates the Site",
+      "description": "System generates a personal site with information about you, subjects, experience, and enrollment form."
     },
     {
       "step": 3,
-      "title": "Publish",
-      "description": "Publish — parents and students will find you",
-      "image_url": ""
+      "title": "Add Details",
+      "description": "Upload photo, add education, certifications, student reviews — the site becomes more convincing."
+    },
+    {
+      "step": 4,
+      "title": "Receive Students",
+      "description": "Share the link on social media or classified boards — start receiving lesson applications."
     }
   ],
   "faq": [
     {
-      "question": "Can I specify subjects?",
-      "answer": "Yes, subjects and tuition block."
+      "question": "Can I specify exam preparation (EGE/OGE)?",
+      "answer": "Yes. Add a section for EGE, OGE, olympiad preparation — these are popular queries students use to search for tutors."
     },
     {
-      "question": "Is there enrollment form?",
-      "answer": "Yes, enrollment form is included."
+      "question": "Is the site suitable for a music tutor or other subjects?",
+      "answer": "Yes. The builder adapts to any subject: mathematics, languages, music, programming, exam preparation."
     },
     {
-      "question": "Does it work for university teacher?",
-      "answer": "Yes, builder works for any teacher."
+      "question": "Can I specify online and in-person format?",
+      "answer": "Yes. Specify lesson format — online, in-person, hybrid — and coverage area for in-person lessons."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan allows creating a basic website."
+      "question": "How will students enroll in lessons?",
+      "answer": "Built-in enrollment form allows students to submit an application with name, contact, and request description — you'll get a notification."
+    },
+    {
+      "question": "What is Promto?",
+      "answer": "Promto is an AI website builder. You describe your activity, the system creates a ready site in minutes without code."
+    },
+    {
+      "question": "How much does a tutor website cost?",
+      "answer": "You can create a site for free. Paid plans give custom domain, analytics, and additional features."
     }
   ],
-  "cta_mid_title": "Create a Tutor Website",
-  "cta_mid_subtitle": "Describe your tutoring — get a ready website in 2 minutes",
-  "cta_final_title": "Ready for a Tutor Website?",
-  "cta_final_subtitle": "Start free — students are already looking for you",
-  "cta_final_button_text": "Create Tutor Website Free"
+  "cta_mid_title": "Attract Students Through Your Site",
+  "cta_mid_subtitle": "Create a tutor website in 5 minutes and start receiving lesson applications.",
+  "cta_final_title": "Your Tutor Website is Ready",
+  "cta_final_subtitle": "AI will create a personal site with subjects and enrollment form. Free, no code.",
+  "cta_final_button_text": "Create Website Free"
 }

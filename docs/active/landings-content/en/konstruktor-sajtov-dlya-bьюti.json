@@ -1,90 +1,92 @@
 {
-  "meta_title": "Beauty Website Builder — Create in 2 Minutes | Promto",
-  "meta_description": "Website builder for beauty industry: salons, masters, cosmetology. Create website in 2 minutes. No code.",
-  "h1": "Beauty Industry Website Builder",
-  "og_title": "Beauty Website Builder — Promto",
-  "og_description": "AI builder creates beauty industry website in 2 minutes.",
-  "hero_title": "Beauty Website Builder",
-  "hero_subtitle": "Create a website for salon or master in 2 minutes — no code",
-  "hero_cta_text": "Create Beauty Website",
-  "hero_placeholder": "Describe what website for beauty business you want...",
-  "social_proof": [
-    {
-      "label": "Beauty Websites",
-      "value": "12,000+"
-    },
-    {
-      "label": "Masters",
-      "value": "24,000+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.9 out of 5"
-    }
-  ],
+  "meta_title": "Beauty Industry Website Builder — Promto AI",
+  "meta_description": "AI-powered website builder for the beauty industry. Create a website for a salon, specialist, or barbershop in 5 minutes. No coders or designers needed.",
+  "h1": "Beauty Industry Website Builder — AI-Powered",
+  "og_title": "Beauty Industry Website Builder | Promto AI",
+  "og_description": "Create a website for a salon, specialist, or SPA in the Promto builder. AI design, services, and online booking — in 5 minutes.",
+  "hero_title": "Beauty Industry Website Builder — AI-Powered",
+  "hero_subtitle": "Create a website for any beauty establishment with the Promto AI builder.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe the website for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "sparkles",
-      "title": "Beautiful Design",
-      "description": "Premium design for beauty industry"
-    },
-    {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready website in 2 minutes"
+      "title": "AI Design",
+      "description": "AI-powered builder will select the style and create the website in seconds."
     },
     {
-      "icon": "image",
-      "title": "With Gallery",
-      "description": "Built-in portfolio gallery"
+      "icon": "star",
+      "title": "Beauty Templates",
+      "description": "Ready solutions for salons, specialists, barbershops, and SPAs — tailored to industry specifics."
     },
     {
-      "icon": "calendar",
+      "icon": "users",
       "title": "Online Booking",
-      "description": "Service booking block"
+      "description": "Built-in service booking forms — no intermediaries or commissions."
+    },
+    {
+      "icon": "globe",
+      "title": "Service Catalog",
+      "description": "Price lists, services, and specialists — everything for beauty business on one website."
+    },
+    {
+      "icon": "trending",
+      "title": "SEO for Beauty",
+      "description": "Website ranks in search engines — clients find specialists and salons in the city."
+    },
+    {
+      "icon": "shield",
+      "title": "Reliability",
+      "description": "SSL, fast hosting, and stable operation — included by default."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about your services",
-      "image_url": ""
+      "title": "Select Establishment Type",
+      "description": "Salon, specialist, barbershop, or SPA — AI will adapt the template to your business."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Website is generated",
-      "image_url": ""
+      "title": "Launch AI",
+      "description": "AI will generate structure, texts, and design — with services and booking."
     },
     {
       "step": 3,
-      "title": "Publish",
-      "description": "Publish and accept bookings",
-      "image_url": ""
+      "title": "Customize Details",
+      "description": "Add work photos, prices, and publish — website is ready to welcome clients."
     }
   ],
   "faq": [
     {
-      "question": "Does it work for a private master?",
-      "answer": "Yes, builder creates sites for both large salons and private masters."
+      "question": "How is Promto different from regular builders?",
+      "answer": "Promto uses AI for content generation — you don't need to create texts and design manually. Describe your business and get a ready website."
     },
     {
-      "question": "Can I add photos of work?",
-      "answer": "Yes, portfolio gallery is included."
+      "question": "What types of beauty businesses are supported?",
+      "answer": "The builder is suitable for beauty salons, barbershops, SPAs, nail technicians, cosmetologists, and massage therapists."
     },
     {
-      "question": "Is there online booking?",
-      "answer": "Yes, booking form is created automatically."
+      "question": "Can I add online booking for services?",
+      "answer": "Yes, you can easily set up a booking form on the website — client selects service, specialist, and time."
     },
     {
-      "question": "What services can I list?",
-      "answer": "Any: manicure, pedicure, haircuts, cosmetology, massage, SPA and others."
+      "question": "Do I need a programmer for setup?",
+      "answer": "No, the builder is fully visual — any user without technical knowledge can manage it."
+    },
+    {
+      "question": "How will the website look on mobile devices?",
+      "answer": "All websites are responsive — they automatically adapt to smartphone or tablet screen size."
+    },
+    {
+      "question": "How much does the builder cost?",
+      "answer": "Start for free. Paid plans unlock additional features and the ability to connect your own domain."
     }
   ],
-  "cta_mid_title": "Create a Beauty Business Website",
-  "cta_mid_subtitle": "Describe your services — get a ready website in 2 minutes",
-  "cta_final_title": "Ready for a Beauty Website?",
-  "cta_final_subtitle": "Start free — clients will find you online",
-  "cta_final_button_text": "Create Beauty Website Free"
+  "cta_mid_title": "Create a Website in the Promto Builder",
+  "cta_mid_subtitle": "AI builder does all the work — from design to service catalog.",
+  "cta_final_title": "Your Beauty Business Needs a Website",
+  "cta_final_subtitle": "AI builder — professional results without programmers in 5 minutes.",
+  "cta_final_button_text": "Create Website Free"
 }

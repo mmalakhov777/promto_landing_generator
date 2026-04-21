@@ -1,90 +1,97 @@
 {
-  "meta_title": "Online School Website — Create in 2 Minutes | Promto",
-  "meta_description": "Online school website: courses, programs, enrollment. Create in 2 minutes with AI. Professional design.",
-  "h1": "Online School Website",
-  "og_title": "Online School Website — Promto",
-  "og_description": "AI builder creates an online school website in 2 minutes.",
-  "hero_title": "Online School Website",
-  "hero_subtitle": "Create an online school website in 2 minutes — with courses and enrollment",
-  "hero_cta_text": "Create School Website",
-  "hero_placeholder": "Describe your online school...",
-  "social_proof": [
-    {
-      "label": "Online School Websites",
-      "value": "7,800+"
-    },
-    {
-      "label": "Students",
-      "value": "450,000+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.8 out of 5"
-    }
-  ],
+  "meta_title": "Website for Online School — Create in 5 Minutes | Promto",
+  "meta_description": "Create an online school website with AI in 5 minutes. Courses, programs, enrollment. Attract students without code or agency. Try free.",
+  "h1": "Website for Online School in 5 Minutes",
+  "og_title": "Website for Online School | Promto",
+  "og_description": "AI will create an online school website in 5 minutes: courses, enrollment, training programs. No code. Try Promto.",
+  "hero_title": "Website for Online School in 5 Minutes",
+  "hero_subtitle": "AI will create an online school site with courses and enrollment form — start attracting students.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe what website you need for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "monitor",
-      "title": "Online Learning",
-      "description": "Website optimized for online schools"
-    },
-    {
-      "icon": "book",
-      "title": "Programs",
-      "description": "Block with courses and programs"
+      "icon": "star",
+      "title": "Course Catalog",
+      "description": "Place training programs with descriptions, duration, prices, and enrollment form for each course."
     },
     {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready website in 2 minutes"
+      "title": "Launch in 5 Minutes",
+      "description": "Describe the online school and training directions — AI will create the site without programming or a designer."
     },
     {
       "icon": "users",
-      "title": "For Teachers",
-      "description": "Suitable for experts and private teachers"
+      "title": "Attracts Students",
+      "description": "SEO optimization and enrollment forms help find new students in search and convert them into applications."
+    },
+    {
+      "icon": "globe",
+      "title": "Visible in Search",
+      "description": "Site is optimized for queries like \"online courses\", \"training + topic\" — students will find you on Google."
+    },
+    {
+      "icon": "trending",
+      "title": "Grows With the School",
+      "description": "Add new courses, programs, and teachers — the site scales without limits."
+    },
+    {
+      "icon": "shield",
+      "title": "Reliable Platform",
+      "description": "SSL, fast loading, and stable 24/7 operation — the site works without failures during peak loads."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about courses and format",
-      "image_url": ""
+      "title": "Describe the Online School",
+      "description": "Tell about training directions, target audience, and key courses of your online school."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Website with courses and enrollment form",
-      "image_url": ""
+      "title": "AI Creates the Site",
+      "description": "System generates a site with course catalog, program descriptions, and enrollment form for training."
     },
     {
       "step": 3,
-      "title": "Publish",
-      "description": "Publish and start enrolling students",
-      "image_url": ""
+      "title": "Add Courses",
+      "description": "Fill in course cards: program, duration, price, training format — students will see everything at once."
+    },
+    {
+      "step": 4,
+      "title": "Start Attracting Students",
+      "description": "Publish the site and start promotion — students will enroll through the form on the site."
     }
   ],
   "faq": [
     {
-      "question": "Can I add video courses?",
-      "answer": "Yes, block with video and course links."
+      "question": "Can I place several courses on the site?",
+      "answer": "Yes. The course catalog allows adding any number of training programs with individual cards and prices."
     },
     {
-      "question": "Is there enrollment form?",
-      "answer": "Yes, course enrollment form is created."
+      "question": "Does the site support integration with webinar platforms?",
+      "answer": "You can add links to Zoom, Google Meet, Stepik, and other platforms in course descriptions or on a separate page."
     },
     {
-      "question": "Does it work for tutor?",
-      "answer": "Yes, builder works for both large schools and private tutors."
+      "question": "Can I accept payments through the site?",
+      "answer": "In the basic version, forms collect applications. Payment system integration is available in extended plans."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan allows creating a basic website."
+      "question": "Is the site suitable for a foreign language school?",
+      "answer": "Yes. Describe the teaching language, format (individual/group), intensity — AI adapts the site structure for a language school."
+    },
+    {
+      "question": "What is Promto?",
+      "answer": "Promto is an AI website builder. You describe your business, and the system creates a ready site with texts, structure, and design in minutes."
+    },
+    {
+      "question": "How much does an online school website cost?",
+      "answer": "You can create a site for free. Paid plans add custom domain, extended analytics, and additional features."
     }
   ],
-  "cta_mid_title": "Create an Online School Website",
-  "cta_mid_subtitle": "Describe your courses — get a ready website in 2 minutes",
-  "cta_final_title": "Ready for an Online School Website?",
-  "cta_final_subtitle": "Start free — students are already looking for you",
-  "cta_final_button_text": "Create School Website Free"
+  "cta_mid_title": "Attract Students to Your Courses",
+  "cta_mid_subtitle": "Create an online school website in 5 minutes and start enrolling students today.",
+  "cta_final_title": "Your Online School Website is Ready",
+  "cta_final_subtitle": "AI will create a course catalog with enrollment. Free, no code, in 5 minutes.",
+  "cta_final_button_text": "Create Website Free"
 }

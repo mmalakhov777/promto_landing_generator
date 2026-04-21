@@ -1,90 +1,92 @@
 {
-  "meta_title": "Beauty Master Landing Page — Create in 2 Minutes | Promto",
-  "meta_description": "Landing page for beauty master: manicure, hairstylist, cosmetology. Create in 2 minutes. Professional design.",
-  "h1": "Beauty Master Landing Page",
-  "og_title": "Beauty Master Landing Page — Promto",
-  "og_description": "AI builder creates a beauty master landing page in 2 minutes.",
-  "hero_title": "Beauty Master Landing Page",
-  "hero_subtitle": "Sales page for nail tech, stylist, or cosmetologist",
-  "hero_cta_text": "Create Landing Page",
-  "hero_placeholder": "Describe what services you offer...",
-  "social_proof": [
-    {
-      "label": "Beauty Landing Pages",
-      "value": "9,800+"
-    },
-    {
-      "label": "Leads Received",
-      "value": "340,000+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.9 out of 5"
-    }
-  ],
+  "meta_title": "Beauty Specialist Landing Page — Create in 5 Minutes | Promto",
+  "meta_description": "Create a landing page for a beauty specialist with portfolio, services, and online booking. Promto AI builder — conversion-focused landing page in minutes.",
+  "h1": "Beauty Specialist Landing Page — with Portfolio",
+  "og_title": "Beauty Specialist Landing Page | Promto AI",
+  "og_description": "Create a landing page for a beauty specialist: portfolio, services, and online booking. Promto AI — ready landing page in 5 minutes.",
+  "hero_title": "Beauty Specialist Landing Page — with Portfolio",
+  "hero_subtitle": "AI will create a conversion-focused landing page for a beauty specialist with portfolio and booking.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe the website for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "image",
-      "title": "With Portfolio",
-      "description": "Before/after gallery to attract clients"
-    },
-    {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready landing page in 2 minutes — with portfolio"
+      "title": "Ready in 5 Minutes",
+      "description": "Describe your services — AI will generate a landing page with portfolio and design in seconds."
     },
     {
       "icon": "star",
-      "title": "Sales-Ready",
-      "description": "Structure optimized for conversion"
+      "title": "Conversion-Focused Structure",
+      "description": "Landing page is designed to increase bookings and requests from clients."
     },
     {
-      "icon": "phone",
+      "icon": "users",
       "title": "Online Booking",
-      "description": "Booking button and messenger link"
+      "description": "Service booking form right on the page — client books in a minute."
+    },
+    {
+      "icon": "globe",
+      "title": "Portfolio",
+      "description": "Gallery of the specialist's best work — before and after photos, service examples."
+    },
+    {
+      "icon": "trending",
+      "title": "SEO Optimization",
+      "description": "Landing page ranks in search engines — clients find the specialist in their city."
+    },
+    {
+      "icon": "shield",
+      "title": "Reliable Hosting",
+      "description": "SSL and fast loading — website works stably on any device."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe Services",
-      "description": "Tell AI about your services and style",
-      "image_url": ""
+      "title": "Describe Your Services",
+      "description": "Specialization, services, prices, and portfolio — AI will understand your niche."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Sales landing page with portfolio and booking form",
-      "image_url": ""
+      "title": "AI Creates the Landing Page",
+      "description": "Ready page with portfolio, services, and booking form will appear in seconds."
     },
     {
       "step": 3,
-      "title": "Get Leads",
-      "description": "Publish and start receiving client inquiries",
-      "image_url": ""
+      "title": "Publish",
+      "description": "Add real work photos, set prices, and launch the landing page."
     }
   ],
   "faq": [
     {
-      "question": "Does it work for nail technician?",
-      "answer": "Yes, builder creates landing pages for any beauty masters."
+      "question": "Why is a landing page better than a full website for a specialist?",
+      "answer": "A landing page is a single-page website focused on one key action: booking a service. For specialists, this is the ideal format."
     },
     {
-      "question": "Can I add photos of work?",
-      "answer": "Yes, gallery with photos is included."
+      "question": "Can I show a portfolio of work on the landing page?",
+      "answer": "Yes, the gallery allows adding specialist work photos — examples of nail art, haircuts, or skincare treatments."
     },
     {
-      "question": "Is there booking button?",
-      "answer": "Yes, online booking button or messenger link."
+      "question": "How does online booking work on the landing page?",
+      "answer": "The booking form allows the client to select service and convenient time — request comes to you by email."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan allows creating a basic landing page."
+      "question": "Will the landing page appear in search engines?",
+      "answer": "Yes, landing pages are SEO-optimized and indexed by Google and Yandex."
+    },
+    {
+      "question": "Can I change the design after creation?",
+      "answer": "Yes, in the editor you can change texts, photos, colors, and block order."
+    },
+    {
+      "question": "How much does it cost to create a specialist landing page?",
+      "answer": "You can create a landing page for free. Paid plans give access to domain and additional features."
     }
   ],
-  "cta_mid_title": "Create a Landing Page for Master",
-  "cta_mid_subtitle": "Describe your services — get a sales page in 2 minutes",
-  "cta_final_title": "Ready for a Master Landing Page?",
-  "cta_final_subtitle": "Start free — receive client inquiries",
-  "cta_final_button_text": "Create Landing Page Free"
+  "cta_mid_title": "Create a Beauty Specialist Landing Page",
+  "cta_mid_subtitle": "AI will generate a conversion-focused page with portfolio and booking — in 5 minutes.",
+  "cta_final_title": "More Bookings Through Landing Page",
+  "cta_final_subtitle": "Create a landing page with portfolio and online booking — start receiving requests today.",
+  "cta_final_button_text": "Create Website Free"
 }

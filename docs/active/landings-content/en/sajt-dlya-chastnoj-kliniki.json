@@ -1,86 +1,96 @@
 {
-  "meta_title": "Private Clinic Website — Create in 2 Minutes | Promto",
-  "meta_description": "Private clinic website: services, doctors, appointment. Create in 2 minutes with AI. Professional design.",
-  "h1": "Private Clinic Website",
-  "og_title": "Private Clinic Website — Promto",
-  "og_description": "AI builder creates a private clinic website in 2 minutes.",
-  "hero_title": "Private Clinic Website",
-  "hero_subtitle": "Create a private clinic website in 2 minutes",
-  "hero_cta_text": "Create Clinic Website",
-  "hero_placeholder": "Describe your private clinic...",
-  "social_proof": [
-    {
-      "label": "Private Clinic Websites",
-      "value": "4,200+"
-    },
-    {
-      "label": "Private Clinics",
-      "value": "2,600+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.8 out of 5"
-    }
-  ],
+  "meta_title": "Private Clinic Website — Create in 5 Minutes | Promto",
+  "meta_description": "Create a private clinic website: online booking, doctors, licenses, pricing. Professional results without programmers. Try free.",
+  "h1": "Private Clinic Website — Trust and Online Booking",
+  "og_title": "Private Clinic Website | Promto",
+  "og_description": "Modern private clinic website with online booking, doctor team, and price list. Launch with no code on Promto.",
+  "hero_title": "Private Clinic Website — Trust and Online Booking",
+  "hero_subtitle": "Stand out from competitors and attract paying patients through the internet.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe the website for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "stethoscope",
-      "title": "Services",
-      "description": "Block with medical services"
+      "icon": "award",
+      "title": "Premium Appearance",
+      "description": "Private clinic design reflects high-level service and builds trust with affluent patients."
     },
     {
-      "icon": "user-md",
-      "title": "Doctors",
-      "description": "Doctor pages"
-    },
-    {
-      "icon": "calendar",
-      "title": "Appointment",
-      "description": "Online booking"
+      "icon": "users",
+      "title": "Team of Specialists",
+      "description": "Doctor cards with photos, education, and experience convince patients to book with you."
     },
     {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready website in 2 minutes"
+      "title": "Quick Launch",
+      "description": "Website ready in 5 minutes. Describe your clinic — AI creates a complete site with copy and structure."
+    },
+    {
+      "icon": "shield",
+      "title": "Licenses and Documents",
+      "description": "Dedicated section for licenses, certificates, and legal information in compliance with regulations."
+    },
+    {
+      "icon": "clock",
+      "title": "24/7 Online Booking",
+      "description": "Patients can book anytime — the form works without your involvement."
+    },
+    {
+      "icon": "globe",
+      "title": "Search Visibility",
+      "description": "SEO optimization for your city and specialties drives organic traffic."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about your clinic",
-      "image_url": ""
+      "title": "Describe Your Clinic",
+      "description": "Specify specialties, services, and advantages — AI will generate the structure and content."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Website is generated",
-      "image_url": ""
+      "title": "Customize Details",
+      "description": "Add doctors, photos, pricing, and contacts through an intuitive editor."
     },
     {
       "step": 3,
-      "title": "Publish",
-      "description": "Publish — patients will find you",
-      "image_url": ""
+      "title": "Launch and Attract Patients",
+      "description": "Publish the site — it will immediately start generating inquiries from new patients."
     }
   ],
   "faq": [
     {
-      "question": "Can I add services?",
-      "answer": "Yes."
+      "question": "How does a private clinic website differ from a government clinic?",
+      "answer": "Emphasis on service, doctor qualifications, comfort, and transparent pricing. Promto helps convey these advantages."
     },
     {
-      "question": "Is there booking?",
-      "answer": "Yes."
+      "question": "How do I display the price list on the site?",
+      "answer": "Add a pricing block in the editor, fill in services and prices — they'll display immediately for patients."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan available."
+      "question": "Can I accept payments through the website?",
+      "answer": "Yes, paid plans include integration with payment systems for online payments."
+    },
+    {
+      "question": "How do I ensure patient data privacy?",
+      "answer": "Promto generates a privacy policy and uses secure connections for data transmission."
+    },
+    {
+      "question": "Do I need a programmer to launch the site?",
+      "answer": "No. The entire process — from creation to publishing — is code-free."
+    },
+    {
+      "question": "How much does website maintenance cost?",
+      "answer": "Basic website is free. Advanced features and custom domain are on paid plans at an affordable price."
     }
   ],
-  "cta_mid_title": "Create a Private Clinic Website",
-  "cta_mid_subtitle": "Get a ready website in 2 minutes",
-  "cta_final_title": "Ready for a Website?",
-  "cta_final_subtitle": "Start free",
-  "cta_final_button_text": "Create Website Free"
+  "cta_mid_title": "Create Your Private Clinic Website Today",
+  "cta_mid_subtitle": "Professional online presence is the key to earning new patients' trust.",
+  "cta_final_title": "Your Private Clinic Deserves a Better Website",
+  "cta_final_subtitle": "Launch your private clinic website for free and attract patients from search.",
+  "cta_final_button_text": "Create Website Free",
+  "social_proof_data": null,
+  "pricing": null,
+  "examples": null,
+  "reviews": null
 }

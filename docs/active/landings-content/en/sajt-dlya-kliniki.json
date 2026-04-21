@@ -1,90 +1,96 @@
 {
-  "meta_title": "Clinic Website — Create in 2 Minutes | Promto",
-  "meta_description": "Clinic website: services, doctors, appointment. Create in 2 minutes with AI. Professional medical design.",
-  "h1": "Clinic Website",
-  "og_title": "Clinic Website — Promto",
-  "og_description": "AI builder creates a clinic website in 2 minutes.",
-  "hero_title": "Clinic Website",
-  "hero_subtitle": "Create a clinic website in 2 minutes — with services and doctors",
-  "hero_cta_text": "Create Clinic Website",
-  "hero_placeholder": "Describe your clinic...",
-  "social_proof": [
-    {
-      "label": "Clinic Websites",
-      "value": "8,600+"
-    },
-    {
-      "label": "Clinics",
-      "value": "5,200+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.8 out of 5"
-    }
-  ],
+  "meta_title": "Clinic Website — Create in 5 Minutes | Promto",
+  "meta_description": "Build a professional clinic website without coders. Patient booking, doctor profiles, schedules. Try free on Promto.",
+  "h1": "Clinic Website — Fast and Professional",
+  "og_title": "Clinic Website | Promto",
+  "og_description": "Professional clinic website with online booking, doctor schedules, and patient reviews. Create in 5 minutes, no code required.",
+  "hero_title": "Clinic Website — Fast and Professional",
+  "hero_subtitle": "Attract patients and accept online bookings today. No programmers needed.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe the website for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "stethoscope",
-      "title": "Services",
-      "description": "Block with medical services"
+      "icon": "zap",
+      "title": "Ready in 5 Minutes",
+      "description": "Describe your clinic — Promto will generate a complete website with sections, copy, and structure."
     },
     {
-      "icon": "user-md",
-      "title": "Doctors",
-      "description": "Doctor pages with experience"
+      "icon": "users",
+      "title": "Online Patient Booking",
+      "description": "Built-in booking form lets patients choose their doctor and time without calling the reception desk."
     },
     {
-      "icon": "calendar",
-      "title": "Appointment",
-      "description": "Online appointment form"
+      "icon": "shield",
+      "title": "Medical-Grade Design",
+      "description": "Clean, trustworthy design that meets patient expectations and medical industry standards."
     },
     {
-      "icon": "map-pin",
-      "title": "Address",
-      "description": "Address and map block"
+      "icon": "globe",
+      "title": "SEO for Clinics",
+      "description": "Website optimized for search queries in your city and clinic specialties."
+    },
+    {
+      "icon": "star",
+      "title": "Doctor Profiles",
+      "description": "Display photos, specialties, experience, and reviews — patients choose their doctor with confidence."
+    },
+    {
+      "icon": "clock",
+      "title": "Schedule and Hours",
+      "description": "Current appointment schedule and operating hours are always available to patients on the site."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about your clinic and services",
-      "image_url": ""
+      "title": "Describe Your Clinic",
+      "description": "Enter the name, specialties, and services list — AI will create the website structure."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Website with services and doctors is generated",
-      "image_url": ""
+      "title": "Customize Content",
+      "description": "Add doctors, schedules, photos, and contacts through a simple editor."
     },
     {
       "step": 3,
-      "title": "Publish",
-      "description": "Publish — patients will find you",
-      "image_url": ""
+      "title": "Publish Your Site",
+      "description": "Choose a domain and launch — it's already ready to accept patients."
     }
   ],
   "faq": [
     {
-      "question": "Can I add medical services?",
-      "answer": "Yes, services block is created."
+      "question": "Can I add online booking to the clinic website?",
+      "answer": "Yes, the online booking form connects in one click. The patient selects a doctor, date, and time, and you receive a notification."
     },
     {
-      "question": "Is there appointment form?",
-      "answer": "Yes, online appointment form."
+      "question": "How do I display doctor schedules?",
+      "answer": "The editor has a dedicated schedule block. You specify the days and hours for each doctor's appointments."
     },
     {
-      "question": "Does it work for private clinic?",
-      "answer": "Yes, builder works for any medical facility."
+      "question": "Is the website suitable for a multi-specialty clinic?",
+      "answer": "Yes, you can create sections for each department: therapy, surgery, dentistry, and more."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan available."
+      "question": "Does the website meet requirements for medical organizations?",
+      "answer": "The site includes all necessary sections: licenses, privacy policy, contacts, and legal information."
+    },
+    {
+      "question": "How much does it cost to create a clinic website on Promto?",
+      "answer": "Start for free. Paid plans unlock additional features: custom domain, advanced analytics, and priority support."
+    },
+    {
+      "question": "Are coding skills required?",
+      "answer": "No. Promto works completely code-free — you describe the website in words, and AI generates the result."
     }
   ],
-  "cta_mid_title": "Create a Clinic Website",
-  "cta_mid_subtitle": "Describe your clinic — get a ready website in 2 minutes",
-  "cta_final_title": "Ready for a Clinic Website?",
-  "cta_final_subtitle": "Start free",
-  "cta_final_button_text": "Create Clinic Website Free"
+  "cta_mid_title": "Launch Your Clinic Website Today",
+  "cta_mid_subtitle": "First patients from the internet within hours of publishing.",
+  "cta_final_title": "Your Clinic Deserves a Better Website",
+  "cta_final_subtitle": "Create a professional clinic website for free right now.",
+  "cta_final_button_text": "Create Website Free",
+  "social_proof_data": null,
+  "pricing": null,
+  "examples": null,
+  "reviews": null
 }

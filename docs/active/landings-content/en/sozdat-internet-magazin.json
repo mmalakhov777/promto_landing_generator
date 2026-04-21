@@ -1,90 +1,96 @@
 {
-  "meta_title": "Create Online Store — in 2 Minutes, No Code | Promto",
-  "meta_description": "Create an online store in 2 minutes with Promto AI builder. No code, no experience. Try free.",
-  "h1": "Create Online Store",
-  "og_title": "Create Online Store — Promto",
-  "og_description": "AI builder creates an online store in 2 minutes without programming.",
-  "hero_title": "Create Online Store",
-  "hero_subtitle": "Create an online store in 2 minutes — with catalog and payment",
-  "hero_cta_text": "Create Store",
-  "hero_placeholder": "Describe what online store you want to create...",
-  "social_proof": [
-    {
-      "label": "Online Stores",
-      "value": "11,000+"
-    },
-    {
-      "label": "Products",
-      "value": "1.8M+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.8 out of 5"
-    }
-  ],
+  "meta_title": "Create Online Store Free — No Code | Promto",
+  "meta_description": "Create an online store quickly and free: product catalog, online payment, delivery. No programmers. Start selling today on Promto.",
+  "h1": "Create Online Store — Fast, Free, No Code",
+  "og_title": "Create Online Store | Promto",
+  "og_description": "Create an online store in 5 minutes: catalog, cart, payment, and delivery. No code or programmers. Try free.",
+  "hero_title": "Create Online Store — Fast, Free, No Code",
+  "hero_subtitle": "Describe your store — AI will create a ready website with catalog and order processing.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe the website for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "shopping-cart",
-      "title": "Full Store",
-      "description": "Catalog, product cards, cart, payment"
-    },
-    {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready store in 2 minutes"
+      "title": "Creation in 5 Minutes",
+      "description": "Enter a store description — AI automatically creates the structure, copy, and design."
     },
     {
-      "icon": "credit-card",
-      "title": "Online Payment",
-      "description": "Popular payment methods"
+      "icon": "trending",
+      "title": "Sales From Day One",
+      "description": "Online payment, cart, and checkout work immediately after launch."
     },
     {
-      "icon": "truck",
-      "title": "Delivery",
-      "description": "Delivery conditions"
+      "icon": "star",
+      "title": "Convenient Catalog",
+      "description": "Categories, filters, product photos, and quick search — customers easily find what they need."
+    },
+    {
+      "icon": "globe",
+      "title": "SEO Promotion",
+      "description": "Product pages optimized for search — customers find you on Yandex and Google."
+    },
+    {
+      "icon": "clock",
+      "title": "Order Automation",
+      "description": "Customer notifications, order history, and status management — all automatic."
+    },
+    {
+      "icon": "shield",
+      "title": "Reliability and Security",
+      "description": "Secure payments, SSL, and data backup — your store is always operational."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about your products and categories",
-      "image_url": ""
+      "title": "Describe Your Store",
+      "description": "Tell us what you're selling — AI will create the structure, design, and copy for the store."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Store with catalog is generated automatically",
-      "image_url": ""
+      "title": "Add Products and Configure Payment",
+      "description": "Upload products, set prices, and connect a convenient payment system."
     },
     {
       "step": 3,
-      "title": "Configure and Sell",
-      "description": "Add prices, payment and delivery methods",
-      "image_url": ""
+      "title": "Launch and Sell",
+      "description": "Publish the store — promote on social media and search and receive orders."
     }
   ],
   "faq": [
     {
-      "question": "Can I create a store for free?",
-      "answer": "Yes, free plan allows creating a basic store."
+      "question": "How long does it take to create an online store?",
+      "answer": "Basic version with catalog and payment — from 5 to 30 minutes depending on the number of products."
     },
     {
-      "question": "What payment methods?",
-      "answer": "Popular payment methods for your region."
+      "question": "Are technical skills required to create a store?",
+      "answer": "No. The entire process is code-free: describe the store, configure through the editor, and publish."
     },
     {
-      "question": "Do I need coding?",
-      "answer": "No, everything is visual."
+      "question": "How do I add many products quickly?",
+      "answer": "Upload an Excel spreadsheet with products — Promto imports them into the catalog automatically."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free to start. Paid plans from $5.99/mo."
+      "question": "Can I migrate an existing store to Promto?",
+      "answer": "Yes, we help import products and data from popular platforms."
+    },
+    {
+      "question": "How do I promote the store in search?",
+      "answer": "SEO optimization is built-in: meta tags, structured data, and fast page loading."
+    },
+    {
+      "question": "How much does it cost to create and maintain a store?",
+      "answer": "Free to start. Advanced features and custom domain on affordable paid plans."
     }
   ],
-  "cta_mid_title": "Create an Online Store Today",
-  "cta_mid_subtitle": "Describe your products — get a ready store in 2 minutes",
-  "cta_final_title": "Ready for Your Own Online Store?",
-  "cta_final_subtitle": "Start free — sell today",
-  "cta_final_button_text": "Create Store Free"
+  "cta_mid_title": "Create Your Online Store Now",
+  "cta_mid_subtitle": "No code, no programmers — your store will be operational today.",
+  "cta_final_title": "Open an Online Store for Free",
+  "cta_final_subtitle": "Create an online store on Promto and start selling with no investment.",
+  "cta_final_button_text": "Create Website Free",
+  "social_proof_data": null,
+  "pricing": null,
+  "examples": null,
+  "reviews": null
 }

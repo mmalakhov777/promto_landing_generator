@@ -1,90 +1,92 @@
 {
-  "meta_title": "Massage Studio Website — Create in 2 Minutes | Promto",
-  "meta_description": "Massage studio website: services, therapists, booking. Create in 2 minutes with AI. Professional design.",
-  "h1": "Massage Studio Website",
-  "og_title": "Massage Studio Website — Promto",
-  "og_description": "AI builder creates a massage studio website in 2 minutes.",
-  "hero_title": "Massage Studio Website",
-  "hero_subtitle": "Create a massage studio website in 2 minutes",
-  "hero_cta_text": "Create Massage Website",
-  "hero_placeholder": "Describe your massage studio...",
-  "social_proof": [
-    {
-      "label": "Massage Websites",
-      "value": "3,600+"
-    },
-    {
-      "label": "Studios",
-      "value": "2,100+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.8 out of 5"
-    }
-  ],
+  "meta_title": "Massage Therapy Website — Create in 5 Minutes | Promto",
+  "meta_description": "Create a massage therapy website with services, prices, and online booking. Promto AI builder — beautiful, fast, and no coding required.",
+  "h1": "Massage Therapy Website — with Booking",
+  "og_title": "Massage Therapy Website | Promto AI",
+  "og_description": "Create a massage therapy website: service catalog, prices, and online booking. Promto AI — in 5 minutes.",
+  "hero_title": "Massage Therapy Website — with Booking",
+  "hero_subtitle": "AI will create a website for your massage therapy practice with services and online booking.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe the website for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "hand",
-      "title": "Massage Services",
-      "description": "Block with massage types and pricing"
-    },
-    {
-      "icon": "user",
-      "title": "Therapists",
-      "description": "Specialist pages with description"
-    },
-    {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready website in 2 minutes"
+      "title": "Ready in 5 Minutes",
+      "description": "Describe your massage practice — AI will create a website with services and design in seconds."
     },
     {
-      "icon": "calendar",
-      "title": "Booking",
-      "description": "Session booking form"
+      "icon": "star",
+      "title": "Relaxing Design",
+      "description": "Soft, calm templates for massage therapy with relaxation atmosphere."
+    },
+    {
+      "icon": "users",
+      "title": "Online Booking",
+      "description": "Clients book massages directly from the website — no phone calls needed."
+    },
+    {
+      "icon": "globe",
+      "title": "Service Catalog",
+      "description": "Types of massage with descriptions, duration, and prices — easy to update."
+    },
+    {
+      "icon": "trending",
+      "title": "SEO for Practice",
+      "description": "Website ranks in search engines — clients find the massage practice in the city."
+    },
+    {
+      "icon": "shield",
+      "title": "Reliable Hosting",
+      "description": "SSL and stable 24/7 operation — included in every plan."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about your services and specialists",
-      "image_url": ""
+      "title": "Describe Your Practice",
+      "description": "Types of massage, specialists, atmosphere — AI will understand the concept."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Website with services, prices, and booking form",
-      "image_url": ""
+      "title": "AI Creates the Website",
+      "description": "Ready website with service catalog, prices, and booking form will appear in seconds."
     },
     {
       "step": 3,
       "title": "Publish",
-      "description": "Publish — clients will find you",
-      "image_url": ""
+      "description": "Add interior photos, set prices, and launch — clients are already looking for you."
     }
   ],
   "faq": [
     {
-      "question": "Can I add massage types?",
-      "answer": "Yes, services and pricing block is created."
+      "question": "Can I display all types of massage with prices on the website?",
+      "answer": "Yes, a service catalog with descriptions of each massage type, duration, and price is easily added."
     },
     {
-      "question": "Is there booking form?",
-      "answer": "Yes, online booking form."
+      "question": "How will clients book massages?",
+      "answer": "Built-in booking form allows selecting massage type, specialist, and convenient time — request comes to you."
     },
     {
-      "question": "Does it work for SPA?",
-      "answer": "Yes, builder creates sites for any massage services."
+      "question": "Is it suitable for a practice with multiple massage therapists?",
+      "answer": "Yes, you can add therapist profiles with their specializations and work experience."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan allows creating a basic website."
+      "question": "Will the practice appear in search results?",
+      "answer": "Yes, websites are SEO-optimized — the practice will appear in city search results."
+    },
+    {
+      "question": "How much does it cost to create a massage therapy website?",
+      "answer": "You can create a website for free. Paid plans unlock custom domain and advanced features."
+    },
+    {
+      "question": "Can I add interior photos and therapist certifications?",
+      "answer": "Yes, the gallery allows showing the practice interior, equipment, and therapist diplomas."
     }
   ],
-  "cta_mid_title": "Create a Massage Studio Website",
-  "cta_mid_subtitle": "Describe your services — get a ready website in 2 minutes",
-  "cta_final_title": "Ready for a Massage Website?",
-  "cta_final_subtitle": "Start free — clients will find you online",
-  "cta_final_button_text": "Create Massage Website Free"
+  "cta_mid_title": "Create Your Massage Therapy Website",
+  "cta_mid_subtitle": "AI will generate a website with service catalog and online booking — in 5 minutes.",
+  "cta_final_title": "Your Practice Needs a Website",
+  "cta_final_subtitle": "Attract clients from the internet — create a website in 5 minutes without programmers.",
+  "cta_final_button_text": "Create Website Free"
 }

@@ -1,90 +1,97 @@
 {
-  "meta_title": "Photographer Website — Create in 2 Minutes | Promto",
-  "meta_description": "Photographer website: portfolio, services, booking. Create in 2 minutes with AI. Professional design.",
-  "h1": "Photographer Website",
-  "og_title": "Photographer Website — Promto",
-  "og_description": "AI builder creates a photographer website in 2 minutes.",
-  "hero_title": "Photographer Website",
-  "hero_subtitle": "Create a photographer website in 2 minutes — with portfolio",
-  "hero_cta_text": "Create Photographer Website",
-  "hero_placeholder": "Describe your photography style...",
-  "social_proof": [
-    {
-      "label": "Photographer Websites",
-      "value": "12,400+"
-    },
-    {
-      "label": "Photographers",
-      "value": "18,000+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.9 out of 5"
-    }
-  ],
+  "meta_title": "Website for Photographer — Create in 5 Minutes | Promto",
+  "meta_description": "Create a photographer website with AI in 5 minutes. Beautiful gallery, booking form, SEO optimization. Attract clients for shoots. Try free.",
+  "h1": "Website for Photographer in 5 Minutes",
+  "og_title": "Website for Photographer | Promto",
+  "og_description": "AI will create a photographer website in 5 minutes: gallery, portfolio, booking form. Attract clients for shoots without code.",
+  "hero_title": "Website for Photographer in 5 Minutes",
+  "hero_subtitle": "AI will create a site with gallery and booking form — start accepting orders today.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe what website you need for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "camera",
-      "title": "Portfolio",
-      "description": "Photo gallery with best works"
-    },
-    {
-      "icon": "image",
-      "title": "Albums",
-      "description": "Organized photo albums"
-    },
-    {
-      "icon": "calendar",
-      "title": "Booking",
-      "description": "Shooting booking form"
+      "icon": "star",
+      "title": "Beautiful Work Gallery",
+      "description": "Showcase your best photos in a professional gallery with masonry grid and lightbox viewer."
     },
     {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready website in 2 minutes"
+      "title": "Quick Launch",
+      "description": "Photographer website ready in 5 minutes: describe your style and specialization — AI will do the rest."
+    },
+    {
+      "icon": "users",
+      "title": "Photo Session Booking Form",
+      "description": "Built-in inquiry form allows clients to easily contact you and book a photo session date."
+    },
+    {
+      "icon": "globe",
+      "title": "Visible in Search",
+      "description": "SEO optimization helps clients find you by queries like \"photographer + city\" on Google and Yandex."
+    },
+    {
+      "icon": "trending",
+      "title": "Price List & Services",
+      "description": "Place service packages and prices right on the site — clients know the cost upfront and come prepared."
+    },
+    {
+      "icon": "shield",
+      "title": "Fast Photo Loading",
+      "description": "Automatic image optimization — the site loads fast even with dozens of photos in the gallery."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about your photography style",
-      "image_url": ""
+      "title": "Describe Your Specialization",
+      "description": "Tell what shoots you do — weddings, portraits, commercial photography, event coverage."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Website with portfolio is generated",
-      "image_url": ""
+      "title": "AI Creates the Site",
+      "description": "System generates a site with gallery, services section, pricing, and booking form tailored for photographers."
     },
     {
       "step": 3,
-      "title": "Publish",
-      "description": "Publish — clients will book you",
-      "image_url": ""
+      "title": "Upload Photos",
+      "description": "Add your best work from your portfolio — these become the main argument for clients."
+    },
+    {
+      "step": 4,
+      "title": "Receive Inquiries",
+      "description": "Publish the site, add to social media, and start receiving inquiries from new clients."
     }
   ],
   "faq": [
     {
-      "question": "Can I add photo albums?",
-      "answer": "Yes, organized photo galleries are included."
+      "question": "What photography genres does the photographer template support?",
+      "answer": "AI adapts the site for any specialization: wedding, children, portrait, product, commercial photography, event coverage, and other genres."
     },
     {
-      "question": "Does it work for wedding photographer?",
-      "answer": "Yes, builder works for any photography type."
+      "question": "Can I place a price list on the photographer's website?",
+      "answer": "Yes. You can add a section with service packages and prices — this reduces questions and speeds up client decision-making."
     },
     {
-      "question": "Is there booking?",
-      "answer": "Yes, booking form is included."
+      "question": "How will clients book photo sessions through the site?",
+      "answer": "There's a built-in inquiry form on the site. Client leaves name, contact, and preferences — you get a notification via email or messenger."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan allows creating a basic website."
+      "question": "Are photos optimized for fast loading?",
+      "answer": "Yes. Promto automatically compresses and converts images to modern formats so the site loads fast without quality loss."
+    },
+    {
+      "question": "What is Promto?",
+      "answer": "Promto is an AI website builder. You describe your business, and the system creates a ready site with texts, design, and structure in minutes."
+    },
+    {
+      "question": "How much does a photographer website cost on Promto?",
+      "answer": "You can create a basic site for free. Paid plans add custom domain, additional pages, and extended analytics."
     }
   ],
-  "cta_mid_title": "Create a Photographer Website",
-  "cta_mid_subtitle": "Describe your style — get a ready portfolio in 2 minutes",
-  "cta_final_title": "Ready for a Photographer Website?",
-  "cta_final_subtitle": "Start free — clients will find you",
-  "cta_final_button_text": "Create Photographer Website Free"
+  "cta_mid_title": "Show Your Mastery to Clients",
+  "cta_mid_subtitle": "Create a photographer website in 5 minutes and start receiving photo session inquiries.",
+  "cta_final_title": "Your Photographer Website is Ready",
+  "cta_final_subtitle": "AI will create gallery, pricing, and booking form in minutes. Free.",
+  "cta_final_button_text": "Create Website Free"
 }

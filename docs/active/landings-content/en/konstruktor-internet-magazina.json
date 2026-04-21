@@ -1,90 +1,96 @@
 {
-  "meta_title": "Online Store Builder — Create in 2 Minutes | Promto",
-  "meta_description": "Online store builder with AI. Create store with products in 2 minutes. No code. Try free.",
-  "h1": "Online Store Builder",
-  "og_title": "Online Store Builder — Promto",
-  "og_description": "AI builder creates an online store in 2 minutes.",
-  "hero_title": "Online Store Builder",
-  "hero_subtitle": "Create an online store in 2 minutes — AI adds products and description",
-  "hero_cta_text": "Create Store",
-  "hero_placeholder": "Describe what online store you want...",
-  "social_proof": [
-    {
-      "label": "Stores Created",
-      "value": "18,000+"
-    },
-    {
-      "label": "Products Added",
-      "value": "2.5M+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.8 out of 5"
-    }
-  ],
+  "meta_title": "Online Store Builder — No Code | Promto",
+  "meta_description": "Online store builder: create a store with catalog, cart, and payment without programmers. Fast, free, professional. Promto.",
+  "h1": "Online Store Builder — Everything for Online Sales",
+  "og_title": "Online Store Builder | Promto",
+  "og_description": "AI online store builder: catalog, cart, payment, and delivery without code. Create a store in 5 minutes on Promto.",
+  "hero_title": "Online Store Builder — Everything for Online Sales",
+  "hero_subtitle": "Create a professional online store without code — AI handles all the routine.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe the website for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "shopping-cart",
-      "title": "With Catalog",
-      "description": "AI creates product catalog structure and cards"
-    },
-    {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready store in 2 minutes"
+      "title": "AI Store Generation",
+      "description": "Describe the store — AI creates the structure, design, and copy. Edit through the visual editor."
     },
     {
-      "icon": "credit-card",
-      "title": "Payment",
-      "description": "Built-in payment methods"
+      "icon": "trending",
+      "title": "Full E-commerce",
+      "description": "Catalog, cart, checkout, payment, delivery, order management — everything in one builder."
     },
     {
-      "icon": "truck",
-      "title": "Delivery",
-      "description": "Delivery conditions block"
+      "icon": "star",
+      "title": "Flexible Customization",
+      "description": "Customize appearance, blocks, and features for any niche without coding knowledge."
+    },
+    {
+      "icon": "globe",
+      "title": "SEO Out of the Box",
+      "description": "Automatic meta tags, fast loading, and structured data for growth in search."
+    },
+    {
+      "icon": "check",
+      "title": "Integrations",
+      "description": "Connect CRM, analytics, advertising pixels, and delivery services in a few clicks."
+    },
+    {
+      "icon": "award",
+      "title": "Scalability",
+      "description": "Start small and scale: add products, pages, and features as your business grows."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe Store",
-      "description": "Tell AI about products you sell",
-      "image_url": ""
+      "title": "Describe the Store in Words",
+      "description": "AI analyzes the description and creates the optimal structure for your store type."
     },
     {
       "step": 2,
-      "title": "AI Creates Catalog",
-      "description": "Catalog structure and product cards are generated",
-      "image_url": ""
+      "title": "Configure in the Editor",
+      "description": "Add products, change colors and blocks — no code, like building with blocks."
     },
     {
       "step": 3,
-      "title": "Add Price",
-      "description": "Add prices and delivery options, then publish",
-      "image_url": ""
+      "title": "Launch and Scale",
+      "description": "Publish the store and connect new features as your business grows."
     }
   ],
   "faq": [
     {
-      "question": "Can I create a store for free?",
-      "answer": "Yes, free plan allows creating a store with limited products."
+      "question": "How does an AI builder differ from a regular website builder?",
+      "answer": "AI creates the structure, copy, and design automatically — you don't start with a blank page."
     },
     {
-      "question": "What payment methods?",
-      "answer": "Popular payment methods for your region."
+      "question": "Can I use my own domain with the builder?",
+      "answer": "Yes, connect your own domain in settings — available on paid plans."
     },
     {
-      "question": "Do I need coding?",
-      "answer": "No, builder is fully visual."
+      "question": "Does the builder support inventory management?",
+      "answer": "Yes, manage inventory in the editor — when stock reaches zero, the Buy button is automatically blocked."
     },
     {
-      "question": "Can I add my own products?",
-      "answer": "Yes, you can add and edit products anytime."
+      "question": "How do I connect an advertising pixel to the store?",
+      "answer": "Insert the pixel code in site settings — Promto supports Yandex.Metrica, VK Pixel, and Google Tag Manager."
+    },
+    {
+      "question": "How many products can I add on the free plan?",
+      "answer": "Dozens of products are available on the free plan. Unlimited catalog on paid plans."
+    },
+    {
+      "question": "Is there technical support for builder users?",
+      "answer": "Yes, support via chat and email is available to all users. Priority support on paid plans."
     }
   ],
-  "cta_mid_title": "Create an Online Store Today",
-  "cta_mid_subtitle": "Describe your products — get a ready store in 2 minutes",
-  "cta_final_title": "Ready for Your Own Store?",
-  "cta_final_subtitle": "Start free — pay only when you sell",
-  "cta_final_button_text": "Create Store Free"
+  "cta_mid_title": "Try the Online Store Builder",
+  "cta_mid_subtitle": "Create a store in 5 minutes — AI does everything necessary for you.",
+  "cta_final_title": "Best Online Store Builder",
+  "cta_final_subtitle": "Launch an online store for free on Promto right now.",
+  "cta_final_button_text": "Create Website Free",
+  "social_proof_data": null,
+  "pricing": null,
+  "examples": null,
+  "reviews": null
 }

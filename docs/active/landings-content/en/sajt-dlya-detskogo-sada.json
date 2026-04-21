@@ -1,90 +1,97 @@
 {
-  "meta_title": "Kindergarten Website — Create in 2 Minutes | Promto",
-  "meta_description": "Kindergarten website: groups, teachers, events. Create in 2 minutes with AI. Professional design.",
-  "h1": "Kindergarten Website",
-  "og_title": "Kindergarten Website — Promto",
-  "og_description": "AI builder creates a kindergarten website in 2 minutes.",
-  "hero_title": "Kindergarten Website",
-  "hero_subtitle": "Create a kindergarten website in 2 minutes — with groups and teachers",
-  "hero_cta_text": "Create Kindergarten Website",
-  "hero_placeholder": "Describe your kindergarten...",
-  "social_proof": [
-    {
-      "label": "Kindergarten Websites",
-      "value": "3,200+"
-    },
-    {
-      "label": "Kindergartens",
-      "value": "1,800+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.8 out of 5"
-    }
-  ],
+  "meta_title": "Website for Kindergarten — Create in 5 Minutes | Promto",
+  "meta_description": "Create a kindergarten website with AI in 5 minutes. Groups, programs, teachers, enrollment form. Attract parents. No code. Try Promto.",
+  "h1": "Website for Kindergarten in 5 Minutes",
+  "og_title": "Website for Kindergarten | Promto",
+  "og_description": "AI will create a kindergarten website in 5 minutes: groups, programs, teachers, enrollment form. No code. Try Promto.",
+  "hero_title": "Website for Kindergarten in 5 Minutes",
+  "hero_subtitle": "AI will create a kindergarten site with groups and teachers — parents will find you in search.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe what website you need for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "baby",
-      "title": "Groups",
-      "description": "Block with groups and ages"
+      "icon": "star",
+      "title": "Groups & Programs",
+      "description": "Place information about groups, ages, developmental programs, and daily schedule."
+    },
+    {
+      "icon": "zap",
+      "title": "Ready in 5 Minutes",
+      "description": "Describe the kindergarten and its features — AI will create a site without programming or a designer."
     },
     {
       "icon": "users",
-      "title": "Teachers",
-      "description": "Teacher and educator pages"
+      "title": "Meet the Teachers",
+      "description": "Add a section with educators: photos, experience, qualifications — parents trust people, not abstractions."
     },
     {
-      "icon": "calendar",
-      "title": "Events",
-      "description": "Calendar of events and holidays"
+      "icon": "globe",
+      "title": "Visibility for Parents",
+      "description": "Site is search-optimized — parents will find the kindergarten by queries like \"kindergarten + district/city\"."
     },
     {
-      "icon": "image",
-      "title": "Gallery",
-      "description": "Photo gallery of kindergarten life"
+      "icon": "trending",
+      "title": "News & Events",
+      "description": "News section allows sharing kindergarten events — open lessons, holidays, children's achievements."
+    },
+    {
+      "icon": "check",
+      "title": "Enrollment Form",
+      "description": "Parents sign up for tours or submit enrollment applications directly through the site."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about groups, teachers, directions",
-      "image_url": ""
+      "title": "Describe the Kindergarten",
+      "description": "Tell about the direction, groups, developmental programs, location, and kindergarten features."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Website with groups, teachers, and gallery is generated",
-      "image_url": ""
+      "title": "AI Creates the Site",
+      "description": "System generates a site with groups, teachers, programs sections, and enrollment form for parents."
     },
     {
       "step": 3,
-      "title": "Publish",
-      "description": "Publish — parents will find you",
-      "image_url": ""
+      "title": "Add Photos & Details",
+      "description": "Upload photos of groups, territory, events — parents will see the kindergarten atmosphere."
+    },
+    {
+      "step": 4,
+      "title": "Attract Parents",
+      "description": "Publish the site and share the link — parents will start signing up for tours and enrollment."
     }
   ],
   "faq": [
     {
-      "question": "Can I add schedule?",
-      "answer": "Yes, daily routine and schedule block is included."
+      "question": "Can I specify multiple buildings or branches?",
+      "answer": "Yes. Specify addresses and contacts for all buildings — parents will choose the one nearest to them."
     },
     {
-      "question": "Is there news section?",
-      "answer": "Yes, news and event announcements section."
+      "question": "Is there a section for news and events?",
+      "answer": "Yes. The news section allows publishing event announcements, holiday reports, and student achievements."
     },
     {
-      "question": "Does it work for private kindergarten?",
-      "answer": "Yes, builder creates sites for any kindergarten."
+      "question": "Can I add a photo gallery?",
+      "answer": "Yes. The gallery supports uploading many photos — show the territory, groups, activities, and holidays."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan allows creating a basic website."
+      "question": "Is the site suitable for a private kindergarten?",
+      "answer": "Perfectly suitable. A personal website distinguishes a private kindergarten from competitors and builds parent trust."
+    },
+    {
+      "question": "What is Promto?",
+      "answer": "Promto is an AI website builder. You describe your business, and the system creates a ready site in minutes without code."
+    },
+    {
+      "question": "How much does a kindergarten website cost?",
+      "answer": "You can create a site for free. Paid plans unlock custom domain and additional features."
     }
   ],
-  "cta_mid_title": "Create a Kindergarten Website",
-  "cta_mid_subtitle": "Describe your kindergarten — get a ready website in 2 minutes",
-  "cta_final_title": "Ready for a Kindergarten Website?",
-  "cta_final_subtitle": "Start free — parents will find you online",
-  "cta_final_button_text": "Create Kindergarten Website Free"
+  "cta_mid_title": "Attract Parents to the Kindergarten",
+  "cta_mid_subtitle": "Create a kindergarten website in 5 minutes and start receiving applications from parents.",
+  "cta_final_title": "Kindergarten Website is Ready",
+  "cta_final_subtitle": "AI will create a site with groups and teachers. Free, no code, in 5 minutes.",
+  "cta_final_button_text": "Create Website Free"
 }

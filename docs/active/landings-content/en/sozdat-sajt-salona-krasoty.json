@@ -1,86 +1,92 @@
 {
-  "meta_title": "Create Beauty Salon Website — AI Builder in 2 Minutes | Promto",
-  "meta_description": "Create a beauty salon website in 2 minutes with AI. Services, masters, booking. No code.",
-  "h1": "Create Beauty Salon Website",
-  "og_title": "Create Beauty Salon Website — Promto",
-  "og_description": "AI builder creates a beauty salon website in 2 minutes.",
-  "hero_title": "Create Beauty Salon Website",
-  "hero_subtitle": "Create a beauty salon website in 2 minutes — with services and booking",
-  "hero_cta_text": "Create Salon Website",
-  "hero_placeholder": "Describe your beauty salon...",
-  "social_proof": [
-    {
-      "label": "Beauty Salon Websites",
-      "value": "7,200+"
-    },
-    {
-      "label": "Salons",
-      "value": "4,800+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.9 out of 5"
-    }
-  ],
+  "meta_title": "Create a Beauty Salon Website — AI Builder by Promto",
+  "meta_description": "Create a beauty salon website with services, prices, and online booking. Promto — AI builder that creates a website in 5 minutes without coders.",
+  "h1": "Create a Beauty Salon Website — with Online Booking",
+  "og_title": "Create a Beauty Salon Website | Promto AI",
+  "og_description": "Create a beauty salon website: service catalog, prices, and online booking. Promto AI — professional results in 5 minutes.",
+  "hero_title": "Create a Beauty Salon Website — with Online Booking",
+  "hero_subtitle": "AI builder will create a website for your salon with services, prices, and online booking.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe the website for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "sparkles",
-      "title": "Services",
-      "description": "Block with services and prices"
+      "icon": "zap",
+      "title": "AI Generation in Seconds",
+      "description": "Describe your salon — AI will create a ready website with design and content."
+    },
+    {
+      "icon": "star",
+      "title": "Beautiful Design",
+      "description": "Elegant templates for beauty salons — with work galleries and services."
     },
     {
       "icon": "users",
-      "title": "Masters",
-      "description": "Pages for stylists and cosmetologists"
+      "title": "Online Booking",
+      "description": "Built-in booking form — clients book services directly from the website."
     },
     {
-      "icon": "image",
-      "title": "Portfolio",
-      "description": "Photo gallery"
+      "icon": "globe",
+      "title": "Service Catalog",
+      "description": "Price list with descriptions and prices — updates without a programmer."
     },
     {
-      "icon": "calendar",
-      "title": "Booking",
-      "description": "Online booking form"
+      "icon": "trending",
+      "title": "SEO Promotion",
+      "description": "Website ranks in search engines — clients find the salon through Google and Yandex."
+    },
+    {
+      "icon": "shield",
+      "title": "Reliability",
+      "description": "SSL, fast hosting, and stable operation — included in every plan."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about your salon",
-      "image_url": ""
+      "title": "Describe Your Salon",
+      "description": "Name, services, specialists, and features — AI will understand the concept in seconds."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Website is generated",
-      "image_url": ""
+      "title": "AI Creates the Website",
+      "description": "Ready website with service catalog, prices, and booking form will appear instantly."
     },
     {
       "step": 3,
-      "title": "Publish",
-      "description": "Publish — clients will find you",
-      "image_url": ""
+      "title": "Customize and Launch",
+      "description": "Add work photos, set prices, and publish — clients are already looking for you."
     }
   ],
   "faq": [
     {
-      "question": "Can I add services?",
-      "answer": "Yes, services block is created."
+      "question": "How do I create a beauty salon website without skills?",
+      "answer": "Promto uses AI — you describe the salon, and the system automatically creates a website with services, prices, and design."
     },
     {
-      "question": "Is there booking?",
-      "answer": "Yes, booking form is included."
+      "question": "Can I add online booking for services?",
+      "answer": "Yes, the website has a ready booking form — client selects service, specialist, and convenient time."
     },
     {
-      "question": "How much does it cost?",
-      "answer": "Free plan available."
+      "question": "Will the website have a price list with prices?",
+      "answer": "Yes, a catalog of services with descriptions and prices is added to the website and easily updated."
+    },
+    {
+      "question": "Will the website appear in search engines?",
+      "answer": "Yes, all websites are SEO-optimized — the salon will appear in city search results."
+    },
+    {
+      "question": "How long does it take to create a website?",
+      "answer": "AI generates the website in seconds. A complete website with content will be ready in 5–10 minutes."
+    },
+    {
+      "question": "Can I connect my own domain?",
+      "answer": "Yes, paid plans allow connecting any domain to your website."
     }
   ],
-  "cta_mid_title": "Create a Beauty Salon Website",
-  "cta_mid_subtitle": "Describe your salon — get a ready website in 2 minutes",
-  "cta_final_title": "Ready for a Salon Website?",
-  "cta_final_subtitle": "Start free",
-  "cta_final_button_text": "Create Salon Website"
+  "cta_mid_title": "Create Your Beauty Salon Website",
+  "cta_mid_subtitle": "AI will do everything — from design to service catalog and booking.",
+  "cta_final_title": "Your Salon Deserves a Website",
+  "cta_final_subtitle": "Professional website with online booking — launch in 5 minutes without coders.",
+  "cta_final_button_text": "Create Website Free"
 }

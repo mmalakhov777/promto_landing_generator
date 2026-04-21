@@ -1,90 +1,96 @@
 {
-  "meta_title": "Store Website Builder — Create in 2 Minutes | Promto",
-  "meta_description": "Store website builder with AI. Create website for offline store or boutique. With catalog and product cards.",
-  "h1": "Store Website Builder",
-  "og_title": "Store Website Builder — Promto",
-  "og_description": "AI builder creates store website in 2 minutes.",
-  "hero_title": "Store Website Builder",
-  "hero_subtitle": "Create a store website in 2 minutes — with catalog and product cards",
-  "hero_cta_text": "Create Store Website",
-  "hero_placeholder": "Describe what store website you want...",
-  "social_proof": [
-    {
-      "label": "Store Websites",
-      "value": "15,000+"
-    },
-    {
-      "label": "Products",
-      "value": "1.2M+"
-    },
-    {
-      "label": "Average Rating",
-      "value": "4.8 out of 5"
-    }
-  ],
+  "meta_title": "Store Website Builder — No Code | Promto",
+  "meta_description": "Store website builder: create an online store with catalog, cart, and payment without programmers. Fast and free on Promto.",
+  "h1": "Store Website Builder — Create Without Code",
+  "og_title": "Store Website Builder | Promto",
+  "og_description": "Specialized builder for online stores. Catalog, cart, payment, and delivery. Create a store without code on Promto.",
+  "hero_title": "Store Website Builder — Create Without Code",
+  "hero_subtitle": "Everything needed for online sales in one builder — from catalog to payment.",
+  "hero_cta_text": "Create Website",
+  "hero_placeholder": "Describe the website for your business...",
+  "social_proof": null,
   "advantages": [
     {
-      "icon": "store",
-      "title": "For Offline Store",
-      "description": "Website with address, hours, product catalog"
-    },
-    {
       "icon": "zap",
-      "title": "In 2 Minutes",
-      "description": "Ready website in 2 minutes"
+      "title": "Store Specialization",
+      "description": "Ready-made blocks for catalog, product cards, cart, and checkout — no setup from scratch."
     },
     {
-      "icon": "package",
-      "title": "Product Catalog",
-      "description": "AI creates product cards with description and photos"
+      "icon": "trending",
+      "title": "Built-in Commerce",
+      "description": "Online payment, inventory management, shipping calculation — everything works out of the box."
     },
     {
-      "icon": "map-pin",
-      "title": "With Map",
-      "description": "Address and map block"
+      "icon": "star",
+      "title": "Flexible Catalog",
+      "description": "Create categories, add filters and product variants for any assortment."
+    },
+    {
+      "icon": "globe",
+      "title": "E-commerce SEO",
+      "description": "Automatic meta tags for products and categories, structured Schema.org data."
+    },
+    {
+      "icon": "clock",
+      "title": "Speed to Launch",
+      "description": "Describe the store — AI generates the design and structure. Edit in the visual editor."
+    },
+    {
+      "icon": "award",
+      "title": "Sales Analytics",
+      "description": "Track conversion, popular products, and traffic sources in one dashboard."
     }
   ],
   "how_it_works": [
     {
       "step": 1,
-      "title": "Describe",
-      "description": "Tell AI about your store and products",
-      "image_url": ""
+      "title": "Describe Your Store",
+      "description": "Specify what you're selling — the builder will create suitable structure and design."
     },
     {
       "step": 2,
-      "title": "AI Creates",
-      "description": "Website with catalog and cards is generated",
-      "image_url": ""
+      "title": "Configure Products and Payment",
+      "description": "Add products, select a payment system, and configure delivery conditions."
     },
     {
       "step": 3,
-      "title": "Publish",
-      "description": "Add contacts and publish",
-      "image_url": ""
+      "title": "Launch the Store",
+      "description": "Publish and promote — the builder scales with your business."
     }
   ],
   "faq": [
     {
-      "question": "Does it work for grocery store?",
-      "answer": "Yes, builder creates sites for any store types."
+      "question": "How does a store builder differ from a universal one?",
+      "answer": "E-commerce blocks are built in: cart, payment, order management — no need to configure everything separately."
     },
     {
-      "question": "Can I add product catalog?",
-      "answer": "Yes, product cards are created automatically."
+      "question": "Can I import products from a spreadsheet?",
+      "answer": "Yes, upload Excel or CSV with products — they'll appear in the catalog automatically."
     },
     {
-      "question": "Is there address block?",
-      "answer": "Yes, address, hours, and map are included."
+      "question": "Does the builder support multiple currencies?",
+      "answer": "Yes, multi-currency support is available on paid plans for selling in different countries."
     },
     {
-      "question": "Can I add prices?",
-      "answer": "Yes, prices can be specified in product cards."
+      "question": "Is there a mobile app for store management?",
+      "answer": "Manage the store via mobile browser — the editor is smartphone-adapted."
+    },
+    {
+      "question": "How much does the store builder cost?",
+      "answer": "Free plan to start. Extended catalog and commercial features on paid plans."
+    },
+    {
+      "question": "Can I use my own domain?",
+      "answer": "Yes, connect your own domain in settings — available on all paid plans."
     }
   ],
-  "cta_mid_title": "Create a Store Website Today",
-  "cta_mid_subtitle": "Describe your store — get a ready website with catalog",
-  "cta_final_title": "Ready for a Store Website?",
-  "cta_final_subtitle": "Start free — customers will find you online",
-  "cta_final_button_text": "Create Store Website Free"
+  "cta_mid_title": "Try the Store Website Builder",
+  "cta_mid_subtitle": "Create an online store in 5 minutes — no code and no developers.",
+  "cta_final_title": "Store Builder — All-Inclusive",
+  "cta_final_subtitle": "Launch an online store for free on the Promto builder.",
+  "cta_final_button_text": "Create Website Free",
+  "social_proof_data": null,
+  "pricing": null,
+  "examples": null,
+  "reviews": null
 }
