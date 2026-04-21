@@ -68,15 +68,28 @@ export function Header() {
   const tCommon = useTranslations("common");
   const tNav = useTranslations("nav");
 
+  // Detect landing page slug from both URL formats:
+  // Flat: /slug-ru or /slug-en (rewritten to /lp/locale/slug internally)
+  // LP: /lp/locale/slug
+  const getLandingSlug = (path: string): string | null => {
+    // Flat format: /konstruktor-sajtov-ru
+    const flatMatch = path.match(/^\/(.+)-(ru|en)\/?$/);
+    if (flatMatch) return flatMatch[1];
+    // LP format: /lp/ru/konstruktor-sajtov
+    const lpMatch = path.match(/^\/lp\/(ru|en)\/(.+)\/?$/);
+    if (lpMatch) return lpMatch[2];
+    return null;
+  };
+
   // Fetch active sections on mount or when pathname changes
   useEffect(() => {
-    const match = pathname.match(/^\/(.+)-(ru|en)\/?$/);
-    if (!match) {
+    const slug = getLandingSlug(pathname);
+    if (!slug) {
       setActiveSections([]);
       return;
     }
-    const slug = match[1];
-    const url = `/api/v1/public/landing-by-slug/${slug}?locale=${locale}`;
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://8001-c6b3792e-4c04-4e34-9e5e-df33d062c96a.preview.promto.ai";
+    const url = `${API_URL}/api/v1/public/landing-by-slug/${slug}?locale=${locale}`;
     fetch(url)
       .then((r) => r.json())
       .then((data) => {
@@ -99,7 +112,7 @@ export function Header() {
   const createSiteUrl = buildPlatformUrl(platformUrl, "mobile_menu", campaign, "create_site");
 
   // Detect flat landing URL: /slug-ru or /slug-en (slug may contain hyphens)
-  const isLandingPage = /^\/.+-(ru|en)\/?$/.test(pathname);
+  const isLandingPage = getLandingSlug(pathname) !== null;
 
   // Build anchors: only show anchors for sections that exist on this landing
   const labelMap = locale === "ru" ? SECTION_ANCHORS_RU : SECTION_ANCHORS_EN;

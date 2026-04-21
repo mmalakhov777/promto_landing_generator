@@ -5,7 +5,7 @@ import { routing } from "./i18n/routing";
 const intlMiddleware = createMiddleware(routing);
 
 // [RISK-03] Paths excluded from i18n middleware
-const EXCLUDED_PREFIXES = ["/admin/", "/api/", "/_next/", "/lp/"];
+const EXCLUDED_PREFIXES = ["/admin/", "/api/public/", "/api/admin/", "/_next/", "/lp/"];
 const EXCLUDED_EXACT = ["/admin", "/robots.txt", "/sitemap.xml", "/favicon.ico"];
 // Static file extensions that should bypass i18n
 const STATIC_EXT_RE = /\.(svg|png|jpg|jpeg|gif|webp|ico|css|js|woff2?|ttf|eot|map|json)$/i;
