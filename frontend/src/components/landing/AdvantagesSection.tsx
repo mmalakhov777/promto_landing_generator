@@ -58,9 +58,15 @@ export function AdvantagesSection({ title, items }: AdvantagesSectionProps) {
       <div className="mx-auto max-w-[1200px] px-4">
         {/* Two-column layout: title left, cards right */}
         <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-24">
-          {/* Left — section title */}
+          {/* Left — section title + subtitle */}
           <div className="shrink-0 lg:w-[400px] lg:sticky lg:top-32">
             <h2 className="text-[38px] font-medium leading-[1.12] text-text">{title}</h2>
+            <p className="mt-6 text-sm leading-relaxed text-text-muted">
+              Промто — это ИИ‑сервис, который создаёт сайты, сервисы, чат-боты, трекеры и другие продукты по вашим запросам. Теперь реализовать цифровое решение — это просто объяснить сервису в диалоге, что вам нужно, как если бы вы давали ТЗ разработчику. Но вместо недель ожидания вы получаете готовый результат через пару минут.
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-text-muted">
+              И нет смысла себя ограничивать: вы действительно можете реализовать любую идею, даже если никогда этого не делали.
+            </p>
           </div>
 
           {/* Right — cards */}
