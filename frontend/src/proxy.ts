@@ -7,6 +7,8 @@ const intlMiddleware = createMiddleware(routing);
 // [RISK-03] Paths excluded from i18n middleware
 const EXCLUDED_PREFIXES = ["/admin/", "/api/", "/_next/", "/lp/"];
 const EXCLUDED_EXACT = ["/admin", "/robots.txt", "/sitemap.xml", "/favicon.ico"];
+// Static file extensions that should bypass i18n
+const STATIC_EXT_RE = /\.(svg|png|jpg|jpeg|gif|webp|ico|css|js|woff2?|ttf|eot|map|json)$/i;
 
 // Regex to detect flat landing URLs: /{slug}-{locale} (e.g. /konstruktor-sajtov-ru or /konstruktor-sajtov-ru/)
 const FLAT_LANDING_RE = /^\/(.+)-(ru|en)\/?$/;
@@ -22,10 +24,11 @@ const FLAT_LANDING_RE = /^\/(.+)-(ru|en)\/?$/;
 export function proxy(request: NextRequest): NextResponse {
   const { pathname } = request.nextUrl;
 
-  // 1. Skip excluded paths
+  // 1. Skip excluded paths and static files
   if (
     EXCLUDED_EXACT.includes(pathname) ||
-    EXCLUDED_PREFIXES.some((prefix) => pathname.startsWith(prefix))
+    EXCLUDED_PREFIXES.some((prefix) => pathname.startsWith(prefix)) ||
+    STATIC_EXT_RE.test(pathname)
   ) {
     return NextResponse.next();
   }
