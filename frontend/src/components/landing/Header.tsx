@@ -4,6 +4,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { buildPlatformUrl, campaignFromPathname } from "@/lib/utm";
+import { useActiveSections } from "@/contexts/ActiveSectionsContext";
 import type { Locale } from "@/types/public";
 
 interface NavAnchor {
@@ -11,23 +12,25 @@ interface NavAnchor {
   label: string;
 }
 
-const LANDING_ANCHORS: NavAnchor[] = [
-  { id: "advantages", label: "Преимущества" },
-  { id: "how-it-works", label: "Как это работает" },
-  { id: "examples", label: "Примеры" },
-  { id: "pricing", label: "Тарифы" },
-  { id: "reviews", label: "Отзывы" },
-  { id: "faq", label: "FAQ" },
-];
+// Figma reference: node 1-503 — nav items in header
+// Map section IDs to labels per locale
+const SECTION_ANCHORS_RU: Record<string, string> = {
+  advantages: "Возможности",
+  "how-it-works": "Как это работает",
+  pricing: "Тарифы",
+  examples: "Кейсы",
+  reviews: "Кейсы",
+  faq: "Интеграции",
+};
 
-const LANDING_ANCHORS_EN: NavAnchor[] = [
-  { id: "advantages", label: "Advantages" },
-  { id: "how-it-works", label: "How it works" },
-  { id: "examples", label: "Examples" },
-  { id: "pricing", label: "Pricing" },
-  { id: "reviews", label: "Reviews" },
-  { id: "faq", label: "FAQ" },
-];
+const SECTION_ANCHORS_EN: Record<string, string> = {
+  advantages: "Features",
+  "how-it-works": "How it works",
+  pricing: "Pricing",
+  examples: "Cases",
+  reviews: "Cases",
+  faq: "Integrations",
+};
 
 interface HeaderProps {
   locale: Locale;
@@ -35,6 +38,7 @@ interface HeaderProps {
 }
 
 export function Header({ locale, platformUrl }: HeaderProps) {
+  const activeSections = useActiveSections();
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
   const tCommon = useTranslations("common");
@@ -49,7 +53,14 @@ export function Header({ locale, platformUrl }: HeaderProps) {
 
   // Detect flat landing URL: /slug-ru or /slug-en (slug may contain hyphens)
   const isLandingPage = /^\/.+-(ru|en)\/?$/.test(pathname);
-  const anchors = locale === "ru" ? LANDING_ANCHORS : LANDING_ANCHORS_EN;
+
+  // Build anchors: only show anchors for sections that exist on this landing
+  const labelMap = locale === "ru" ? SECTION_ANCHORS_RU : SECTION_ANCHORS_EN;
+  const allAnchorIds = ["advantages", "how-it-works", "pricing", "examples", "reviews", "faq"];
+  const activeSet = new Set(activeSections ?? []);
+  const anchors: NavAnchor[] = allAnchorIds
+    .filter((id) => activeSet.has(id))
+    .map((id) => ({ id, label: labelMap[id] ?? id }));
 
   // Build the alternate locale URL
   let localeSwitchHref: string;
@@ -125,8 +136,8 @@ export function Header({ locale, platformUrl }: HeaderProps) {
           </button>
         </div>
 
-        {/* Anchor nav — only on landing pages */}
-        {isLandingPage && (
+        {/* Anchor nav — only on landing pages, only for active sections */}
+        {isLandingPage && anchors.length > 0 && (
           <nav className="hidden gap-1 border-t border-border-light py-2 md:flex">
             {anchors.map((anchor) => (
               <a
@@ -145,7 +156,7 @@ export function Header({ locale, platformUrl }: HeaderProps) {
       {menuOpen && (
         <div className="px-4 py-4 md:hidden">
           {/* Mobile anchor nav */}
-          {isLandingPage && (
+          {isLandingPage && anchors.length > 0 && (
             <nav className="mb-4 flex flex-col gap-1 border-b border-border-light pb-4">
               {anchors.map((anchor) => (
                 <a

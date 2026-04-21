@@ -6,6 +6,7 @@ import {
   getPublicSettings,
   getSitemapData,
 } from "@/lib/public-api";
+import { ActiveSectionsProvider } from "@/contexts/ActiveSectionsContext";
 import { HeroSection } from "@/components/landing/HeroSection";
 import { SocialProofBar } from "@/components/landing/SocialProofBar";
 import { AdvantagesSection } from "@/components/landing/AdvantagesSection";
@@ -106,6 +107,8 @@ export default async function LandingPage({ params }: Props) {
   const allSections = ["social_proof", "advantages", "how_it_works", "examples", "cta_mid", "video", "pricing", "reviews", "faq"];
   const enabledList = landing.enabled_sections?.length > 0 ? landing.enabled_sections : allSections;
   const enabled = new Set(enabledList);
+  // Sections that have content (used for anchor nav)
+  const sectionsWithContent = allSections.filter((s) => landing[s as keyof typeof landing] !== null);
 
   const [t, tNav] = await Promise.all([
     getTranslations({ locale, namespace: "landing" }),
@@ -113,6 +116,7 @@ export default async function LandingPage({ params }: Props) {
   ]);
 
   return (
+    <ActiveSectionsProvider sections={sectionsWithContent}>
     <>
       <JsonLd
         landing={landing}
@@ -210,5 +214,6 @@ export default async function LandingPage({ params }: Props) {
         />
       </article>
     </>
+    </ActiveSectionsProvider>
   );
 }
