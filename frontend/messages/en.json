@@ -2,11 +2,11 @@
   "common": {
     "siteName": "Промто",
     "comingSoon": "Landing pages coming soon",
-    "description": "SEO landing page generator for the Promto platform"
+    "description": "SEO landing page generator for the Промто platform"
   },
   "home": {
     "heroTitle": "Build websites with AI",
-    "heroSubtitle": "Promto is a platform for quickly creating professional websites and landing pages using artificial intelligence",
+    "heroSubtitle": "Промто is a platform for quickly creating professional websites and landing pages using artificial intelligence",
     "categoriesTitle": "Categories",
     "allLandings": "All landings",
     "viewCategory": "View all",
@@ -35,8 +35,8 @@
   },
   "sitemap": {
     "title": "Site Map",
-    "metaTitle": "Site Map — Promto",
-    "metaDescription": "All pages and sections of Promto. Navigate categories and landing pages.",
+    "metaTitle": "Site Map — Промто",
+    "metaDescription": "All pages and sections of Промто. Navigate categories and landing pages.",
     "mainPages": "Main Pages",
     "categories": "Categories",
     "landings": "Landings"
@@ -47,9 +47,9 @@
     "backHome": "Back to home"
   },
   "footer": {
-    "copyright": "© Promto, {year}",
+    "copyright": "© Промто, {year}",
     "description": "A unified development platform. Build products in weeks instead of months.",
-    "ctaText": "Build products with Promto faster than the market can change",
+    "ctaText": "Build products with Промто faster than the market can change",
     "ctaButton": "Try for free",
     "termsOfUse": "Terms of Use",
     "privacy": "Privacy Policy",
