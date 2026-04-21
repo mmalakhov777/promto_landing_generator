@@ -1,25 +1,12 @@
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import {
   getPublicCategories,
-  getPublicLanding,
   getPublicLandings,
-  getPublicSettings,
   getSitemapData,
 } from "@/lib/public-api";
 import { Breadcrumbs } from "@/components/landing/Breadcrumbs";
-import { HeroSection } from "@/components/landing/HeroSection";
-import { SocialProofBar } from "@/components/landing/SocialProofBar";
-import { AdvantagesSection } from "@/components/landing/AdvantagesSection";
-import { HowItWorksSection } from "@/components/landing/HowItWorksSection";
-import { ExamplesSection } from "@/components/landing/ExamplesSection";
-import { VideoSection } from "@/components/landing/VideoSection";
-import { PricingSection } from "@/components/landing/PricingSection";
-import { ReviewsSection } from "@/components/landing/ReviewsSection";
-import { FaqSection } from "@/components/landing/FaqSection";
-import { CtaBlock } from "@/components/landing/CtaBlock";
-import { JsonLd } from "@/components/landing/JsonLd";
 import type { Locale } from "@/types/public";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://promto.ai";
@@ -96,41 +83,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
   }
 
-  // Landing page metadata
-  const landingSlug = rest[0];
-  if (!landingSlug || rest.length > 1) return {};
-
-  try {
-    const [landing, tCommon] = await Promise.all([
-      getPublicLanding(categorySlug, landingSlug, locale),
-      getTranslations({ locale, namespace: "common" }),
-    ]);
-    const title = landing.meta_title || `${landing.h1} — ${tCommon("siteName")}`;
-    const canonical = `${SITE_URL}/${locale}/${categorySlug}/${landingSlug}/`;
-
-    return {
-      title,
-      description: landing.meta_description,
-      alternates: {
-        canonical,
-        languages: {
-          ru: `${SITE_URL}/ru/${categorySlug}/${landingSlug}/`,
-          en: `${SITE_URL}/en/${categorySlug}/${landingSlug}/`,
-          "x-default": `${SITE_URL}/ru/${categorySlug}/${landingSlug}/`,
-        },
-      },
-      openGraph: {
-        title: landing.og_title || title,
-        description: landing.og_description || landing.meta_description,
-        url: canonical,
-        type: "website",
-        locale,
-        ...(landing.og_image_url ? { images: [landing.og_image_url] } : {}),
-      },
-    };
-  } catch {
-    return {};
-  }
+  // Landing pages are now served at flat URLs — no metadata needed for redirect
+  return {};
 }
 
 export default async function CatchAllPage({ params }: Props) {
@@ -221,155 +175,10 @@ export default async function CatchAllPage({ params }: Props) {
     );
   }
 
-  // ---- Landing page ----
+  // ---- Landing page → 301 redirect to flat URL ----
   const landingSlug = rest[0];
   if (!landingSlug || rest.length > 1) notFound();
 
-  let landing;
-  try {
-    landing = await getPublicLanding(categorySlug, landingSlug, locale);
-  } catch {
-    notFound();
-  }
-
-  const [categories, settings] = await Promise.all([
-    getPublicCategories().catch(() => []),
-    getPublicSettings().catch(() => ({
-      platform_url: "https://app.promto.ai",
-      metrika_id: "",
-      smartcaptcha_client_key: "",
-    })),
-  ]);
-
-  const cat = categories.find((c) => c.slug === categorySlug);
-  const catName = cat
-    ? locale === "ru"
-      ? cat.name_ru
-      : cat.name_en
-    : categorySlug;
-
-  const platformUrl = settings.platform_url || "https://app.promto.ai";
-  const metrikaId = settings.metrika_id || "";
-  const captchaClientKey = settings.smartcaptcha_client_key || "";
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
-  const canonicalUrl = `${SITE_URL}/${locale}/${categorySlug}/${landingSlug}/`;
-
-  const enabled = new Set(landing.enabled_sections);
-
-  // i18n section titles from messages/{locale}.json
-  const [t, tNav] = await Promise.all([
-    getTranslations({ locale, namespace: "landing" }),
-    getTranslations({ locale, namespace: "nav" }),
-  ]);
-
-  return (
-    <>
-      <JsonLd
-        landing={landing}
-        locale={locale as Locale}
-        canonicalUrl={canonicalUrl}
-        breadcrumbs={[
-          { name: tNav("home"), url: `${SITE_URL}/${locale}/` },
-          { name: catName, url: `${SITE_URL}/${locale}/${categorySlug}/` },
-          { name: landing.h1, url: canonicalUrl },
-        ]}
-      />
-
-      <article>
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="pt-6">
-            <Breadcrumbs
-              locale={locale as Locale}
-              items={[
-                { label: catName, href: `/${locale}/${categorySlug}/` },
-                { label: landing.h1 },
-              ]}
-            />
-          </div>
-        </div>
-
-        <HeroSection
-          h1={landing.h1 || landing.hero_title}
-          subtitle={landing.hero_subtitle}
-          ctaText={landing.hero_cta_text}
-          placeholder={landing.hero_placeholder}
-          platformUrl={platformUrl}
-          categorySlug={categorySlug}
-          landingSlug={landingSlug}
-          metrikaId={metrikaId}
-          captchaClientKey={captchaClientKey}
-          apiUrl={apiUrl}
-        />
-
-        {enabled.has("social_proof") && landing.social_proof && (
-          <SocialProofBar items={landing.social_proof} />
-        )}
-
-        {enabled.has("advantages") && landing.advantages && (
-          <AdvantagesSection title={t("advantagesTitle")} items={landing.advantages} />
-        )}
-
-        {enabled.has("how_it_works") && landing.how_it_works && (
-          <HowItWorksSection title={t("howItWorksTitle")} steps={landing.how_it_works} />
-        )}
-
-        {enabled.has("examples") && landing.examples && (
-          <ExamplesSection title={t("examplesTitle")} items={landing.examples} />
-        )}
-
-        {enabled.has("cta_mid") && (
-          <CtaBlock
-            title={landing.cta_mid_title}
-            subtitle={landing.cta_mid_subtitle}
-            platformUrl={platformUrl}
-            categorySlug={categorySlug}
-            landingSlug={landingSlug}
-            placeholder={landing.hero_placeholder}
-            variant="mid"
-            metrikaId={metrikaId}
-            captchaClientKey={captchaClientKey}
-            apiUrl={apiUrl}
-          />
-        )}
-
-        {enabled.has("video") && (
-          <VideoSection
-            title={landing.video_title || t("videoTitle")}
-            videoUrl={landing.video_url}
-          />
-        )}
-
-        {enabled.has("pricing") && landing.pricing && (
-          <PricingSection
-            title={t("pricingTitle")}
-            plans={landing.pricing}
-            popularLabel={t("popular")}
-            ctaTextPrimary={t("ctaStart")}
-            ctaTextSecondary={t("ctaChoose")}
-            metrikaId={metrikaId}
-          />
-        )}
-
-        {enabled.has("reviews") && landing.reviews && (
-          <ReviewsSection title={t("reviewsTitle")} reviews={landing.reviews} />
-        )}
-
-        {enabled.has("faq") && landing.faq && (
-          <FaqSection title={t("faqTitle")} items={landing.faq} metrikaId={metrikaId} />
-        )}
-
-        {/* Final CTA */}
-        <CtaBlock
-          title={landing.cta_final_title}
-          subtitle={landing.cta_final_subtitle}
-          buttonText={landing.cta_final_button_text}
-          platformUrl={platformUrl}
-          categorySlug={categorySlug}
-          landingSlug={landingSlug}
-          variant="final"
-          metrikaId={metrikaId}
-        />
-      </article>
-    </>
-  );
+  // Redirect old format /ru/site-generator/konstruktor-sajtov/ → /konstruktor-sajtov-ru
+  permanentRedirect(`/${landingSlug}-${locale}`);
 }

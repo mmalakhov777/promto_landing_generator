@@ -75,7 +75,7 @@ async def public_landings(
         items.append({
             "title": content.h1 if content and content.h1 else l.keyword_ru,
             "slug": l.slug, "category_slug": l.category.slug,
-            "full_url": f"/{locale}/{l.category.slug}/{l.slug}/",
+            "full_url": f"/{l.slug}-{locale}",
             "keyword": l.keyword_ru if locale == "ru" else l.keyword_en,
             "search_volume": l.search_volume, "locale": locale,
         })
@@ -124,6 +124,45 @@ async def public_landing_detail(
     }
 
 
+@router.get("/landing-by-slug/{slug}")
+async def public_landing_by_slug(
+    slug: str,
+    locale: str = Query("ru"),
+    db: AsyncSession = Depends(get_db),
+):
+    """Lookup a landing by its slug alone (globally unique)."""
+    result = await db.execute(
+        select(Landing).join(Category)
+        .where(Landing.slug == slug, Landing.is_published == True, Category.is_active == True)
+        .options(selectinload(Landing.contents), selectinload(Landing.sections), selectinload(Landing.category))
+    )
+    landing = result.scalar_one_or_none()
+    if not landing:
+        raise NotFoundException("Landing not found")
+
+    content = next((c for c in landing.contents if c.locale.value == locale), None)
+    if not content:
+        raise NotFoundException(f"Content not found for locale '{locale}'")
+
+    enabled = [s.section_type.value for s in landing.sections if s.is_enabled]
+    return {
+        "slug": landing.slug, "category_slug": landing.category.slug,
+        "meta_title": content.meta_title, "meta_description": content.meta_description,
+        "h1": content.h1, "og_title": content.og_title, "og_description": content.og_description,
+        "og_image_url": content.og_image_url,
+        "hero_title": content.hero_title, "hero_subtitle": content.hero_subtitle,
+        "hero_cta_text": content.hero_cta_text, "hero_placeholder": content.hero_placeholder,
+        "social_proof": content.social_proof, "advantages": content.advantages,
+        "how_it_works": content.how_it_works, "examples": content.examples,
+        "video_url": content.video_url, "video_title": content.video_title,
+        "pricing": content.pricing, "reviews": content.reviews, "faq": content.faq,
+        "cta_mid_title": content.cta_mid_title, "cta_mid_subtitle": content.cta_mid_subtitle,
+        "cta_final_title": content.cta_final_title, "cta_final_subtitle": content.cta_final_subtitle,
+        "cta_final_button_text": content.cta_final_button_text,
+        "enabled_sections": enabled,
+    }
+
+
 @router.get("/sitemap-data")
 async def sitemap_data(db: AsyncSession = Depends(get_db)):
     result = await db.execute(
@@ -134,6 +173,7 @@ async def sitemap_data(db: AsyncSession = Depends(get_db)):
     landings = result.scalars().all()
     return [
         {
+            "slug": l.slug,
             "category_slug": l.category.slug, "landing_slug": l.slug,
             "updated_at": l.updated_at.isoformat() if l.updated_at else None,
             "locales": [c.locale.value for c in l.contents if c.h1] or ["ru", "en"],

@@ -19,11 +19,19 @@ export function Header({ locale, platformUrl }: HeaderProps) {
   const otherLocale = locale === "ru" ? "en" : "ru";
   const localeLabel = locale === "ru" ? "EN" : "RU";
 
-  // Build the alternate locale URL by swapping the locale prefix
-  const localeSwitchHref = pathname.replace(
-    new RegExp(`^/${locale}(/|$)`),
-    `/${otherLocale}$1`,
-  );
+  // Build the alternate locale URL
+  let localeSwitchHref: string;
+  // Detect flat landing URLs: /slug-ru or /slug-en (with optional trailing slash)
+  const flatMatch = pathname.match(/^\/(.+)-(ru|en)\/?$/);
+  if (flatMatch) {
+    localeSwitchHref = `/${flatMatch[1]}-${otherLocale}`;
+  } else {
+    // Standard locale-prefixed paths: swap /ru/ ↔ /en/
+    localeSwitchHref = pathname.replace(
+      new RegExp(`^/${locale}(/|$)`),
+      `/${otherLocale}$1`,
+    );
+  }
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">

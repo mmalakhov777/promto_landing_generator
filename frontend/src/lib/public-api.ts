@@ -75,6 +75,19 @@ export async function getPublicLanding(
   );
 }
 
+export async function getPublicLandingBySlug(
+  slug: string,
+  locale: string = "ru",
+): Promise<PublicLandingDetail> {
+  return fetchAPI<PublicLandingDetail>(
+    `/public/landing-by-slug/${slug}?locale=${locale}`,
+    {
+      tags: ["landings", `landing:${slug}`],
+      revalidate: 3600,
+    },
+  );
+}
+
 export async function getSitemapData(): Promise<SitemapItem[]> {
   return fetchAPI<SitemapItem[]>("/public/sitemap-data", {
     tags: ["sitemap"],

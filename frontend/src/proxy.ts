@@ -5,25 +5,39 @@ import { routing } from "./i18n/routing";
 const intlMiddleware = createMiddleware(routing);
 
 // [RISK-03] Paths excluded from i18n middleware
-const EXCLUDED_PREFIXES = ["/admin/", "/api/", "/_next/"];
+const EXCLUDED_PREFIXES = ["/admin/", "/api/", "/_next/", "/lp/"];
 const EXCLUDED_EXACT = ["/admin", "/robots.txt", "/sitemap.xml", "/favicon.ico"];
 
+// Regex to detect flat landing URLs: /{slug}-{locale} (e.g. /konstruktor-sajtov-ru or /konstruktor-sajtov-ru/)
+const FLAT_LANDING_RE = /^\/(.+)-(ru|en)\/?$/;
+
 /**
- * Proxy execution order (documented per RISK-14):
- * 1. Exclude static files, API routes, favicon → NextResponse.next()
- * 2. Exclude /admin/ paths → NextResponse.next()
- * 3. Normalize URL: collapse multiple slashes, enforce trailing slash → 301
- * 4. Apply i18n middleware (next-intl)
+ * Proxy execution order:
+ * 1. Exclude static files, API routes, favicon, /lp/ → NextResponse.next()
+ * 2. Detect flat landing URL (/{slug}-{locale}) → rewrite to /lp/{locale}/{slug}
+ * 3. Normalize URL: collapse multiple slashes → 301
+ * 4. Trailing slash enforcement for non-landing paths
+ * 5. Apply i18n middleware (next-intl)
  */
 export function proxy(request: NextRequest): NextResponse {
   const { pathname } = request.nextUrl;
 
-  // 1-2. Skip excluded paths
+  // 1. Skip excluded paths
   if (
     EXCLUDED_EXACT.includes(pathname) ||
     EXCLUDED_PREFIXES.some((prefix) => pathname.startsWith(prefix))
   ) {
     return NextResponse.next();
+  }
+
+  // 2. Flat landing URL detection: /konstruktor-sajtov-ru → rewrite to /lp/ru/konstruktor-sajtov
+  const flatMatch = pathname.match(FLAT_LANDING_RE);
+  if (flatMatch) {
+    const slug = flatMatch[1];
+    const locale = flatMatch[2];
+    const url = request.nextUrl.clone();
+    url.pathname = `/lp/${locale}/${slug}`;
+    return NextResponse.rewrite(url);
   }
 
   // 3. URL normalization: collapse multiple slashes → 301
@@ -34,7 +48,7 @@ export function proxy(request: NextRequest): NextResponse {
     return NextResponse.redirect(url, 301);
   }
 
-  // 3. Trailing slash enforcement (next.config trailingSlash:true handles most cases,
+  // 4. Trailing slash enforcement (next.config trailingSlash:true handles most cases,
   //    but proxy catches edge cases for non-file paths)
   if (
     pathname !== "/" &&
@@ -46,7 +60,7 @@ export function proxy(request: NextRequest): NextResponse {
     return NextResponse.redirect(url, 301);
   }
 
-  // 4. i18n middleware
+  // 5. i18n middleware
   return intlMiddleware(request);
 }
 

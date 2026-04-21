@@ -109,6 +109,7 @@ export interface PublicLandingDetail {
 }
 
 export interface SitemapItem {
+  slug: string;
   category_slug: string;
   landing_slug: string;
   updated_at: string;

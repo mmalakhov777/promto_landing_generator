@@ -25,13 +25,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Skip categories if API unavailable
   }
 
-  // Landing pages
+  // Landing pages — flat URL format: /{slug}-{locale}
   try {
     const sitemapData = await getSitemapData();
     for (const item of sitemapData) {
+      const slug = item.slug || item.landing_slug;
       for (const locale of item.locales) {
         urls.push({
-          url: `${SITE_URL}/${locale}/${item.category_slug}/${item.landing_slug}/`,
+          url: `${SITE_URL}/${slug}-${locale}`,
           lastModified: new Date(item.updated_at),
         });
       }
