@@ -35,6 +35,9 @@ export function Footer({ platformUrl }: FooterProps) {
               <a href={platformUrl} rel="nofollow noopener" className="text-sm text-text transition-colors hover:text-primary">
                 {tFooter("ctaButton")}
               </a>
+              <a href="https://promto.ai/blog" className="text-sm text-text transition-colors hover:text-primary">
+                {tFooter("blog")}
+              </a>
             </div>
 
             {/* Column: Документы */}
