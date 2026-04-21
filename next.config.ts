@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   trailingSlash: false,
   allowedDevOrigins: [
     '*.proxy.daytona.works',
+    '*.preview.promto.ai',
   ],
   async redirects() {
     return [

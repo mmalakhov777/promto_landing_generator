@@ -50,7 +50,7 @@ const mobileBlobs: MobileBlob[] = [
 
 export function BackgroundBlobs() {
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true" style={{ contain: 'paint' }}>
       {desktopBlobs.map((blob, i) => (
         <div
           key={`d-${i}`}
