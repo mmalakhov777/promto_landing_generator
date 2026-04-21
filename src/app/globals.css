@@ -1,0 +1,361 @@
+@import "tailwindcss";
+
+/* ── Theme variables ───────────────────────────────────────── */
+:root {
+  --theme-bg-page: #FAFAFA;
+  --theme-bg-card: #FFFFFF;
+  --theme-bg-inactive: #ECECEC;
+  --theme-bg-footer: #111111;
+
+  --theme-text-primary: #111111;
+  --theme-text-secondary: #858585;
+  --theme-text-placeholder: #BCBCBD;
+  --theme-text-muted: #959595;
+
+  --theme-subtle: rgba(133, 133, 133, 0.12);
+  --theme-subtle-light: rgba(133, 133, 133, 0.08);
+  --theme-border-light: rgba(133, 133, 133, 0.24);
+  --theme-border-muted: rgba(133, 133, 133, 0.3);
+
+  --theme-shadow-card: 0px 4px 12px rgba(149, 149, 149, 0.08);
+  --theme-shadow-card-md: 0px 4px 12px rgba(149, 149, 149, 0.12);
+  --theme-shadow-card-lg: 0px 4px 24px rgba(149, 149, 149, 0.24);
+
+  --theme-header-bg: rgba(250, 250, 250, 0.8);
+  --theme-menu-bg: rgba(255, 255, 255, 0.9);
+  --theme-chat-inner-bg: #FFFFFF;
+  --theme-dropdown-bg: #FFFFFF;
+  --theme-dropdown-hover: #f9fafb;
+  --theme-dropdown-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  --theme-pricing-selected-fill: #fff;
+  --theme-pricing-selected-overlay: linear-gradient(180deg, rgba(94,255,110,0.12) 0%, rgba(70,78,255,0.12) 100%);
+  --theme-accordion-bg: #FFFFFF;
+  --theme-scrollbar-track: #ECECEC;
+  --theme-scrollbar-thumb: #BCBCBD;
+  --theme-github-fill: #111;
+  --theme-noise-opacity: 0;
+
+  /* Light theme gradient defaults */
+  --theme-gradient-primary: linear-gradient(186deg, #5EFF6E -11%, #464EFF 71%);
+  --theme-gradient-primary-animated: linear-gradient(135deg, #5EFF6E 0%, #464EFF 50%, #5EFF6E 100%);
+  --theme-gradient-border: linear-gradient(135deg, #464EFF 0%, #5EFF6E 50%, #464EFF 100%);
+  --theme-gradient-text: 4deg, rgba(70,78,255,1) 21%, rgba(94,255,110,1) 100%;
+  --theme-gradient-border-static: 4deg, rgba(70,78,255,1) 30%, rgba(94,255,110,1) 100%;
+  --theme-btn-primary-bg: linear-gradient(186deg, #5EFF6E -11%, #464EFF 71%);
+  --theme-btn-primary-hover-bg: linear-gradient(186deg, #5EFF6E -11%, #464EFF 71%);
+  --theme-send-btn-bg: linear-gradient(135deg, #5EFF6E 0%, #464EFF 50%, #5EFF6E 100%);
+  --theme-btn-frosted-bg: transparent;
+  --theme-btn-frosted-hover: transparent;
+  --theme-card-border: transparent;
+  --theme-card-glass-bg: transparent;
+  --theme-blob-color-1: rgba(70,78,255,1);
+  --theme-blob-color-2: rgba(94,255,110,1);
+  --theme-accent-from: rgba(70,78,255,1);
+  --theme-accent-to: rgba(94,255,110,1);
+  --theme-glow-color-1: rgba(70, 78, 255, 0.2);
+  --theme-glow-color-2: rgba(94, 255, 110, 0.1);
+}
+
+[data-theme="dark"] {
+  --theme-bg-page: #0d0d0d;
+  --theme-bg-card: #1a1a1a;
+  --theme-bg-inactive: #1b1b1b;
+  --theme-bg-footer: #0d0d0d;
+
+  --theme-text-primary: #ffffff;
+  --theme-text-secondary: rgba(255, 255, 255, 0.55);
+  --theme-text-placeholder: rgba(255, 255, 255, 0.75);
+  --theme-text-muted: rgba(255, 255, 255, 0.5);
+
+  --theme-subtle: rgba(255, 255, 255, 0.07);
+  --theme-subtle-light: rgba(255, 255, 255, 0.04);
+  --theme-border-light: rgba(255, 255, 255, 0.12);
+  --theme-border-muted: rgba(255, 255, 255, 0.24);
+
+  --theme-shadow-card: none;
+  --theme-shadow-card-md: none;
+  --theme-shadow-card-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
+
+  --theme-header-bg: rgba(13, 13, 13, 0.85);
+  --theme-menu-bg: rgba(26, 26, 26, 0.95);
+  --theme-chat-inner-bg: #1a1a1a;
+  --theme-dropdown-bg: #1a1a1a;
+  --theme-dropdown-hover: #2a2a2a;
+  --theme-dropdown-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --theme-pricing-selected-fill: #1a1a1a;
+  --theme-pricing-selected-overlay: linear-gradient(180deg, rgba(120,255,134,0.06) 0%, rgba(40,159,53,0.06) 100%);
+  --theme-accordion-bg: #1a1a1a;
+  --theme-scrollbar-track: #1a1a1a;
+  --theme-scrollbar-thumb: #3a3a3a;
+  --theme-github-fill: #ffffff;
+  --theme-noise-opacity: 0.03;
+
+  /* Dark theme accent overrides: green gradient instead of blue-green */
+  --theme-gradient-primary: linear-gradient(229deg, #78FF86 -56%, #289F35 80%);
+  --theme-gradient-primary-animated: linear-gradient(229deg, #78FF86 -56%, #289F35 80%);
+  --theme-send-btn-bg: linear-gradient(135deg, #78FF86 0%, #289F35 50%, #78FF86 100%);
+  --theme-gradient-border: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.5) 100%);
+  --theme-gradient-text: 90deg, #78FF86 0%, #289F35 100%;
+  --theme-gradient-border-static: 4deg, #78FF86 30%, #289F35 100%;
+  --theme-btn-primary-bg: linear-gradient(229deg, #78FF86 -56%, #289F35 80%);
+  --theme-btn-primary-hover-bg: linear-gradient(229deg, #78FF86 -56%, #289F35 80%);
+  --theme-btn-frosted-bg: rgba(255, 255, 255, 0.16);
+  --theme-btn-frosted-hover: rgba(255, 255, 255, 0.24);
+  --theme-card-border: rgba(255, 255, 255, 0.08);
+  --theme-card-glass-bg: rgba(255, 255, 255, 0.04);
+  /* Background blobs: green + purple in dark theme */
+  --theme-blob-color-1: #45e87a;
+  --theme-blob-color-2: #9333ea;
+  /* Accent gradient colors for buttons/text/borders */
+  --theme-accent-from: #78FF86;
+  --theme-accent-to: #289F35;
+  --theme-glow-color-1: rgba(255, 255, 255, 0.15);
+  --theme-glow-color-2: rgba(255, 255, 255, 0.08);
+}
+
+@theme inline {
+  /* Font — make Onest the default sans font */
+  --font-sans: var(--font-onest);
+
+  /* Brand colors */
+  --color-brand-blue: #464EFF;
+  --color-brand-green: #5EFF6E;
+
+  /* Text colors — mapped to theme variables */
+  --color-text-primary: var(--theme-text-primary);
+  --color-text-secondary: var(--theme-text-secondary);
+  --color-text-placeholder: var(--theme-text-placeholder);
+  --color-text-muted: var(--theme-text-muted);
+
+  /* Background colors — mapped to theme variables */
+  --color-bg-page: var(--theme-bg-page);
+  --color-bg-card: var(--theme-bg-card);
+  --color-bg-inactive: var(--theme-bg-inactive);
+  --color-bg-footer: var(--theme-bg-footer);
+
+  /* Semi-transparent — mapped to theme variables */
+  --color-subtle: var(--theme-subtle);
+  --color-subtle-light: var(--theme-subtle-light);
+  --color-border-light: var(--theme-border-light);
+  --color-border-muted: var(--theme-border-muted);
+
+  /* Accent icon colors */
+  --color-accent-red: #FF4D6B;
+  --color-accent-orange-from: #FFD478;
+  --color-accent-orange-to: #FF9854;
+  --color-accent-purple-from: #575EFF;
+  --color-accent-purple-to: #E478FF;
+  --color-accent-green-from: #28C840;
+  --color-accent-green-to: #5EFF6E;
+  --color-accent-blue-from: #3F50EF;
+  --color-accent-blue-to: #223DDB;
+
+  /* Shadows — mapped to theme variables */
+  --shadow-card: var(--theme-shadow-card);
+  --shadow-card-md: var(--theme-shadow-card-md);
+  --shadow-card-lg: var(--theme-shadow-card-lg);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: clip;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--theme-scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--theme-scrollbar-thumb);
+  border-radius: 3px;
+}
+
+/* Hide scrollbar utility */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Noise overlay for dark theme */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  opacity: var(--theme-noise-opacity);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* ── Dark theme component overrides ── */
+
+/* Dark cards: glass morphism with subtle border */
+[data-theme="dark"] .bg-bg-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Dark CTA glow uses white */
+[data-theme="dark"] .animate-cta-glow {
+  animation-name: glow-pulse-dark;
+}
+
+@keyframes glow-pulse-dark {
+  0%, 100% { box-shadow: 0 0 12px 2px rgba(255, 255, 255, 0.1), 0 0 24px 4px rgba(255, 255, 255, 0.05); }
+  50% { box-shadow: 0 0 20px 6px rgba(255, 255, 255, 0.18), 0 0 40px 8px rgba(255, 255, 255, 0.08); }
+}
+
+/* Dark step cards: no border override needed, just subtle glass */
+[data-theme="dark"] .bg-bg-inactive {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ── Dark theme: primary CTA buttons — green gradient fill + white text ── */
+[data-theme="dark"] .btn-primary {
+  background: linear-gradient(229deg, #78FF86 -56%, #289F35 80%) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+  background: linear-gradient(229deg, #78FF86 -56%, #289F35 80%) !important;
+  opacity: 0.85;
+}
+
+/* ── Dark theme: outline CTA buttons become frosted glass ── */
+/* Frosted glass button base */
+.btn-cta-outline {
+  position: relative;
+}
+
+[data-theme="dark"] .btn-cta-outline {
+  background: rgba(255, 255, 255, 0.16) !important;
+  color: white !important;
+}
+
+[data-theme="dark"] .btn-cta-outline:hover {
+  background: rgba(255, 255, 255, 0.24) !important;
+}
+
+/* Hide gradient border layer in dark theme */
+[data-theme="dark"] .btn-cta-outline .gradient-border-mask {
+  display: none;
+}
+
+/* Override gradient text to plain white in dark theme */
+[data-theme="dark"] .btn-cta-outline .bg-clip-text {
+  background: none !important;
+  -webkit-text-fill-color: white !important;
+  color: white !important;
+}
+
+/* Override icon color to white in dark theme */
+[data-theme="dark"] .btn-cta-outline .text-brand-blue {
+  color: white !important;
+}
+
+[data-theme="dark"] .btn-cta-outline svg path {
+  stroke: white !important;
+}
+
+/* Outline/secondary buttons in dark theme: transparent 12% + white text */
+[data-theme="dark"] .btn-outline-sm {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: none !important;
+  color: white !important;
+}
+
+[data-theme="dark"] .btn-outline-sm:hover {
+  background: rgba(255, 255, 255, 0.20) !important;
+}
+
+[data-theme="dark"] .btn-outline-sm .bg-clip-text {
+  background: none !important;
+  -webkit-text-fill-color: white !important;
+  color: white !important;
+}
+
+/* Hide gradient border mask on outline buttons in dark theme */
+[data-theme="dark"] .btn-outline-sm .gradient-border-mask {
+  display: none !important;
+}
+
+/* Icons white in dark theme outline buttons — override SVG gradient strokes and fills */
+[data-theme="dark"] .btn-outline-sm svg path {
+  stroke: white !important;
+  fill: none !important;
+}
+
+[data-theme="dark"] .btn-outline-sm svg circle {
+  fill: white !important;
+}
+
+[data-theme="dark"] .btn-outline-sm svg {
+  color: white !important;
+}
+
+/* Theme-based logo visibility */
+[data-theme="dark"] .dark-hidden {
+  display: none !important;
+}
+[data-theme="dark"] .dark-visible {
+  display: block !important;
+}
+
+/* Animated gradient border for chat input */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Blinking cursor for typewriter */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* CTA button glow pulse */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 12px 2px rgba(70, 78, 255, 0.2), 0 0 24px 4px rgba(94, 255, 110, 0.1); }
+  50% { box-shadow: 0 0 20px 6px rgba(70, 78, 255, 0.3), 0 0 40px 8px rgba(94, 255, 110, 0.15); }
+}
+
+/* Subtle blob breathing animation */
+@keyframes blob-breathe {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(15px, -10px) scale(1.03); }
+  66% { transform: translate(-10px, 8px) scale(0.97); }
+}
+
+@layer utilities {
+  .animate-gradient-shift {
+    animation: gradient-shift 4s ease infinite;
+  }
+
+  .animate-gradient-shift-slow {
+    animation: gradient-shift 8s ease infinite;
+  }
+
+  .animate-blob {
+    animation: blob-breathe 18s ease-in-out infinite;
+  }
+
+  .animate-blink {
+    animation: blink 1s step-end infinite;
+  }
+
+  .animate-cta-glow {
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+}
