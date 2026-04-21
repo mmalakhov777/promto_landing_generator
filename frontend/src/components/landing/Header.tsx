@@ -81,8 +81,16 @@ export function Header() {
     return null;
   };
 
-  // Fetch active sections on mount or when pathname changes
+  // Fetch active sections from window global (set by landing page server component)
   useEffect(() => {
+    // First try to get from window global (set by landing page)
+    const win = window as typeof window & { __LANDING_ACTIVE_SECTIONS__?: string[] };
+    if (win.__LANDING_ACTIVE_SECTIONS__) {
+      setActiveSections(win.__LANDING_ACTIVE_SECTIONS__);
+      return;
+    }
+
+    // Fallback: fetch from API if window global not set
     const slug = getLandingSlug(pathname);
     if (!slug) {
       setActiveSections([]);

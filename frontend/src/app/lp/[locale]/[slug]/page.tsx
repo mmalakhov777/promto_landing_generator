@@ -112,8 +112,17 @@ export default async function LandingPage({ params }: Props) {
     getTranslations({ locale, namespace: "nav" }),
   ]);
 
+  // Compute active sections for anchor navigation
+  const activeSections = allSections.filter((s) => landing[s as keyof typeof landing] !== null);
+
   return (
     <>
+      {/* Hidden data for Header anchor navigation - set before React hydration */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `window.__LANDING_ACTIVE_SECTIONS__ = ${JSON.stringify(activeSections)};`,
+        }}
+      />
       <JsonLd
         landing={landing}
         locale={locale as Locale}
