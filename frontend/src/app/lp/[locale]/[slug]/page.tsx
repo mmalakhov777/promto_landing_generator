@@ -183,6 +183,7 @@ export default async function LandingPage({ params }: Props) {
             popularLabel={t("popular")}
             ctaTextPrimary={t("ctaStart")}
             ctaTextSecondary={t("ctaChoose")}
+            landingSlug={slug}
             metrikaId={metrikaId}
           />
         )}

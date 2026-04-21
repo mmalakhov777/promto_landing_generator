@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { buildPlatformUrl, campaignFromPathname } from "@/lib/utm";
 import type { Locale } from "@/types/public";
 
 interface HeaderProps {
@@ -18,6 +19,10 @@ export function Header({ locale, platformUrl }: HeaderProps) {
 
   const otherLocale = locale === "ru" ? "en" : "ru";
   const localeLabel = locale === "ru" ? "EN" : "RU";
+
+  const campaign = campaignFromPathname(pathname);
+  const logoUrl = buildPlatformUrl(platformUrl, "header", campaign, "logo");
+  const tryItUrl = buildPlatformUrl(platformUrl, "header", campaign, "try_it");
 
   // Build the alternate locale URL
   let localeSwitchHref: string;
@@ -38,7 +43,7 @@ export function Header({ locale, platformUrl }: HeaderProps) {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         {/* Logo — nofollow per SEO req #37 */}
         <a
-          href={platformUrl}
+          href={logoUrl}
           rel="nofollow noopener"
           className="flex items-center"
         >
@@ -69,7 +74,7 @@ export function Header({ locale, platformUrl }: HeaderProps) {
             {localeLabel}
           </a>
           <a
-            href={platformUrl}
+            href={tryItUrl}
             rel="nofollow noopener"
             className="btn-gradient px-6 py-2.5 text-sm"
           >
@@ -104,7 +109,7 @@ export function Header({ locale, platformUrl }: HeaderProps) {
               {localeLabel}
             </a>
             <a
-              href={platformUrl}
+              href={tryItUrl}
               rel="nofollow noopener"
               className="btn-gradient px-6 py-2.5 text-center text-sm"
             >

@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { reachGoal } from "@/lib/metrika";
 import { executeAndVerify } from "@/lib/smartcaptcha";
+import { getUtmParams } from "@/lib/utm";
 
 interface PromptInputProps {
   placeholder: string;
@@ -52,12 +53,10 @@ export function PromptInput({
         }
       }
 
+      const utm = getUtmParams("hero", landingSlug, "send_prompt");
       const params = new URLSearchParams({
         prompt: prompt || placeholder,
-        utm_source: "types",
-        utm_medium: "landing",
-        utm_campaign: categorySlug,
-        utm_content: landingSlug,
+        ...utm,
       });
       window.location.href = `${platformUrl}?${params.toString()}`;
     } catch {

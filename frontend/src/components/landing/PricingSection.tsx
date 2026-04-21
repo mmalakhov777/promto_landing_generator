@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { reachGoal } from "@/lib/metrika";
+import { buildPlatformUrl } from "@/lib/utm";
 import type { PricingPlan } from "@/types/public";
 
 interface PricingSectionProps {
@@ -10,6 +11,7 @@ interface PricingSectionProps {
   popularLabel: string;
   ctaTextPrimary: string;
   ctaTextSecondary: string;
+  landingSlug: string;
   metrikaId?: string;
 }
 
@@ -19,6 +21,7 @@ export function PricingSection({
   popularLabel,
   ctaTextPrimary,
   ctaTextSecondary,
+  landingSlug,
   metrikaId,
 }: PricingSectionProps) {
   const sectionRef = useRef<HTMLElement>(null);
@@ -90,7 +93,11 @@ export function PricingSection({
               )}
               {plan.cta_url && (
                 <a
-                  href={plan.cta_url}
+                  href={
+                    plan.cta_url.includes("promto.ai")
+                      ? buildPlatformUrl(plan.cta_url, "pricing", landingSlug, `plan_${plan.name.toLowerCase().replace(/\s+/g, "_")}`)
+                      : plan.cta_url
+                  }
                   rel="nofollow noopener"
                   onClick={handleCtaClick}
                   className={`mt-6 block py-3.5 text-center text-sm font-medium transition-all ${

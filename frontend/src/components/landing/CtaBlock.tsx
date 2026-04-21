@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { reachGoal } from "@/lib/metrika";
+import { buildPlatformUrl } from "@/lib/utm";
 import { PromptInput } from "./PromptInput";
 
 interface CtaBlockProps {
@@ -95,7 +96,7 @@ export function CtaBlock({
               />
             ) : (
               <a
-                href={`${platformUrl}?utm_source=types&utm_medium=landing&utm_campaign=${categorySlug}&utm_content=${landingSlug}`}
+                href={buildPlatformUrl(platformUrl, isFinal ? "cta_final" : "cta_mid", landingSlug, "cta_button")}
                 rel="nofollow noopener"
                 onClick={handleLinkClick}
                 className="btn-gradient px-10 py-4 text-sm"

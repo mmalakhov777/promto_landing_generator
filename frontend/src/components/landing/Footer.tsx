@@ -1,15 +1,23 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { buildPlatformUrl, campaignFromPathname } from "@/lib/utm";
 
 interface FooterProps {
   platformUrl: string;
 }
 
 export function Footer({ platformUrl }: FooterProps) {
+  const pathname = usePathname();
   const tCommon = useTranslations("common");
   const tFooter = useTranslations("footer");
   const year = new Date().getFullYear();
+
+  const campaign = campaignFromPathname(pathname);
+  const logoUrl = buildPlatformUrl(platformUrl, "footer", campaign, "logo");
+  const tryItUrl = buildPlatformUrl(platformUrl, "footer", campaign, "try_it");
+  const ctaUrl = buildPlatformUrl(platformUrl, "footer", campaign, "cta_button");
 
   return (
     <footer className="pt-20 pb-12">
@@ -18,7 +26,7 @@ export function Footer({ platformUrl }: FooterProps) {
         <div className="flex flex-col gap-12 lg:flex-row lg:justify-between">
           {/* Left — logo + description */}
           <div className="flex flex-col gap-10 lg:w-[240px] lg:shrink-0">
-            <a href={platformUrl} rel="nofollow noopener" className="transition-opacity hover:opacity-80">
+            <a href={logoUrl} rel="nofollow noopener" className="transition-opacity hover:opacity-80">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/logo-desktop.svg" alt={tCommon("siteName")} width={142} height={34} />
             </a>
@@ -32,7 +40,7 @@ export function Footer({ platformUrl }: FooterProps) {
             {/* Column: Продукт */}
             <div className="flex flex-col gap-4">
               <span className="text-sm text-text-muted">{tCommon("siteName")}</span>
-              <a href={platformUrl} rel="nofollow noopener" className="text-sm text-text transition-colors hover:text-primary">
+              <a href={tryItUrl} rel="nofollow noopener" className="text-sm text-text transition-colors hover:text-primary">
                 {tFooter("ctaButton")}
               </a>
               <a href="https://promto.ai/blog" className="text-sm text-text transition-colors hover:text-primary">
@@ -60,7 +68,7 @@ export function Footer({ platformUrl }: FooterProps) {
                 {tFooter("ctaText")}
               </p>
               <a
-                href={platformUrl}
+                href={ctaUrl}
                 rel="nofollow noopener"
                 className="btn-gradient inline-flex w-[250px] items-center justify-center px-6 py-4 text-sm"
               >
@@ -70,22 +78,11 @@ export function Footer({ platformUrl }: FooterProps) {
           </div>
         </div>
 
-        {/* Bottom bar — copyright + legal links */}
-        <div className="mt-20 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+        {/* Bottom bar — copyright only */}
+        <div className="mt-20 flex justify-center">
           <span className="text-xs text-text-muted">
             {tFooter("copyright", { year: String(year) })}
           </span>
-          <div className="flex flex-wrap items-center gap-4 text-xs text-text-muted">
-            <a href="https://app.promto.ai/termsofuse" rel="nofollow noopener" className="transition-colors hover:text-text">
-              {tFooter("termsOfUse")}
-            </a>
-            <a href="https://app.promto.ai/privacy" rel="nofollow noopener" className="transition-colors hover:text-text">
-              {tFooter("privacy")}
-            </a>
-            <a href="https://app.promto.ai/consent" rel="nofollow noopener" className="transition-colors hover:text-text">
-              {tFooter("consent")}
-            </a>
-          </div>
         </div>
       </div>
     </footer>
