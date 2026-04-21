@@ -12,7 +12,7 @@ interface NavAnchor {
   label: string;
 }
 
-// Figma reference: node 1-503 — nav items in header
+// Figma reference: node 1-503 (desktop) and 1-1006 (mobile menu)
 // Map section IDs to labels per locale
 const SECTION_ANCHORS_RU: Record<string, string> = {
   advantages: "Возможности",
@@ -50,6 +50,7 @@ export function Header({ locale, platformUrl }: HeaderProps) {
   const campaign = campaignFromPathname(pathname);
   const logoUrl = buildPlatformUrl(platformUrl, "header", campaign, "logo");
   const tryItUrl = buildPlatformUrl(platformUrl, "header", campaign, "try_it");
+  const createSiteUrl = buildPlatformUrl(platformUrl, "mobile_menu", campaign, "create_site");
 
   // Detect flat landing URL: /slug-ru or /slug-en (slug may contain hyphens)
   const isLandingPage = /^\/.+-(ru|en)\/?$/.test(pathname);
@@ -73,6 +74,8 @@ export function Header({ locale, platformUrl }: HeaderProps) {
       `/${otherLocale}$1`,
     );
   }
+
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
@@ -152,39 +155,59 @@ export function Header({ locale, platformUrl }: HeaderProps) {
         )}
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu — Figma node 1-1006: full-screen overlay */}
       {menuOpen && (
-        <div className="px-4 py-4 md:hidden">
-          {/* Mobile anchor nav */}
-          {isLandingPage && anchors.length > 0 && (
-            <nav className="mb-4 flex flex-col gap-1 border-b border-border-light pb-4">
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 z-40 md:hidden"
+            onClick={closeMenu}
+            aria-hidden="true"
+          />
+
+          {/* Menu panel */}
+          <div className="fixed inset-x-0 bottom-0 z-50 rounded-t-[40px] bg-[#FAFAFA] px-6 pb-8 pt-4 md:hidden">
+            {/* Navigation links */}
+            <nav className="mb-8 flex flex-col gap-6">
               {anchors.map((anchor) => (
                 <a
                   key={anchor.id}
                   href={`#${anchor.id}`}
-                  className="rounded-lg px-3 py-2 text-sm text-text-muted transition-colors hover:bg-surface hover:text-text"
+                  onClick={closeMenu}
+                  className="text-left text-base font-medium text-text transition-colors hover:text-primary"
+                  style={{ fontFamily: "var(--font-onest, inherit)" }}
                 >
                   {anchor.label}
                 </a>
               ))}
             </nav>
-          )}
-          <div className="flex flex-col gap-3">
-            <a
-              href={localeSwitchHref}
-              className="btn-outline-gradient px-5 py-2.5 text-center text-sm font-medium"
-            >
-              {localeLabel}
-            </a>
-            <a
-              href={tryItUrl}
-              rel="nofollow noopener"
-              className="btn-gradient px-6 py-2.5 text-center text-sm"
-            >
-              {tNav("tryIt")}
-            </a>
+
+            {/* CTA buttons */}
+            <div className="flex flex-col gap-3">
+              {/* Создать сайт — gradient filled */}
+              <a
+                href={createSiteUrl}
+                rel="nofollow noopener"
+                onClick={closeMenu}
+                className="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#5EFF6E] to-[#464EFF] py-4 text-sm font-medium text-white transition-opacity hover:opacity-90"
+                style={{ fontFamily: "var(--font-onest, inherit)" }}
+              >
+                {locale === "ru" ? "Создать сайт" : "Create website"}
+              </a>
+
+              {/* Попробовать бесплатно — outlined */}
+              <a
+                href={tryItUrl}
+                rel="nofollow noopener"
+                onClick={closeMenu}
+                className="flex items-center justify-center gap-2 rounded-full border border-[rgba(70,78,255,1)] py-4 text-sm font-medium text-[#464EFF] transition-opacity hover:bg-[rgba(70,78,255,0.05)]"
+                style={{ fontFamily: "var(--font-onest, inherit)" }}
+              >
+                {locale === "ru" ? "Попробовать бесплатно 3 дня" : "Try free for 3 days"}
+              </a>
+            </div>
           </div>
-        </div>
+        </>
       )}
     </header>
   );
