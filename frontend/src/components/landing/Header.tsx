@@ -158,88 +158,113 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-      <div className="mx-auto max-w-6xl px-4">
-        {/* Single row — logo + anchors + locale + CTA */}
-        <div className="flex h-16 items-center justify-between">
-          {/* Left side — logo + section anchors */}
-          <div className="flex items-center gap-10">
-            {/* Logo — nofollow per SEO req #37 */}
-            <a
-              href={logoUrl}
-              rel="nofollow noopener"
-              className="flex items-center"
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/logo-desktop.svg"
-                alt={tCommon("siteName")}
-                width={120}
-                height={32}
-                className="hidden sm:block"
-              />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/logo-mobile.svg"
-                alt={tCommon("siteName")}
-                width={32}
-                height={32}
-                className="block sm:hidden"
-              />
-            </a>
+      {/* Desktop nav — Figma node 1-512 */}
+      <nav
+        className="hidden lg:flex max-w-[1440px] mx-auto px-[60px] xl:px-[120px] py-[20px] items-center justify-between"
+        aria-label="Основная навигация"
+      >
+        <div className="flex items-center gap-[60px] xl:gap-[162px]">
+          {/* Logo — nofollow per SEO req #37 */}
+          <a
+            href={logoUrl}
+            rel="nofollow noopener"
+            className="flex-shrink-0"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo-desktop.svg"
+              alt={tCommon("siteName")}
+              width={121}
+              height={32}
+            />
+          </a>
 
-            {/* Anchor nav — landing pages, inline with logo */}
-            {isLandingPage && anchors.length > 0 && (
-              <nav className="hidden items-center gap-10 md:flex">
-                {anchors.map((anchor) => (
+          {/* Anchor nav — landing pages */}
+          {isLandingPage && anchors.length > 0 && (
+            <ul className="flex items-center gap-[30px] xl:gap-[60px]">
+              {anchors.map((anchor) => (
+                <li key={anchor.id}>
                   <a
-                    key={anchor.id}
                     href={`#${anchor.id}`}
-                    className="whitespace-nowrap text-sm font-medium text-text-muted transition-colors hover:text-text"
+                    className="whitespace-nowrap text-[14px] font-medium leading-[1.2] text-text transition-colors hover:text-primary"
                   >
                     {anchor.label}
                   </a>
-                ))}
-              </nav>
-            )}
-          </div>
-
-          {/* Desktop nav — main nav links (hidden on landing pages) */}
-          {!isLandingPage && (
-            <nav className="hidden items-center gap-6 lg:flex">
-              {mainNav.map((item) => (
-                <a
-                  key={item.id}
-                  href={item.href}
-                  rel="nofollow noopener"
-                  className="text-sm text-text-muted transition-colors hover:text-text"
-                >
-                  {item.label}
-                </a>
+                </li>
               ))}
-            </nav>
+            </ul>
           )}
 
-          {/* Desktop nav — right side: locale + CTA */}
-          <div className="hidden items-center gap-4 md:flex">
-            <a
-              href={localeSwitchHref}
-              className="btn-outline-gradient px-5 py-2 text-sm font-medium transition-colors"
-            >
-              {localeLabel}
-            </a>
-            <a
-              href={tryItUrl}
-              rel="nofollow noopener"
-              className="btn-gradient px-6 py-2.5 text-sm"
-            >
-              {tNav("tryIt")}
-            </a>
-          </div>
+          {/* Main nav — non-landing pages */}
+          {!isLandingPage && (
+            <ul className="flex items-center gap-[30px] xl:gap-[60px]">
+              {mainNav.map((item) => (
+                <li key={item.id}>
+                  <a
+                    href={item.href}
+                    rel="nofollow noopener"
+                    className="whitespace-nowrap text-[14px] font-medium leading-[1.2] text-text transition-colors hover:text-primary"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
 
-          {/* Mobile burger */}
+        <div className="flex items-center gap-4">
+          <a
+            href={localeSwitchHref}
+            className="btn-outline-gradient px-5 py-2 text-sm font-medium transition-colors"
+          >
+            {localeLabel}
+          </a>
+          <a
+            href={tryItUrl}
+            rel="nofollow noopener"
+            className="btn-gradient px-6 py-2.5 text-sm"
+          >
+            {tNav("tryIt")}
+          </a>
+        </div>
+      </nav>
+
+      {/* Mobile nav */}
+      <div className="flex lg:hidden items-center justify-between h-[72px] px-6">
+        <a
+          href={logoUrl}
+          rel="nofollow noopener"
+          className="flex-shrink-0"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo-mobile.svg"
+            alt={tCommon("siteName")}
+            width={42}
+            height={42}
+          />
+        </a>
+
+        <div className="flex items-center gap-3">
+          <a
+            href={localeSwitchHref}
+            className="btn-outline-gradient px-4 py-2 text-sm font-medium transition-colors"
+          >
+            {localeLabel}
+          </a>
+          <a
+            href={tryItUrl}
+            rel="nofollow noopener"
+            className="btn-gradient px-5 py-2.5 text-sm"
+          >
+            {tNav("tryIt")}
+          </a>
+
+          {/* Hamburger */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="flex h-10 w-10 items-center justify-center rounded-2xl md:hidden hover:bg-surface transition-colors"
+            className="flex h-10 w-10 items-center justify-center rounded-2xl hover:bg-surface transition-colors"
             aria-label="Menu"
           >
             <svg className="h-6 w-6 text-text" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -251,7 +276,6 @@ export function Header() {
             </svg>
           </button>
         </div>
-
       </div>
 
       {/* Mobile menu — Figma node 1-1006: full-screen overlay */}
@@ -259,13 +283,13 @@ export function Header() {
         <>
           {/* Backdrop */}
           <div
-            className="fixed inset-0 z-40 bg-black/80 backdrop-blur-[60px] md:hidden"
+            className="fixed inset-0 z-40 bg-black/80 backdrop-blur-[60px] lg:hidden"
             onClick={closeMenu}
             aria-hidden="true"
           />
 
           {/* Menu panel */}
-          <div className="fixed inset-x-0 bottom-0 z-50 rounded-t-[40px] bg-[#FAFAFA] px-6 pb-8 pt-4 md:hidden">
+          <div className="fixed inset-x-0 bottom-0 z-50 rounded-t-[40px] bg-[#FAFAFA] px-6 pb-8 pt-4 lg:hidden">
             {/* Main navigation links */}
             <nav className="mb-8 flex flex-col gap-6">
               {mainNav.map((item) => (
