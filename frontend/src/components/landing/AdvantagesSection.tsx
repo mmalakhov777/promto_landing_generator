@@ -14,12 +14,12 @@ const iconSvgMap: Record<string, string> = {
   code: "/icons/code.svg",
 };
 
-/* Gradient backgrounds from Figma design system */
-const gradients = [
-  "linear-gradient(196deg, #FFD478 0%, #FF9854 91%)",
+/* Icon badge backgrounds from Figma — cycling colors */
+const badgeColors = [
+  "#FF4D6B",
   "linear-gradient(193deg, #5EFF6E 0%, #289F35 100%)",
-  "linear-gradient(196deg, #575EFF 0%, #E478FF 91%)",
   "linear-gradient(196deg, #3F50EF 0%, #223DDB 100%)",
+  "linear-gradient(196deg, #575EFF 0%, #E478FF 91%)",
 ];
 
 interface AdvantagesSectionProps {
@@ -27,36 +27,74 @@ interface AdvantagesSectionProps {
   items: AdvantageItem[];
 }
 
+function AdvantageCard({ item, idx }: { item: AdvantageItem; idx: number }) {
+  return (
+    <div className="rounded-[32px] bg-surface p-8 shadow-card">
+      {/* Icon badge — 40x40, radius 10px */}
+      <div
+        className="mb-8 flex h-10 w-10 items-center justify-center rounded-[10px]"
+        style={{ background: badgeColors[idx % badgeColors.length] }}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={iconSvgMap[item.icon] || "/icons/plus-square.svg"}
+          alt=""
+          width={24}
+          height={24}
+          className="brightness-0 invert"
+        />
+      </div>
+      <h3 className="mb-3 text-[20px] font-medium leading-[1.24] text-text">{item.title}</h3>
+      <p className="text-sm leading-[1.3] text-text-muted">{item.description}</p>
+    </div>
+  );
+}
+
 export function AdvantagesSection({ title, items }: AdvantagesSectionProps) {
   if (!items.length) return null;
 
   return (
     <section className="py-section">
-      <div className="mx-auto max-w-6xl px-4">
-        <h2 className="mb-12 text-center text-[38px] font-medium leading-[1.12] text-text">{title}</h2>
-        <div className={`grid gap-6 sm:grid-cols-2 ${items.length <= 3 ? "lg:grid-cols-3" : "lg:grid-cols-4"}`}>
-          {items.map((item, idx) => (
-            <div
-              key={idx}
-              className="rounded-[32px] bg-surface p-8 shadow-card shadow-card-hover transition-all"
-            >
-              <div
-                className="mb-5 flex h-12 w-12 items-center justify-center rounded-[14px] text-white"
-                style={{ background: gradients[idx % gradients.length] }}
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={iconSvgMap[item.icon] || "/icons/plus-square.svg"}
-                  alt=""
-                  width={22}
-                  height={22}
-                  className="brightness-0 invert"
-                />
+      <div className="mx-auto max-w-[1200px] px-4">
+        {/* Two-column layout: title left, cards right */}
+        <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-24">
+          {/* Left — section title */}
+          <div className="shrink-0 lg:w-[400px] lg:sticky lg:top-32">
+            <h2 className="text-[38px] font-medium leading-[1.12] text-text">{title}</h2>
+          </div>
+
+          {/* Right — cards */}
+          <div className="flex-1">
+            {items.length === 3 ? (
+              /* Figma layout: 2 cards on top + 1 wide on bottom */
+              <div className="flex flex-col gap-3">
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  <AdvantageCard item={items[0]} idx={0} />
+                  <AdvantageCard item={items[1]} idx={1} />
+                </div>
+                <AdvantageCard item={items[2]} idx={2} />
               </div>
-              <h3 className="mb-2 text-lg font-medium text-text">{item.title}</h3>
-              <p className="text-sm leading-relaxed text-text-muted">{item.description}</p>
-            </div>
-          ))}
+            ) : items.length === 2 ? (
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {items.map((item, idx) => (
+                  <AdvantageCard key={idx} item={item} idx={idx} />
+                ))}
+              </div>
+            ) : items.length === 4 ? (
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {items.map((item, idx) => (
+                  <AdvantageCard key={idx} item={item} idx={idx} />
+                ))}
+              </div>
+            ) : (
+              /* 5+ items: 2-column grid */
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {items.map((item, idx) => (
+                  <AdvantageCard key={idx} item={item} idx={idx} />
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </section>
