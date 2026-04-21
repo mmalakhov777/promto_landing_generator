@@ -12,6 +12,7 @@ export function Footer({ platformUrl }: FooterProps) {
   const pathname = usePathname();
   const tCommon = useTranslations("common");
   const tFooter = useTranslations("footer");
+  const tNav = useTranslations("nav");
   const year = new Date().getFullYear();
 
   const campaign = campaignFromPathname(pathname);
@@ -37,14 +38,29 @@ export function Footer({ platformUrl }: FooterProps) {
 
           {/* Right — nav columns + CTA */}
           <div className="flex flex-col gap-10 sm:flex-row sm:gap-16 lg:gap-[120px]">
-            {/* Column: Продукт */}
+            {/* Column: Промто — site-wide nav */}
             <div className="flex flex-col gap-4">
               <span className="text-sm text-text-muted">{tCommon("siteName")}</span>
-              <a href={tryItUrl} rel="nofollow noopener" className="text-sm text-text transition-colors hover:text-primary">
-                {tFooter("ctaButton")}
+              <a href="https://app.promto.ai/about" rel="nofollow noopener" className="text-sm text-text transition-colors hover:text-primary">
+                {tNav("about")}
               </a>
-              <a href="https://promto.ai/blog" className="text-sm text-text transition-colors hover:text-primary">
-                {tFooter("blog")}
+              <a href="https://app.promto.ai/services" rel="nofollow noopener" className="text-sm text-text transition-colors hover:text-primary">
+                {tNav("services")}
+              </a>
+              <a href="https://app.promto.ai/pricing" rel="nofollow noopener" className="text-sm text-text transition-colors hover:text-primary">
+                {tNav("pricing")}
+              </a>
+              <a href="https://promto.ai/blog" rel="nofollow noopener" className="text-sm text-text transition-colors hover:text-primary">
+                {tNav("blog")}
+              </a>
+              <a href="https://app.promto.ai/cases" rel="nofollow noopener" className="text-sm text-text transition-colors hover:text-primary">
+                {tNav("cases")}
+              </a>
+              <a href="https://app.promto.ai/contacts" rel="nofollow noopener" className="text-sm text-text transition-colors hover:text-primary">
+                {tNav("contacts")}
+              </a>
+              <a href="https://promto.ai/faq" rel="nofollow noopener" className="text-sm text-text transition-colors hover:text-primary">
+                {tNav("faq")}
               </a>
             </div>
 

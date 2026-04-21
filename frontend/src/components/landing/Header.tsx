@@ -158,32 +158,50 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-      <div className="mx-auto flex max-w-6xl flex-col px-4">
-        {/* Top row — logo + locale + CTA */}
+      <div className="mx-auto max-w-6xl px-4">
+        {/* Single row — logo + anchors + locale + CTA */}
         <div className="flex h-16 items-center justify-between">
-          {/* Logo — nofollow per SEO req #37 */}
-          <a
-            href={logoUrl}
-            rel="nofollow noopener"
-            className="flex items-center"
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/logo-desktop.svg"
-              alt={tCommon("siteName")}
-              width={120}
-              height={32}
-              className="hidden sm:block"
-            />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/logo-mobile.svg"
-              alt={tCommon("siteName")}
-              width={32}
-              height={32}
-              className="block sm:hidden"
-            />
-          </a>
+          {/* Left side — logo + section anchors */}
+          <div className="flex items-center gap-10">
+            {/* Logo — nofollow per SEO req #37 */}
+            <a
+              href={logoUrl}
+              rel="nofollow noopener"
+              className="flex items-center"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logo-desktop.svg"
+                alt={tCommon("siteName")}
+                width={120}
+                height={32}
+                className="hidden sm:block"
+              />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logo-mobile.svg"
+                alt={tCommon("siteName")}
+                width={32}
+                height={32}
+                className="block sm:hidden"
+              />
+            </a>
+
+            {/* Anchor nav — landing pages, inline with logo */}
+            {isLandingPage && anchors.length > 0 && (
+              <nav className="hidden items-center gap-10 md:flex">
+                {anchors.map((anchor) => (
+                  <a
+                    key={anchor.id}
+                    href={`#${anchor.id}`}
+                    className="whitespace-nowrap text-sm font-medium text-text-muted transition-colors hover:text-text"
+                  >
+                    {anchor.label}
+                  </a>
+                ))}
+              </nav>
+            )}
+          </div>
 
           {/* Desktop nav — main nav links (hidden on landing pages) */}
           {!isLandingPage && (
@@ -234,20 +252,6 @@ export function Header() {
           </button>
         </div>
 
-        {/* Anchor nav — only on landing pages, only for active sections */}
-        {isLandingPage && anchors.length > 0 && (
-          <nav className="hidden gap-1 border-t border-border-light py-2 md:flex">
-            {anchors.map((anchor) => (
-              <a
-                key={anchor.id}
-                href={`#${anchor.id}`}
-                className="rounded-lg px-3 py-1.5 text-xs text-text-muted transition-colors hover:bg-surface hover:text-text"
-              >
-                {anchor.label}
-              </a>
-            ))}
-          </nav>
-        )}
       </div>
 
       {/* Mobile menu — Figma node 1-1006: full-screen overlay */}
