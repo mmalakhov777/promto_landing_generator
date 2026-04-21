@@ -31,6 +31,12 @@
     "backHome": "Back to home"
   },
   "footer": {
-    "copyright": "© {year} {siteName}. All rights reserved."
+    "copyright": "© Promto, {year}",
+    "description": "A unified development platform. Build products in weeks instead of months.",
+    "ctaText": "Build products with Promto faster than the market can change",
+    "ctaButton": "Try for free",
+    "termsOfUse": "Terms of Use",
+    "privacy": "Privacy Policy",
+    "consent": "Data Processing Consent"
   }
 }

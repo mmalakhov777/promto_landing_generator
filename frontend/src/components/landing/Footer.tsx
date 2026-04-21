@@ -1,49 +1,88 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+
 interface FooterProps {
   platformUrl: string;
 }
 
 export function Footer({ platformUrl }: FooterProps) {
   const tCommon = useTranslations("common");
-  const tNav = useTranslations("nav");
   const tFooter = useTranslations("footer");
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-secondary text-white">
-      <div className="mx-auto max-w-6xl px-4 py-12">
-        <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
-          {/* Brand logo */}
-          <a
-            href={platformUrl}
-            rel="nofollow noopener"
-            className="hover:opacity-80 transition-opacity"
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/footer-logo-white.svg"
-              alt={tCommon("siteName")}
-              width={100}
-              height={28}
-            />
-          </a>
-
-          {/* Links */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-text-muted">
-            <a
-              href={platformUrl}
-              rel="nofollow noopener"
-              className="hover:text-white transition-colors"
-            >
-              {tNav("platform")}
+    <footer className="pt-20 pb-12">
+      <div className="mx-auto max-w-[1200px] px-4">
+        {/* Main footer content — two columns */}
+        <div className="flex flex-col gap-12 lg:flex-row lg:justify-between">
+          {/* Left — logo + description */}
+          <div className="flex flex-col gap-10 lg:w-[240px] lg:shrink-0">
+            <a href={platformUrl} rel="nofollow noopener" className="transition-opacity hover:opacity-80">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo-desktop.svg" alt={tCommon("siteName")} width={142} height={34} />
             </a>
+            <p className="text-sm leading-[1.25] text-text-muted">
+              {tFooter("description")}
+            </p>
+          </div>
+
+          {/* Right — nav columns + CTA */}
+          <div className="flex flex-col gap-10 sm:flex-row sm:gap-16 lg:gap-[120px]">
+            {/* Column: Продукт */}
+            <div className="flex flex-col gap-4">
+              <span className="text-sm text-text-muted">{tCommon("siteName")}</span>
+              <a href={platformUrl} rel="nofollow noopener" className="text-sm text-text transition-colors hover:text-primary">
+                {tFooter("ctaButton")}
+              </a>
+            </div>
+
+            {/* Column: Документы */}
+            <div className="flex flex-col gap-4">
+              <span className="text-sm text-text-muted">Документы</span>
+              <a href="https://app.promto.ai/termsofuse" rel="nofollow noopener" className="text-sm text-text transition-colors hover:text-primary">
+                {tFooter("termsOfUse")}
+              </a>
+              <a href="https://app.promto.ai/privacy" rel="nofollow noopener" className="text-sm text-text transition-colors hover:text-primary">
+                {tFooter("privacy")}
+              </a>
+              <a href="https://app.promto.ai/consent" rel="nofollow noopener" className="text-sm text-text transition-colors hover:text-primary">
+                {tFooter("consent")}
+              </a>
+            </div>
+
+            {/* Column: CTA */}
+            <div className="flex flex-col gap-8 lg:w-[274px]">
+              <p className="text-sm leading-[1.2] text-text">
+                {tFooter("ctaText")}
+              </p>
+              <a
+                href={platformUrl}
+                rel="nofollow noopener"
+                className="btn-gradient inline-flex w-[250px] items-center justify-center px-6 py-4 text-sm"
+              >
+                {tFooter("ctaButton")}
+              </a>
+            </div>
           </div>
         </div>
 
-        <div className="mt-8 border-t border-white/10 pt-6 text-center text-sm text-text-muted">
-          {tFooter("copyright", { year: String(year), siteName: tCommon("siteName") })}
+        {/* Bottom bar — copyright + legal links */}
+        <div className="mt-20 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+          <span className="text-xs text-text-muted">
+            {tFooter("copyright", { year: String(year) })}
+          </span>
+          <div className="flex flex-wrap items-center gap-4 text-xs text-text-muted">
+            <a href="https://app.promto.ai/termsofuse" rel="nofollow noopener" className="transition-colors hover:text-text">
+              {tFooter("termsOfUse")}
+            </a>
+            <a href="https://app.promto.ai/privacy" rel="nofollow noopener" className="transition-colors hover:text-text">
+              {tFooter("privacy")}
+            </a>
+            <a href="https://app.promto.ai/consent" rel="nofollow noopener" className="transition-colors hover:text-text">
+              {tFooter("consent")}
+            </a>
+          </div>
         </div>
       </div>
     </footer>
