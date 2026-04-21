@@ -143,15 +143,15 @@ export default async function LandingPage({ params }: Props) {
         )}
 
         {enabled.has("advantages") && landing.advantages && (
-          <AdvantagesSection title={t("advantagesTitle")} items={landing.advantages} />
+          <AdvantagesSection title={t("advantagesTitle")} items={landing.advantages} id="advantages" />
         )}
 
         {enabled.has("how_it_works") && landing.how_it_works && (
-          <HowItWorksSection title={t("howItWorksTitle")} steps={landing.how_it_works} />
+          <HowItWorksSection title={t("howItWorksTitle")} steps={landing.how_it_works} id="how-it-works" />
         )}
 
         {enabled.has("examples") && landing.examples && (
-          <ExamplesSection title={t("examplesTitle")} items={landing.examples} />
+          <ExamplesSection title={t("examplesTitle")} items={landing.examples} id="examples" />
         )}
 
         {enabled.has("cta_mid") && (
@@ -173,6 +173,7 @@ export default async function LandingPage({ params }: Props) {
           <VideoSection
             title={landing.video_title || t("videoTitle")}
             videoUrl={landing.video_url}
+            id="video"
           />
         )}
 
@@ -185,15 +186,16 @@ export default async function LandingPage({ params }: Props) {
             ctaTextSecondary={t("ctaChoose")}
             landingSlug={slug}
             metrikaId={metrikaId}
+            id="pricing"
           />
         )}
 
         {enabled.has("reviews") && landing.reviews && (
-          <ReviewsSection title={t("reviewsTitle")} reviews={landing.reviews} />
+          <ReviewsSection title={t("reviewsTitle")} reviews={landing.reviews} id="reviews" />
         )}
 
         {enabled.has("faq") && landing.faq && (
-          <FaqSection title={t("faqTitle")} items={landing.faq} metrikaId={metrikaId} />
+          <FaqSection title={t("faqTitle")} items={landing.faq} metrikaId={metrikaId} id="faq" />
         )}
 
         <CtaBlock

@@ -4,13 +4,14 @@ import type { ExampleItem } from "@/types/public";
 interface ExamplesSectionProps {
   title: string;
   items: ExampleItem[];
+  id?: string;
 }
 
-export function ExamplesSection({ title, items }: ExamplesSectionProps) {
+export function ExamplesSection({ title, items, id }: ExamplesSectionProps) {
   if (!items.length) return null;
 
   return (
-    <section className="py-section">
+    <section id={id} className="py-section">
       <div className="mx-auto max-w-6xl px-4">
         <h2 className="mb-12 text-center text-[38px] font-medium leading-[1.12] text-text">{title}</h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

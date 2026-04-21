@@ -11,13 +11,14 @@ const stepVisuals = [
 interface HowItWorksSectionProps {
   title: string;
   steps: HowItWorksStep[];
+  id?: string;
 }
 
-export function HowItWorksSection({ title, steps }: HowItWorksSectionProps) {
+export function HowItWorksSection({ title, steps, id }: HowItWorksSectionProps) {
   if (!steps.length) return null;
 
   return (
-    <section className="py-section">
+    <section id={id} className="py-section">
       <div className="mx-auto max-w-[1200px] px-4">
         <h2 className="mb-20 text-center text-[38px] font-medium leading-[1.12] text-text">{title}</h2>
         <div className="flex flex-col gap-3">

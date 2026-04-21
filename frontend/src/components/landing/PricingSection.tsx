@@ -13,6 +13,7 @@ interface PricingSectionProps {
   ctaTextSecondary: string;
   landingSlug: string;
   metrikaId?: string;
+  id?: string;
 }
 
 export function PricingSection({
@@ -23,6 +24,7 @@ export function PricingSection({
   ctaTextSecondary,
   landingSlug,
   metrikaId,
+  id,
 }: PricingSectionProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const trackedRef = useRef(false);
@@ -58,7 +60,7 @@ export function PricingSection({
   };
 
   return (
-    <section ref={sectionRef} className="py-section">
+    <section id={id} ref={sectionRef} className="py-section">
       <div className="mx-auto max-w-6xl px-4">
         <h2 className="mb-12 text-center text-[38px] font-medium leading-[1.12] text-text">{title}</h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

@@ -5,9 +5,10 @@ import { useState } from "react";
 interface VideoSectionProps {
   title: string;
   videoUrl: string;
+  id?: string;
 }
 
-export function VideoSection({ title, videoUrl }: VideoSectionProps) {
+export function VideoSection({ title, videoUrl, id }: VideoSectionProps) {
   const [loaded, setLoaded] = useState(false);
 
   if (!videoUrl) return null;
@@ -17,7 +18,7 @@ export function VideoSection({ title, videoUrl }: VideoSectionProps) {
   if (!embedUrl) return null;
 
   return (
-    <section className="py-section">
+    <section id={id} className="py-section">
       <div className="mx-auto max-w-4xl px-4">
         {title && (
           <h2 className="mb-8 text-center text-[38px] font-medium leading-[1.12] text-text">{title}</h2>

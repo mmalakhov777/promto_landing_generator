@@ -25,6 +25,7 @@ const badgeColors = [
 interface AdvantagesSectionProps {
   title: string;
   items: AdvantageItem[];
+  id?: string;
 }
 
 function AdvantageCard({ item, idx }: { item: AdvantageItem; idx: number }) {
@@ -50,11 +51,11 @@ function AdvantageCard({ item, idx }: { item: AdvantageItem; idx: number }) {
   );
 }
 
-export function AdvantagesSection({ title, items }: AdvantagesSectionProps) {
+export function AdvantagesSection({ title, items, id }: AdvantagesSectionProps) {
   if (!items.length) return null;
 
   return (
-    <section className="py-section">
+    <section id={id} className="py-section">
       <div className="mx-auto max-w-[1200px] px-4">
         {/* Two-column layout: title left, cards right */}
         <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-24">

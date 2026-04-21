@@ -7,9 +7,10 @@ interface FaqSectionProps {
   title: string;
   items: FaqItem[];
   metrikaId?: string;
+  id?: string;
 }
 
-export function FaqSection({ title, items, metrikaId }: FaqSectionProps) {
+export function FaqSection({ title, items, metrikaId, id }: FaqSectionProps) {
   if (!items.length) return null;
 
   const handleToggle = (e: React.MouseEvent<HTMLElement>) => {
@@ -21,7 +22,7 @@ export function FaqSection({ title, items, metrikaId }: FaqSectionProps) {
   };
 
   return (
-    <section className="py-section">
+    <section id={id} className="py-section">
       <div className="mx-auto max-w-3xl px-4">
         <h2 className="mb-12 text-center text-[38px] font-medium leading-[1.12] text-text">{title}</h2>
         <div className="space-y-3">
