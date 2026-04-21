@@ -177,19 +177,21 @@ export function Header() {
             />
           </a>
 
-          {/* Desktop nav — main nav links */}
-          <nav className="hidden items-center gap-6 lg:flex">
-            {mainNav.map((item) => (
-              <a
-                key={item.id}
-                href={item.href}
-                rel="nofollow noopener"
-                className="text-sm text-text-muted transition-colors hover:text-text"
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
+          {/* Desktop nav — main nav links (hidden on landing pages) */}
+          {!isLandingPage && (
+            <nav className="hidden items-center gap-6 lg:flex">
+              {mainNav.map((item) => (
+                <a
+                  key={item.id}
+                  href={item.href}
+                  rel="nofollow noopener"
+                  className="text-sm text-text-muted transition-colors hover:text-text"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+          )}
 
           {/* Desktop nav — right side: locale + CTA */}
           <div className="hidden items-center gap-4 md:flex">
