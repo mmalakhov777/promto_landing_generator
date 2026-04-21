@@ -1,7 +1,6 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-
 interface FooterProps {
   platformUrl: string;
 }
@@ -13,20 +12,26 @@ export function Footer({ platformUrl }: FooterProps) {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border bg-secondary text-white">
+    <footer className="bg-secondary text-white">
       <div className="mx-auto max-w-6xl px-4 py-12">
         <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
-          {/* Brand */}
+          {/* Brand logo */}
           <a
             href={platformUrl}
             rel="nofollow noopener"
-            className="text-lg font-bold text-white hover:text-primary-light transition-colors"
+            className="hover:opacity-80 transition-opacity"
           >
-            {tCommon("siteName")}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/footer-logo-white.svg"
+              alt={tCommon("siteName")}
+              width={100}
+              height={28}
+            />
           </a>
 
           {/* Links */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-text-muted">
             <a
               href={platformUrl}
               rel="nofollow noopener"
@@ -37,7 +42,7 @@ export function Footer({ platformUrl }: FooterProps) {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
+        <div className="mt-8 border-t border-white/10 pt-6 text-center text-sm text-text-muted">
           {tFooter("copyright", { year: String(year), siteName: tCommon("siteName") })}
         </div>
       </div>

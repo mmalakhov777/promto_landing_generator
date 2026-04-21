@@ -17,12 +17,12 @@ export function VideoSection({ title, videoUrl }: VideoSectionProps) {
   if (!embedUrl) return null;
 
   return (
-    <section className="bg-surface py-section">
+    <section className="py-section">
       <div className="mx-auto max-w-4xl px-4">
         {title && (
-          <h2 className="mb-8 text-center text-3xl font-bold text-text">{title}</h2>
+          <h2 className="mb-8 text-center text-[38px] font-medium leading-[1.12] text-text">{title}</h2>
         )}
-        <div className="relative aspect-video overflow-hidden rounded-2xl bg-secondary">
+        <div className="relative aspect-video overflow-hidden rounded-[32px] bg-secondary shadow-card">
           {loaded ? (
             <iframe
               src={embedUrl}
@@ -37,7 +37,9 @@ export function VideoSection({ title, videoUrl }: VideoSectionProps) {
               className="absolute inset-0 flex items-center justify-center transition-opacity hover:opacity-80"
               aria-label="Play video"
             >
-              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/90 text-white shadow-lg">
+              <div className="flex h-20 w-20 items-center justify-center rounded-full text-white shadow-lg" style={{
+                background: 'linear-gradient(183deg, rgba(94, 255, 110, 1) 0%, rgba(70, 78, 255, 1) 83%)'
+              }}>
                 <svg className="ml-1 h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z" />
                 </svg>

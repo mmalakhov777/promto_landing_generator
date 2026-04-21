@@ -57,24 +57,24 @@ export function PricingSection({
   return (
     <section ref={sectionRef} className="py-section">
       <div className="mx-auto max-w-6xl px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold text-text">{title}</h2>
+        <h2 className="mb-12 text-center text-[38px] font-medium leading-[1.12] text-text">{title}</h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {plans.map((plan, idx) => (
             <div
               key={idx}
-              className={`relative flex flex-col rounded-2xl border p-6 transition-shadow hover:shadow-md ${
+              className={`relative flex flex-col rounded-[32px] p-8 transition-shadow ${
                 plan.is_popular
-                  ? "border-primary bg-primary/5 shadow-sm"
-                  : "border-border bg-white"
+                  ? "card-gradient-border shadow-card"
+                  : "bg-surface shadow-card shadow-card-hover"
               }`}
             >
               {plan.is_popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-xs font-medium text-white">
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-pink px-5 py-1.5 text-xs font-medium text-white">
                   {popularLabel}
                 </div>
               )}
-              <h3 className="text-xl font-bold text-text">{plan.name}</h3>
-              <div className="mt-4 text-3xl font-bold text-primary">{plan.price}</div>
+              <h3 className="text-xl font-medium text-text">{plan.name}</h3>
+              <div className="mt-4 text-3xl font-medium text-gradient">{plan.price}</div>
               {plan.features.length > 0 && (
                 <ul className="mt-6 flex-1 space-y-3">
                   {plan.features.map((feature, fidx) => (
@@ -90,10 +90,10 @@ export function PricingSection({
                   href={plan.cta_url}
                   rel="nofollow noopener"
                   onClick={handleCtaClick}
-                  className={`mt-6 block rounded-xl py-3 text-center text-sm font-medium transition-colors ${
+                  className={`mt-6 block py-3.5 text-center text-sm font-medium transition-all ${
                     plan.is_popular
-                      ? "bg-primary text-white hover:bg-primary-hover"
-                      : "border border-primary text-primary hover:bg-primary/5"
+                      ? "btn-gradient"
+                      : "btn-outline-gradient"
                   }`}
                 >
                   {plan.is_popular ? ctaTextPrimary : ctaTextSecondary}

@@ -32,8 +32,8 @@ export function SocialProofBar({ items }: SocialProofBarProps) {
   if (!items.length) return null;
 
   return (
-    <div ref={ref} className="border-y border-border bg-surface py-6">
-      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-8 px-4 md:gap-16">
+    <div ref={ref} className="py-8">
+      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-10 px-4 md:gap-20">
         {items.map((item, idx) => (
           <div
             key={idx}
@@ -42,7 +42,7 @@ export function SocialProofBar({ items }: SocialProofBarProps) {
             }`}
             style={{ transitionDelay: `${idx * 100}ms` }}
           >
-            <div className="text-2xl font-bold text-primary md:text-3xl">
+            <div className="text-2xl font-medium text-gradient md:text-3xl">
               {item.value}
             </div>
             <div className="mt-1 text-sm text-text-muted">{item.label}</div>

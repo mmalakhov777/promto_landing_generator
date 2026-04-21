@@ -94,7 +94,7 @@ export default async function CategoryPage({ params }: Props) {
         items={[{ label: name }]}
       />
 
-      <h1 className="text-3xl font-bold text-text md:text-4xl">{name}</h1>
+      <h1 className="text-3xl font-medium text-text md:text-4xl">{name}</h1>
       {description && (
         <p className="mt-4 text-lg text-text-muted">{description}</p>
       )}
@@ -104,7 +104,7 @@ export default async function CategoryPage({ params }: Props) {
           <a
             key={landing.slug}
             href={landing.full_url}
-            className="group rounded-2xl border border-border bg-white p-5 transition-shadow hover:shadow-md"
+            className="group rounded-[20px] bg-surface p-6 shadow-card shadow-card-hover transition-shadow"
           >
             <p className="font-semibold text-text group-hover:text-primary transition-colors">
               {landing.title}

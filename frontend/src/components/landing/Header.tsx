@@ -34,29 +34,44 @@ export function Header({ locale, platformUrl }: HeaderProps) {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         {/* Logo — nofollow per SEO req #37 */}
         <a
           href={platformUrl}
           rel="nofollow noopener"
-          className="text-xl font-bold text-primary"
+          className="flex items-center"
         >
-          {tCommon("siteName")}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo-desktop.svg"
+            alt={tCommon("siteName")}
+            width={120}
+            height={32}
+            className="hidden sm:block"
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo-mobile.svg"
+            alt={tCommon("siteName")}
+            width={32}
+            height={32}
+            className="block sm:hidden"
+          />
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden items-center gap-4 md:flex">
           <a
             href={localeSwitchHref}
-            className="rounded-lg border border-border px-3 py-1.5 text-sm font-medium text-text hover:bg-surface transition-colors"
+            className="btn-outline-gradient px-5 py-2 text-sm font-medium transition-colors"
           >
             {localeLabel}
           </a>
           <a
             href={platformUrl}
             rel="nofollow noopener"
-            className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white hover:bg-primary-hover transition-colors"
+            className="btn-gradient px-6 py-2.5 text-sm"
           >
             {tNav("tryIt")}
           </a>
@@ -65,10 +80,10 @@ export function Header({ locale, platformUrl }: HeaderProps) {
         {/* Mobile burger */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="flex h-10 w-10 items-center justify-center rounded-lg md:hidden hover:bg-surface transition-colors"
+          className="flex h-10 w-10 items-center justify-center rounded-2xl md:hidden hover:bg-surface transition-colors"
           aria-label="Menu"
         >
-          <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className="h-6 w-6 text-text" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             {menuOpen ? (
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             ) : (
@@ -80,18 +95,18 @@ export function Header({ locale, platformUrl }: HeaderProps) {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="border-t border-border px-4 py-4 md:hidden">
+        <div className="px-4 py-4 md:hidden">
           <div className="flex flex-col gap-3">
             <a
               href={localeSwitchHref}
-              className="rounded-lg border border-border px-3 py-2 text-center text-sm font-medium text-text hover:bg-surface transition-colors"
+              className="btn-outline-gradient px-5 py-2.5 text-center text-sm font-medium"
             >
               {localeLabel}
             </a>
             <a
               href={platformUrl}
               rel="nofollow noopener"
-              className="rounded-lg bg-primary px-4 py-2 text-center text-sm font-medium text-white hover:bg-primary-hover transition-colors"
+              className="btn-gradient px-6 py-2.5 text-center text-sm"
             >
               {tNav("tryIt")}
             </a>

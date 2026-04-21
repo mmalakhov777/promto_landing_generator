@@ -126,7 +126,7 @@ export default async function CatchAllPage({ params }: Props) {
           ]}
         />
 
-        <h1 className="text-3xl font-bold text-text">
+        <h1 className="text-3xl font-medium text-text">
           {name} — {pageLabel} {pageNum}
         </h1>
 
@@ -135,9 +135,9 @@ export default async function CatchAllPage({ params }: Props) {
             <a
               key={landing.slug}
               href={landing.full_url}
-              className="group rounded-2xl border border-border bg-white p-5 transition-shadow hover:shadow-md"
+              className="group rounded-[20px] bg-surface p-6 shadow-card shadow-card-hover transition-shadow"
             >
-              <p className="font-semibold text-text group-hover:text-primary transition-colors">
+              <p className="font-medium text-text group-hover:text-primary transition-colors">
                 {landing.title}
               </p>
               <p className="mt-1 text-sm text-text-muted">{landing.keyword}</p>
@@ -154,7 +154,7 @@ export default async function CatchAllPage({ params }: Props) {
                   ? `/${locale}/${categorySlug}/`
                   : `/${locale}/${categorySlug}/page${pageNum - 1}/`
               }
-              className="rounded-lg border border-border px-4 py-2 text-sm hover:bg-surface transition-colors"
+              className="rounded-full border border-border px-4 py-2 text-sm hover:bg-surface transition-colors"
             >
               ←
             </a>
@@ -165,7 +165,7 @@ export default async function CatchAllPage({ params }: Props) {
           {pageNum < totalPages && (
             <a
               href={`/${locale}/${categorySlug}/page${pageNum + 1}/`}
-              className="rounded-lg border border-border px-4 py-2 text-sm hover:bg-surface transition-colors"
+              className="rounded-full border border-border px-4 py-2 text-sm hover:bg-surface transition-colors"
             >
               →
             </a>

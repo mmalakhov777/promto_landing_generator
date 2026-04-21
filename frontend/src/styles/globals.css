@@ -1,29 +1,40 @@
 @import "tailwindcss";
 
 @theme {
-  /* Promto brand colors */
-  --color-primary: #6366f1;
-  --color-primary-hover: #4f46e5;
-  --color-primary-light: #e0e7ff;
-  --color-secondary: #0f172a;
-  --color-accent: #06b6d4;
-  --color-background: #ffffff;
-  --color-surface: #f8fafc;
-  --color-border: #e2e8f0;
-  --color-text: #0f172a;
-  --color-text-muted: #64748b;
+  /* Promto brand colors — from Figma "White landing b2c" */
+  --color-primary: #464EFF;
+  --color-primary-hover: #3F50EF;
+  --color-primary-light: rgba(70, 78, 255, 0.08);
+  --color-secondary: #111111;
+  --color-accent: #5EFF6E;
+  --color-background: #FAFAFA;
+  --color-surface: #FFFFFF;
+  --color-border: rgba(133, 133, 133, 0.24);
+  --color-border-light: rgba(133, 133, 133, 0.12);
+  --color-text: #111111;
+  --color-text-muted: #858585;
+  --color-text-light: #BCBCBD;
   --color-success: #22c55e;
   --color-warning: #f59e0b;
   --color-error: #ef4444;
+  --color-pink: #FF4D6B;
 
-  /* Font family — Onest from brandbook, Inter as fallback */
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  /* Font family — Onest from brandbook */
+  --font-sans: var(--font-onest), ui-sans-serif, system-ui, sans-serif;
 
   /* Spacing */
   --spacing-section: 5rem;
 
+  /* Border radius tokens */
+  --radius-card: 32px;
+  --radius-card-sm: 20px;
+  --radius-pill: 60px;
+  --radius-tag: 40px;
+  --radius-inner: 14px;
+
   /* Animation */
-  --animate-in: animate-in 0.2s ease-out;
+  --animate-in: animate-in 0.4s ease-out;
+  --animate-fade-up: animate-fade-up 0.6s ease-out;
 }
 
 @keyframes animate-in {
@@ -37,6 +48,110 @@
   }
 }
 
+@keyframes animate-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .animate-in {
   animation: animate-in 0.2s ease-out;
+}
+
+.animate-fade-up {
+  animation: animate-fade-up 0.6s ease-out both;
+}
+
+/* Gradient border card style */
+.card-gradient-border {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: var(--radius-card);
+}
+
+.card-gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-card);
+  padding: 1.25px;
+  background: linear-gradient(4deg, rgba(70, 78, 255, 1) 10%, rgba(94, 255, 110, 1) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Gradient button */
+.btn-gradient {
+  background: linear-gradient(183deg, rgba(94, 255, 110, 1) 0%, rgba(70, 78, 255, 1) 83%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-pill);
+  font-weight: 500;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn-gradient:hover {
+  opacity: 0.9;
+}
+
+.btn-gradient:active {
+  transform: scale(0.98);
+}
+
+/* Outline button with gradient border */
+.btn-outline-gradient {
+  position: relative;
+  background: transparent;
+  border-radius: var(--radius-pill);
+  font-weight: 500;
+  color: #111111;
+  border: none;
+}
+
+.btn-outline-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-pill);
+  padding: 1.5px;
+  background: linear-gradient(4deg, rgba(70, 78, 255, 1) 45%, rgba(94, 255, 110, 1) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(90deg, #464EFF 26%, #5EFF6E 72%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero decorative gradient orbs */
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* Soft card shadow from Figma */
+.shadow-card {
+  box-shadow: 0px 4px 12px 0px rgba(149, 149, 149, 0.08);
+}
+
+.shadow-card-hover:hover {
+  box-shadow: 0px 4px 24px 0px rgba(149, 149, 149, 0.24);
 }

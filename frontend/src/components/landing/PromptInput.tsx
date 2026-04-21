@@ -75,12 +75,12 @@ export function PromptInput({
         value={prompt}
         onChange={(e) => setPrompt(e.target.value)}
         placeholder={placeholder}
-        className="flex-1 rounded-xl border border-border bg-white px-4 py-3 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
+        className="flex-1 rounded-[60px] border border-border bg-surface px-6 py-3.5 text-sm text-text outline-none placeholder:text-text-light focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
       />
       <button
         type="submit"
         disabled={submitting}
-        className="rounded-xl bg-primary px-6 py-3 text-sm font-medium text-white hover:bg-primary-hover active:scale-[0.98] transition-all disabled:opacity-70"
+        className="btn-gradient px-8 py-3.5 text-sm transition-all disabled:opacity-70"
       >
         {ctaText}
       </button>

@@ -18,22 +18,22 @@ export function ReviewsSection({ title, reviews }: ReviewsSectionProps) {
   const pages = Math.ceil(reviews.length / visibleCount);
 
   return (
-    <section className="bg-surface py-section">
+    <section className="py-section">
       <div className="mx-auto max-w-6xl px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold text-text">{title}</h2>
+        <h2 className="mb-12 text-center text-[38px] font-medium leading-[1.12] text-text">{title}</h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {reviews
             .slice(active * visibleCount, (active + 1) * visibleCount)
             .map((review, idx) => (
               <div
                 key={idx}
-                className="flex flex-col rounded-2xl border border-border bg-white p-6"
+                className="flex flex-col rounded-[20px] bg-surface p-6 shadow-card"
               >
                 <div className="mb-3 flex items-center gap-1">
                   {Array.from({ length: 5 }, (_, i) => (
                     <span
                       key={i}
-                      className={`text-lg ${i < review.rating ? "text-warning" : "text-border"}`}
+                      className={`text-lg ${i < review.rating ? "text-warning" : "text-text-light"}`}
                     >
                       ★
                     </span>
@@ -42,7 +42,7 @@ export function ReviewsSection({ title, reviews }: ReviewsSectionProps) {
                 <p className="flex-1 text-sm leading-relaxed text-text-muted">
                   {review.text}
                 </p>
-                <div className="mt-4 flex items-center gap-3 border-t border-border pt-4">
+                <div className="mt-4 flex items-center gap-3 pt-4">
                   {review.avatar_url ? (
                     <Image
                       src={review.avatar_url}
@@ -53,7 +53,9 @@ export function ReviewsSection({ title, reviews }: ReviewsSectionProps) {
                       loading="lazy"
                     />
                   ) : (
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full text-sm font-medium text-white" style={{
+                      background: 'linear-gradient(196deg, #5EFF6E 0%, #464EFF 71%)'
+                    }}>
                       {review.author.charAt(0).toUpperCase()}
                     </div>
                   )}
@@ -69,7 +71,7 @@ export function ReviewsSection({ title, reviews }: ReviewsSectionProps) {
                 key={i}
                 onClick={() => setActive(i)}
                 className={`h-2.5 w-2.5 rounded-full transition-colors ${
-                  i === active ? "bg-primary" : "bg-border hover:bg-text-muted"
+                  i === active ? "bg-primary" : "bg-border-light hover:bg-text-muted"
                 }`}
                 aria-label={`Page ${i + 1}`}
               />

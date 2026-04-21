@@ -12,12 +12,12 @@ export function ExamplesSection({ title, items }: ExamplesSectionProps) {
   return (
     <section className="py-section">
       <div className="mx-auto max-w-6xl px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold text-text">{title}</h2>
+        <h2 className="mb-12 text-center text-[38px] font-medium leading-[1.12] text-text">{title}</h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((item, idx) => (
             <div
               key={idx}
-              className="group overflow-hidden rounded-2xl border border-border bg-white transition-shadow hover:shadow-md"
+              className="group overflow-hidden rounded-[32px] bg-surface shadow-card shadow-card-hover transition-shadow"
             >
               {item.image_url && (
                 <div className="relative aspect-video overflow-hidden">
@@ -31,17 +31,17 @@ export function ExamplesSection({ title, items }: ExamplesSectionProps) {
                   />
                 </div>
               )}
-              <div className="p-5">
-                <h3 className="mb-2 text-lg font-semibold text-text">{item.title}</h3>
+              <div className="p-6">
+                <h3 className="mb-2 text-lg font-medium text-text">{item.title}</h3>
                 {item.description && (
-                  <p className="text-sm text-text-muted">{item.description}</p>
+                  <p className="text-sm leading-relaxed text-text-muted">{item.description}</p>
                 )}
                 {item.url && (
                   <a
                     href={item.url}
                     target="_blank"
                     rel="nofollow noopener"
-                    className="mt-3 inline-block text-sm font-medium text-primary hover:text-primary-hover transition-colors"
+                    className="mt-3 inline-block text-sm font-medium text-primary hover:opacity-80 transition-opacity"
                   >
                     ↗
                   </a>

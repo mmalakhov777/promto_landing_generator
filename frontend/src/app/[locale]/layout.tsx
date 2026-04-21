@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { Inter } from "next/font/google";
+import { Onest } from "next/font/google";
 import "@/styles/globals.css";
 import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
@@ -10,10 +10,10 @@ import { YandexMetrika } from "@/components/landing/YandexMetrika";
 import { getPublicSettings } from "@/lib/public-api";
 import type { Locale } from "@/types/public";
 
-const inter = Inter({
+const onest = Onest({
   subsets: ["latin", "cyrillic"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-onest",
 });
 
 type Props = {
@@ -40,7 +40,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   }
 
   return (
-    <html lang={locale} className={inter.variable}>
+    <html lang={locale} className={onest.variable}>
       <body className="font-sans bg-background text-text antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header locale={locale as Locale} platformUrl={platformUrl} />

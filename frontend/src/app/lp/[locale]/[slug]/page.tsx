@@ -102,7 +102,10 @@ export default async function LandingPage({ params }: Props) {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL || "";
   const canonicalUrl = `${SITE_URL}/${slug}-${locale}`;
 
-  const enabled = new Set(landing.enabled_sections);
+  // If no sections are explicitly enabled, show all sections that have content
+  const allSections = ["social_proof", "advantages", "how_it_works", "examples", "cta_mid", "video", "pricing", "reviews", "faq"];
+  const enabledList = landing.enabled_sections?.length > 0 ? landing.enabled_sections : allSections;
+  const enabled = new Set(enabledList);
 
   const [t, tNav] = await Promise.all([
     getTranslations({ locale, namespace: "landing" }),
