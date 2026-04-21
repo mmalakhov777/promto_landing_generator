@@ -4,6 +4,14 @@
     "comingSoon": "Landing pages coming soon",
     "description": "SEO landing page generator for the Promto platform"
   },
+  "home": {
+    "heroTitle": "Build websites with AI",
+    "heroSubtitle": "Promto is a platform for quickly creating professional websites and landing pages using artificial intelligence",
+    "categoriesTitle": "Categories",
+    "allLandings": "All landings",
+    "viewCategory": "View all",
+    "landingsCount": "{count} landings"
+  },
   "nav": {
     "home": "Home",
     "tryIt": "Try it",
