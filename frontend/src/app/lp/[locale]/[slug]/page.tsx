@@ -17,6 +17,7 @@ import { ReviewsSection } from "@/components/landing/ReviewsSection";
 import { FaqSection } from "@/components/landing/FaqSection";
 import { CtaBlock } from "@/components/landing/CtaBlock";
 import { JsonLd } from "@/components/landing/JsonLd";
+import { PageBackgroundOrbs } from "@/components/landing/PageBackgroundOrbs";
 import type { Locale } from "@/types/public";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://promto.ai";
@@ -133,7 +134,8 @@ export default async function LandingPage({ params }: Props) {
         ]}
       />
 
-      <article>
+      <article className="relative">
+        <PageBackgroundOrbs />
         <HeroSection
           h1={landing.h1 || landing.hero_title}
           subtitle={landing.hero_subtitle}
