@@ -10,7 +10,7 @@ export function PageBackgroundOrbs() {
   const gradient = "linear-gradient(200deg, rgba(70,78,255,1) 21%, rgba(94,255,110,1) 88%)";
 
   return (
-    <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+    <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
       {/* Orb 1 — top-right */}
       <div
         className="absolute top-0 -right-[250px] h-[400px] w-[400px] rounded-full opacity-20 blur-[150px] lg:-right-[200px] lg:h-[955px] lg:w-[955px] lg:opacity-50 lg:blur-[228px]"
