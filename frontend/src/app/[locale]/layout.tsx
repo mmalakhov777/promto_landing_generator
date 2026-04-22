@@ -59,7 +59,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} className={onest.variable}>
-      <body className="font-sans bg-background text-text antialiased">
+      <body className="font-sans bg-background text-text antialiased overflow-x-hidden">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <LayoutContextProvider
             platformUrl={platformUrl}
