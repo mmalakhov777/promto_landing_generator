@@ -130,6 +130,24 @@
   pointer-events: none;
 }
 
+/* Gradient border for dark mobile menu buttons — Figma node 1-1069 */
+.menu-btn-gradient-border {
+  position: relative;
+}
+.menu-btn-gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-pill);
+  padding: 1.5px;
+  background: linear-gradient(181deg, rgba(94, 255, 110, 1) 0%, rgba(70, 78, 255, 1) 79%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
 /* Gradient text */
 .text-gradient {
   background: linear-gradient(90deg, #464EFF 26%, #5EFF6E 72%);

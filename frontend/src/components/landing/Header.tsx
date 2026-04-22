@@ -281,61 +281,158 @@ export function Header() {
       </header>
 
       {/* Mobile menu — Figma node 1-1006: full-screen overlay
+           Two variants: dark (landing pages) and light (non-landing).
            Rendered outside <header> because backdrop-blur creates a new
            containing block that breaks position:fixed children. */}
       {menuOpen && (
-        <>
-          {/* Backdrop */}
-          <div
-            className="fixed inset-0 z-[60] bg-black/80 backdrop-blur-[60px] lg:hidden"
-            onClick={closeMenu}
-            aria-hidden="true"
-          />
+        <div
+          className={`fixed inset-0 z-[60] flex flex-col lg:hidden ${
+            isLandingPage
+              ? "bg-[rgba(17,17,17,0.8)] backdrop-blur-[60px]"
+              : "bg-[rgba(255,255,255,0.9)] backdrop-blur-[12px]"
+          }`}
+        >
+          {/* Menu header — logo + Войти + close */}
+          <div className="flex items-center justify-between h-[72px] px-6 flex-shrink-0">
+            <a href={logoUrl} rel="nofollow noopener" className="flex-shrink-0">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logo-mobile.svg"
+                alt={tCommon("siteName")}
+                width={42}
+                height={42}
+                className={isLandingPage ? "brightness-0 invert" : ""}
+              />
+            </a>
 
-          {/* Menu panel */}
-          <div className="fixed inset-x-0 bottom-0 z-[70] rounded-t-[40px] bg-[#FAFAFA] px-6 pb-8 pt-4 lg:hidden">
-            {/* Main navigation links */}
-            <nav className="mb-8 flex flex-col gap-6">
-              {mainNav.map((item) => (
-                <a
-                  key={item.id}
-                  href={item.href}
-                  rel="nofollow noopener"
-                  onClick={closeMenu}
-                  className="text-left text-base font-medium text-text transition-colors hover:text-primary"
-                  style={{ fontFamily: "var(--font-onest, inherit)" }}
+            <div className="flex items-center gap-3">
+              {/* Войти button */}
+              <a
+                href={buildPlatformUrl(platformUrl, "mobile_menu", campaign, "login")}
+                rel="nofollow noopener"
+                onClick={closeMenu}
+                className={`flex items-center justify-center rounded-full px-6 h-[42px] text-sm font-medium transition-opacity hover:opacity-80 ${
+                  isLandingPage
+                    ? "bg-white/[0.12] text-white"
+                    : "btn-outline-gradient"
+                }`}
+                style={{ fontFamily: "var(--font-onest, inherit)" }}
+              >
+                {locale === "ru" ? "Войти" : "Sign in"}
+              </a>
+
+              {/* Close button */}
+              <button
+                onClick={closeMenu}
+                className={`flex h-[42px] w-[42px] items-center justify-center rounded-full transition-opacity hover:opacity-80 ${
+                  isLandingPage
+                    ? "bg-white/[0.12]"
+                    : "btn-outline-gradient"
+                }`}
+                aria-label="Close menu"
+              >
+                <svg
+                  className={`h-5 w-5 ${isLandingPage ? "text-white" : "text-text"}`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
-                  {item.label}
-                </a>
-              ))}
-            </nav>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
 
-            {/* CTA buttons */}
-            <div className="flex flex-col gap-3">
-              {/* Создать сайт — gradient filled */}
+          {/* Navigation links — Figma: Onest 500, 16px, gap 32px */}
+          <nav className="flex flex-col gap-8 px-6 mt-[28px]">
+            {isLandingPage && anchors.length > 0
+              ? anchors.map((anchor) => (
+                  <a
+                    key={anchor.id}
+                    href={`#${anchor.id}`}
+                    onClick={closeMenu}
+                    className="text-left text-base font-medium text-white transition-opacity hover:opacity-70"
+                    style={{ fontFamily: "var(--font-onest, inherit)" }}
+                  >
+                    {anchor.label}
+                  </a>
+                ))
+              : mainNav.map((item) => (
+                  <a
+                    key={item.id}
+                    href={item.href}
+                    rel="nofollow noopener"
+                    onClick={closeMenu}
+                    className={`text-left text-base font-medium transition-opacity hover:opacity-70 ${
+                      isLandingPage ? "text-white" : "text-[#111]"
+                    }`}
+                    style={{ fontFamily: "var(--font-onest, inherit)" }}
+                  >
+                    {item.label}
+                  </a>
+                ))}
+          </nav>
+
+          {/* Spacer pushes CTA to bottom */}
+          <div className="flex-1" />
+
+          {/* CTA section — Figma: gap 12px buttons, 16px to helper text */}
+          <div className="flex flex-col items-center gap-4 px-6 pb-[60px] flex-shrink-0">
+            <div className="flex flex-col gap-3 w-full max-w-[327px]">
+              {/* Создать сайт — with monitor icon */}
               <a
                 href={createSiteUrl}
                 rel="nofollow noopener"
                 onClick={closeMenu}
-                className="flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#5EFF6E] to-[#464EFF] py-4 text-sm font-medium text-white transition-opacity hover:opacity-90"
+                className={`flex items-center justify-center gap-2 rounded-full py-[17px] text-sm font-medium transition-opacity hover:opacity-90 ${
+                  isLandingPage
+                    ? "bg-white/[0.16] text-white"
+                    : "bg-gradient-to-b from-[#5EFF6E] to-[#464EFF] text-white"
+                }`}
                 style={{ fontFamily: "var(--font-onest, inherit)" }}
               >
+                {/* Monitor icon — Figma: System / Monitor */}
+                <svg className="w-[18px] h-[18px]" viewBox="0 0 18 18" fill="none">
+                  <path d="M2.25 3h13.5a.75.75 0 0 1 .75.75v8.5a.75.75 0 0 1-.75.75H2.25a.75.75 0 0 1-.75-.75v-8.5A.75.75 0 0 1 2.25 3Z" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M6 15.75h6M9 13v2.75" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
                 {locale === "ru" ? "Создать сайт" : "Create website"}
               </a>
 
-              {/* Попробовать бесплатно — outlined */}
+              {/* Попробовать бесплатно — with sparkles icon */}
               <a
                 href={tryItUrl}
                 rel="nofollow noopener"
                 onClick={closeMenu}
-                className="flex items-center justify-center gap-2 rounded-full border border-[rgba(70,78,255,1)] py-4 text-sm font-medium text-[#464EFF] transition-opacity hover:bg-[rgba(70,78,255,0.05)]"
+                className={`flex items-center justify-center gap-2 rounded-full py-[17px] text-sm font-medium transition-opacity hover:opacity-90 ${
+                  isLandingPage
+                    ? "bg-white/[0.16] text-white menu-btn-gradient-border"
+                    : "btn-outline-gradient bg-transparent"
+                }`}
                 style={{ fontFamily: "var(--font-onest, inherit)" }}
               >
+                {/* Sparkles / AI icon — Figma: hugeicons:ai-magic */}
+                <svg className={`w-[18px] h-[18px] ${isLandingPage ? "text-white" : "text-[#464EFF]"}`} viewBox="0 0 18 18" fill="none">
+                  <path d="M9 1.5l1.08 3.42L13.5 6l-3.42 1.08L9 10.5 7.92 7.08 4.5 6l3.42-1.08L9 1.5Z" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M13.5 10.5l.54 1.71 1.71.54-1.71.54-.54 1.71-.54-1.71-1.71-.54 1.71-.54.54-1.71Z" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
                 {locale === "ru" ? "Попробовать бесплатно 3 дня" : "Try free for 3 days"}
               </a>
             </div>
+
+            {/* Helper text */}
+            <p
+              className={`text-xs leading-[1.2] text-center ${
+                isLandingPage ? "text-white/50" : "text-[#858585]"
+              }`}
+              style={{ fontFamily: "var(--font-onest, inherit)" }}
+            >
+              {locale === "ru"
+                ? "Банковская карта не потребуется:\nпробный период без привязки карты"
+                : "No credit card required:\nfree trial without card binding"}
+            </p>
           </div>
-        </>
+        </div>
       )}
     </>
   );
