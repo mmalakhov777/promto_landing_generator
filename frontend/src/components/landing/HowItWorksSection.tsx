@@ -1,29 +1,29 @@
 import type { HowItWorksStep } from "@/types/public";
 
-/* ─── Rich CSS-based illustrations for each step ─── */
+/* ─── Rich CSS-based illustrations with micro-animations ─── */
 
 /** Step 1: Chat / prompt input mockup */
 function IllustrationPrompt() {
   return (
     <>
-      <div className="absolute top-4 right-8 h-20 w-20 rounded-full bg-accent/20 blur-[25px]" />
-      <div className="absolute bottom-6 left-6 h-16 w-16 rounded-full bg-primary/20 blur-[20px]" />
+      <div className="hiw-glow absolute top-4 right-8 h-20 w-20 rounded-full bg-accent/20 blur-[25px]" />
+      <div className="hiw-glow-d1 absolute bottom-6 left-6 h-16 w-16 rounded-full bg-primary/20 blur-[20px]" />
 
       <div className="relative w-[80%] max-w-[260px]">
         {/* Incoming bubble */}
-        <div className="mb-3 mr-auto w-[70%] rounded-2xl rounded-bl-[4px] bg-white px-4 py-3 shadow-md">
+        <div className="hiw-float-d1 mb-3 mr-auto w-[70%] rounded-2xl rounded-bl-[4px] bg-white px-4 py-3 shadow-md">
           <div className="h-2 w-[85%] rounded-full bg-gray-200" />
           <div className="mt-1.5 h-2 w-[50%] rounded-full bg-gray-200" />
         </div>
         {/* User bubble */}
-        <div className="mb-3 ml-auto w-[75%] rounded-2xl rounded-br-[4px] bg-primary/8 px-4 py-3 shadow-sm">
+        <div className="hiw-float-d2 mb-3 ml-auto w-[75%] rounded-2xl rounded-br-[4px] bg-primary/8 px-4 py-3 shadow-sm">
           <div className="h-2 w-[90%] rounded-full bg-primary/15" />
           <div className="mt-1.5 h-2 w-[60%] rounded-full bg-primary/15" />
         </div>
         {/* Input bar */}
         <div className="flex items-center gap-2 rounded-2xl bg-white px-4 py-2.5 shadow-xl ring-1 ring-gray-100">
           <div className="h-2 w-[55%] rounded-full bg-gray-200" />
-          <div className="ml-auto flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-accent to-primary shadow-md">
+          <div className="hiw-pulse ml-auto flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-accent to-primary shadow-md">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
               <path d="M22 2L11 13M22 2L15 22L11 13L2 9L22 2Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
@@ -32,8 +32,8 @@ function IllustrationPrompt() {
       </div>
 
       {/* Floating sparkle dots */}
-      <div className="absolute top-[18%] left-[12%] h-2.5 w-2.5 rounded-full bg-accent shadow-md shadow-accent/40" />
-      <div className="absolute bottom-[22%] right-[10%] h-2 w-2 rounded-full bg-primary shadow-md shadow-primary/40" />
+      <div className="hiw-float absolute top-[18%] left-[12%] h-2.5 w-2.5 rounded-full bg-accent shadow-md shadow-accent/40" />
+      <div className="hiw-float-d2 absolute bottom-[22%] right-[10%] h-2 w-2 rounded-full bg-primary shadow-md shadow-primary/40" />
     </>
   );
 }
@@ -42,35 +42,41 @@ function IllustrationPrompt() {
 function IllustrationProcessing() {
   return (
     <>
-      <div className="absolute top-[12%] right-[12%] h-24 w-24 rounded-full bg-accent/15 blur-[30px]" />
-      <div className="absolute bottom-[12%] left-[12%] h-20 w-20 rounded-full bg-primary/15 blur-[25px]" />
+      <div className="hiw-glow absolute top-[12%] right-[12%] h-24 w-24 rounded-full bg-accent/15 blur-[30px]" />
+      <div className="hiw-glow-d1 absolute bottom-[12%] left-[12%] h-20 w-20 rounded-full bg-primary/15 blur-[25px]" />
 
-      {/* Concentric rings */}
-      <div className="relative">
-        <div className="flex h-32 w-32 items-center justify-center rounded-full border-2 border-primary/10">
-          <div className="flex h-[88px] w-[88px] items-center justify-center rounded-full border-2 border-accent/20">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent shadow-lg shadow-primary/25">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="white" fillOpacity="0.9"/>
-              </svg>
-            </div>
+      {/* Concentric rings with orbiting nodes */}
+      <div className="relative h-32 w-32">
+        {/* Outer ring — spins slowly */}
+        <div className="hiw-spin-slow absolute inset-0 rounded-full border-2 border-primary/10">
+          {/* Nodes attached to the outer ring */}
+          <div className="absolute -top-1 left-1/2 -translate-x-1/2 h-3.5 w-3.5 rounded-full bg-accent shadow-md shadow-accent/40" />
+          <div className="absolute top-1/2 -right-1 -translate-y-1/2 h-3 w-3 rounded-full bg-primary shadow-md shadow-primary/40" />
+          <div className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 h-3 w-3 rounded-full bg-pink shadow-md shadow-pink/40" />
+          <div className="absolute top-1/2 -left-1 -translate-y-1/2 h-2.5 w-2.5 rounded-full bg-primary/60 shadow-md" />
+        </div>
+
+        {/* Inner ring — spins opposite */}
+        <div className="hiw-spin-reverse absolute inset-[22px] rounded-full border-2 border-accent/20" />
+
+        {/* Central orb — pulses */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="hiw-pulse flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent shadow-lg shadow-primary/25">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="white" fillOpacity="0.9"/>
+            </svg>
           </div>
         </div>
-        {/* Orbiting nodes */}
-        <div className="absolute -top-1 left-1/2 -translate-x-1/2 h-3.5 w-3.5 rounded-full bg-accent shadow-md shadow-accent/40" />
-        <div className="absolute top-1/2 -right-1 -translate-y-1/2 h-3 w-3 rounded-full bg-primary shadow-md shadow-primary/40" />
-        <div className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 h-3 w-3 rounded-full bg-pink shadow-md shadow-pink/40" />
-        <div className="absolute top-1/2 -left-1 -translate-y-1/2 h-2.5 w-2.5 rounded-full bg-primary/60 shadow-md" />
       </div>
 
       {/* Floating data chips */}
-      <div className="absolute top-8 right-6 rounded-xl bg-white px-3 py-2 shadow-lg ring-1 ring-gray-50">
+      <div className="hiw-float absolute top-8 right-6 rounded-xl bg-white px-3 py-2 shadow-lg ring-1 ring-gray-50">
         <div className="flex items-center gap-1.5">
           <div className="h-2 w-2 rounded-full bg-accent" />
           <div className="h-1.5 w-10 rounded-full bg-gray-200" />
         </div>
       </div>
-      <div className="absolute bottom-10 left-6 rounded-xl bg-white px-3 py-2 shadow-lg ring-1 ring-gray-50">
+      <div className="hiw-float-d1 absolute bottom-10 left-6 rounded-xl bg-white px-3 py-2 shadow-lg ring-1 ring-gray-50">
         <div className="flex items-center gap-1.5">
           <div className="h-2 w-2 rounded-full bg-primary" />
           <div className="h-1.5 w-8 rounded-full bg-gray-200" />
@@ -84,11 +90,11 @@ function IllustrationProcessing() {
 function IllustrationCustomize() {
   return (
     <>
-      <div className="absolute top-6 left-8 h-16 w-16 rounded-full bg-primary/15 blur-[20px]" />
-      <div className="absolute bottom-8 right-6 h-14 w-14 rounded-full bg-accent/15 blur-[18px]" />
+      <div className="hiw-glow absolute top-6 left-8 h-16 w-16 rounded-full bg-primary/15 blur-[20px]" />
+      <div className="hiw-glow-d1 absolute bottom-8 right-6 h-14 w-14 rounded-full bg-accent/15 blur-[18px]" />
 
       {/* Settings card */}
-      <div className="relative w-[80%] max-w-[240px] rounded-2xl bg-white p-5 shadow-xl ring-1 ring-gray-50">
+      <div className="hiw-float-slow relative w-[80%] max-w-[240px] rounded-2xl bg-white p-5 shadow-xl ring-1 ring-gray-50">
         {/* Colour palette */}
         <div className="mb-4 flex items-center gap-2">
           <div className="h-6 w-6 rounded-full bg-primary ring-2 ring-primary/30 ring-offset-1" />
@@ -126,7 +132,7 @@ function IllustrationCustomize() {
       </div>
 
       {/* Floating pen icon */}
-      <div className="absolute top-[10%] right-[8%] flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-accent shadow-lg shadow-primary/20">
+      <div className="hiw-float absolute top-[10%] right-[8%] flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-accent shadow-lg shadow-primary/20">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
           <path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
@@ -139,8 +145,8 @@ function IllustrationCustomize() {
 function IllustrationPublish() {
   return (
     <>
-      <div className="absolute top-[8%] right-[8%] h-24 w-24 rounded-full bg-accent/12 blur-[30px]" />
-      <div className="absolute bottom-[12%] left-[8%] h-20 w-20 rounded-full bg-primary/12 blur-[25px]" />
+      <div className="hiw-glow absolute top-[8%] right-[8%] h-24 w-24 rounded-full bg-accent/12 blur-[30px]" />
+      <div className="hiw-glow-d1 absolute bottom-[12%] left-[8%] h-20 w-20 rounded-full bg-primary/12 blur-[25px]" />
 
       {/* Browser mockup */}
       <div className="relative" style={{ perspective: "600px" }}>
@@ -172,9 +178,9 @@ function IllustrationPublish() {
           </div>
         </div>
 
-        {/* Phone */}
+        {/* Phone — floats gently */}
         <div
-          className="absolute -right-6 -bottom-3 w-[72px] rounded-xl bg-white shadow-xl ring-1 ring-gray-100"
+          className="hiw-float-d1 absolute -right-6 -bottom-3 w-[72px] rounded-xl bg-white shadow-xl ring-1 ring-gray-100"
           style={{ transform: "rotateY(-2deg)" }}
         >
           <div className="p-2">
@@ -187,15 +193,15 @@ function IllustrationPublish() {
         </div>
       </div>
 
-      {/* Success badge */}
-      <div className="absolute top-[12%] right-[10%] flex h-9 w-9 items-center justify-center rounded-full bg-accent shadow-lg shadow-accent/30">
+      {/* Success badge — pulses */}
+      <div className="hiw-pulse-d1 absolute top-[12%] right-[10%] flex h-9 w-9 items-center justify-center rounded-full bg-accent shadow-lg shadow-accent/30">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
           <path d="M20 6L9 17L4 12" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       </div>
 
-      {/* Globe */}
-      <div className="absolute bottom-[18%] left-[10%] flex h-8 w-8 items-center justify-center rounded-full bg-primary/8">
+      {/* Globe — floats */}
+      <div className="hiw-float-d2 absolute bottom-[18%] left-[10%] flex h-8 w-8 items-center justify-center rounded-full bg-primary/8">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
           <circle cx="12" cy="12" r="10" stroke="#464EFF" strokeWidth="1.5"/>
           <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" stroke="#464EFF" strokeWidth="1.5"/>
