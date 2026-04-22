@@ -20,12 +20,12 @@ interface MainNavItem {
 // Figma reference: node 1-503 (desktop) and 1-1006 (mobile menu)
 // Map section IDs to labels per locale
 const SECTION_ANCHORS_RU: Record<string, string> = {
-  advantages: "Возможности",
+  advantages: "Преимущества",
   "how-it-works": "Как это работает",
   pricing: "Тарифы",
   examples: "Кейсы",
   reviews: "Кейсы",
-  faq: "Интеграции",
+  faq: "Частые вопросы",
 };
 
 const SECTION_ANCHORS_EN: Record<string, string> = {
