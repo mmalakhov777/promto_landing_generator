@@ -37,6 +37,18 @@
   --animate-fade-up: animate-fade-up 0.6s ease-out;
 }
 
+/* Decorative orb blur — mobile vs desktop (Figma: 80px mobile, 180–228px desktop) */
+:root {
+  --orb-blur-sm: blur(80px);
+  --orb-blur-lg: blur(80px);
+}
+@media (min-width: 1024px) {
+  :root {
+    --orb-blur-sm: blur(182px);
+    --orb-blur-lg: blur(228px);
+  }
+}
+
 @keyframes animate-in {
   from {
     opacity: 0;
